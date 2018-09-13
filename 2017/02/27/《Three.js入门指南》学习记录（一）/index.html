@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>《Three.js入门指南》学习记录（一） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Three.js">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>《Three.js入门指南》学习记录（一）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">《Three.js入门指南》学习记录（一）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-27T14:23:31.000Z" itemprop="datePublished" class="page-time">
+  2017-02-27
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-《Three.js入门指南》学习记录（一）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">《Three.js入门指南》学习记录（一）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-02-27 22:23:31" datetime="2017-02-27T14:23:31.000Z"  itemprop="datePublished">2017-02-27</time>
+
+            
+
+
+            
+	<span id="/2017/02/27/《Three.js入门指南》学习记录（一）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（一）" title="《Three.js入门指南》学习记录（一）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/27/《Three.js入门指南》学习记录（一）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/27/《Three.js入门指南》学习记录（一）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="1-定义Canvas-元素"><a href="#1-定义Canvas-元素" class="headerlink" title="1.定义Canvas 元素"></a>1.定义Canvas 元素</h4><p>WebGL 的渲染是需要 HTML5 Canvas 元素的。</p>
+<pre><code>&lt;canvas id=&quot;mainCanvas&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;&lt;/canvas&gt;
+</code></pre><h4 id="2-渲染器（Renderer）"><a href="#2-渲染器（Renderer）" class="headerlink" title="2.渲染器（Renderer）"></a>2.渲染器（Renderer）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">            <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>若未定义canvas元素则</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer();</div><div class="line">renderer.setSize(<span class="number">400</span>, <span class="number">300</span>);</div><div class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>].appendChild(renderer.domElement);</div></pre></td></tr></table></figure>
+<p>设置背景色<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">renderer.setClearColor(<span class="number">0x000000</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="3-场景（Scene）"><a href="#3-场景（Scene）" class="headerlink" title="3.场景（Scene）"></a>3.场景（Scene）</h4><p>场景相当于容器，物体都添加进场景中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h4 id="4-照相机（Camera）"><a href="#4-照相机（Camera）" class="headerlink" title="4.照相机（Camera）"></a>4.照相机（Camera）</h4><p>WebGL 和 Three.js 使用右手坐标系。<br><strong>照相机也要被添加到场景中。</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.PerspectiveCamera(<span class="number">45</span>, <span class="number">4</span> / <span class="number">3</span>, <span class="number">1</span>, <span class="number">1000</span>);</div><div class="line">camera.position.set(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</div><div class="line">scene.add(camera);</div></pre></td></tr></table></figure></p>
+<h4 id="5-渲染"><a href="#5-渲染" class="headerlink" title="5.渲染"></a>5.渲染</h4><p>调用渲染器的渲染函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">renderer.render(scene,camera);</div></pre></td></tr></table></figure></p>
+<h4 id="6-第一节总结"><a href="#6-第一节总结" class="headerlink" title="6.第一节总结"></a>6.第一节总结</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;body onload="init()"&gt;</div><div class="line">    &lt;canvas id="mainCanvas" width="400px" height="300px"&gt;&lt;/canvas&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    function init()&#123;</div><div class="line">        //渲染器</div><div class="line">        var renderer = new THREE.WebGLRenderer(&#123;</div><div class="line">            canvas:document.getElementById('mainCanvas')</div><div class="line">        &#125;);</div><div class="line">        renderer.setClearColor(0x000000);</div><div class="line">        //场景</div><div class="line">        var scene = new THREE.Scene();</div><div class="line">        //照相机</div><div class="line">        var camera = new THREE.PerspectiveCamera(45, 4 / 3, 1, 1000);</div><div class="line">        camera.position.set(0, 0, 5);</div><div class="line">        scene.add(camera);</div><div class="line">        //创建x、y、z 方向长度1、2、 3的红色长方体</div><div class="line">        var cube = new THREE.Mesh(new THREE.CubeGeometry(1,2,3),</div><div class="line">                new THREE.MeshBasicMaterial(&#123;</div><div class="line">                    color:0xff0000</div><div class="line">                &#125;)</div><div class="line">        );</div><div class="line">        scene.add(cube);</div><div class="line">        //渲染</div><div class="line">        renderer.render(scene,camera);</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:30:42.222Z" itemprop="dateUpdated">2017-11-21 22:30:42</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/02/27/《Three.js入门指南》学习记录（一）/" target="_blank" rel="external">https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&title=《《Three.js入门指南》学习记录（一）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&title=《《Three.js入门指南》学习记录（一）》 — Renko's blog&source=1.定义Canvas 元素WebGL 的渲染是需要 HTML5 Canvas 元素的。
+&lt;canvas id=&quot;mainCanvas&qu..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（一）》 — Renko's blog&url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/02/28/hexo重装/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">hexo重装</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/01/酸酸乳/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">酸酸乳</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&title=《《Three.js入门指南》学习记录（一）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&title=《《Three.js入门指南》学习记录（一）》 — Renko's blog&source=1.定义Canvas 元素WebGL 的渲染是需要 HTML5 Canvas 元素的。
+&lt;canvas id=&quot;mainCanvas&qu..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（一）》 — Renko's blog&url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/27/《Three.js入门指南》学习记录（一）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACyUlEQVR42u3awU7DMBAE0P7/T4PECalNmFnbFKSXU4VCui9ItpndxyO+Pr6u58/ff/J8rT/z/ifbLjw8PLxR6fclXj366p4r5H2J9y/o6vk/vFY8PDy8Y7x24U6+JtkkZvckNePh4eH9BV6+WNdFBPfg4eHh/Udee8Btl/7ZZzw8PLx38doS78PcE9Ht8awFDw8Pb5IMPE4s3Cc+/1J/Dw8PD28hhL1fdvMD9P0GkzTAijrx8PDwDvDyo3BSYnvg3vucolw8PDy8Bd6srZUv0yfaYPkGg4eHh3eCl7Sv2si13RKKQsvQBA8PD+8ELw9P8/ZYXuiuY/eG7BkPDw+v7KG3m8HspbSDU+1BP5qMwMPDw1vmzTaA9uC7fmd+6H/R38PDw8Pbylvqmy0s9HkonB/H62YYHh4e3ojXNu/zgar1dDk/WG+bccDDw8Mr+0ezcaj8mgUW7fH6h30PDw8PbxNv5d/+PGLYVXR7HMfDw8Pby8sX9Lxt30bDe+OJyzACDw8P7xgvX9BXCqrP+7PwAg8PD+8Abxa/JvfnS39+aM7rKf6GeHh4eCPerOG0HlLkDbbZloOHh4d3mpeHDsMRqHJIqx3zKkYW8PDw8BZ4yRcki3KylLcBx4aQAg8PD+8ALw8a8mNuG2fMXnQRQ+Dh4eEd5s0aYMkX54v4bFuqkXh4eHjLvHyMIN821oOGbRsSHh4e3lbeLAj4iK/2/tmhuejs4eHh4W3itYMCs/vzoutw4ep78fDw8LbyVhbrPD6Y8fInX9aDh4eHd4A3W3CTyGClwd9uVMMGGB4eHt4Cb7YZzELbdiihHeR68bt4eHh4x3j5At3GDe14wWybiWJcPDw8vDfxTo8RJE+oZ8fw8PDw3sRLhgySL947IrBtY8DDw8M7kHO2j85fR35/HSXj4eHhHeDNWlazYDffkGajYBv6e3h4eHh3VX0Cy+YNAevSS70AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

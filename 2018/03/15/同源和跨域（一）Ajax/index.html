@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>同源和跨域（一）Ajax | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>同源和跨域（一）Ajax</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">同源和跨域（一）Ajax</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-15T09:56:34.000Z" itemprop="datePublished" class="page-time">
+  2018-03-15
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-同源和跨域（一）Ajax"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">同源和跨域（一）Ajax</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-15 17:56:34" datetime="2018-03-15T09:56:34.000Z"  itemprop="datePublished">2018-03-15</time>
+
+            
+
+
+            
+	<span id="/2018/03/15/同源和跨域（一）Ajax/" class="leancloud_visitors" data-flag-title="同源和跨域（一）Ajax" title="同源和跨域（一）Ajax">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/15/同源和跨域（一）Ajax/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/15/同源和跨域（一）Ajax/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="1-原生Ajax写法"><a href="#1-原生Ajax写法" class="headerlink" title="1. 原生Ajax写法"></a>1. 原生Ajax写法</h3><ol>
+<li>建立XMLHTTPRequest对象</li>
+<li>注册回调函数<br>当服务器回应我们了,我们想要执行什么逻辑</li>
+<li>使用open方法设置和服务器端交互的基本信息<br>设置提交的网址,数据,post提交的一些额外内容</li>
+<li>设置发送的数据，开始和服务器端交互<br>发送数据</li>
+<li>更新界面<br>在注册的回调函数中,获取返回的数据,更新界面</li>
+</ol>
+<p><strong>示例代码:GET</strong> get的数据,直接在请求的url中添加即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 创建XMLHttpRequest 对象</span></div><div class="line">  <span class="keyword">var</span> xml = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置跟服务端交互的信息</span></div><div class="line">  xml.open(<span class="string">'get'</span>,<span class="string">'01.ajax.php?name=fox'</span>);</div><div class="line">  xml.send(<span class="literal">null</span>);    <span class="comment">// get请求这里写null即可</span></div><div class="line"></div><div class="line">  <span class="comment">// 接收服务器反馈</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">      <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">          <span class="comment">// 打印响应内容</span></div><div class="line">          alert(xml.responseText);</div><div class="line">      &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p><strong>示例代码:POST</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 异步对象</span></div><div class="line">  <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置属性</span></div><div class="line">  xhr.open(<span class="string">'post'</span>, <span class="string">'02.post.php'</span> );</div><div class="line"></div><div class="line">  <span class="comment">// 如果想要使用post提交数据,必须添加</span></div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 将数据通过send方法传递</span></div><div class="line">  xhr.send(<span class="string">'name=fox&amp;age=18'</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 发送并接受返回值</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">  <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">         alert(xhr.responseText);</div><div class="line">       &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h3 id="2-Ajax工具函数封装"><a href="#2-Ajax工具函数封装" class="headerlink" title="2. Ajax工具函数封装"></a>2. Ajax工具函数封装</h3><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">option</span>) </span>&#123;</div><div class="line">  <span class="comment">// 创建对象</span></div><div class="line">  <span class="keyword">var</span> xmlRequest ;</div><div class="line">  <span class="keyword">if</span> (XMLHttpRequest) &#123;</div><div class="line">      xmlRequest = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">      xmlRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 格式化传入的数据为name=fox&amp;age=18这样的格式</span></div><div class="line">  <span class="keyword">var</span> formatStr = <span class="string">""</span>;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> option.data)&#123;</div><div class="line">      <span class="comment">// 获取属性名,属性值,进行拼接</span></div><div class="line">      formatStr+=item;<span class="comment">// 属性名</span></div><div class="line">      formatStr+=<span class="string">"="</span>;<span class="comment">//等号</span></div><div class="line">      formatStr+=option.data[item];<span class="comment">//属性值</span></div><div class="line">      formatStr+=<span class="string">"&amp;"</span>;<span class="comment">//分隔符</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 去除最后一个&amp;</span></div><div class="line">  formatStr = formatStr.slice(<span class="number">0</span>,<span class="number">-1</span>);</div><div class="line"></div><div class="line">  <span class="comment">// open方法 如果是get方法,那么url之后需要添加数据</span></div><div class="line">  <span class="keyword">if</span>(option.method == <span class="string">"get"</span>)&#123;</div><div class="line">      option.url = option.url+<span class="string">"?"</span>+formatStr;</div><div class="line">      option.data = <span class="literal">null</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// 调用open方法</span></div><div class="line">  xmlRequest.open(option.method,option.url)</div><div class="line"></div><div class="line">  <span class="comment">// 如果是post设置HTTP协议头</span></div><div class="line">  <span class="keyword">if</span> (option.method==<span class="string">"post"</span>) &#123;</div><div class="line">      xmlRequest.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// send方法 这里的data已经是修改过的,如果使用的是get方法,那么data为null</span></div><div class="line">      xmlRequest.send(option.data);</div><div class="line"></div><div class="line">  <span class="comment">// 判断状态改变,调用方法</span></div><div class="line">  xmlRequest.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">  <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">             option.success(这里的数据是ajax获取的);  </div><div class="line">     &#125; </div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-JQueryAjax使用"><a href="#3-JQueryAjax使用" class="headerlink" title="3. JQueryAjax使用"></a>3. JQueryAjax使用</h3><p><strong>格式化表单$(‘form’).serialize()</strong></p>
+<pre><code>我们在向服务器提交数据时,如果使用的是Ajax需要手动将数据格式化name=fox&amp;age=18类似这样的格式,JQuery已经封装好了一个格式化数据的方法
+</code></pre><p>语法:$(selector).serialize() 直接可以将form中拥有name属性的表单元素的字,进行格式化</p>
+<p><strong>$.ajax({}) 方法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">        <span class="attr">url</span>:<span class="string">'01.php'</span>,<span class="comment">//请求地址</span></div><div class="line">        data:<span class="string">'name=fox&amp;age=18'</span>,<span class="comment">//发送的数据</span></div><div class="line">        type:<span class="string">'GET'</span>,<span class="comment">//请求的方式</span></div><div class="line">        success:<span class="function"><span class="keyword">function</span> (<span class="params">argument</span>) </span>&#123;&#125;,<span class="comment">// 请求成功执行的方法</span></div><div class="line">        beforeSend:<span class="function"><span class="keyword">function</span> (<span class="params">argument</span>) </span>&#123;&#125;,<span class="comment">// 在发送请求之前调用,可以做一些验证之类的处理</span></div><div class="line">        error:<span class="function"><span class="keyword">function</span> (<span class="params">argument</span>) </span>&#123;<span class="built_in">console</span>.log(argument);&#125;,<span class="comment">//请求失败调用</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-21T15:39:46.823Z" itemprop="dateUpdated">2018-03-21 23:39:46</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/03/15/同源和跨域（一）Ajax/" target="_blank" rel="external">https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&title=《同源和跨域（一）Ajax》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&title=《同源和跨域（一）Ajax》 — Renko's blog&source=1. 原生Ajax写法
+建立XMLHTTPRequest对象
+注册回调函数当服务器回应我们了,我们想要执行什么逻辑
+使用open方法设置和服务器端交互的基..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（一）Ajax》 — Renko's blog&url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/16/同源和跨域（二）概念&JSONP/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">同源和跨域（二）概念&amp;JSONP</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/03/函数节流&防抖/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">函数节流&amp;防抖</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&title=《同源和跨域（一）Ajax》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&title=《同源和跨域（一）Ajax》 — Renko's blog&source=1. 原生Ajax写法
+建立XMLHTTPRequest对象
+注册回调函数当服务器回应我们了,我们想要执行什么逻辑
+使用open方法设置和服务器端交互的基..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（一）Ajax》 — Renko's blog&url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/15/同源和跨域（一）Ajax/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3a0W7jQAgF0Pz/T3elvrY7vsDQtNLxU+Um9hxHGjDwesXHx+fx9cz5/Pkz+Zn/XefagYeHh9da+nlZ5xucz3+9Tr6GBHz+Fh4eHt4e77zo6hafb+Xnu5wfd/Sg8fDw8N7Ky9PrvcQaDw8P76/z8mJEL1Qk68HDw8N7Fy8pRlQLu71EPAktK7UWPDw8vP7O/JoHie2/F/t7eHh4eIOuerLhTpYyT80fVouHh4e3wLvVZKqODlTT3/xhRW8MeHh4eJd4eUZ6bvlXSxLVIFQNV3h4eHh7vDwwVHl5Ct4bOHgID3h4eHgLvF4SPFlcPlxVrdY+XAEPDw9vzKve/kKTPi5t5I/p4bfCw8PDu8rbTperAaA6YlVIpvHw8PAWeHnrK0+vJyMFycMaBQM8PDy8Aa+31fbGBfJibvWOeHh4eD/P2ytSTB5fb7wADw8P72d4+TFPgvOOXDV9/+ZqeHh4eAu8arkhDyqTwalqwl0o5uLh4eGNeXnKWy00VEu3t4ojeHh4eHu8XhKcN/h7ISdvdz18Fw8PD2+BVx0UqI5D5al5/t/RuBUeHh7eJd6tSka+3VdDy7WZMjw8PLxLvGq5oRdC8sR6Uux4SKnx8PDwxrx8q0029ITRGyxIrlnO0PHw8PBavOooQK/BX0X2Phnh8fDw8Ma8+Q0mBYuN8IOHh4f3Lt4k7a4WZPNvle+Ih4eHt8CrMvIhgGoqPCk6RKvCw8PDu8T7KB69JDtvZeVBJRr8wsPDw1vg9TpHVXYeTqrJ90pjDA8PDy9+T09KqNXibPJc84CU/0qFxBoPDw9vwKsOB0wA1VpBL4Dh4eHh/QberSX2BguaBQ48PDy8X8DLLz0vSSRNsofzeHh4eGu8XiGg2tCajxpUC754eHh4G7zeS/6kAJGkxZPwMOrv4eHh4Z3W8A9Zn6ZLXZ9wowAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

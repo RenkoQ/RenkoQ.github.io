@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>terminal、shell、tty、console | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="运维">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>terminal、shell、tty、console</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">terminal、shell、tty、console</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-04-30T18:01:30.000Z" itemprop="datePublished" class="page-time">
+  2018-05-01
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-terminal、shell、tty、console"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">terminal、shell、tty、console</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-01 02:01:30" datetime="2018-04-30T18:01:30.000Z"  itemprop="datePublished">2018-05-01</time>
+
+            
+
+
+            
+	<span id="/2018/05/01/terminal、shell、tty、console/" class="leancloud_visitors" data-flag-title="terminal、shell、tty、console" title="terminal、shell、tty、console">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/05/01/terminal、shell、tty、console/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/01/terminal、shell、tty、console/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="无关本文比较的TTY"><a href="#无关本文比较的TTY" class="headerlink" title="无关本文比较的TTY"></a>无关本文比较的TTY</h3><blockquote>
+<p>TTY is a toolbox for developing beautiful command line clients in Ruby<br>with a fluid interface for gathering input, querying terminal<br>properties and displaying information.</p>
+</blockquote>
+<p><a href="https://github.com/piotrmurach/tty" target="_blank" rel="noopener">github</a><br><a href="http://piotrmurach.github.io/tty/" target="_blank" rel="noopener">官网</a></p>
+<hr>
+<p><strong>但此处比较的不是这个RUBY命令行工具。</strong></p>
+<p><a href="https://blog.csdn.net/on_1y/article/details/20203963" target="_blank" rel="noopener">控制台，终端，tty，shell等概念的区别</a></p>
+<p><a href="https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con" target="_blank" rel="noopener">What is the exact difference between a ‘terminal’, a ‘shell’, a ‘tty’ and a ‘console’?</a></p>
+<p><a href="https://www.zhihu.com/question/21711307" target="_blank" rel="noopener">终端，Shell，“tty”和控制台（console）有什么区别？</a></p>
+<p>(以下内容皆从上述链接中复制粘贴整理所得，侵删致歉)</p>
+<blockquote>
+<p><strong>A terminal is at the end of an electric wire, a shell is the home of a turtle, tty is a strange abbreviation and a console is a kind of cabinet.</strong></p>
+</blockquote>
+<p>In unix terminology, the short answer is that</p>
+<p><code>terminal</code> = <code>tty</code> = text input/output environment（文本的输入输出环境）<br><code>console</code> = physical terminal（物理终端）<br><code>shell</code> = command line interpreter(命令行解释器)</p>
+<h3 id="Teleprinter（TTY）-amp-Terminal"><a href="#Teleprinter（TTY）-amp-Terminal" class="headerlink" title="Teleprinter（TTY）&amp; Terminal"></a>Teleprinter（TTY）&amp; Terminal</h3><a id="more"></a>
+<p><a href="https://en.wikipedia.org/wiki/Teleprinter" target="_blank" rel="noopener">电传打字机TTY</a></p>
+<blockquote>
+<p>A teleprinter (teletypewriter, Teletype or TTY) is an<br>electromechanical typewriter that can be used to send and receive<br>typed messages through various communications channels, in both<br>point-to-point and point-to-multipoint configurations.</p>
+</blockquote>
+<p>The name “terminal” came from the electronic point of view, and the name “console” from the furniture point of view. Very early in unix history, electronic keyboards and displays became the norm for terminals.</p>
+<p><code>终端（terminal）</code>这个名字是从电子的观点来看的，而<code>控制台(console)</code>是从设备的角度来看的。<br>在UNIX历史的极早期阶段，电子键盘和显示器就已经是一种规范的<code>终端</code>。</p>
+<p>a tty is a particular kind of device file which implements a number of additional commands (ioctls) beyond read and write.<br>tty在读写控制外实现特殊命令。</p>
+<p><strong>terminal is synonymous with tty.</strong><br>通常意义上终端是tty同义词。</p>
+<p>Some ttys are <strong>provided by the kernel on behalf of a hardware device</strong>, for example with the input coming from the keyboard and the output going to a text mode screen, or with the input and output transmitted over a serial line. Other ttys, sometimes called pseudo(伪)-ttys, are <strong>provided (through a thin kernel layer) by programs called terminal emulators(模拟器)</strong>, such as Xterm (running in the X Window System), Screen (which provides a layer of isolation between a program and another terminal), Ssh (which connects a terminal on one machine with programs on another machine), Expect (for scripting terminal interactions), etc.</p>
+<p>有的tty由（软件）内核来代替硬件设备，比如从键盘发送过来的input，以及发送到文本模式的屏幕上的output，或者在串行线上传输的input/output流。还有一种tty——有时候叫做伪tty（pseudo-ttys）的，它是由叫做”终端模拟器“的程序提供的（通过一个中间层），这种tty例如Xterm（运行在X window系统上），Screen（在一个程序和另一个终端之间提供了中间层），SSH（在另一台电脑上，通过程序连接另一台电脑上的终端），Expect（用脚本和终端交互）。</p>
+<p>The word terminal can also have a more traditional meaning of a device through which one interacts with a computer, typically with a keyboard and display. For example an X terminal is a kind of thin client, a special-purpose computer whose only purpose is to drive a keyboard, display, mouse and occasionally other human interaction peripherals（外围交互设备）, with the actual applications running on another, more powerful computer.</p>
+<p><code>terminal</code>这个词通常也有一个更加传统的意思，表示一台能够用来和电脑交互的设备——通常有显示器和键盘。<br>比如一个X terminal，它唯一的作用就是驱动键盘，显示器，鼠标，（偶尔还有）别的外围交互设备；而实际上程序是泡在另外一台更加强大的计算机上的。</p>
+<h3 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h3><blockquote>
+<p>A console is generally a terminal in the physical sense that is by some definition the primary terminal（主终端） directly connected to a machine. The console appears to the operating system as a (kernel-implemented) tty. On some systems, such as Linux and FreeBSD, the console appears as several ttys (special key combinations switch between these ttys); just to confuse matters, the name given to each particular tty can be “console”, ”virtual console”, ”virtual terminal”, and other variations.</p>
+</blockquote>
+<p>控制台通常是物理意义上的终端，其通过某种定义直接连接到机器的主终端。<br>在一些操作系统（比如Linux和FreeBSD）上console一般有好几个tty（用特定的组合键能够在这些tty之间切换）。有时候这些命名让人混乱，比如操作系统可能把那些tty叫做”console“ ”virtual console“ ”virtual terminal“之类的。</p>
+<p><a href="https://askubuntu.com/q/14284/1059" target="_blank" rel="noopener">Why is a Virtual Terminal “virtual”, and what/why/where is the “real” Terminal?</a></p>
+<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><blockquote>
+<p>A shell is the primary interface that users see when they log in, whose primary purpose is to start other programs. (I don’t know whether the original metaphor is that the shell is the home environment for the user, or that the shell is what other programs are running in.)</p>
+</blockquote>
+<p><code>shell</code>，作为用户登录系统时看到的主界面，它主要的用处就是启动别的程序。（我不确定原来的比喻义是指shell是用户的home环境，还是说shell是其他程序在里面跑的环境）</p>
+<p>In unix circles, <strong>shell has specialized to mean a command-line shell</strong>, centered around entering the name of the application one wants to start, followed by the names of files or other objects that the application should act on, and pressing the Enter key. Other types of environments don’t use the word “shell”; for example, window systems involve “window managers” and “desktop environments”, not a “shell”.</p>
+<p>在UNIX圈里，<strong>shell 特指命令行shell</strong>（并且围绕这这样的描述：  “输入你想要运行的应用名字，后面跟着参数，并按回车键。”） 其他类型的环境并不使用“shell”这个词，比如说窗口系统涉及了”窗口管理器“(window managers) 和”桌面环境“(desktop environments)，但并不使用”shell“这个词。</p>
+<p>There are many different unix shells. Popular shells for interactive use include Bash (the default on most Linux installations), zsh (which emphasizes power and customizability) and fish (which emphasizes simplicity).</p>
+<p>比较流行的交互式shell包括bash（大多数Linux发行版的默认选择） zsh（重视功能和可定制性） 还有fish（以简单为主旨）。</p>
+<p>In unix system administration, <strong>a user’s shell is the program that is invoked when they log in</strong>. Normal user accounts have a command-line shell, but users with restricted access may have a restricted shell or some other specific command (e.g. for file-transfer-only accounts).</p>
+<p>在UNIX系统管理中，一个用户的shell是那个在登录的时候被调用的程序。普通用户账户也拥有命令行shell，受限的用户（比如仅用于传输文件的账户）可能拥有一个受限的shell，或者只能运行特定命令的shell。</p>
+<h3 id="tasks-of-terminal-and-shell"><a href="#tasks-of-terminal-and-shell" class="headerlink" title="tasks of terminal and shell"></a>tasks of terminal and shell</h3><ul>
+<li><p><strong>Input</strong>: the <code>terminal</code> converts keys into control sequences (e.g. <code>Left</code> →<br><code>\e[D</code>). The <code>shell</code> converts control sequences into commands (e.g. <code>\e[D</code><br>→ <code>backward-char</code>).<br>终端把键盘操作转换成控制序列,shell再转换控制序列为命令</p>
+</li>
+<li><p>Line editing, input history and completion are provided by the <code>shell</code>.<br>The terminal may provide its own line editing, history and completion instead, and only send a line to the shell when it’s ready to be executed. The only common terminal that operates in this way is M-x shell in Emacs.<br>行编辑（line editon）中，输入历史和输入补全功能是shell提供的。<br>终端有时候会在它自己的行编辑功能中提供输入历史和输入补全功能，并且在命令要执行时通过line发送到shell中。唯一这样做的主流terminal就是Emacs里的M-x。</p>
+</li>
+<li><p>Output: the <code>shell</code> emits instructions such as “display foo”, “switch<br>the foreground color to green”, “move the cursor to the next line”,<br>etc. The <code>terminal</code> acts on these instructions.<br>输出：shell发出指令，而终端就响应这些指令。</p>
+</li>
+<li><p>The prompt is purely a <code>shell</code> concept.<br>命令提示符是纯粹的shell概念。</p>
+</li>
+<li><p>The <code>shell</code> never sees the output of the commands it runs (unless<br>redirected). Output history (scrollback) is purely a <code>terminal</code><br>concept.<br>shell永远看不到它所运行的命令的输出（除非重定向），输出历史（回滚）仅仅是个终端上的概念。</p>
+</li>
+<li><p>Inter-application copy-paste is provided by the <code>terminal</code> (usually<br>with the mouse or key sequences such as Ctrl+Shift+V or<br>Shift+Insert). The <code>shell</code> may have its own internal copy-paste<br>mechanism as well (e.g. Meta+W and Ctrl+Y).<br>应用程序之间的复制粘贴是由终端提供的（通常用鼠标，或者组合键，比如Ctrl+SHift+V 或Shift+Insert）。 Shell可能有它自己的内部复制粘贴机制（比如Meta+Y，Ctrl+Y）。</p>
+</li>
+<li><p>Job control (launching programs in the background and managing them)<br>is mostly performed by the <code>shell</code>. However, it’s the terminal that<br>handles key combinations like Ctrl+C to kill the foreground job and<br>Ctrl+Z to suspend it.<br>作业控制（在后台启动程序，并且管理这些程序）主要是由shell执行。不过，是由终端来处理组合键的（比如Ctrl+C 杀死前台程序，或者Ctrl+Z终止任务运行）。</p>
+</li>
+</ul>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-12T09:33:12.251Z" itemprop="dateUpdated">2018-09-12 17:33:12</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/05/01/terminal、shell、tty、console/" target="_blank" rel="external">https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&title=《terminal、shell、tty、console》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&title=《terminal、shell、tty、console》 — Renko's blog&source=无关本文比较的TTY
+TTY is a toolbox for developing beautiful command line clients in ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《terminal、shell、tty、console》 — Renko's blog&url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/05/06/YAML/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">YAML</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/01/Red Hat/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Red Hat</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&title=《terminal、shell、tty、console》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&title=《terminal、shell、tty、console》 — Renko's blog&source=无关本文比较的TTY
+TTY is a toolbox for developing beautiful command line clients in ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《terminal、shell、tty、console》 — Renko's blog&url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/05/01/terminal、shell、tty、console/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aW47jMAwEwNz/0rMHGNjbTVpGBih/BXk4KgWQlCY/n/j6ub1+v/Pqmd+Pr565evVz4sLDw8M7MPQrzP0X309BMvRkau6nGw8PD+8cb3PrZLLa1Xs/HXh4eHjfz0uO18m2kbDx8PDw/havHXobKySfwsPDw/sGXjugPITNh7UPfPHw8PDe4eVVpO95fKS+h4eHh7euqifFsPw4noe5yX2i0eLh4eEd4OULboJJjt3tp9qNAQ8PD+8d3iYUaBl5OJs0ftWHbzw8PLw1b5NezJqu2iNyHuNGJ3Q8PDy8Y7w8SmiX+NnG0zZp4eHh4Z3j5Yv+rMWq3TY2gy42OTw8PLw1Lw8RZpHBJvZtS3FFSo2Hh4c34s2W/s3he3bsniUMeHh4eKd5J0r7yTPJO9sC22f/i+Hh4eHFvH1ZaxPj7jeY/2wMeHh4eGteXspqQ4HZVjFrILh/jIeHh/cOry3btyFCG0O096xraHh4eHgxb1aS3zQKtPefjQ0PDw/vHG+2fLdlrXyaPvE1vBseHh7eQ7z2D38eT9zfcxYWt4EIHh4e3ju8Nj6YNWbNNqE6TMHDw8M7wJsN7qnwIt+WVuEFHh4e3gHerMC/b7HaNBbUVT48PDy8R3mbAbWNBe3BfYPHw8PDO8HLY4VZoJC3F8y+Parp4eHh4b3Ia//8zyLaPCBupwMPDw/vNK/OLUZDHMav+9IXHh4e3pr3U15tADGb73bbuHwVDw8P7wBvs9znrQZJa0IeUgxrenh4eHiP8vLNYBMozI7Is4jksgCGh4eH9yhv9jWz2PfZSOJ+c8LDw8P7Hl4eK+SfzRsCirIcHh4e3tfw9m1VM1LRboWHh4d3mLdqbIoX+mQS9xOEh4eHd5o3+8O/aQiYDejhmh4eHh7ehPcPJy5Uuc76re0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

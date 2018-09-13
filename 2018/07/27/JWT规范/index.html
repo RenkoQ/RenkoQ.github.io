@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>JWT规范 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="后台">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>JWT规范</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">JWT规范</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-07-27T03:26:30.000Z" itemprop="datePublished" class="page-time">
+  2018-07-27
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-JWT规范"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">JWT规范</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-27 11:26:30" datetime="2018-07-27T03:26:30.000Z"  itemprop="datePublished">2018-07-27</time>
+
+            
+
+
+            
+	<span id="/2018/07/27/JWT规范/" class="leancloud_visitors" data-flag-title="JWT规范" title="JWT规范">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/07/27/JWT规范/#comment">
+            <span class="valine-comment-count" data-xid="/2018/07/27/JWT规范/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>文章参考</p>
+<p><a href="https://jwt.io/introduction/" target="_blank" rel="noopener">Introduction to JSON Web Tokens</a></p>
+<p><a href="https://blog.leapoahead.com/2015/09/06/understanding-jwt/" target="_blank" rel="noopener">JSON Web Token - 在Web应用间安全地传递信息</a></p>
+<h3 id="JSON-Web-Token"><a href="#JSON-Web-Token" class="headerlink" title="JSON Web Token"></a>JSON Web Token</h3><p>使用JWT规范在用户和服务器之间传递安全可靠的信息。<br>适合用于向Web应用传递一些<strong>非敏感</strong>信息。</p>
+<a id="more"></a>
+<p><a href="https://en.wikipedia.org/wiki/JSON_Web_Token" target="_blank" rel="noopener">JSON Web Token</a></p>
+<blockquote>
+<p>JSON Web Token (JWT, sometimes pronounced /dʒɒt/) is a JSON-based open standard (RFC 7519) for creating access tokens that assert some number of claims.</p>
+</blockquote>
+<blockquote>
+<p>For example, a server could generate a token that has the claim “logged in as admin” and provide that to a client. The client could then use that token to prove that it is logged in as admin.</p>
+</blockquote>
+<blockquote>
+<p>The tokens are signed by the server’s key, so the client and server are both able to verify that the token is legitimate. The tokens are designed to be compact, URL-safe and usable especially in web browser single sign-on (SSO) context. JWT claims can be typically used to pass identity of authenticated users between an identity provider and a service provider, or any other type of claims as required by business processes. The tokens can also be authenticated and encrypted.</p>
+</blockquote>
+<h3 id="JSON-Web-Token-structure"><a href="#JSON-Web-Token-structure" class="headerlink" title="JSON Web Token structure"></a>JSON Web Token structure</h3><h4 id="头部（Header）"><a href="#头部（Header）" class="headerlink" title="头部（Header）"></a>头部（Header）</h4><p>描述类型以及签名所用的算法</p>
+<p>the type of the token, which is JWT, and the hashing algorithm being used, such as HMAC SHA256 or RSA.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"alg"</span>: <span class="string">"HS256"</span>,</span><br><span class="line">  <span class="attr">"typ"</span>: <span class="string">"JWT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进行Base64编码，之后的字符串就成了JWT的Header</p>
+<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+</code></pre><h4 id="载荷（Payload）"><a href="#载荷（Payload）" class="headerlink" title="载荷（Payload）"></a>载荷（Payload）</h4><p>Claims are statements about an entity (typically, the user) and additional metadata. There are three types of claims: registered, public, and private claims.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"iss"</span>: <span class="string">"John Wu JWT"</span>,</span><br><span class="line">    <span class="attr">"iat"</span>: <span class="number">1441593502</span>,</span><br><span class="line">    <span class="attr">"exp"</span>: <span class="number">1441594722</span>,</span><br><span class="line">    <span class="attr">"aud"</span>: <span class="string">"www.example.com"</span>,</span><br><span class="line">    <span class="attr">"sub"</span>: <span class="string">"jrocket@example.com"</span>,</span><br><span class="line">    <span class="attr">"from_user"</span>: <span class="string">"B"</span>,</span><br><span class="line">    <span class="attr">"target_user"</span>: <span class="string">"A"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>iss: 该JWT的签发者
+sub: 该JWT所面向的用户
+aud: 接收该JWT的一方
+exp(expires): 什么时候过期，这里是一个Unix时间戳
+iat(issued at): 在什么时候签发的
+</code></pre><p>将上面的JSON对象进行[base64编码]可以得到下面的字符串。这个字符串我们将它称作JWT的Payload（载荷）。</p>
+<pre><code>eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> base64url = <span class="built_in">require</span>(<span class="string">'base64url'</span>)</span><br><span class="line"><span class="keyword">var</span> header = &#123;</span><br><span class="line">    <span class="string">"from_user"</span>: <span class="string">"B"</span>,</span><br><span class="line">    <span class="string">"target_user"</span>: <span class="string">"A"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(base64url(<span class="built_in">JSON</span>.stringify(header)))</span><br><span class="line"><span class="comment">// 输出：eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9</span></span><br></pre></td></tr></table></figure>
+<h4 id="签名（Signature）"><a href="#签名（Signature）" class="headerlink" title="签名（Signature）"></a>签名（Signature）</h4><p>To create the signature part you have to take the <code>encoded header</code>, the <code>encoded payload</code>, a <code>secret</code>(密钥), the <code>algorithm specified in the header</code>, and sign that.</p>
+<p>使用HMAC SHA256 算法创建signature</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HMACSHA256(</span><br><span class="line">  base64UrlEncode(header) + <span class="string">"."</span> +</span><br><span class="line">  base64UrlEncode(payload),</span><br><span class="line">  secret)</span><br></pre></td></tr></table></figure>
+<p>将上面的两个编码后的字符串都用句号.连接在一起（头部在前），就形成了</p>
+<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
+</code></pre><p>如果我们用mystar作为密钥的话，那么就可以得到我们加密后的内容</p>
+<pre><code>rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM
+</code></pre><p>最后将这一部分签名也拼接在被签名的字符串后面，我们就得到了完整的JWT,然后更改URL等（?jwt=字符串）</p>
+<p><strong>Do not put secret information in the payload or header elements of a JWT unless it is encrypted.</strong></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-13T01:53:06.278Z" itemprop="dateUpdated">2018-09-13 09:53:06</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/07/27/JWT规范/" target="_blank" rel="external">https://renkoq.github.io/2018/07/27/JWT规范/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/07/27/JWT规范/&title=《JWT规范》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/07/27/JWT规范/&title=《JWT规范》 — Renko's blog&source=文章参考
+Introduction to JSON Web Tokens
+JSON Web Token - 在Web应用间安全地传递信息
+JSON Web..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JWT规范》 — Renko's blog&url=https://renkoq.github.io/2018/07/27/JWT规范/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/07/27/JWT规范/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/08/15/Node.js (一) Express/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Node.js (一) Express</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/13/word & git版本控制/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">word &amp; git版本控制</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/07/27/JWT规范/&title=《JWT规范》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/07/27/JWT规范/&title=《JWT规范》 — Renko's blog&source=文章参考
+Introduction to JSON Web Tokens
+JSON Web Token - 在Web应用间安全地传递信息
+JSON Web..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JWT规范》 — Renko's blog&url=https://renkoq.github.io/2018/07/27/JWT规范/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/07/27/JWT规范/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aO27DMBAFQN//0k6dwsp7SzmAyFEVIIzEYbHZD1+v+HkHz6eVn952/ZXXNx4MDIzHMtrN5R++5s0O5eMXMTAwDmAkm7iOdflf5QG3eAMGBgZGGQSTZPE6iGNgYGCsM5IQmaSS7RswMDBOZuQBtE0c8/A6C+4YGBgnMPKu+////JX5BgYGxqMYK836JF2bDRjqXWFgYGzNWE/sZk3/6yRvuB8MDIxjGO1n2mHASjius1cMDIwtGG0zKx9V3jVgiNZjYGAcwJhd1cqHB21Dvx4AYGBgHMCYtcNWgmY+BojWY2BgbM1YmQ+uvGd2NEsTWgwMjC0Y7eauN5E07NoxQ/E/BAMDYyNGW8S2hWuy6fy3t7XbMDAwHsVom27t+PP6DUn5WrAxMDAOYLTpXZvGrbTSoiPAwMA4hjG7ZtFej0hW1seEgYGxKSO/sNW20mbXL4bjBwwMjAMY188spM7GAO1M41fAxcDA2JQxm3a2l7pWDiJv3mFgYJzAaJtls9HCbGX0LQwMjMMY7XWHJClsV9aHhYGBcRhjOGGIk8X8i0UxjIGBsSnjXT53/W171eMPKgYGxtaM/MmvSrQdsLydt1JmY2BgPJ2RBMqVxLG9QpEXtBgYGKcx2ktjs7LzriEEBgYGRhJk2yJzfX3UdMPAwMAYFb15aZqXtbcFXAwMjEcxkiI2T+na5K8IrOu1OAYGxgMZeQDNr03kJe7KpjEwMA5g/ABU3pNh+7kIpgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

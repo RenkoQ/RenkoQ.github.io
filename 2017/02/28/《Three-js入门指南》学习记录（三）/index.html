@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>《Three.js入门指南》学习记录（三） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Three.js">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>《Three.js入门指南》学习记录（三）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">《Three.js入门指南》学习记录（三）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-28T07:07:29.000Z" itemprop="datePublished" class="page-time">
+  2017-02-28
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-《Three-js入门指南》学习记录（三）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">《Three.js入门指南》学习记录（三）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-02-28 15:07:29" datetime="2017-02-28T07:07:29.000Z"  itemprop="datePublished">2017-02-28</time>
+
+            
+
+
+            
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（三）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（三）" title="《Three.js入门指南》学习记录（三）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（三）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（三）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="1-立方体（CubeGeometry）"><a href="#1-立方体（CubeGeometry）" class="headerlink" title="1.立方体（CubeGeometry）"></a>1.立方体（CubeGeometry）</h4><pre><code>THREE.CubeGeometry(width, height,depth,widthSegments,heightSegments,depthSegments)
+</code></pre><p><code>width</code> : x 方向上的长度<br><code>height</code>: y 方向上的长度<br><code>depth</code>: z 方向上的长度<br>后三个参数分别是在三个方向上的分段数，如 widthSegments为3的话，代表x方向上水平分为三份。后三个参数的缺省值为 1。<br>（对六个面进行分段，而不是对立方体的体素分段）</p>
+<h4 id="2-平面（PlaneGeometry）"><a href="#2-平面（PlaneGeometry）" class="headerlink" title="2.平面（PlaneGeometry）"></a>2.平面（PlaneGeometry）</h4><pre><code>THREE.PlaneGeometry(width, height, widthSegments, heightSegments)
+</code></pre><h4 id="3-球体（SphereGeometry）"><a href="#3-球体（SphereGeometry）" class="headerlink" title="3.球体（SphereGeometry）"></a>3.球体（SphereGeometry）</h4><pre><code>THREE.SphereGeometry(radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength)
+</code></pre><p><code>radius</code>: 半径<br><code>segmentsWidth</code>: 表示经度上的切片<br><code>segmentsHeight</code>: 表示纬度上的切片数<br><code>phiStart</code>: 表示经度开始的弧度<br><code>phiLength</code>: 表示经度跨过的弧度<br><code>thetaStart</code>: 表示纬度开始的弧度<br><code>thetaLength</code>: 表示纬度跨过的弧度</p>
+<h4 id="4-圆形（CircleGeometry）"><a href="#4-圆形（CircleGeometry）" class="headerlink" title="4.圆形（CircleGeometry）"></a>4.圆形（CircleGeometry）</h4><pre><code>THREE.CircleGeometry(radius, segments, thetaStart, thetaLength)
+</code></pre><h4 id="5-圆柱体（CylinderGeometry）"><a href="#5-圆柱体（CylinderGeometry）" class="headerlink" title="5.圆柱体（CylinderGeometry）"></a>5.圆柱体（CylinderGeometry）</h4><pre><code>THREE.CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
+</code></pre><p><code>radiusTop</code> 顶面半径<br><code>radiusBottom</code> 底面半径<br><code>height</code> 圆柱体的高度；<br><code>radiusSegments</code> 与 <code>heightSegments</code> 可类比球体中的分段<br><code>openEnded</code> 是一个布尔值，表示是否没有顶面和底面，缺省值为 false ，表示有顶面和底面。</p>
+<h4 id="6-正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）"><a href="#6-正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）" class="headerlink" title="6.正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）"></a>6.正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）</h4><pre><code>THREE.TetrahedronGeometry(radius, detail)
+THREE.OctahedronGeometry(radius, detail)
+THREE.IcosahedronGeometry(radius, detail)
+</code></pre><p><code>radius</code> 半径<br><code>detail</code> 细节层次（Level of Detail）的层数，一般可以对这个值缺省   </p>
+<h4 id="7-圆环面（TorusGeometry）"><a href="#7-圆环面（TorusGeometry）" class="headerlink" title="7.圆环面（TorusGeometry）"></a>7.圆环面（TorusGeometry）</h4><pre><code>THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
+</code></pre><p> <code>radius</code> 圆环半径<br> <code>tube</code> 管道半径<br> <code>radialSegments</code> 与 <code>tubularSegments</code> 分别是两个分段数<br> <code>arc</code> 圆环面的弧度，缺省值为 Math.PI * 2     </p>
+<h4 id="8-文字形状（TextGeometry）"><a href="#8-文字形状（TextGeometry）" class="headerlink" title="8.文字形状（TextGeometry）"></a>8.文字形状（TextGeometry）</h4><pre><code>THREE.TextGeometry(text, parameters)
+</code></pre><p><code>text</code> 文字字符串<br><code>parameters</code> 是以下参数组成的对象：</p>
+<ul>
+<li>size ：字号大小，一般为大写字母的高度</li>
+<li>height ：文字的厚度</li>
+<li>curveSegments ：弧线分段数，使得文字的曲线更加光滑</li>
+<li>font ：字体，默认是 ‘helvetiker’ ，需对应引用的字体文件</li>
+<li>weight ：值为 ‘normal’ 或 ‘bold’ ，表示是否加粗</li>
+<li>style ：值为 ‘normal’ 或 ‘italics’ ，表示是否斜体</li>
+<li>bevelEnabled ：布尔值，是否使用倒角，意为在边缘处斜切</li>
+<li>bevelThickness ：倒角厚度</li>
+<li>bevelSize ：倒角宽度</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-2.5</span>, <span class="number">2.5</span>, <span class="number">1.875</span>, <span class="number">-1.875</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">            camera.position.set(<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> material = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                <span class="attr">color</span>: <span class="number">0xffff00</span></div><div class="line">            &#125;);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> loader = <span class="keyword">new</span> THREE.FontLoader();</div><div class="line">            loader.load(<span class="string">'gothical_Regular.json'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">font</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> mesh = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.TextGeometry(<span class="string">'Hello'</span>, &#123;</div><div class="line">                    <span class="attr">font</span>: font,</div><div class="line">                    <span class="attr">size</span>: <span class="number">1</span>,</div><div class="line">                    <span class="attr">height</span>: <span class="number">1</span></div><div class="line">                &#125;), material);</div><div class="line">                scene.add(mesh);</div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="9-自定义形状"><a href="#9-自定义形状" class="headerlink" title="9.自定义形状"></a>9.自定义形状</h4><pre><code>THREE.Geometry()
+</code></pre><p><a href="https://threejs.org/docs/index.html?q=ge#Reference/Core/Geometry" target="_blank" rel="external">https://threejs.org/docs/index.html?q=ge#Reference/Core/Geometry</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:35:47.144Z" itemprop="dateUpdated">2017-11-21 22:35:47</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/02/28/《Three-js入门指南》学习记录（三）/" target="_blank" rel="external">https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&title=《《Three.js入门指南》学习记录（三）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&title=《《Three.js入门指南》学习记录（三）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（三）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/02/28/《Three-js入门指南》学习记录（四）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">《Three.js入门指南》学习记录（四）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/28/《Three-js入门指南》学习记录（二）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">《Three.js入门指南》学习记录（二）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&title=《《Three.js入门指南》学习记录（三）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&title=《《Three.js入门指南》学习记录（三）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（三）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（三）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aQXIbMQwEQP3/084DZG9mCCJWqlonlSXtovdA0AO+XvHr6+31/un7+58+za/2/qvXxgsPDw9vXPr75Z7/khf6XG7+4JKa8fDw8LZ5PxWRXPq59Oe2sfcdPDw8vM/hPe9dkyvnG+XnRoWHh4f3f/E2lv6chIeHh/cJvCSMmCSoSUSbhxcrWQseHh5ezMsL/Zz3K/M9PDw8vPFUPY9rzxblvG0cVouHh4e3wGsj2mQMli/r7XGrszrx8PDw9niT0tsB2Dz2LSrBw8PDW+Alg/x8u3zr0OqtCBgPDw/vLq+NG9qR1dlBgeRxRPXg4eHhrfEmZT2HrXPSaLKHh4eHt8w7O/CU8J5bThsWF0ev8PDw8BZ47eKbXK69fR491KMvPDw8vDVee7ApWdzzZtNuqfM2g4eHh7fHyyPds2i1hZ1trF9tT8PDw8M74uXBQRvd5kWcRQ9RfouHh4e3xss3snkpedhxawhXf4yHh4d3deZ+thAnhebf2TiCgIeHh3eLNxll5dFqPvqanKf65mp4eHh4C7yzEf5Z9DAJec+OIODh4eHd5bWhbTIGa0dZ7eY7DzXw8PDwtnlnY/5JbNEi67vj4eHhrfHq81nlYj1pAJNDCXh4eHgbvFsLd8srDk7FLSoKhfHw8PAu8c5C2El40TJGd8HDw8Nb47VxQLupzVvIWShch7l4eHh4Y95ZY2gHaW3424Yjl/seHh4eXrwct5vatqCzouswAg8PD2+BN7/02SY4aQ93N/R4eHh4d3l3m0FyhbMt9YUBGB4eHt5V3nxylNy+DSzyphWl1Hh4eHi/yktKT6hnsUJxgAAPDw/vA3g5bP7bdp6Fh4eH9y95SRjRbqzbR3m2Hf/L3/Hw8PAWePN/+HNqvawPHgEeHh7eAu8P0HiwJQ4sgI4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

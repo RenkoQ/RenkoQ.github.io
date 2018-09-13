@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Google 地图 JavaScript API（一） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,MAP">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Google 地图 JavaScript API（一）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Google 地图 JavaScript API（一）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-01T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2017-12-02
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Google 地图 JavaScript API（一）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Google 地图 JavaScript API（一）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-02 00:00:00" datetime="2017-12-01T16:00:00.000Z"  itemprop="datePublished">2017-12-02</time>
+
+            
+
+
+            
+	<span id="/2017/12/02/Google 地图 JavaScript API（一）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（一）" title="Google 地图 JavaScript API（一）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/12/02/Google 地图 JavaScript API（一）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/12/02/Google 地图 JavaScript API（一）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>根据udacity课程学习的笔记。</p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
+<h3 id="1-首先需要在控制台创建一个项目。"><a href="#1-首先需要在控制台创建一个项目。" class="headerlink" title="1. 首先需要在控制台创建一个项目。"></a>1. 首先需要在<a href="https://console.developers.google.com" target="_blank" rel="external">控制台</a>创建一个项目。</h3><h3 id="2-然后启用API。"><a href="#2-然后启用API。" class="headerlink" title="2. 然后启用API。"></a>2. 然后启用API。</h3><pre><code>[Google Maps JavaScript API](https://console.developers.google.com/apis/library/maps-backend.googleapis.com)
+
+
+
+[Google Maps Roads API][4]
+[Google Static Maps API][5]
+[Google Street View Image API][6]
+[Google Places API Web Service][7]
+[Google Maps Geocoding API][8]
+[Google Maps Geolocation API][9]
+[Google Maps Directions API][10]
+[Google Maps Distance Matrix API][11]
+[Google Maps Elevation API][12]
+[Google Maps Time Zone API][13]
+</code></pre><h3 id="3-创建凭据"><a href="#3-创建凭据" class="headerlink" title="3. 创建凭据"></a>3. 创建凭据</h3><pre><code>创建 API 密钥，在您的应用中使用此密钥的方法是：使用 key=API_KEY 参数传递此密钥。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 用于异步加载API --&gt;</div><div class="line">&lt;script async defer</div><div class="line">    src=&quot;https://maps.googleapis.com/maps/api/js?key=填写api密钥&amp;v=3&amp;callback=initMap&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="4-创建地图"><a href="#4-创建地图" class="headerlink" title="4. 创建地图"></a>4. 创建地图</h3><p><code>a lat long literal</code>经纬度字面量</p>
+<p><a href="https://google-developers.appspot.com/maps/documentation/utils/geocoder/" target="_blank" rel="external">获取特定位置的坐标</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> map;</div><div class="line"><span class="comment">//加载地图</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// Constructor creates a new map - only center and zoom are required.</span></div><div class="line">  map = <span class="keyword">new</span> google.maps.Map(<span class="built_in">document</span>.getElementById(<span class="string">'map'</span>), &#123;</div><div class="line">    <span class="comment">//中心 纬度 经度</span></div><div class="line">    center: &#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;,</div><div class="line">    <span class="comment">//缩放值 越高越详细</span></div><div class="line">    zoom: <span class="number">13</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a> 
+<h3 id="5-标记Marker"><a href="#5-标记Marker" class="headerlink" title="5. 标记Marker"></a>5. 标记Marker</h3><p>标记用来标识地图上的位置。<br><a href="https://developers.google.com/maps/documentation/javascript/markers" target="_blank" rel="external">文档</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建寝室标识</span></div><div class="line"><span class="keyword">var</span> dorm  =&#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;;</div><div class="line"><span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">  <span class="comment">//放置位置</span></div><div class="line">  position: dorm,</div><div class="line">  <span class="attr">map</span>: map,</div><div class="line">  <span class="attr">title</span>: <span class="string">'My Dorm'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="6-信息窗口InfoWindow"><a href="#6-信息窗口InfoWindow" class="headerlink" title="6. 信息窗口InfoWindow"></a>6. 信息窗口InfoWindow</h3><p>在地图上方给定位置的弹出窗口中显示内容（通常为文本或图像）。<br><a href="https://developers.google.com/maps/documentation/javascript/infowindows" target="_blank" rel="external">文档</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建信息窗口</span></div><div class="line"><span class="keyword">var</span> infowindow = <span class="keyword">new</span> google.maps.InfoWindow(&#123;</div><div class="line">  <span class="attr">content</span>: <span class="string">'this is a infowindow'</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">//因为窗口不会自动打开，所以在事件监听器中调用方法</span></div><div class="line">marker.addListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//传入窗口打开的地图和固定它的标记(后者可换为位置属性)</span></div><div class="line">  infowindow.open(map,marker);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-11T10:29:12.557Z" itemprop="dateUpdated">2017-12-11 18:29:12</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/12/02/Google 地图 JavaScript API（一）/" target="_blank" rel="external">https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&title=《Google 地图 JavaScript API（一）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&title=《Google 地图 JavaScript API（一）》 — Renko's blog&source=根据udacity课程学习的笔记。
+教程和文档
+Google Maps JavaScript API V3 Reference
+1. 首先需要在控制台创建..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Google 地图 JavaScript API（一）》 — Renko's blog&url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/12/02/Google 地图 JavaScript API（二）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Google 地图 JavaScript API（二）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/19/Hyperledger Composer（一）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hyperledger Composer（一）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&title=《Google 地图 JavaScript API（一）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&title=《Google 地图 JavaScript API（一）》 — Renko's blog&source=根据udacity课程学习的笔记。
+教程和文档
+Google Maps JavaScript API V3 Reference
+1. 首先需要在控制台创建..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Google 地图 JavaScript API（一）》 — Renko's blog&url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（一）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3awW4iMRAEUP7/p3evKyVAVdudsNKbEwrD4OdIdlPtxyO+/oyu/LNf7/z3L19fX77w8PDwrg799T3PBpHf2Y4zHzMeHh7eNi953OtJeX3ns6W//a58zHh4eHifwyseHS/ueT2Mh4eH9//yXi/xJ8X0yRPw8PDwfpKXhwivi93XRXDynDzevZy14OHh4cW8WYT6u69X+nt4eHh4CwcCksJ3FjS020M0Wjw8PLwFXhu/to2rnNEGE8U48fDw8K7yZrCTAKJtnuWRxDefwsPDw1vgPXt0e+ypjQzacrw92vVIMHh4eHgj3nnbKT9k0Gats0bXN1sCHh4e3gIv/9l/cv95xFC/i4eHh7fAa8vl/AuS8rctpodxMB4eHt5V3nnLKpmatkxvt5mnI8TDw8Nb4CU/+NswYjZZs7ZZFHng4eHhLfDyW5MN4GToM1IEw8PDw1vgnbSdTqLb15FEHnO8mRo8PDy8H+E9Dq5kS5gdNZiV3Xh4eHgbvDaeOAkXzjekWSyCh4eHd4t3axHPp6OOX0eFOx4eHt4GL1mykzi1jVbzwGK2/eDh4eH9Fm/WUWpba20JXoQpeHh4eAu8tjGfN5y2l/4Lxwjw8PDwRrx2sZ7FBO1BhFks8s234+Hh4S3w2mHNNpKTg1NtTPx0tHh4eHhXebPFup2ItqmWP+fNPwAPDw9vmXerxdUW0ydHEOqTEXh4eHiXeEn8uhH1ztpveTSMh4eHd5d3lF7E09HC8ubZm3fx8PDwFnizxTfabUah7fmWM9xm8PDw8EpeshnMwtY8wM2no30aHh4e3h5vtqC3hwmSTaXdu97cj4eHh/eRvLblPwuF2zHj4eHhfRqvDWrzJ+QTFIW2eHh4eGu8pMxtDz+dhBfXNgw8PDy8Bd75D/5Z+6otxPOjCXh4eHhrvL+jBivwSMSqWgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>《Three.js入门指南》学习记录（五） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Three.js">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>《Three.js入门指南》学习记录（五）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">《Three.js入门指南》学习记录（五）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-28T07:08:07.000Z" itemprop="datePublished" class="page-time">
+  2017-02-28
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-《Three-js入门指南》学习记录（五）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">《Three.js入门指南》学习记录（五）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-02-28 15:08:07" datetime="2017-02-28T07:08:07.000Z"  itemprop="datePublished">2017-02-28</time>
+
+            
+
+
+            
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（五）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（五）" title="《Three.js入门指南》学习记录（五）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（五）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="1-每秒帧数-FPS（Frames-Per-Second）"><a href="#1-每秒帧数-FPS（Frames-Per-Second）" class="headerlink" title="1.每秒帧数 FPS（Frames Per Second）"></a>1.每秒帧数 FPS（Frames Per Second）</h4><p>对于Three.js 动画而言，一般 FPS 在 30 到 60 之间都是可取的。</p>
+<h4 id="2-setInterval-方法"><a href="#2-setInterval-方法" class="headerlink" title="2.setInterval 方法"></a>2.setInterval 方法</h4><pre><code>setInterval(func, msec)
+</code></pre><p>其中， <code>func</code> 是每过 <code>msec</code> 毫秒执行的函数，如果将 <code>func</code>定义为重绘画面的函数，就能实<br>现动画效果。 <code>setInterval</code> 函数返回一个 <code>id</code> ，如果需要停止重绘，需要使用<br><code>clearInterval</code> 方法，并传入该 <code>id</code></p>
+<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    <span class="keyword">var</span> scene = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> camera = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> renderer = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> mesh = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> id = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> stat = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat = <span class="keyword">new</span> Stats();</div><div class="line">        stat.domElement.style.position = <span class="string">'absolute'</span>;</div><div class="line">        stat.domElement.style.right = <span class="string">'0px'</span>;</div><div class="line">        stat.domElement.style.top = <span class="string">'0px'</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(stat.domElement);</div><div class="line"></div><div class="line">        renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">            <span class="attr">canvas</span>: <span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">        &#125;);</div><div class="line">        renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">        scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line"></div><div class="line">        camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-5</span>, <span class="number">5</span>, <span class="number">3.75</span>, <span class="number">-3.75</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">        camera.position.set(<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>);</div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">        scene.add(camera);</div><div class="line"></div><div class="line">        mesh = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</div><div class="line">                <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</div><div class="line">                    <span class="attr">color</span>: <span class="number">0xffff00</span></div><div class="line">                &#125;));</div><div class="line">        scene.add(mesh);</div><div class="line"></div><div class="line">        <span class="keyword">var</span> light = <span class="keyword">new</span> THREE.DirectionalLight(<span class="number">0xffffff</span>);</div><div class="line">        light.position.set(<span class="number">20</span>, <span class="number">10</span>, <span class="number">5</span>);</div><div class="line">        scene.add(light);</div><div class="line"></div><div class="line">        id = setInterval(draw, <span class="number">20</span>);  <span class="comment">//每 20 毫秒执行 draw 函数</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat.begin();</div><div class="line"></div><div class="line">        mesh.rotation.y = (mesh.rotation.y + <span class="number">0.01</span>) % (<span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">        renderer.render(scene, camera);</div><div class="line"></div><div class="line">        stat.end();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (id !== <span class="literal">null</span>) &#123;</div><div class="line">            clearInterval(id);</div><div class="line">            id = <span class="literal">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:35:36.338Z" itemprop="dateUpdated">2017-11-21 22:35:36</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/02/28/《Three-js入门指南》学习记录（五）/" target="_blank" rel="external">https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&title=《《Three.js入门指南》学习记录（五）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&title=《《Three.js入门指南》学习记录（五）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（五）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">第一人称视角(FPV)Three.js相机控件</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/28/《Three-js入门指南》学习记录（四）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">《Three.js入门指南》学习记录（四）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&title=《《Three.js入门指南》学习记录（五）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&title=《《Three.js入门指南》学习记录（五）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（五）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（五）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3a3Y6jMAwGUN7/pWe1cztL+/kndFY6XFWUkpxUwsbOdcXH1/fx+vPdr35e//O4G+vuPssHHh4eXmvqrwe+m2IyiWRyOTKfMx4eHt5pXhIMJkO+ZufX5HPGw8PD+w28atpdTbiTfBgPDw/v/+IlZ/KleR1UesuNh4eH9yQvKUYk5Ynkt/lyVEfEw8PDe4a31QB78vMH+nt4eHh4ceG12uDP0/E8bDRni4eHh3eAl7ftTxQgeqMnM7kmA+Dh4eG1MtLJNqxeAbd6Tf4tHh4e3i5vXlrtnclLwFGL626J8fDw8A7weiEh3z5VDS3NSecbufDw8PDGvMnrfXWjQM7Og0G5a4eHh4e3yqsmu73lOLHQt9fg4eHhHeDlaetuoXZ38+ubsISHh4e3yusN09tctZVSJ4s1WkU8PDy8gFdNc3cZ1TBQOI+Hh4d3gNcrs/ZaWfMrC28JeZcMDw8Pr8jLt1LlBd9qmbU6bqExhoeHh/cIr1dyrRYv5gl69Ffh4eHhHeblr/q9h3g1iZ+Uhq/eOuHh4eEVeVXSfAPWpKSbfIuHh4d3jpdMrteC6m0R6C0THh4e3jO8rXS217KqInubtPDw8PB2eXlhNCkcbLX8JxsXmnVfPDw8vCIvT4XzRDnHV9tvhVCBh4eHd5iXNKgmra9Jgl6925utA3h4eHgDXu+hvMWrPuib6TUeHh7eKq+XKFfP5Ml0dcnepOZ4eHh4H+JNtghU75yXfcvJNB4eHt4SLz+q5ddJolwtNzRJeHh4eANe/sjubdKaP+6r4+Lh4eE9wyu85LeKDvmkJyWJf1Dx8PDwPsrbTaOrASBf+mZgwMPDwzvM2ypn5El2NcDg4eHhneblranXvHxRJoxCKMLDw8M7wNt6rFdLvdUJ5Wn6dSJq4eHh4f09/gA1cCvwvJKfIAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

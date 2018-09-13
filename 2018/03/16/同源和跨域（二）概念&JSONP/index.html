@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>同源和跨域（二）概念&amp;JSONP | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>同源和跨域（二）概念&amp;JSONP</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">同源和跨域（二）概念&amp;JSONP</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-16T04:43:11.000Z" itemprop="datePublished" class="page-time">
+  2018-03-16
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-同源和跨域（二）概念&amp;JSONP"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">同源和跨域（二）概念&JSONP</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-16 12:43:11" datetime="2018-03-16T04:43:11.000Z"  itemprop="datePublished">2018-03-16</time>
+
+            
+
+
+            
+	<span id="/2018/03/16/同源和跨域（二）概念&JSONP/" class="leancloud_visitors" data-flag-title="同源和跨域（二）概念&JSONP" title="同源和跨域（二）概念&JSONP">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/16/同源和跨域（二）概念&JSONP/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/16/同源和跨域（二）概念&JSONP/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><pre><code>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。
+</code></pre><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><h3 id="1-跨域类型"><a href="#1-跨域类型" class="headerlink" title="1. 跨域类型"></a>1. 跨域类型</h3><table>
+<thead>
+<tr>
+<th>URL</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:center">是否允许通信</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名下</td>
+<td style="text-align:center">允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/lab/a.js" target="_blank" rel="external">http://www.a.com/lab/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/script/b.js" target="_blank" rel="external">http://www.a.com/script/b.js</a></td>
+<td style="text-align:right">同一域名下不同文件夹</td>
+<td style="text-align:center">允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com:8000/a.js" target="_blank" rel="external">http://www.a.com:8000/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同端口</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="https://www.a.com/b.js" target="_blank" rel="external">https://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同协议</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://70.32.92.74/b.js" target="_blank" rel="external">http://70.32.92.74/b.js</a></td>
+<td style="text-align:right">域名和域名对应ip</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://script.a.com/b.js" target="_blank" rel="external">http://script.a.com/b.js</a></td>
+<td style="text-align:right">主域相同，子域不同</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://a.com/b.js" target="_blank" rel="external">http://a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同二级域名（同上）</td>
+<td style="text-align:center">不允许（cookie这种情况下也不允许访问）</td>
+</tr>
+<tr>
+<td><a href="http://www.cnblogs.com/a.js" target="_blank" rel="external">http://www.cnblogs.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">不同域名</td>
+<td style="text-align:center">不允许</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-跨域方案"><a href="#2-跨域方案" class="headerlink" title="2. 跨域方案"></a>2. 跨域方案</h3><p>顶级域名相同的可以通过domain.name来解决，即同时设置 domain.name = 顶级域名（如example.com）</p>
+<p>document.domain + iframe</p>
+<p>window.name + iframe</p>
+<p>location.hash + iframe</p>
+<p>window.postMessage()</p>
+<h3 id="3-JSONP"><a href="#3-JSONP" class="headerlink" title="3. JSONP"></a>3. JSONP</h3><a id="more"></a>
+<pre><code>JSON with Padding其本质是利用了&lt;script src=&quot;&quot;&gt;&lt;/script&gt;标签具有可跨域的特性，由服务端返回一个预先定义好的Javascript函数的调用，并且将服务器数据以该函数参数的形式传递过来，此方法需要前后端配合完成。
+</code></pre><p><strong>只能以GET方式请求</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> </div><div class="line"></div><div class="line">    <span class="comment">// echo "alert('hello')";</span></div><div class="line"></div><div class="line">    $callBack = $_GET[<span class="string">'callback'</span>];</div><div class="line"></div><div class="line">    $arr = <span class="keyword">array</span>(</div><div class="line"></div><div class="line">        <span class="string">'name'</span> =&gt;<span class="string">'flower'</span> ,</div><div class="line"></div><div class="line">        <span class="string">'color'</span> =&gt;<span class="string">'red'</span> </div><div class="line"></div><div class="line">         );</div><div class="line"></div><div class="line">    <span class="keyword">echo</span> $callBack.<span class="string">"("</span>.json_encode($arr).<span class="string">")"</span>;</div><div class="line"></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<p>核心是通过script标签的src属性提交get请求</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"></div><div class="line">        function fn(data)&#123;</div><div class="line"></div><div class="line">            console.log(data);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">'http://www.section02.com/seciton02_jsonP.php?callback=fn'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>区域1的页面_jsonP演示<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="4-jQuery-的-ajax-使用JSONP"><a href="#4-jQuery-的-ajax-使用JSONP" class="headerlink" title="4. jQuery 的$.ajax() 使用JSONP"></a>4. jQuery 的$.ajax() 使用JSONP</h3><pre><code>方法当中集成了JSONP的实现，可以非常方便的实现跨域数据的访问。
+</code></pre><p><code>dataType: &#39;jsonp&#39;</code> 设置dataType值为jsonp即开启跨域访问</p>
+<p><code>jsonp</code> 可以指定服务端接收的参数的“key”值，默认为callback</p>
+<p><code>jsonpCallback</code> 可以指定相应的回调函数，默认自动生成    </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">'jquery/jquery-3.0.0.min.js'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>区域1的页面<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">onclick</span>=<span class="string">'sendAjax()'</span> <span class="attr">value</span>=<span class="string">"jquery区域请求"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"></div><div class="line">    function sendAjax()&#123;</div><div class="line"></div><div class="line">        $.ajax(&#123;</div><div class="line"></div><div class="line">            url:'http://www.section02.com/sectcion02_jqJsonp.php',</div><div class="line"></div><div class="line">            type:'post',</div><div class="line"></div><div class="line">            dataType: 'jsonp',</div><div class="line"></div><div class="line">            data:&#123;name:'itt'&#125;,</div><div class="line"></div><div class="line">            success:function(data)&#123;</div><div class="line"></div><div class="line">                console.log(data);</div><div class="line"></div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;)</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>通过$.getJSON(）实现跨域</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在地址中加上callback=?参数即可</span></div><div class="line">$.getJSON(<span class="string">"https://api.douban.com/v2/book/search?q=javascript&amp;count=1&amp;callback=?"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data);</div><div class="line">            &#125;);</div></pre></td></tr></table></figure>
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-21T15:39:31.918Z" itemprop="dateUpdated">2018-03-21 23:39:31</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/03/16/同源和跨域（二）概念&amp;JSONP/" target="_blank" rel="external">https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&amp;JSONP/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&title=《同源和跨域（二）概念&JSONP》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&title=《同源和跨域（二）概念&JSONP》 — Renko's blog&source=同源同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。
+跨域1. 跨域类型
+
+
+URL
+说明
+是否允许通信
+
+
+
+
+http://w..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（二）概念&JSONP》 — Renko's blog&url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/17/同源和跨域（三）Fetch API/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">同源和跨域（三）Fetch API</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/15/同源和跨域（一）Ajax/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">同源和跨域（一）Ajax</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#同源"><span class="post-toc-number">1.</span> <span class="post-toc-text">同源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域"><span class="post-toc-number">2.</span> <span class="post-toc-text">跨域</span></a></li></ol>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&title=《同源和跨域（二）概念&JSONP》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&title=《同源和跨域（二）概念&JSONP》 — Renko's blog&source=同源同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。
+跨域1. 跨域类型
+
+
+URL
+说明
+是否允许通信
+
+
+
+
+http://w..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（二）概念&JSONP》 — Renko's blog&url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/16/同源和跨域（二）概念&JSONP/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aQW4DMQgF0Nz/0q3UVaV2Jh8waSo9r6LE8vjNwhDw4xGPj6/x85vv42rm1WpXa17NSVZuDjw8PLzW1q9GsvT9/GSde9j9nKs94+Hh4W3zkkfmv95vovqU/HXj4eHhvRsv31wSSCbf4OHh4f0X3qQMMd8uHh4e3rvxkmJEEiqqx/2kqHG41oKHh4cX86oNsHf4vNjfw8PDwxt01aujenxXg015P3h4eHgLvDw5Th5WTYvz5lmedj/yhfDw8PBavGr7v3dRoBcGqhcIfvmMh4eHt8CrNpOSJtY8Ha8m2U9m4uHh4R3lJWlrrx11/zqq6fKBSwN4eHh4h3hnA8N9eKg+Ny8Qvyju4eHh4QXHdL7d5IjPS7r3W8+DCh4eHt4271TSPC9k5Dt5UnTGw8PDW+BNShKThlavMFENLXh4eHjbvB519OD4gkKy8pO3iIeHh7fMy0lJsaD3uReQosCAh4eHN+BVE9Z8Tq8ZVi1PPAkSeHh4eAu8avu/WrRNju9JUThaAQ8PD2+B11uuV57oBZ5T4QcPDw/vFG9eSiinueMiciEY4OHh4S3wemWF3tWoaiHjVJMMDw8Pb4P3+rZWb/3J+Y+Hh4c3583Lqc03V3yJ+Td4eHh427zeX/28ZJDPrybTSeDBw8PD2+NVr1vdL5TzzpZ0Cz09PDw8vDHv7BF/qjAxeaF4eHh4r+Tll5yapYHinEdr/PKPAQ8PD+8Q76M48oS7GjB64eQ+sOHh4eFt8JqRZBAqksBwKkHHw8PD2+NNgkE1Kc+LC3ki3rw6gIeHhzfm5S2x6rGeF2p7aTEeHh7e/+JVCwqT6wLNCwR4eHh4f8rrtfbzjVaT8ugCAR4eHt4ar5f49sqvvRJtMwXHw8PDW+BVG2DNHlrcVMuDzbFd4eHh4aW7+gSvdtpPFVONIAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

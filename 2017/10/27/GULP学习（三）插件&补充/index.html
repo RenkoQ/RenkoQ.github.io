@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>GULP学习（三）插件&amp;补充 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,gulp">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>GULP学习（三）插件&amp;补充</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">GULP学习（三）插件&amp;补充</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-10-26T16:01:00.000Z" itemprop="datePublished" class="page-time">
+  2017-10-27
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-GULP学习（三）插件&amp;补充"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">GULP学习（三）插件&补充</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-10-27 00:01:00" datetime="2017-10-26T16:01:00.000Z"  itemprop="datePublished">2017-10-27</time>
+
+            
+
+
+            
+	<span id="/2017/10/27/GULP学习（三）插件&补充/" class="leancloud_visitors" data-flag-title="GULP学习（三）插件&补充" title="GULP学习（三）插件&补充">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/27/GULP学习（三）插件&补充/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/27/GULP学习（三）插件&补充/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>整理一些网上查到的资料(已注明出处、侵删)，再对gulp相关进行补充。</p>
+<p><a href="https://github.com/Platform-CUF/use-gulp" target="_blank" rel="external">use-gulp</a><br><a href="https://gulpjs.com/plugins/" target="_blank" rel="external">gulp插件网</a><br><a href="https://github.com/alferov/awesome-gulp" target="_blank" rel="external">awesome-gulp</a><br><a href="http://www.tangshuang.net/3126.html" target="_blank" rel="external">gulp中文入门教程</a></p>
+<h3 id="1-为静态文件添加-MD5-指纹-foot1"><a href="#1-为静态文件添加-MD5-指纹-foot1" class="headerlink" title="1. 为静态文件添加 MD5 指纹^foot1"></a>1. 为静态文件添加 MD5 指纹<a href="https://zhuanlan.zhihu.com/p/24975955" target="_blank" rel="external">^foot1</a></h3><p>使用 Gulp 自动对 HTML 中引用的静态文件添加<code>MD5 指纹戳</code>，有效解决旧文件缓存，新文件无法更新的问题。</p>
+<p><code>MD5</code>的作用是让大容量信息在用数字签名软件签署私人密钥前被”压缩”成一种保密的格式（就是把一个任意长度的字节串变换成一定长的十六进制数字串）。</p>
+<p><a href="https://www.npmjs.com/package/gulp-rev" target="_blank" rel="external">gulp-rev</a></p>
+<blockquote>
+<p> Static asset revisioning by appending content hash to filenames: unicorn.css → unicorn-d41d8cd98f.css</p>
+</blockquote>
+<p>完美规避更新时短时间内客户端请求结果不一致的问题，但易造成文件冗余。</p>
+<p><a href="https://www.npmjs.com/package/gulp-rev-append" target="_blank" rel="external">gulp-rev-append</a></p>
+<pre><code>转换后变为&lt;script src=&apos;BearD01001.min.js?rev=366dc531e1&apos;&gt;&lt;/script&gt;
+</code></pre><p>每次更新不会产生新文件，有效避免文件冗余，但更新时短时间内，客户端请求到的静态文件可能不一致。</p>
+<pre><code>$ npm install --save-dev gulp-rev --save-dev
+$ npm install --save-dev gulp-rev-append --save-dev
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">const</span> rev = <span class="built_in">require</span>(<span class="string">'gulp-rev'</span>);</div><div class="line"><span class="comment">// const revAppend = require('gulp-rev-append');</span></div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, () =&gt;</div><div class="line">	gulp.src(<span class="string">'src/*.css'</span>)</div><div class="line">		.pipe(rev())</div><div class="line">		<span class="comment">// .pipe(revAppend())</span></div><div class="line">		.pipe(gulp.dest(<span class="string">'dist'</span>))</div><div class="line">);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-JS-CSS-合并"><a href="#2-JS-CSS-合并" class="headerlink" title="2. JS / CSS 合并"></a>2. JS / CSS 合并</h3><p><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="external">gulp-concat</a></p>
+<p>合并javascript文件，减少网络请求，减少冗余</p>
+<pre><code>$ npm install gulp-concat --save-dev 
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'scripts'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//return gulp.src('./lib/*.js')</span></div><div class="line">  <span class="keyword">return</span> gulp.src([<span class="string">'./lib/file3.js'</span>, <span class="string">'./lib/file1.js'</span>, <span class="string">'./lib/file2.js'</span>])</div><div class="line">    .pipe(concat(<span class="string">'all.js'</span>)) <span class="comment">//合并后的文件名</span></div><div class="line">    .pipe(gulp.dest(<span class="string">'./dist/'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="3-CSS小图标转码为-base64-编码"><a href="#3-CSS小图标转码为-base64-编码" class="headerlink" title="3. CSS小图标转码为 base64 编码"></a>3. CSS小图标转码为 base64 编码</h3><p><a href="https://zh.wikipedia.org/wiki/Base64" target="_blank" rel="external">Base64</a></p>
+<blockquote>
+<p>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。<br>Base64常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据。包括MIME的email、在XML中存储复杂数据。例如迅雷的“专用地址”也是用 Base64 加密的。</p>
+</blockquote>
+<p>图片的 base64 编码就是可以将一副图片数据编码成一串字符串，使用该字符串代替图像地址。<br>如果图片足够小且因为用处的特殊性无法被制作成雪碧图（CssSprites），在整个网站的复用性很高且基本不会被更新，此时使用 base64 编码传输图片。（例如平铺图作为background-image）</p>
+<p>图片的下载始终都要向服务器发出请求，将 CSS 中引用的小图标转码为 base64 编码的 data URI 字符串，减少额外的 http 请求数。</p>
+<p><strong>显示图片的 base64 编码</strong><br>在 chrome 下新建一个窗口，然后把要转化的图片直接拖入浏览器，打开控制台，点 Source，如下图所示，点击图片，右侧就会显示该图片的 base64 编码。<a href="http://www.cnblogs.com/coco1s/p/4375774.html" target="_blank" rel="external">^foot2</a></p>
+<p><strong>使用 Base64 不代表性能优化</strong><br>使用 Base64 的好处是能够减少一个图片的 HTTP 请求，代价则是 CSS 文件体积的增大，引起CRP 的阻塞。页面解析 CSS 生成的 CSSOM 时间增加。</p>
+<blockquote>
+<p><code>CRP（Critical Rendering Path，关键渲染路径）</code>：当浏览器从服务器接收到一个HTML页面的请求时，到屏幕上渲染出来要经过很多个步骤。浏览器完成这一系列的运行，或者说渲染出来我们常常称之为“关键渲染路径”。</p>
+<p><code>CSS 对象模型 (CSSOM)</code>：CSSOM是一个建立在web页面上的 CSS 样式的映射，它和DOM类似，但是只针对CSS而不是HTML。</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/gulp-base64" target="_blank" rel="external">gulp-base64</a></p>
+<pre><code>$ npm install gulp-base64 --save-dev
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var gulp = require('gulp');</div><div class="line">var base64 = require('./build/gulp-base64');</div><div class="line"></div><div class="line">//basic example</div><div class="line">gulp.task('build', function () &#123;</div><div class="line">    return gulp.src('./css/*.css')</div><div class="line">        .pipe(base64())</div><div class="line">        .pipe(concat('main.css'))</div><div class="line">        .pipe(gulp.dest('./public/css'));</div><div class="line">&#125;);</div><div class="line">...</div><div class="line">//example with options</div><div class="line">gulp.task('build', function () &#123;</div><div class="line">    return gulp.src('./css/*.css')</div><div class="line">        .pipe(base64(&#123;</div><div class="line">            baseDir: 'public',</div><div class="line">            extensions: ['svg', 'png', /\.jpg#datauri$/i],</div><div class="line">            exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],</div><div class="line">            maxImageSize: 8*1024, // bytes,</div><div class="line">            deleteAfterEncoding: false,</div><div class="line">            debug: true</div><div class="line">        &#125;))</div><div class="line">        .pipe(concat('main.css'))</div><div class="line">        .pipe(gulp.dest('./public/css'));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>在 extensions 参数中可以使用正则（例如：<code>/\.jpg#datauri$/i</code>）匹配带有指定 hash 的引用文件，这样在开发过程中就可以通过在文件末尾加上对应的 hash （例如： <code>background-image: url(./images/icon.jpg#datauri);</code> ）手动指定哪些文件转码成 data URI。<a href="https://zhuanlan.zhihu.com/p/24984797?refer=web-learning" target="_blank" rel="external">^foot3</a></p>
+<h3 id="4-gulp-plumber构建异常捕获-foot3"><a href="#4-gulp-plumber构建异常捕获-foot3" class="headerlink" title="4. gulp-plumber构建异常捕获^foot3"></a>4. gulp-plumber构建异常捕获<a href="https://zhuanlan.zhihu.com/p/24984797?refer=web-learning" target="_blank" rel="external">^foot3</a></h3><p><a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="external">gulp-plumber</a></p>
+<pre><code>$ npm install gulp-plumber --save-dev
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp    = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    gutil   = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>),</div><div class="line">    babel   = <span class="built_in">require</span>(<span class="string">'gulp-babel'</span>),</div><div class="line">    concat  = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</div><div class="line">    plumber = <span class="built_in">require</span>(<span class="string">'gulp-plumber'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'build'</span>, () =&gt; &#123;</div><div class="line">    gulp.src(<span class="string">'./_src/js/*.js'</span>)</div><div class="line">        <span class="comment">// 最先 pipe 到 plumber 中，以便出现异常前准备捕获</span></div><div class="line">        .pipe(plumber(&#123; <span class="attr">errHandler</span>: <span class="function"><span class="params">e</span> =&gt;</span> &#123;</div><div class="line">            gutil.beep(); <span class="comment">// 哔~ 的响一声</span></div><div class="line">            gutil.log(e); <span class="comment">// 抛出异常</span></div><div class="line">        &#125;&#125;))</div><div class="line">        .pipe(babel())</div><div class="line">        .pipe(concat(<span class="string">'all.js'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'./public/js'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="5-grunt-amp-gulp"><a href="#5-grunt-amp-gulp" class="headerlink" title="5. grunt&amp;gulp"></a>5. grunt&amp;gulp</h3><p>1.插件很难遵守单一责任原则。</p>
+<p>2.用插件做一些本来不需要插件来做的事情。</p>
+<p>3.试图用配置文件完成所有事，结果混乱不堪。</p>
+<p>4.落后的流程控制产生临时文件(夹)，导致性能滞后。</p>
+<p>相比之下gulp特点<br>1.构建脚本是代码而不是配置文件。</p>
+<p>2.使用标准库（node.js standard library）来编写。</p>
+<p>3.插件简单且只负责完成一件事</p>
+<p>4.任务都以最大的并发数来执行。</p>
+<p>5.输入/输出（I/O）基于“流式”。</p>
+<h3 id="6-npm-scripts"><a href="#6-npm-scripts" class="headerlink" title="6. npm scripts"></a>6. npm scripts</h3><p><a href="http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part1" target="_blank" rel="external">我为何放弃Gulp与Grunt，转投npm scripts（上）</a><br><a href="http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part3?utm_source=infoq&amp;utm_campaign=user_page&amp;utm_medium=link" target="_blank" rel="external">我为何放弃Gulp与Grunt，转投npm scripts（下）</a><br><a href="http://www.imooc.com/video/5800" target="_blank" rel="external">npm in action</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:35:10.996Z" itemprop="dateUpdated">2017-11-21 22:35:10</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/10/27/GULP学习（三）插件&amp;补充/" target="_blank" rel="external">https://renkoq.github.io/2017/10/27/GULP学习（三）插件&amp;补充/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&title=《GULP学习（三）插件&补充》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&title=《GULP学习（三）插件&补充》 — Renko's blog&source=整理一些网上查到的资料(已注明出处、侵删)，再对gulp相关进行补充。
+use-gulpgulp插件网awesome-gulpgulp中文入门教程
+1. ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（三）插件&补充》 — Renko's blog&url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/10/30/Hyperledger Fabric开发环境/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hyperledger Fabric 开发环境</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/24/Hyperledger Fabric 部署示例/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hyperledger Fabric 部署示例</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&title=《GULP学习（三）插件&补充》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&title=《GULP学习（三）插件&补充》 — Renko's blog&source=整理一些网上查到的资料(已注明出处、侵删)，再对gulp相关进行补充。
+use-gulpgulp插件网awesome-gulpgulp中文入门教程
+1. ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（三）插件&补充》 — Renko's blog&url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/27/GULP学习（三）插件&补充/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3ay27CMBAFUP7/p1upO1QF7jwcWJysEKGJjyvFkzt+POLj5+/4//nq7NXvr36Zf/84ceDh4eG1hn515LyEkUxfPmWvx4yHh4d3mpcsBjlysgD0FqfL7/Hw8PA+ykseynkRnPPyK+Ph4eF9G+/1w70aGVQXCTw8PLxv4yWP+KSMTqKKOelI1oKHh4cX8yYNsE99vqm/h4eHh1fsqk/Cgvy++dDLo8XDw8M7wEva9nkR3PuragutPEF4eHh4q7ytAU0Ci90G2NNZPDw8vAO86vKQR7TVB3pvw0HhX4KHh4e3xOvdOGlE5UOZkN6MAQ8PD+8ALy+OqxuwquV1vrSsdfDw8PDwBnuNyi/2xcigd5dJewwPDw/vHK+HrJbOk6u9XoSiicDDw8Nb5eWFcjVI7YWwvcUp2m6Fh4eHt8TrvfZXQ4pkSeh17QpTjIeHh7fK690yL5HzjQj5VBaug4eHh3eY12vV53+VLy1rmw/w8PDwTu1ril7y58PqFcqToh8PDw9vlzcJZCeBxWSxKQQWeHh4eDfyJqVzQqpuZu2dxcPDw7uTt1UKb7XH8iWhsO7h4eHhDXhJoNCbiHOtr6gZhoeHh3eAt5v+9qKEaohcviYeHh7eKi9/va8GtVvbVfOSHQ8PD+9OXh6wzodYXWZ6hftTjIuHh4e3ypsUr3kLvxpq9K6wXJvj4eHhtWKIZNmoBg35FXpbvso7I/Dw8PAGvHx5yKegt62quvlgVEzj4eHhdSrhwgM3L8rzeHcSFldDZDw8PLwt3jyGyMOI/Jve9fHw8PDu5PXa/HmwWx1ib5NW4QQeHh7eLbxqm7833GoI8ub6eHh4eF/Mm8Spk/h4raTGw8PDOxBGnItck81Y1anBw8PDO8ervupvNfurQ8nvO9o6gIeHh/eK9wtF0Rbb6/9V5gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

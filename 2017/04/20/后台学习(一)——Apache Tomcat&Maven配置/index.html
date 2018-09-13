@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>后台学习(一)——Apache Tomcat&amp;Maven配置 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="后台">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>后台学习(一)——Apache Tomcat&amp;Maven配置</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">后台学习(一)——Apache Tomcat&amp;Maven配置</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-20T13:21:00.000Z" itemprop="datePublished" class="page-time">
+  2017-04-20
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-后台学习(一)——Apache Tomcat&amp;Maven配置"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">后台学习(一)——Apache Tomcat&Maven配置</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-20 21:21:00" datetime="2017-04-20T13:21:00.000Z"  itemprop="datePublished">2017-04-20</time>
+
+            
+
+
+            
+	<span id="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" class="leancloud_visitors" data-flag-title="后台学习(一)——Apache Tomcat&Maven配置" title="后台学习(一)——Apache Tomcat&Maven配置">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/#comment">
+            <span class="valine-comment-count" data-xid="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
+<h3 id="1-Apache-Tomcat"><a href="#1-Apache-Tomcat" class="headerlink" title="1. Apache Tomcat"></a>1. Apache Tomcat</h3><blockquote>
+<p>The Apache Tomcat® software is an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies.<br>Web 应用服务器</p>
+</blockquote>
+<p><a href="http://tomcat.apache.org/" target="_blank" rel="external">官网下载</a></p>
+<h4 id="1-添加系统环境变量"><a href="#1-添加系统环境变量" class="headerlink" title="1. 添加系统环境变量"></a>1. 添加系统环境变量</h4><pre><code>（1）变量名： CATALINA_BASE 变量值： F:\apache-tomcat-7.0.77
+（2）变量名： CATALINA_HOME     变量值： F:\apache-tomcat-7.0.77
+（3）变量名： CATALINA_TMPDIR     变量值： F:\apache-tomcat-7.0.77\temp
+（4）变量名： Path    变量值：F:\apache-tomcat-7.0.77\bin
+</code></pre><h4 id="2-检查配置"><a href="#2-检查配置" class="headerlink" title="2. 检查配置"></a>2. 检查配置</h4><p>cmd输入<code>startup.bat</code>,再访问<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a></p>
+<figure class="image-box">
+                <img src="http://wx1.sinaimg.cn/large/789d050dgy1felf0gnhc3j20mw0i20wo.jpg" alt="tomcat运行" title="" class="">
+                <p>tomcat运行</p>
+            </figure> 
+<h4 id="3-中文乱码问题解决"><a href="#3-中文乱码问题解决" class="headerlink" title="3. 中文乱码问题解决"></a>3. 中文乱码问题解决</h4><p>修改在<code>apache-tomcat-7.0.77\conf</code>路径下的<code>server.xml</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</div><div class="line">               connectionTimeout=&quot;20000&quot;</div><div class="line">               redirectPort=&quot;8443&quot; </div><div class="line">			   URIEncoding=&quot;UTF-8&quot;/&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-Apache-Maven"><a href="#2-Apache-Maven" class="headerlink" title="2. Apache Maven"></a>2. Apache Maven</h3><blockquote>
+<p>Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information.<br>Apache Maven是一个软件项目管理和综合工具。基于项目对象模型（POM）的概念，Maven可以从一个中心资料片管理项目构建，报告和文件。</p>
+</blockquote>
+<p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">官网下载</a></p>
+<h4 id="1-添加系统环境变量-1"><a href="#1-添加系统环境变量-1" class="headerlink" title="1. 添加系统环境变量"></a>1. 添加系统环境变量</h4><pre><code>（1）变量名： M2_HOME 变量值： F:\apache-maven-3.5.0
+（2）变量名： MAVEN_HOME     变量值： F:\apache-maven-3.5.0
+（3）变量名： Path    变量值：%M2_HOME%\bin
+</code></pre><h4 id="2-检查配置-1"><a href="#2-检查配置-1" class="headerlink" title="2. 检查配置"></a>2. 检查配置</h4><p>cmd输入<code>mvn –version</code></p>
+<figure class="image-box">
+                <img src="http://wx2.sinaimg.cn/large/789d050dgy1felf9oqb4uj20mv0cjack.jpg" alt="mvn检查" title="" class="">
+                <p>mvn检查</p>
+            </figure> 
+<h4 id="3-修改本地仓库存放位置"><a href="#3-修改本地仓库存放位置" class="headerlink" title="3. 修改本地仓库存放位置"></a>3. 修改本地仓库存放位置</h4><p>修改在<code>apache-maven-3.5.0\conf</code>路径下的<code>settings.xml</code>文件</p>
+<p><localrepository>对应的是maven的放置目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;localRepository&gt;F:\mavenrepository&lt;/localRepository&gt;</div></pre></td></tr></table></figure></localrepository></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:31:24.121Z" itemprop="dateUpdated">2017-11-21 22:31:24</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/04/20/后台学习(一)——Apache Tomcat&amp;Maven配置/" target="_blank" rel="external">https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&amp;Maven配置/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&title=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&title=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&source=
+1. Apache Tomcat
+The Apache Tomcat® software is an open source implementatio..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/01/python基础学习笔记/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python基础学习笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&title=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&title=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&source=
+1. Apache Tomcat
+The Apache Tomcat® software is an open source implementatio..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台学习(一)——Apache Tomcat&Maven配置》 — Renko's blog&url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADNklEQVR42u3awW7iQBAEUP7/p8llDysFTFWPifDwfIosZM8bpDRdPbdbfN1/Xf/ff/b5/MnHbzzrXfWFjY2NfRH2/fA6/kyyNc8Yx/fzLUjW+eD52NjY2NuxjwvDs0cfPye5k5er/OuJihw2Njb217OTpbRlLwGf1hphY2Njfz07aR7y1iLBHN/HxsbGxs5/4rfxU14Ok3Cq3aATsjRsbGzsj2e349hP/vst821sbGzsD2a/OwzKB8BJk7MeZv17AjY2NvZG7LwAzOKbNjY6ayQcxVjY2NjYW7BXjsjkkdNKw9OSordjY2Njb8SehfKzBqMexI5Kaf0FYGNjY1+cnQ9KzwruZ9FVfidqfrCxsbE3YkeZ06iEnDU2mJXGPKLCxsbG3ok9i5BWqPl2r6zhxaqwsbGxN2XfRtf60mdvzAvesGJjY2Njfzw7+affhjUz/Pq7ilExNjY29nbsPKxfJ62Me2eh0oP72NjY2Nux6wJQfibfprYpmo0fsLGxsXdit2PX5IhPW8ZWnpA8s5iKYGNjY2/Eni1lNtxtD9zMkNjY2Ni7spMIpi05K+PY2bvyrwcbGxt7J3a+6PznfntAJw+k8sJW12psbGzsy7LPKkUrA9q85WivF+0QNjY29hbsWUyfBzqzZc3i/nw92NjY2Puxkx/xyaJXjmnOxgBt6cXGxsbej52XgfXYaIW08sVEUxFsbGzsy7Lbh862aaVpmY1yX5Q0bGxs7O3Y60FSjmw3PS+TxXOwsbGxt2PXh10WTr+0pHb8HIVT2NjY2Bux8+M1LeYdI4d22Nx+edjY2NjXZc+i//yVbYFpG55ZScPGxsbejz0rJEk81C60HUXkrdGD+TY2Njb2RuwZtT4fFI8HksFw3lBNqxw2Njb2p7Pv5dXGPe3i6sM3cQF+UbGxsbGxL8vOr/xoTts8tOOH2cbVExJsbGzsS7HbopXET3lr0TZIKxtXJ0/Y2NjYl2L/TZOQhESzwXMdlmFjY2N/MTsZGKwPfWej36L4YWNjY38xOy8eSdswK11tS4ONjY39Dey8YchHqjNGO6xtyxg2Njb2fuxZlj4rQskW5w1Pux3Y2NjY27F/ALVdaQSKnZb7AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>第一人称视角(FPV)Three.js相机控件 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Three.js">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>第一人称视角(FPV)Three.js相机控件</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">第一人称视角(FPV)Three.js相机控件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-28T16:01:00.000Z" itemprop="datePublished" class="page-time">
+  2017-03-01
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-第一人称视角(FPV)Three.js相机控件"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">第一人称视角(FPV)Three.js相机控件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-01 00:01:00" datetime="2017-02-28T16:01:00.000Z"  itemprop="datePublished">2017-03-01</time>
+
+            
+
+
+            
+	<span id="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" class="leancloud_visitors" data-flag-title="第一人称视角(FPV)Three.js相机控件" title="第一人称视角(FPV)Three.js相机控件">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/#comment">
+            <span class="valine-comment-count" data-xid="/2017/03/01/第一人称视角(FPV)Three.js相机控件/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/FirstPersonControls.js" target="_blank" rel="external">FirstPersonControls.js</a></p>
+<p><a href="https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html" target="_blank" rel="external">https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html</a></p>
+<p>代码参考了<br>知乎作者：AanYip So  <a href="https://zhuanlan.zhihu.com/p/20796329" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/20796329</a></p>
+<h4 id="1-先定义相机控件和间隔时间"><a href="#1-先定义相机控件和间隔时间" class="headerlink" title="1 . 先定义相机控件和间隔时间"></a>1 . 先定义相机控件和间隔时间</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> control;</div><div class="line"><span class="keyword">const</span> clock = <span class="keyword">new</span> THREE.Clock(); <span class="comment">//用于计算两次animationFrame之间间隔时间</span></div></pre></td></tr></table></figure>
+<h4 id="2-在init（）函数里添加"><a href="#2-在init（）函数里添加" class="headerlink" title="2 . 在init（）函数里添加"></a>2 . 在init（）函数里添加</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*第一人称视觉*/</span></div><div class="line">        control = <span class="keyword">new</span> THREE.FirstPersonControls( camera, canvas);</div><div class="line">        control.movementSpeed = <span class="number">100</span>;   <span class="comment">//镜头移速</span></div><div class="line">        control.lookSpeed = <span class="number">0.125</span>;  <span class="comment">//视觉改变速度</span></div><div class="line">        control.lookVertical = <span class="literal">true</span>;  <span class="comment">//是否允许视觉上下改变</span></div><div class="line"></div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">       <span class="comment">// window.addEventListener('mousemove', this.onMouseMove, false);</span></div><div class="line">       <span class="comment">//根据官方源码写的话如下</span></div><div class="line">        <span class="keyword">var</span> _onMouseMove = bind( control, control.onMouseMove );</div><div class="line">        control.domElement.addEventListener( <span class="string">'mousemove'</span>, _onMouseMove, <span class="literal">false</span> );</div><div class="line">        </div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params"> scope, fn </span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">                fn.apply( scope, <span class="built_in">arguments</span> );</div><div class="line"></div><div class="line">            &#125;;</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h4 id="3-添加到动画中再渲染"><a href="#3-添加到动画中再渲染" class="headerlink" title="3 . 添加到动画中再渲染"></a>3 . 添加到动画中再渲染</h4><pre><code>firstPersoncontrols.update(clock.getDelta());  //此处传入的delta是两次animationFrame的间隔时间，用于计算速度 
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">move() &#123;</div><div class="line">  control.update( clock.getDelta() );   </div><div class="line"></div><div class="line">  renderer.render(scene,camera);</div><div class="line">  requestAnimationFrame(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">this</span>.move());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:32:01.320Z" itemprop="dateUpdated">2017-11-21 22:32:01</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" target="_blank" rel="external">https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&title=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&title=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/11/Koch曲线实现/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Koch曲线实现</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">《Three.js入门指南》学习记录（五）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&title=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&title=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《第一人称视角(FPV)Three.js相机控件》 — Renko's blog&url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/03/01/第一人称视角(FPV)Three.js相机控件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3aQXLCMAwFUO5/6XbbGXD4kuw0i8eKoSH40RlLfOv1ih8/b4/311dX/v3r6p7X772+z4YHHh4e3njpVcbqnu/PV9ckV+ZfBB4eHt49vHyJVXZ1Q88/N/nK8PDw8J7DywvD9T2Tdjn/yvDw8PCeyasGB71Scf0uPDw8vCfwkiUmW3zvnpMoZFvWgoeHh3fgFOk5z4+c7+Hh4eGNT9WTbTovHvkBWLV4LFeLh4eHd4DXiwbyYKJXZiaFAQ8PD+8JvF7ZqJaQ6kryHwB4eHh4J3jVTXlv61wNbTcEE3h4eHgD3mSj7x2D5fikof/CxsPDw7uFlw8H5CMF1Wij2mqPEhQ8PDy8wUBAtVRMwoUkDq423x/Wg4eHh3cLr1pC8va3OgpQjXGXkxF4eHh4t/DyZjpvqXeFGnlai4eHh3eaVw0jept4dTxr1O7j4eHhHeDlwUE+9jSJbpN2vBmO4OHh4W3lVYeZ8rB13l73hrpe1RM5PDw8vNbJe3XDzQG9wtMrQsvr8fDw8Dbx8iP/aoRaHQuYz1N9yVrw8PDwjvGqEcAuajU4jsoSHh4e3j/xToStk6O1wqrw8PDwbufNj6yqcUNeVKI14OHh4R3m9W7aCxHyrb96tPbq/a/w8PDwYl5yi/xQqtccz2PcLyvEw8PDO8abl42cMR/YKhQYPDw8vGO8vJlODqsSUtL3VkkfXsfDw8M7xksa3MkowDwCrpYcPDw8vBO8SQCRtLy9AKJ32LYcHcDDw8PbyusdXFV33es7JE12r0HHw8PDO8frHc/PQ97qFt+MkvHw8PCO8coZRmtAKg84JmMEeHh4eE/j5U3zPG7I493l5+Lh4eE9gJcXg2owkZDyph8PDw/vNK869jT5OuZjBHmki4eHh3eCV/3Bnx//z1vn3vV4eHh4x3i/nxKccesagNwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

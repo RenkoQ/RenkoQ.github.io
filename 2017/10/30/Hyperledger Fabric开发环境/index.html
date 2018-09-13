@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Hyperledger Fabric 开发环境 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="区块链">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Hyperledger Fabric 开发环境</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Hyperledger Fabric 开发环境</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-10-30T13:09:30.000Z" itemprop="datePublished" class="page-time">
+  2017-10-30
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Hyperledger Fabric开发环境"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Hyperledger Fabric 开发环境</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-10-30 21:09:30" datetime="2017-10-30T13:09:30.000Z"  itemprop="datePublished">2017-10-30</time>
+
+            
+
+
+            
+	<span id="/2017/10/30/Hyperledger Fabric开发环境/" class="leancloud_visitors" data-flag-title="Hyperledger Fabric 开发环境" title="Hyperledger Fabric 开发环境">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/30/Hyperledger Fabric开发环境/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/30/Hyperledger Fabric开发环境/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>所有参考资料贴在最后。</p>
+<h3 id="1-Vagrant"><a href="#1-Vagrant" class="headerlink" title="1. Vagrant"></a>1. Vagrant</h3><p><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">官方下载</a></p>
+<p>Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟机的管理，包括建立和删除虚拟机、配置虚拟机运行参数、管理虚拟机运行状态、自动化配置和安装开发环境必须的各类软件、打包和分发虚拟机运行环境等。 <a href="http://www.ituring.com.cn/article/131600" target="_blank" rel="external">^foot1</a></p>
+<p>简单地说，Vagrant让我们可以通过代码的方式快速地、可重复地创建针对不同虚拟环境的虚拟机，包括Virtualbox、AWS、Docker等。它使得我们可以一次性地、自动创建多个环境相同的虚拟机，对于软件开发和测试尤其有用。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
+<p>使用Vagrant能尽可能避免”Work on my machine“错误，缩短搭建开发环境的时间。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
+<h3 id="2-go"><a href="#2-go" class="headerlink" title="2. go"></a>2. go</h3><p><a href="https://golang.org/dl/" target="_blank" rel="external">官方下载</a></p>
+<p><a href="https://golang.org/doc/" target="_blank" rel="external">官方文档</a></p>
+<p>Go语言需要配置<code>GOPATH</code>环境变量，指向代码目录。</p>
+<p>管理员模式打开CMD输入<code>go env</code>验证。</p>
+<h3 id="3-下载源码"><a href="#3-下载源码" class="headerlink" title="3. 下载源码"></a>3. 下载源码</h3><p><a href="https://github.com/hyperledger/fabric" target="_blank" rel="external">fabric</a><br><a href="https://github.com/hyperledger/fabric-ca" target="_blank" rel="external">fabric-ca</a></p>
+<pre><code>git clone https://github.com/hyperledger/fabric.git                        
+git clone https://github.com/hyperledger/fabric-ca.git    
+</code></pre><a id="more"></a>    
+<h3 id="4-启动vagrant"><a href="#4-启动vagrant" class="headerlink" title="4. 启动vagrant"></a>4. 启动vagrant</h3><pre><code>cd F:\hyperledger\1\fabric\devenv                
+vagrant up    
+vagrant ssh
+</code></pre><ol>
+<li><p>“No Usable default provider could be found for your system”</p>
+<p> <code>vagrant up --provider=virtualbox</code>查询错误信息，发现vagrant对virtualbox的版本有要求。<a href="https://github.com/hashicorp/vagrant/issues/7411#issuecomment-232305067" target="_blank" rel="external">具体版本支持。</a><br> 重新安装virtualbox 5.1后成功。</p>
+</li>
+<li><p>“Couldn’t open file /Users/…/base”</p>
+<pre><code>vagrant init hashicorp/fabric 
+vagrant up
+</code></pre><p> 具体参见 <a href="https://stackoverflow.com/questions/23874260/error-when-trying-vagrant-up" target="_blank" rel="external">1</a> <a href="https://github.com/hyperledger-archives/fabric/issues/2400" target="_blank" rel="external">2</a><br> 我的解决方法是重新Clone the fabric folder。不要用<code>vagrant init</code>修改原有的<code>Vagrantfile</code>配置文件。</p>
+</li>
+<li><p>“Can’t download boxes on Windows 10”</p>
+<p> 问题：<a href="https://github.com/mitchellh/vagrant/issues/6754" target="_blank" rel="external">mitchellh/vagrant#6754</a>)<br> If the <code>vagrant up</code> command fails it may be because you do not have the Microsoft Visual C++ Redistributable package installed. <a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328" target="_blank" rel="external">下载地址</a>。<a href="http://hyperledger-fabric.readthedocs.io/en/latest/dev-setup/devenv.html" target="_blank" rel="external">^foot3</a></p>
+</li>
+<li><p>“Vagrant box downloads extremely slow”</p>
+<p>  <a href="https://github.com/hashicorp/vagrant/issues/5319" target="_blank" rel="external">#5319</a><br> take a walk or make yourself a sandwich. Get way from screen for a little bit.</p>
+</li>
+<li><p>“ubuntu xenial64 box password”</p>
+<p> 在目录<code>~/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20161221.0.0/virtualbox/Vagrantfile</code>中有密码</p>
+</li>
+</ol>
+<h3 id="5-使用本地二进制文件"><a href="#5-使用本地二进制文件" class="headerlink" title="5. 使用本地二进制文件"></a>5. 使用本地二进制文件</h3><p>在fabric目录下编译peer和orderer：</p>
+<pre><code>make clean
+make native
+</code></pre><p>生成<code>ccenv</code>镜像：</p>
+<pre><code>make peer-docker
+</code></pre><p>然后打开两个终端都进入vagrant，至此有三个终端都在vagrant里。</p>
+<p>前首先清空ledger文件夹·/var/hyperledger/·（每次运行后，为避免错误或重复，都要清空）:</p>
+<pre><code>rm -rf /var/hyperledger/*
+</code></pre><p>终端1<br>使用<code>configtxgen</code>工具创建orderer创世区块：</p>
+<pre><code>configtxgen -profile SampleSingleMSPSolo -outputBlock orderer.block
+</code></pre><p>终端2<br>用刚生成的创世区块启动orderer：</p>
+<pre><code>ORDERER_GENERAL_GENESISMETHOD=file ORDERER_GENERAL_GENESISFILE=./orderer.block orderer
+</code></pre><p>终端1<br>创建 channel configuration transaction：</p>
+<pre><code>configtxgen -profile SampleSingleMSPSolo -outputCreateChannelTx channel.tx -channelID &lt;channel-ID&gt;
+</code></pre><p>执行成功会在当前目录生成channel.tx</p>
+<p>终端3<br>以<code>chainless</code>模式启动peer：</p>
+<pre><code>peer node start --peer-defaultchain=false
+</code></pre><p>Create channel<br>以<code>channel.tx</code>为参数创建channel：</p>
+<pre><code>peer channel create -o 127.0.0.1:7050 -c mychannel -f channel.tx
+</code></pre><p>执行后在当前目录生成一个channel的创世区块mychannel.block</p>
+<p>Join channel<br>通过channel的创世区块<code>mychannel.block</code>加入channel：</p>
+<pre><code>peer channel join -b mychannel.block
+</code></pre><p>Install chaincode<br>在peer上安装chaincode：</p>
+<pre><code>peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+</code></pre><p>执行成功后查看文件可以看到mycc.1.0:</p>
+<pre><code>ls /var/hyperledger/production/chaincodes
+</code></pre><p>Instantiate chaincode<br>实例化chaincode：</p>
+<pre><code>peer chaincode instantiate -o 127.0.0.1:7050 -C mychannel -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c &apos;{&quot;Args&quot;:[&quot;init&quot;,&quot;a&quot;, &quot;100&quot;, &quot;b&quot;,&quot;200&quot;]}&apos;
+</code></pre><p><code>docker ps</code>查看运行中的容器，如果chaincode启动成功，则显示：</p>
+<pre><code>CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+bd9c6bda7560        dev-jdoe-mycc-1.0   &quot;chaincode -peer.a...&quot;   5 seconds ago       Up 5 seconds                            dev-jdoe-mycc-1.0
+</code></pre><p>Invoke chaincode<br>调用chaincode从“a”转移“10”给“b“：</p>
+<pre><code>peer chaincode invoke -o 127.0.0.1:7050 -C mychannel -n mycc -c &apos;{&quot;Args&quot;:[&quot;invoke&quot;,&quot;a&quot;,&quot;b&quot;,&quot;10&quot;]}&apos;
+</code></pre><p>Query chaincode<br>查询”a“的值：<br>返回值应是 90</p>
+<pre><code>peer chaincode query -o 127.0.0.1:7050 -C mychannel -n mycc -c &apos;{&quot;Args&quot;:[&quot;query&quot;,&quot;a&quot;]}&apos;
+</code></pre><p>运行完成后不要忘记清空ledger文件夹/var/hyperledger/：</p>
+<pre><code>rm -rf /var/hyperledger/*
+</code></pre>
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:33:40.618Z" itemprop="dateUpdated">2017-11-21 22:33:40</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/10/30/Hyperledger Fabric开发环境/" target="_blank" rel="external">https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&title=《Hyperledger Fabric 开发环境》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&title=《Hyperledger Fabric 开发环境》 — Renko's blog&source=所有参考资料贴在最后。
+1. Vagrant官方下载
+Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hyperledger Fabric 开发环境》 — Renko's blog&url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/02/Surface3装ubuntu实现双系统/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Surface3装ubuntu实现双系统</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/27/GULP学习（三）插件&补充/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">GULP学习（三）插件&amp;补充</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&title=《Hyperledger Fabric 开发环境》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&title=《Hyperledger Fabric 开发环境》 — Renko's blog&source=所有参考资料贴在最后。
+1. Vagrant官方下载
+Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hyperledger Fabric 开发环境》 — Renko's blog&url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/30/Hyperledger Fabric开发环境/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3a0U7DMAwF0P3/T4PEE9Lodm3H25BOnxArbU6QEu86t1t8ff1cjz/9fd3//v451b96PIbRhYeHh9ca+tV1NawJoDehj598+RY8PDy8Nd7jFyQDzRf9fLlPnvPEgoeHh/dWXrKdJCV4tVDGw8PD+7+8fCg5srpJ4OHh4X0OL1nokzggKYjzRT+POQ5kLXh4eHgxrxqqfsLPi/09PDw8vEFXPV9wq83+5M48/rgcLR4eHt4CL2nS99pRk8NV1Wc+2Tbw8PDwjvImEcNrWmWTicPDw8Pb4yVbQq8lVj2GNSH9MSo8PDy8BV6efE6C3Tyq6G05eHh4eK/kJSV1PqD8/l5M3Oza4eHh4S3w8ui2WuCempqEdxnj4uHh4R3lVW9KFvr8Ob3wtxdn4OHh4Z3iVV9zajPoxcd5md6cRTw8PLyYVw0pejFEUo4nn476e3h4eHiHePMXTI5q5cFx9eACHh4e3gYvDwt6B6qqRw1620yZioeHh3eIV90YeqHDJKLNN57LXh8eHh7emJcv5b2wNW+Mjf4zVxOKh4eHt8DrhQV5kyxvqk3Ckai8xsPDwzvK6zX480BhEljMtyI8PDy8Dd6oVG0dzMoD4gkbDw8Pb4+XL+vzoSRduEk7rTxbeHh4eEVeUiJXv/znwURUChfjYzw8PLz38vJFPI8heoV1r6DHw8PD2+D1ooG8mM4n7mybDQ8PD2+P1yuL5/dMJqIw0Xh4eHgv4fUOWlU3j0mQUTjghYeHh7fAy6/8WEC15d9rdB0g4eHh4Q14yWZQDWd7G0D1cGohxsXDw8Nb4PWW9QksOUaQ72nR0Ss8PDy8l/OqRXbvuMA85sDDw8P7TF7v6NWpsCPZVPDw8PC2edX4oDc1p8r05H48PDy8PV7vq/4cXG2h9d6Lh4eHd/S93yQIVLmbUhZ9AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

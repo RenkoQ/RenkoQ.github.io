@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>计算机组成原理笔记（二）——存储器 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="架构">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>计算机组成原理笔记（二）——存储器</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">计算机组成原理笔记（二）——存储器</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-10T19:01:30.000Z" itemprop="datePublished" class="page-time">
+  2017-11-11
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-计算机组成原理笔记（二）——存储器"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">计算机组成原理笔记（二）——存储器</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-11 03:01:30" datetime="2017-11-10T19:01:30.000Z"  itemprop="datePublished">2017-11-11</time>
+
+            
+
+
+            
+	<span id="/2017/11/11/计算机组成原理笔记（二）——存储器/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（二）——存储器" title="计算机组成原理笔记（二）——存储器">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/11/计算机组成原理笔记（二）——存储器/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/11/计算机组成原理笔记（二）——存储器/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-存储器的分类"><a href="#1-存储器的分类" class="headerlink" title="1. 存储器的分类"></a>1. 存储器的分类</h3><ol>
+<li><p><strong>按存储器在计算机系统中的作用分类</strong><br>① <strong>高速缓冲存储器（Cache）</strong>：位于主存和CPU之间，用来存放正在执行的程序段和数据，以便CPU能高速地使用它们。<br>② <strong>主存储器</strong>：用来存放计算机运行期间所需要的程序和数据，CPU可直接随机地进行读/写访问。<br>③ <strong>辅助存储器</strong>：用来存放当前暂不参与运行的程序和数据，以及一些需要永久性保存的信息。CPU不能直接访问辅存，辅存中的信息必须调入主存后，CPU才能使用。</p>
+</li>
+<li><p><strong>按存取方式分类</strong><br>① 随机存取存储器（<strong>RAM</strong>）：CPU可以对存储器中的内容进行随机存取，存取时间相同，与其所处的物理位置无关。<br>② 只读存储器（<strong>ROM</strong>）：ROM可以看做RAM的一种特殊形式，存储器的内容只能随机读出而不能写入。<br>③ 顺序存取存储器（<strong>SAM</strong>）：SAM的内容只能按某种顺序存取，存取时间的长短与信息在存储体上的物理位置有关。磁带机就是这样一类存储器。<br>④ 直接存取存储器（<strong>DAM</strong>）：介于RAM和SAM再者之间。第1步直接指向整个存储器中的某个小区域（如磁盘上的磁道）；第2步在小区域内顺序检索或等待，直至找到目的地后再进行读/写操作。磁盘机就属于这类存储器。</p>
+</li>
+<li><p><strong>按存储介质分类</strong><br>① 磁芯存储器：信息可以长期存储，不会因数断电而丢失；但磁芯存储器的读出是破坏性读出。<br>② 半导体存储器：主要是MOS型存储器和双极型（TTL电路或ECL电路）存储器两大类。半导体RAM存储的信息会因为断电而丢失。<br>③ 磁表面存储器：用磁层存储信息，常见的有磁盘、磁带等。由于它的容量大、价格低、存取速度慢，帮多用做辅助存储器。<br>④ 光存储器：采用激光技术控制访问的存储器，一般分为只读式、一次写入式、可改写式几种，它们的存储容量都很大，是目前使用非常广泛的辅助存储器。</p>
+</li>
+<li><p><strong>按信息的可保存性分类</strong><br>断电后，存储信息即消失的存储器，称易失性存储器；断电后信息仍然保存的存储器，称非易失性存储器。<br>如果读出时，原存信息被破坏，则称破坏性读出；如果读出时，被读单元原存信息不被破坏，则称非破坏性读出。</p>
+</li>
+</ol>
+<a id="more"></a>
+<h3 id="2-半导体随机存取存储器"><a href="#2-半导体随机存取存储器" class="headerlink" title="2. 半导体随机存取存储器"></a>2. 半导体随机存取存储器</h3><ol>
+<li><p><strong>SRAM存储器的工作原理</strong><br>SRAM记忆单元是用双稳态触发器来记忆信息的。<br>SRAM的存取速度快，但集成度低，功耗也较高，一般用来组成高速缓冲存储器和小容量主存系统。</p>
+</li>
+<li><p><strong>DRAM存储器的工作原理</strong><br>DRAM是靠MOS电路中的栅极电容C1 和C2 来存储信息的。<br>DRAM集成度高、功耗低，但存取速度慢，一般用来组成大容量主存系统。<br>栅极电容上存储的信息随着时间的推移会逐渐丢失，因此，每隔一定的时间必须向栅极电容补充一次电荷，这个过程称为“刷新”。常见的刷新方式有集中式、分散式和异步式3种。</p>
+</li>
+</ol>
+<h3 id="3-主存储器与CPU的连接"><a href="#3-主存储器与CPU的连接" class="headerlink" title="3. 主存储器与CPU的连接"></a>3. 主存储器与CPU的连接</h3><p>用多个存储芯片组合成存储器，常采用位扩展法、字扩展法、字和位同时扩展法。</p>
+<p><strong>位扩展</strong><br>指只在位数方向扩展（加大字长），而芯片的字数和存储器的字数是一致的。<br>位扩展的连接方式是将各存储芯片的地址线、片选线和读写线相应地并联起来，而将各芯片的数据线单独列出。<br><strong>字扩展</strong><br>指仅在字数方向扩展，而倍数不变。<br>字扩展将芯片的地址线、数据线、读写线并联，由片选信号来区分各个芯片。<br><strong>字和位同时扩展</strong><br>是前两种扩展方法的组合，在字数方向和位数方向上同时扩展。</p>
+<p>存储器与CPU的连接，特别要注意地址线、数据线和控制线的连接。</p>
+<p><strong>地址线的连接</strong>：<br>通常CPU的地址的低位与存储芯片的地址线相连，CPU地址线的高位用做片选信号。<br><strong>数据线的连接</strong>：<br>如果CPU的数据线数与存储芯片的数据线数不相等，必须对存储芯片进行位扩展，使其数据位数与CPU的数据线数相等。<br><strong>读写命令线的连接</strong>：<br>CPU的读写命令线一般直接与存储芯片的读写控制端相连。<br><strong>片选线的连接</strong>：<br>那些未与存储芯片连接的高位地址必须和访存控制信号共同产生存储芯片的片选信号。通常还需要用到一些逻辑电路，如译码器及各种门电路，来产生片选有效信号。<br>片选信号的产生可细分为线选法、全译码法和部分译码法。</p>
+<h3 id="4-Cache的基本工作原理"><a href="#4-Cache的基本工作原理" class="headerlink" title="4. Cache的基本工作原理"></a>4. Cache的基本工作原理</h3><p>利用程序的局部性原理，把程序中正在使用的部分存放在一个高速的容量较小的Cache中，使CPU的访存操作大多数针对Cache进行，从而使程序的执行速度大大提高。</p>
+<p>Cache和主存都被分成若干个大小相等的块，每块由若干字节组成。</p>
+<p>由于Cache的容量远小于主存的容量，所以Cache中的块数要远少于主存中的块数，它保存的信息只是主存中最需执行的若干块的副本。</p>
+<p>当CPU发生主存地址后，首先判断该存储字是否在Cache中，若命中，则直接访问Cache；若不命中，则访问主存并将该字所在的主存块装入Cache。</p>
+<h3 id="5-Cache和主存之间的映射方式"><a href="#5-Cache和主存之间的映射方式" class="headerlink" title="5. Cache和主存之间的映射方式"></a>5. Cache和主存之间的映射方式</h3><p>由于Cache的容量小，因此Cache中的内容会经常地被新的主存块替换掉，它们之间就有一个地址映射问题。常见的地址映射的方法有3种：全相联映射、直接映射和组相联映射。</p>
+<p>（1）<strong>全相联映射</strong></p>
+<p>全相联映射就是让主存中任何一个块均可以映射装入到Cache任何一个块的位置上。</p>
+<p>全相联映射方式比较灵活，Cache的块冲突概率最低、空间利用率最高，但是地址变换速度慢，而且成本高，实现起来比较困难。</p>
+<p>（2）<strong>直接映射</strong></p>
+<p>直接映射是指主存中的每一个块只能被放置到Cache中唯一的一个指定位置，若这个位置已有内容，则产生块冲突，原来的块将无条件地被替换出去。</p>
+<p>直接映射方式是最简单的地址映射方式，成本低，易实现，地址变换速度快，但这种方式不够灵活，Cache的块冲突概率最高、空间利用率最低。</p>
+<p>（3）<strong>组相联映射</strong></p>
+<p>组相联映射实际上是全相联映射和直接映射的折中方案，所以其优点和缺点介于全相联和直接映射方式之间。</p>
+<h3 id="6-Cache中主存块的替换算法"><a href="#6-Cache中主存块的替换算法" class="headerlink" title="6. Cache中主存块的替换算法"></a>6. Cache中主存块的替换算法</h3><p>Cache在不命中的情况下，需要从主存中读入最新数据，必然要产生替换，常用的替换算法有以下几种。</p>
+<p><strong>（1）随机算法</strong></p>
+<p> 这是一种最简单的替换算法，完全不用管Cache块过去、现在及将来的使用情况，只需简单地根据一个随机数，选择一块替换竨。</p>
+<p><strong>（2）先进先出（FIFO）算法</strong></p>
+<p> FIFO算法是按调入Cache的先后决定淘汰的顺序，即在需要更新时，将最先进入Cache的块作为被替换的块。FIFO算法容易实现，而且系统开销小，但缺点是没有利用程序的局部性原理，可能会把一些需要经常使用的程序块（如循环程序）也作为最早进入Cache的块替换掉。</p>
+<p><strong>（3）近期最少使用（LRU）算法</strong></p>
+<p>LRU算法是把CPU近期最少使用的块作为被替换的块。该算法相对合理，但实现起来比较复杂，系统开销较大。</p>
+<h3 id="7-Cache写策略"><a href="#7-Cache写策略" class="headerlink" title="7. Cache写策略"></a>7. Cache写策略</h3><p>为了保证Cache中的内容是主存活跃部分的副本，即Cache和主存的一致性，当CPU执行写操作且Cache命中时，有写直达法和写回法两种Cache写策略。</p>
+<p><strong>写直达法</strong>是指必须把被写数据同时写入Cache和主存。这种方法实现简单，而且能随时保持主存数据的正确性，但可能增加多次不必要的主存写入，会降低存取速度。</p>
+<p><strong>写回法</strong>是指被写数据只写入Cache，不写入主存，仅当需要替换时，才把已经修改过的Cache块写回到主存。这种方法操作速度快，但因主存中的字块未及时修改而有可能出错。</p>
+<h3 id="8-题"><a href="#8-题" class="headerlink" title="8. 题"></a>8. 题</h3><pre><code>【例3.1】存储器进行一次完整的读/写操作所需的全部时间成为（  B   ）。
+</code></pre><p> A．存取时间      B. 存取周期     C. CPU周期   D. 机器周期</p>
+<p>试题分析：一次完成的读写操作所需要的全部时间也就是连续两次访问存储器错做的间隔时间。要注意存取周期与存取时间这两个概念的区别，存取时间是指从启动一次存储器操作到完成该错做所经历的时间，所以存取时间小于存取周期。</p>
+<pre><code>【例3.2】下述说法中正确的是（ C     ）。
+</code></pre><p>A.    半导体RAM信息可读可写，且断电后仍能保持记忆<br>B.    动态RAM时易失性RAM，而静态RAM中的存储信息是不易失的<br>C.    半导体RAM是易失性RAM，但只要电源不断电，所存信息室不丢失的<br>D.    半导体RAM是非易失性的RAM</p>
+<p>试题分析：半导体RAM，无论静态RAM还是动态RAM都是易失性的，断电后信息将丢失。</p>
+<pre><code>【例3.3】下面叙述错误的是（ C     ）。
+</code></pre><p>A.    随机存储器可随时存取信息，掉电后信息丢失<br>B.    在访问随机存储器时，访问时间与单元的物理位置无关<br>C.    主存储器中存储的信息均是不可改变的<br>D.    随机存储器和只读存储器可以统一编址</p>
+<p>试题分析：主存由RAM和ROM组成，其中ROM中的信息室不可改变的，RAM中的信息室可以改变的</p>
+<pre><code>【例3.5】在对破坏性读出的存储器进行读写操作时，为维持原存信息不变，必须辅以的操作是（   B  ）。
+</code></pre><p>A. 刷新           B. 再生         C. 写保护        D. 主存校验</p>
+<p>试题分析：对于破坏性读出的存储器，每当一次读出操作之后，必须紧接一个重写（再生）的操作，一遍恢复被破坏的信息，保持原存信息不变。</p>
+<pre><code>【例3.6】动态RAM的刷新单位是（    B   ）。
+</code></pre><p>A. 存储单元          B. 行            C. 列         D. 存储位</p>
+<p>试题分析：动态RAM芯片中的全部记忆单元排列成矩阵，刷新是以行尾单位进行的，一行中的各记忆单元同时被刷新。</p>
+<pre><code>【3.7】某计算机字长是16位，它的存储容量是1MB，按字编址，它的寻址单元数是（  A    ）。
+</code></pre><p>A. 512K<br>B. 1M<br>C. 512KB<br>D. 1MB</p>
+<p>试题分析：由于字长为16位，一个字等于2个字节，所以1M字节等于512K字。</p>
+<pre><code>【3.8】设机器字长为32位，一个容量为16MB的存储器，CPU按半字寻址，其寻址单元数是（     B  ）。
+</code></pre><p>A. 224<br>B. 223<br>C. 222<br>D. 221</p>
+<p>试题分析：16MB=224，由于字长为32位，现在按半字（16位）寻址，相当于有8M个存储单元，每个存储单元中存放16位。</p>
+<pre><code>【3.9】设机器字长为32位，存储容量为16MB，若按双字编址，其寻址单元数是（ B   ）。
+</code></pre><p>A. 8MB<br>B. 2M<br>C. 4M<br>D. 16M</p>
+<p>试题分析：按双字编址，即一个存储单元存放64位（8个字节），16M字节=2M字，<br>共有24M个存储单元。</p>
+<pre><code>【3.10】在1K*8的存储器芯片中，采用双译码方式，译码器的输出信号条数是（64）。
+</code></pre><p>试题分析：双译码方式又称为重合法。1K*8的存储芯片共有10根地址线，分成相等的两段，一段用于水平方向作X地址线，供X地址译码器译码；一段用于垂直方向作Y地址线，供Y地址译码器译码。每个译码器的输出信号条数是32条，两个译码器的输出线数共64条。</p>
+<pre><code>【例3.12】若数据在存储器中采用以低字节地址为字地址的存放方式，则十六进制数12345678H的存储字节顺序按地址由小到大一次为（   B   ）。
+</code></pre><p>A. 12345678<br>B. 78563412<br>C. 87654321<br>D. 34127856</p>
+<p>此存放方式是小端次序方案，将最低有效字节存储在最小地址位置。</p>
+<pre><code>【例3.13】某一SRAM芯片，其容量为1024*8，除电源和接地端外，该芯片量最少引出线数为（  20    ）。
+</code></pre><p>试题分析：地址线10根，数据线8根，控制线（读写和片选）2根。</p>
+<pre><code>【例3.15】地址总线A0（高位）~A15（低位），用4K*4的存储芯片组成16KB存储器，则产生片信号的译码器的输入地址线应该是（  A ）。
+</code></pre><p>A. A2A3<br>B. A0A1<br>C. A12A13<br>D. A14A15</p>
+<p>试题分析: 由于A15为地址线的低位，接入各芯片地址端得是地址线的低12位，即A4~A15，共有8个芯片（分为4组）组成16KB的存储器，由高2位地址线A2A3作为译码器的输入。</p>
+<pre><code>【例3.17】RAM芯片字扩张时可以使（B     ）。
+</code></pre><p>A. 存储器宽度增加<br>B. 存储器地址范围增加<br>C. 存储器速度增加<br>D. 降低存储器的平均价格</p>
+<p>试题分析：字扩张可以增加存储单元的数量，因此增加了存储器的地址范围。</p>
+<pre><code>【3.19】如果一个存储单元被访问，则可能这个存储单元会很快地再次被访问，这称为（   A    ）。
+</code></pre><p>A. 时间局部性<br>B. 空间局部性<br>C. 程序局部性<br>D. 数据局部性</p>
+<p>试题分析：从时间上看，一个单元刚被访问又被再次访问，这是因为程序中存在着循环。</p>
+<pre><code>【3.20】访问相连存储器时，（    A  ）
+</code></pre><p>A. 根据内容，不需地址<br>B. 不根据内容，只需要地址<br>C. 既要内容，又要地址<br>D. 不要内容也不要地址</p>
+<p>试题分析：相联存储器是一种按内容访问的存储器</p>
+<pre><code>【例3.21】容量为64块的Cache采用组相联映射方式，字块大小为128个字，每4块为一组。若主存4096块，且以字编址，那么主存地址和主存标记的位数分别为（    D  ）。
+</code></pre><p>A. 16，6<br>B. 17，6<br>C. 18，8<br>D. 19，8</p>
+<p>试题分析：主存容量4K*128=512K字，故主存地址19位，由主存标记、组号和块内地址3部分组成。因为字块大小为128个字，故块内地址7位，Cache被分成64/4=16组，故组号4位，主存标记19-4-7=8位。</p>
+<pre><code>【例3.25】设有一个1MB容量的存储器，字长为32位，问：
+</code></pre><p>(1)    按字节编址，地址寄存器、数据寄存器各位几位？编址范围为多大？<br>(2)    按半字编址，地址寄存器、数据寄存器各位几位？编址范围为多大？<br>(3)    按字编址，地址寄存器、数据寄存器各位几位？编址范围为多大？</p>
+<p>解答：<br>（1）20，8，00000H~FFFFFH。<br>（2）19，16，00000H~7FFFFH。<br>（3）18，32，00000H~3FFFFH。</p>
+<p>试题分析：<br>（1）    按字节编址，1MB=220<em>8b，地址寄存器为20位，数据寄存器为8位，编址范围为00000H~FFFFFH。<br>（2）    按半字编址，1MB=220</em>8b=219<em>16b，地址寄存器为19位，数据寄存器为16位，编址范围为00000H~7FFFFH。<br>（3）    按字编址，1MB=220</em>8b=218*32b，地址寄存器为18位，数据存储器为32位，编址范围为00000H~3FFFFH。</p>
+<pre><code>【例3.26】一台8位微机的地址总线为16条，其RAM存储器容量为32KB，首地址为4000H，且地址是连续的，可用的最高地址是多少？
+</code></pre><p>解答：BFFFH。<br>试题分析：若32KB的存储地址起始单元为0000H，则可知32KB存储空间共占用15条地址线，其范围应为0000~7FFFH，但现在的首地址为4000H，即地址后移了，因此最高地址应为4000H+7FFFH=BFFFH。</p>
+<pre><code>【例3.28】图2-3-2所示为用8片2114构成的4K*8的存储器，与8位的一个微处理器相连，2114为1024*4位的静态RAM芯片。试问：
+</code></pre><p>（1）    每一组芯片组的地址范围和地址线数目是多少？<br>（2）    4KB的RAM寻址范围是多少？<br>（3）    存储器有没有地址重叠？</p>
+<p>解答：<br>（1）000H~3FFH，10。<br>（2）0000H~03FFH，4000H~43FFH，8000H~83FFH，C00H~C3FFH。<br>（3）存在地址重叠现象。</p>
+<p>试题分析：<br>（1）    芯片组的容量为1024B，地址范围为000H~3FFH，地址线数目10根（A9~A0）。<br>（2）    根据图2-3-2所示的连线，各芯片组的片选端由地址线A15、A14进行译码。芯片组内地址线为A9~A0，A13~A10空闲，即为任意态。假设A13~A10为全0，4KB RAM的寻址范围分别是：第0组为0000H~03FFH，第一组为4000H~43FFH，第二组为8000H~83FFH，第三组为C000H~C3FFH，可见这4KB存储器的地址空间是不连续的。<br>（3）    由于A13~A10没有参与译码（部分译码），所以存储器存在地址重现现象。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-12T09:58:06.492Z" itemprop="dateUpdated">2018-09-12 17:58:06</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/11/11/计算机组成原理笔记（二）——存储器/" target="_blank" rel="external">https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&title=《计算机组成原理笔记（二）——存储器》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&title=《计算机组成原理笔记（二）——存储器》 — Renko's blog&source=整理自学院网站
+1. 存储器的分类
+按存储器在计算机系统中的作用分类① 高速缓冲存储器（Cache）：位于主存和CPU之间，用来存放正在执行的程序段和数据..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（二）——存储器》 — Renko's blog&url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/12/Lorem ipsum 乱数假文/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Lorem ipsum 乱数假文</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">计算机组成原理笔记（一）——计算机系统概述</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&title=《计算机组成原理笔记（二）——存储器》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&title=《计算机组成原理笔记（二）——存储器》 — Renko's blog&source=整理自学院网站
+1. 存储器的分类
+按存储器在计算机系统中的作用分类① 高速缓冲存储器（Cache）：位于主存和CPU之间，用来存放正在执行的程序段和数据..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（二）——存储器》 — Renko's blog&url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（二）——存储器/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADPUlEQVR42u3awVLjQAwEUP7/p9nrbrGOu0cOxQzPJwqS2G9yEGrp4yO+Pv+6kld+fdfr6+ouV79pn2rxwsbGxt6EvfZA+aF8/f3V6/MnSY7p6hOwsbGxT2Unpejqo99RxtpKlFuwsbGxsYsiET/W6/LWti7Y2NjY2Ak7eaB5w/P6WLGxsbGxJ1HOswf3+nneUlyxsbGxD2JPgpuf9vNb5tvY2NjYP5j9WV5tAXt9l+TT1grVjQIbGxv7IPZaZP9UI5EcVj48aEcO2NjY2Cexk1WbPKzP8e3d17qMj/mNsbGxsTdh5y/Nl2byMUN7NO3Xc1O6sLGxsbdlJ6swz5aftWWd1y1KPRLGxsbGPo7dRvNrwdA83M/L3s1XhY2NjX0cuy1g+T/9eZQ/aYHyu2NjY2Ofx14boE5WatYeerI2VGdp2NjY2FuxJ+F+W+raoexkXHHz+djY2NgHsdsgPseslbq2dLURGDY2NvZ57DbiX1uaad+7Vj6LWQA2Njb2cezvCfrbYe1kUHHzFWJjY2MfxM4Xd9qVmqeK4tqKT9GQYGNjY2/OngwDWkweEhURf1Dq/vMzNjY29nHstbg/bxgm49t5O1TMQ7CxsbEPYifNSV6i2iApb4ryEe8/78LGxsY+jt3GPW1ZWmsk2sMtjh4bGxv7IHb7D31bTiaD27aM5XhsbGzsk9htg9E2D0mGM7lvO3K4nIpgY2Njb8tul2aSwvbUws1Tg4qbLwwbGxt7c3b7r3zOywtbzphHWjdZGjY2NvaG7Enos8bLI63JX9tnwMbGxj6J3S7BrLU080WcnFd3Y9jY2NgbsvOHaDFrw93JqHhUrrCxsbE3Z+fUPIpaW6DMBxJvCZKwsbGxN2dPQvl8nDBvOdrloWJZBxsbG3sr9mSZpi0kbbj/VCx1GSdhY2NjH8Fui8HkSo6jbVfypmWxEGJjY2Nvwl6Le9pYZxJaTXL+xW8SGxsbe0P2ZHFnrW2YlMn2OC4LGDY2NvavZLfxTRs8taPlpMReJmrY2NjYv5K9tu5Tr9QMBsPR8WFjY2Mfx24DoHk41Qb6a4X2MkfCxsbGPog9WmQMik3dJMSfma8ELS7uYGNjY/909h9ZKyFMLiY64AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

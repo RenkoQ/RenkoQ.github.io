@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="后台">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-20T13:21:01.000Z" itemprop="datePublished" class="page-time">
+  2017-04-20
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">后台学习(二)——MySql绿色版配置&Navicat for MySQL</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-20 21:21:01" datetime="2017-04-20T13:21:01.000Z"  itemprop="datePublished">2017-04-20</time>
+
+            
+
+
+            
+	<span id="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" class="leancloud_visitors" data-flag-title="后台学习(二)——MySql绿色版配置&Navicat for MySQL" title="后台学习(二)——MySql绿色版配置&Navicat for MySQL">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/#comment">
+            <span class="valine-comment-count" data-xid="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
+<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">Windows (x86, 64-bit), ZIP Archive</a><br>No thanks, just start my download.</p>
+<h3 id="2-添加系统环境变量"><a href="#2-添加系统环境变量" class="headerlink" title="2. 添加系统环境变量"></a>2. 添加系统环境变量</h3><pre><code>变量名： Path    变量值：E:\mysql\mysql-5.7.18-winx64\bin；
+</code></pre><h3 id="3-配置my-ini文件"><a href="#3-配置my-ini文件" class="headerlink" title="3. 配置my.ini文件"></a>3. 配置my.ini文件</h3><p>解压目录下新建<code>my.ini</code>文件，编辑为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[mysqld]  </div><div class="line">basedir=E:\mysql\mysql-5.7.18-winx64    # 设置mysql的安装目录  </div><div class="line">datadir=E:\mysql\mysqldbms\data   # 设置mysql数据库的数据的存放目录，必须是data，或者是//xxx/data  </div><div class="line">  </div><div class="line">*************************分割线*******************  </div><div class="line"></div><div class="line">&lt;!--more--&gt;</div><div class="line"></div><div class="line">port = 3306  </div><div class="line">socket = /tmp/mysql.sock  </div><div class="line">default-character-set=gbk   # 设置mysql服务器的字符集  </div><div class="line">skip-locking  </div><div class="line">key_buffer = 16K  </div><div class="line">max_allowed_packet = 1M  </div><div class="line">table_cache = 4  </div><div class="line">sort_buffer_size = 64K  </div><div class="line">read_buffer_size = 256K  </div><div class="line">read_rnd_buffer_size = 256K  </div><div class="line">net_buffer_length = 2K  </div><div class="line">thread_stack = 64K  </div><div class="line">  </div><div class="line">[client]   </div><div class="line">#password = your_password  </div><div class="line">port = 3306  </div><div class="line">socket = /tmp/mysql.sock  </div><div class="line">default-character-set=gbk   </div><div class="line">*************************分割线*******************</div></pre></td></tr></table></figure></p>
+<h3 id="4-安装服务"><a href="#4-安装服务" class="headerlink" title="4. 安装服务"></a>4. 安装服务</h3><p><strong>管理员模式</strong>下cmd输入<code>mysqld --install MySQL --defaults-file=&quot;E:\mysql\mysql-5.7.18-winx64\my.ini&quot;</code><br>显示Service successfully installed</p>
+<p>同理删除服务<code>mysqld --remove MySQL</code></p>
+<h3 id="5-启动MySQL服务"><a href="#5-启动MySQL服务" class="headerlink" title="5. 启动MySQL服务"></a>5. 启动MySQL服务</h3><p><code>mysqld  --initialize</code>自动生成带随机密码的root用户<br><code>mysqld --initialize-insecure</code>自动生成无密码的root用户（我先执行了这个命令）<br>data文件夹不为空是不能执行这个命令的。可以先删除data目录下的所有文件或者移走。</p>
+<p>cmd管理员模式在bin目录下<code>net start mysql</code>即可启动服务。<br>同理，停止服务器命令<code>net stop MySQL</code></p>
+<ul>
+<li><p>服务无法启动-“NET HELPMSG 3534”问题解决<br>参考<a href="http://bbs.csdn.net/topics/391851148" target="_blank" rel="external">http://bbs.csdn.net/topics/391851148</a><br>先<code>mysqld  --initialize</code>初始化data目录。<br>5.7版本还可以把5.6的data目录拷过去解决。</p>
+</li>
+<li><p>服务无法启动-1067错误问题解决<br>参考<a href="http://www.cnblogs.com/mr-hero/p/5817142.html" target="_blank" rel="external">http://www.cnblogs.com/mr-hero/p/5817142.html</a></p>
+</li>
+</ul>
+<h3 id="6-设置密码"><a href="#6-设置密码" class="headerlink" title="6. 设置密码"></a>6. 设置密码</h3><p><code>mysql -uroot -p password 123456</code> </p>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fet9ibojlsj20es02kmxe.jpg" alt="密码设置"></p>
+<h3 id="7-本地连接"><a href="#7-本地连接" class="headerlink" title="7. 本地连接"></a>7. 本地连接</h3><p>cmd输入<code>mysql -u root -p</code>再输密码连接<br>退出<code>exit</code>（bye真的好萌(*ﾟ∇ﾟ)）<br><figure class="image-box">
+                <img src="http://wx1.sinaimg.cn/large/789d050dgy1fet9p2fskqj20m8095jsi.jpg" alt="连接操作" title="" class="">
+                <p>连接操作</p>
+            </figure></p>
+<h3 id="8-Navicat-for-MySQL"><a href="#8-Navicat-for-MySQL" class="headerlink" title="8. Navicat for MySQL"></a>8. Navicat for MySQL</h3><p>图形化数据库管理工具，<a href="https://navicatformysql.en.softonic.com/" target="_blank" rel="external">官网下载</a>。<br>安装后<code>新建连接</code>连接数据库就行。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:31:48.876Z" itemprop="dateUpdated">2017-11-21 22:31:48</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/04/20/后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL/" target="_blank" rel="external">https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&title=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&title=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/20/后台学习(三)——框架测试/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">后台学习(三)——框架测试</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">后台学习(一)——Apache Tomcat&amp;Maven配置</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&title=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&title=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台学习(二)——MySql绿色版配置&Navicat for MySQL》 — Renko's blog&url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADH0lEQVR42u3aQW7DMAwEwPz/0+kDCru7kgLUzPhUpI6tUQ8sl3q94ut9e/2+8+pb98/P3/7789cnLmxsbOyHsBNS8rKr+6++tXN/vtGXW4ONjY09jp0/bm1ZCTJ/V77dl59jY2NjYwcNQH7/fVFMfouNjY2Nfaow5M1GnvN8Yp3Y2NjY89jJK9diprzNWGt+Pp6lYWNjY/97dj4V/f8/f2S+jY2Njf2P2e+Na/+Yztqxm7xcXa4cGxsbexC7LRJtrHO/QfmTW2o0PMDGxsYewd4J38+GO23MlP9JFufP2NjY2A9k5wdoTh2yae9sh8GXG4GNjY09iN1m5juHdfLgaX88UARb2NjY2A9n569sS0vbJNzf05alPzYIGxsb+2vY7RB37fNkGNAOhrGxsbG/jV0HMXHMtH/Qpw2PopgMGxsbezQ7iZnOBkP7DUzdUGFjY2OPY7dNSLspbZzUlrp6II2NjY09mp2H/juFsB0P7yCxsbGxZ7PbmD4P5dtDPEkkdKoFwsbGxp7E/uOQYlnATo1m29LYDgmwsbGxp7LzAtY2LTtNyM5o+XJbsbGxsQexz0Y57ag4CZ7awlYcQsLGxsYeyk4+PxUY3S/x/v5khPxqJ8zY2NjYj2W3jLwtaTd6bXi8E2ZhY2Njz2Mn7cdaYVvb7p2BQbRmbGxs7HHsfDvWSkg7PMgbksWACRsbG/vh7Da4aReab1MyPG6HzUXRwsbGxn44uz0Ec3ZT9otljcfGxsYexz7woO3oJy+uO9NbbGxs7Kns9p/7vJ041WDsBFLY2NjYs9n5qDVvUfKF5u/Ng6dieIyNjY09gt22H20rkmzB/tCi/i42Njb2IHYe36wtOnlOG06tBVvY2NjYU9nv8lob2bZtyc4oOgqesLGxsQex8ytfYjLuzYtcUurqFA0bGxt7HHutaO00GHkZy0tjUlaxsbGxZ7PXMGtNyH4LsRYqYWNjY2Pn5WHt6E8bQrWHirCxsbGxc/DagLYtmUkbg42Njf097Lw87Ix1dw7urI2ZL+/ExsbGHsTOo/w8xPlEOJW/JS+Z2NjY2A9n/wCpCCY5a+Mr4QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

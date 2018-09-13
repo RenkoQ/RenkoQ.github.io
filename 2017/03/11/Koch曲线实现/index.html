@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Koch曲线实现 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="javascript">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Koch曲线实现</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Koch曲线实现</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-11T12:58:51.000Z" itemprop="datePublished" class="page-time">
+  2017-03-11
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Koch曲线实现"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Koch曲线实现</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-11 20:58:51" datetime="2017-03-11T12:58:51.000Z"  itemprop="datePublished">2017-03-11</time>
+
+            
+
+
+            
+	<span id="/2017/03/11/Koch曲线实现/" class="leancloud_visitors" data-flag-title="Koch曲线实现" title="Koch曲线实现">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/03/11/Koch曲线实现/#comment">
+            <span class="valine-comment-count" data-xid="/2017/03/11/Koch曲线实现/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank" rel="noopener">摘自维基</a>：<br>科赫曲线是一种分形，是de Rham曲线的特例。<br>给定线段AB，科赫曲线可以由以下步骤生成：<br>1.将线段分成三等份（AC,CD,DB）<br>2.以CD为底，向外（内外随意）画一个等边三角形DMC<br>3.将线段CD移去<br>4.分别对AC,CM,MD,DB重复1~3。<br>科赫雪花是以等边三角形三边生成的科赫曲线组成的。每条科赫曲线的长度是无限大，它是连续而无处可微的曲线。</p>
+<a id="more"></a>
+<h3 id="2-数学原理与Matlab实现"><a href="#2-数学原理与Matlab实现" class="headerlink" title="2. 数学原理与Matlab实现"></a>2. 数学原理与Matlab实现</h3><p>摘自<a href="http://www.weibo.com/p/230418e9a1554a0102vpll" target="_blank" rel="noopener">分形系列之matlab绘制koch曲线</a><br> 1 . 算法分析：<br><figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1fv6v8hsm15j20810363yg.jpg" alt="描述" title="" class="">
+                <p>描述</p>
+            </figure><br>在直线段的中间依次插入三个点P2，P3，P4。P2,P4三等分点。P3是P2,P4中点，旋转60°由正交矩阵实现。<br> <figure class="image-box">
+                <img src="http://s6.sinaimg.cn/large/004hgvMuzy6SNVJ9Mpf85" alt="旋转矩阵" title="" class="">
+                <p>旋转矩阵</p>
+            </figure><br>根据初始数据（P1和P5点的坐标），产生图中5个结点的坐标。结点的坐标数组形成一个矩阵，矩阵的第一行为P1的坐标，第二行为P2的坐标……，第五行为P5的坐标。矩阵的第一列元素分别为5个结点的x坐标，第二列元素分别为5个结点的y坐标。<br>进一步考虑Koch曲线形成过程中结点数目的变化规律。设第k次迭代产生的结点数为n(k)，第k+1次迭代产生的结点数为n(k+1)，则n(k)和n(k+1)中间的递推关系为n(k+1)=4n(k)-3。</p>
+<p>2 . 代码</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Koch</span><span class="params">(num)</span></span></span><br><span class="line">p = [<span class="number">0</span> <span class="number">0</span>;<span class="number">10</span> <span class="number">0</span>];<span class="comment">%p初始线段两端点</span></span><br><span class="line">n=<span class="number">2</span>;  <span class="comment">%n结点数</span></span><br><span class="line">A=[cos(pi/<span class="number">3</span>) -sin(pi/<span class="number">3</span>);sin(pi/<span class="number">3</span>) cos(pi/<span class="number">3</span>)]; <span class="comment">%旋转矩阵</span></span><br><span class="line"><span class="keyword">for</span> k=<span class="number">1</span>:num   <span class="comment">%k为分形次数</span></span><br><span class="line"> d=diff(p)/<span class="number">3</span>;<span class="comment">%diff计算相邻两个点的坐标之差 d得三等分点</span></span><br><span class="line"> m=<span class="number">4</span>*n<span class="number">-3</span>;<span class="comment">%迭代公式</span></span><br><span class="line"> q=p(<span class="number">1</span>:n<span class="number">-1</span>,:); <span class="comment">%以原点为起点,前n-1个点的坐标为终点形成向量</span></span><br><span class="line"> p(<span class="number">5</span>:<span class="number">4</span>:m,:)=p(<span class="number">2</span>:n,:); <span class="comment">%迭代后处于4k+1位置上的点的坐标为迭代前的相应坐标</span></span><br><span class="line"> p(<span class="number">2</span>:<span class="number">4</span>:m,:)=q+d;     <span class="comment">%用向量方法计算迭代后处于4k+2位置上的点的坐标    </span></span><br><span class="line"> p(<span class="number">3</span>:<span class="number">4</span>:m,:)=q+d+d*A';  <span class="comment">%用向量方法计算迭代后处于4k+3位置上的点的坐标   </span></span><br><span class="line"> p(<span class="number">4</span>:<span class="number">4</span>:m,:)=q+<span class="number">2</span>*d;   <span class="comment">%用向量方法计算迭代后处于4k位置上的点的坐标</span></span><br><span class="line"> n=m; <span class="comment">%迭代后新的结点数目</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">plot(p(:,<span class="number">1</span>),p(:,<span class="number">2</span>));</span><br><span class="line">axis([<span class="number">0</span> <span class="number">10</span> <span class="number">0</span> <span class="number">10</span>]);</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://wx4.sinaimg.cn/mw690/789d050dgy1fdgve4cpq4j20ta0hudib.jpg" alt="matlab演示" title="" class="">
+                <p>matlab演示</p>
+            </figure>
+<h3 id="3-Javascript实现"><a href="#3-Javascript实现" class="headerlink" title="3. Javascript实现"></a>3. Javascript实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;KochCurve&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body onload=<span class="string">"Draw()"</span>&gt;</span><br><span class="line">&lt;form &gt;</span><br><span class="line">    &lt;label&gt;请选择分形次数&lt;<span class="regexp">/label&gt;</span></span><br><span class="line"><span class="regexp">    &lt;input type="range" name="points" min="1" max="9" onchange="change()" id="range"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;input type="text" id="show"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;input type="button" value="Draw" onclick="Draw()"/</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/form&gt;</span></span><br><span class="line"><span class="regexp">&lt;br/</span>&gt;</span><br><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"600"</span> height=<span class="string">"600"</span></span><br><span class="line">        style=<span class="string">"border: 1px solid #c3c3c3;background-color: antiquewhite"</span>&gt;</span><br><span class="line">    Your browser does not support the canvas element.</span><br><span class="line">&lt;<span class="regexp">/canvas&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    var c = document.getElementById("</span>myCanvas<span class="string">");</span></span><br><span class="line"><span class="string">    var cxt  = c.getContext("</span><span class="number">2</span>d<span class="string">");</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /*科赫曲线函数*/</span></span><br><span class="line"><span class="string">    function Koch(p1,p2,n)&#123;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        if(n==0)&#123;</span></span><br><span class="line"><span class="string">            drawLine(p1.x,p1.y,p2.x,p2.y);</span></span><br><span class="line"><span class="string">            return;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        var p3 = &#123;&#125;, p4=&#123;&#125;, p5 = &#123;&#125;;</span></span><br><span class="line"><span class="string">        var d53x,d53y;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        p3.x = (2*p1.x + p2.x) / 3;</span></span><br><span class="line"><span class="string">        p3.y = (2*p1.y + p2.y) / 3;</span></span><br><span class="line"><span class="string">        p5.x = (p1.x + 2*p2.x) / 3;</span></span><br><span class="line"><span class="string">        p5.y = (p1.y + 2*p2.y) / 3;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        d53x = (p2.x - p1.x)/3;</span></span><br><span class="line"><span class="string">        d53y = (p2.y - p1.y)/3;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        p4.x = p3.x+ d53x* Math.cos(Math.PI/3) +d53y*Math.sin(Math.PI/3);</span></span><br><span class="line"><span class="string">        p4.y = p3.y- d53x* Math.sin(Math.PI/3) +d53y*Math.cos(Math.PI/3);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Koch(p1,p3,n-1);</span></span><br><span class="line"><span class="string">        Koch(p3,p4,n-1);</span></span><br><span class="line"><span class="string">        Koch(p4,p5,n-1);</span></span><br><span class="line"><span class="string">        Koch(p5,p2,n-1);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    function Draw()&#123;</span></span><br><span class="line"><span class="string">        clearCanvas();</span></span><br><span class="line"><span class="string">        var n=parseInt(document.getElementById("</span>range<span class="string">").value);  //传入分形次数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        //返回元素的高度和宽度，以像素为单位。</span></span><br><span class="line"><span class="string">        var osa=&#123;x:0,y:c.offsetHeight / 2&#125;;</span></span><br><span class="line"><span class="string">        var osb=&#123;x:c.offsetWidth,y:c.offsetHeight / 2&#125;;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Koch(osa, osb, n);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /*canvas连线*/</span></span><br><span class="line"><span class="string">    function drawLine(x0,y0,x1,y1)&#123;</span></span><br><span class="line"><span class="string">        cxt.beginPath();</span></span><br><span class="line"><span class="string">        cxt.strokeStyle ="</span><span class="number">00</span>ff00<span class="string">";</span></span><br><span class="line"><span class="string">        //cxt.lineWidth = 2;</span></span><br><span class="line"><span class="string">        cxt.moveTo(x0,y0);</span></span><br><span class="line"><span class="string">        cxt.lineTo(x1,y1);</span></span><br><span class="line"><span class="string">        cxt.stroke();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /*清空画布*/</span></span><br><span class="line"><span class="string">    function clearCanvas() &#123;</span></span><br><span class="line"><span class="string">        cxt.clearRect(0,0,c.width,c.height);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /*滑块数字显示*/</span></span><br><span class="line"><span class="string">    function change()&#123;</span></span><br><span class="line"><span class="string">        var num = document.getElementById("</span>range<span class="string">");</span></span><br><span class="line"><span class="string">        var location = document.getElementById("</span>show<span class="string">");</span></span><br><span class="line"><span class="string">        location.value = num.value;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-12T09:10:16.002Z" itemprop="dateUpdated">2018-09-12 17:10:16</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/03/11/Koch曲线实现/" target="_blank" rel="external">https://renkoq.github.io/2017/03/11/Koch曲线实现/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&title=《Koch曲线实现》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&title=《Koch曲线实现》 — Renko's blog&source=
+1. 介绍摘自维基：科赫曲线是一种分形，是de Rham曲线的特例。给定线段AB，科赫曲线可以由以下步骤生成：1.将线段分成三等份（AC,CD,DB）2..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Koch曲线实现》 — Renko's blog&url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/12/FPS记录控件stat.js/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">FPS记录控件stat.js</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">第一人称视角(FPV)Three.js相机控件</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&title=《Koch曲线实现》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&title=《Koch曲线实现》 — Renko's blog&source=
+1. 介绍摘自维基：科赫曲线是一种分形，是de Rham曲线的特例。给定线段AB，科赫曲线可以由以下步骤生成：1.将线段分成三等份（AC,CD,DB）2..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Koch曲线实现》 — Renko's blog&url=https://renkoq.github.io/2017/03/11/Koch曲线实现/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/03/11/Koch曲线实现/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACH0lEQVR42u3aMW7DMAwF0N7/0unaoXY+SSWApecpiG1ZTwNBUvr5ia/XxXV/9+8zV6Ml/y+7MDAwHstIJlEFVL+yYIEwMDAOYFx9+Op38k/yfD7OmzljYGBgBGlc9R8MDAyMTwfcSdl5/zwGBgbGpIi9fysPx5MkckEtjoGB8UBGNUR+8/dH9jcwMDAexeg16/MWWzWVfLUuDAyMvRl5gJs09/MpTuaDgYGxN6PXGktaZtVn7pdgWW6LgYHxKEavKdYLeXmjrdyYw8DAOIaRD5TwenerYb1c+2JgYDyQcf/CqiMUvWK1l5JiYGDsx1h12LQ60WpAf5OGYmBgbM3oFaW98nXyrcJdDAyMAxhJmJsE5clEo0MbGBgYWzN6wTRvok0ac+UZYmBgbMTIQ2p1IyEvPudLgIGBsTdj3pQvHIloLVzeHMTAwNiV0TtOkaeV1UBc3gbIVwsDA2MjRvLkqvDaW7J/3sXAwNiakbe9qkcxeguRb1FEOxsYGBjbMaqt+d52Zl4SV1t1GBgYJzB6hegkQVzV7MPAwDiHkSd21TRuQUMtaQViYGBsypgcmFiV2CUh/k0zDgMDY2vGqphdTRmToJwXzBgYGCcwJmXqJExPjlxgYGCcyehtAOSFbpIIVkM/BgYGRp6i5ZuU1buFMTEwMDBaR8cmo5W3HzAwMA5gVBO4729YLqvFMTAwHsjIB12755AvSjlNxMDA2IfxC5VMIuBYlu05AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

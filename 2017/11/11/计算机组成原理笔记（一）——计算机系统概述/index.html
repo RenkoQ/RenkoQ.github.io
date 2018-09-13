@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>计算机组成原理笔记（一）——计算机系统概述 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="架构">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>计算机组成原理笔记（一）——计算机系统概述</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">计算机组成原理笔记（一）——计算机系统概述</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-10T18:01:30.000Z" itemprop="datePublished" class="page-time">
+  2017-11-11
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-计算机组成原理笔记（一）——计算机系统概述"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">计算机组成原理笔记（一）——计算机系统概述</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-11 02:01:30" datetime="2017-11-10T18:01:30.000Z"  itemprop="datePublished">2017-11-11</time>
+
+            
+
+
+            
+	<span id="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（一）——计算机系统概述" title="计算机组成原理笔记（一）——计算机系统概述">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-计算机发展历程"><a href="#1-计算机发展历程" class="headerlink" title="1. 计算机发展历程"></a>1. 计算机发展历程</h3><p>计算机的发展史包括硬件和软件两方面。<strong>硬件</strong>的发展主要体现在组成计算机基本电路的电子元器件的性能上，<strong>软件</strong>的发展始终以如何提高计算机的效率和如何方便用户为目标。</p>
+<p>通常，根据组成计算机的电子器件，把电子计算机分为4个发展阶段，习惯上称为四代：<strong>电子管、晶体管、中小规模集成电路、大规模超大规模集成电路</strong>。</p>
+<h3 id="2-计算机硬件的基本组成"><a href="#2-计算机硬件的基本组成" class="headerlink" title="2. 计算机硬件的基本组成"></a>2. 计算机硬件的基本组成</h3><p>中央处理器（CPU）=运算器+控制器。<br>主机=CPU+主存储器。<br>除去主机以外的硬件装置（如输入设备﹑输出设备﹑辅助存储器等）称为外围设备或外部设备。</p>
+<p>计算机的硬件系统由以下五大基本部件组成。</p>
+<ul>
+<li><strong>输入设备</strong>：把程序和原始数据送到计算机中去的设备。</li>
+<li><strong>输出设</strong>备：把计算机的处理结果送到计算机的设备。</li>
+<li><strong>存储器</strong>：用来存放程序和数据的部件，是计算机实现“存储程序控制“的基础。</li>
+<li><strong>运算器</strong>：对信息进行处理和运算的部件，经常进行的运算是算术运算和逻辑运算。</li>
+<li><strong>控制器</strong>：控制器是整个计算机的指挥中心，它的主要功能是按照人们预先确定的操作步骤，控制整个计算机的各部件有条不紊地自动工作。</li>
+</ul>
+<a id="more"></a>
+<h3 id="3-计算机软件的分类"><a href="#3-计算机软件的分类" class="headerlink" title="3. 计算机软件的分类"></a>3. 计算机软件的分类</h3><p>计算机软件按其功能分，有应用软件和系统软件两大类。应用软件是用户为解决某种应用问题而编制的程序；系统软件用于实现计算机系统的管理﹑调度﹑监视﹑服务等功能。</p>
+<p>通常将系统软件分为以下几类。</p>
+<ul>
+<li>操作系统：有批处理系统﹑分时操作系统﹑实时操作系统等。</li>
+<li>语言处理程序：如编译程序﹑汇编程序﹑解释程序等。</li>
+<li>标准程序库：如监控程序，用于监视计算机工作。</li>
+<li>服务性程序：如链接程序﹑编辑程序﹑调试程序﹑诊断程序等。</li>
+<li>数据库管理系统：包括数据库和数据库管理软件。</li>
+<li>计算机网络软件：为计算机网络配置的系统软件。</li>
+</ul>
+<h3 id="4-计算机工作过程"><a href="#4-计算机工作过程" class="headerlink" title="4. 计算机工作过程"></a>4. 计算机工作过程</h3><p><strong>人们将事先编好的程序（指令序列）和数据送到计算机的存储器内，然后计算机按此指令序列逐条完成全部指令的功能，直至程序结束。</strong></p>
+<h3 id="5-计算机性能指标"><a href="#5-计算机性能指标" class="headerlink" title="5. 计算机性能指标"></a>5. 计算机性能指标</h3><p><strong>吞吐量</strong>：吞吐量是指系统在单位时间内处理请求的数量。<br><strong>响应时间</strong>：响应时间是指系统对请求作出响应的时间。<br><strong>主频</strong>：主频是衡量CPU速度的重要参数。CPU的主频表示在CPU内数字脉冲信号振荡的速度，与CPU实际的运行能力并没有直接关系。<br><strong>CPU时钟周期</strong>：主频的倒数是时钟周期，这是CPU中最小的时间元素。每个动作至少需要一个时钟周期。<br><strong>CPI</strong>：每条指令执行所需的时钟周期数。<br><figure class="image-box">
+                <img src="http://wx3.sinaimg.cn/large/789d050dgy1ff99ach9a8j20k6095t9l.jpg" alt="此处输入图片的描述" title="" class="">
+                <p>此处输入图片的描述</p>
+            </figure></p>
+<h3 id="6-题"><a href="#6-题" class="headerlink" title="6. 题"></a>6. 题</h3><p>【例1.1】    下列叙述正确的是（D ）<br>A.    世界上第一台电子计算机ENIAC首次实现了“存储程序”方案<br>B.    按照计算机的规模，人们把计算机的发展过程分为4个时代<br>C.    微型计算机最早出现于第三代计算机中<br>D.    冯·诺依曼提出的计算机体系结构奠定了现代计算机的基础<br>试题分析：ENIAC的存储器容量极小，不属于存储器的计算机。通常划分计算机发展时代是以计算机所用的电子元器件为标准的。最早的微型计算机是由大规模集成电路实现的。</p>
+<p>【例1.2】    电子计算机可分为数字计算机、模拟计算机和数模混合计算机，是按（C）。<br> A.计算机的用途分类                    B.计算机的使用方式分类<br> C.信息的形式和处理方式分类            D.计算机的系统规模分类<br>试题分析：根据计算机的用途可分为通用计算机和专用计算机；根据计算机系统的规模可分为巨型机、大型机、中型机、小型机、微型机等；根据信息的形式和处理方式可分为电子数字计算机、电子模拟计算机，也可以有数模混合计算机。</p>
+<p>【例1.3】    由0、1代码组成的语言，称为（C ）<br> A.汇编语言         B.自然语言       C.机器语言         D.高级语言<br>试题分析：机器语言是计算机唯一可以直接识别和执行的语言，它是由二进制代码编写的。而汇编语言是一种助记符来表示计算机指令的语言，高级语言是与计算机硬件结构无关的程序设计语言。</p>
+<p>【例1.4】    只有当程序执行时，它才会去将源程序翻译成机器语言，而且一次只能读取、翻译并执行源代码中的一行语句，此程序称为（C ）<br> A.目标程序         B.编译程序        C.解释程序        D.汇编程序<br>试题分析：将高级语言编写的源程序翻译成机器语言的语言处理程序包括编译程序和解释程序，前者是先将源程序转换为目标程序，然后在开始执行；而后者对源程序的处理采用一行一行语句地边解释边执行的方法。</p>
+<p>【例1.5】    用于科学计算的计算机中，标志系统性能的主要参数是（ D）<br> A.主频              B.主存容量       C.MIPS            D.MFLOPS<br>试题分析：主频越高和主存容量越大越有利于提高计算机的性能，但它们并不是标志系统性能的主要参数，也就是说主频高和主存大的计算机并不一定就能获得好的性能。MIPS和MFLOPS都是标志系统性能的主要参数，MIPS表示每秒执行百万条指令条数，用来描述计算机定点运行速度，MFLOPS表示每秒钟执行百万次浮点运算，用来描述计算机的浮点运行速度，而科学计算的计算机更看重浮点运算速度。</p>
+<p>【例1.6】    微机A和B采用了不同主频的CPU芯片，片内逻辑电路完全相同。<br>(1)    若A机的CPU主频为8MHz，B机为12MHz，则A机的CPU时钟周期为多少？<br>(2)    如A机的平均指令执行速度为0.4MIPS,那么A机的平均指令周期为多少？<br>(3)    B机的平均指令执行速度为多少？<br>试题分析：<br>（1）    A机的CPU主频为8MHz,所以A机的CPU时钟周期=1÷8MHz=0.125us。<br>（2）    A机的平均指令执行速度为0.4MIPS，所以A    机的平均指令周期=1÷0.4MIPS=2.5us。<br>（3）    A机平均每条指令的时钟周期数=2.5us÷0.125us=20。而微机A和B片内逻辑电路完全相同，所以B机平均每条指令的时钟周期数也为20.<br> 由于B机的CPU主频为12MHz，所以B机的CPU时钟周期=1÷12MHz= us。<br> B机的平均指令周期=20× us= us.<br> B机的平均指令执行速度= MIPS=0.6MIPS。</p>
+<p>【例1.7】    设某机主频为8MHz，每个机器周期平均含2个时钟周期，每条指令平均有2.5个机器周期，试问该机的平均指令执行速度为多少MIPS?若机器主频不变，但每个机器周期平均含4个时钟周期，每条指令平均有5个机器周期，则该机的平均指令执行速度又是多少MIPS?<br>试题分析：根据主频为8MHz，时钟周期=1÷8MHz=0.125us，机器周期为0.125×2=0.25us,指令周期为0.25×2.5=0.625us。<br>（1）    平均指令执行速度为1÷0.625=1.6MIPS。<br>（2）    若机器主频不变，机器周期含4个时钟周期，每条指令平均含5个机器周期，则指令周期为0.125×4×5=2.5us，故平均指令执行速度为1÷2.5=0.4MIPS。</p>
+<p>【题 1.1】 通常划分计算机发展时代的标准是（A ）<br>A.所用电子器件          B.运算速度             C.计算机结构      D.所用语言</p>
+<p>【题 1.2】冯·诺依曼计算机结构的核心思想是（ D）<br>A.二进制运算                          B.有存储信息的功能<br>C.运算速度快                          D.存储程序控制</p>
+<p>【题 1.3】中央处理器（CPU）是指（ C）<br>A.运算器          B.控制器       C.运算器和控制器      D.运算器、控制器和存储器</p>
+<p>【题 1.4】计算机硬件能够直接执行的是（A ）<br>A.机器语言                            B.汇编语言<br>C.机器语言和汇编语言                  D.各种高级语言</p>
+<p>【题 1.5】假设某机平均执行一条指令需要两次访存，平均需要2个机器周期，每个机器周期平均包含4个时钟周期。若机器主频为200MHz，请回答：<br>（1）    若主存零等待（即不需要插入等待周期），平均指令执行速度为多少MIPS?<br>（2）    若每次访问主存需要插入2个等待周期，平均指令执行速度为多少MIPS?<br>参考答案：<br>（1）时钟周期=1÷200=0.005us，机器周期=4×0.005=0.02us，指令周期=2×机器周期=0.04us，平均指令执行速度=1÷0.04=25MIPS。<br>（2）指令周期=2×机器周期+2×机器周期=0.05us， 平均指令执行速度=1÷0.05=20MIPS。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-12T09:48:22.244Z" itemprop="dateUpdated">2018-09-12 17:48:22</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" target="_blank" rel="external">https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&title=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&title=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&source=整理自学院网站
+1. 计算机发展历程计算机的发展史包括硬件和软件两方面。硬件的发展主要体现在组成计算机基本电路的电子元器件的性能上，软件的发展始终以如何提..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/11/计算机组成原理笔记（二）——存储器/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">计算机组成原理笔记（二）——存储器</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/03/yeoman/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">yeoman</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&title=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&title=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&source=整理自学院网站
+1. 计算机发展历程计算机的发展史包括硬件和软件两方面。硬件的发展主要体现在组成计算机基本电路的电子元器件的性能上，软件的发展始终以如何提..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（一）——计算机系统概述》 — Renko's blog&url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADNUlEQVR42u3a207jUAwFUP7/p2deGUGYvX1SibirT4imidephPHl4yN+/XnB6/Odvz7l5+deXX/zCxsbG/sh7Dy4n8P9es/23asrr2D5MX1zB2xsbOx17KubJtckh9UmoSSqNk5sbGxs7CSZ5SkqSU75oWNjY2Nj3/XgpKiYJby2QMLGxsZ+N3bexJ8VALNG0klyva2Xho2Njf3r2flU9Pf//JL5NjY2NvYvZp8v2SQPvis1zoqWb56LjY2NvYidJ4CkAZQ0/dtrTkYC/3kiNjY29iJ2DmsbPW1Dpz2+JFl+nH+f2NjY2I9iz4YBs+WeWWMoH/dGR4CNjY39cHYS1mwo+/MqTxt63sCKUho2Njb2Ovbsn/i8LLmrud+2kC5/j42Njb2I3Tbi8+vvWq9p02fRlsLGxsZewW4HAHmqywPKm0F3DYaxsbGxN7HbUWteuswWd2aD3lmE2NjY2PvYs0Z8Ds6Lk5PkV1uwsbGxH85OqG3h0Y5dc9jsuZcVGDY2NvY6dt5amoV7UmYkg9v8CLCxsbE3sfP1mvYvf9vKz0uLk+UebGxs7H3sFpwnjFlwM0zdbMLGxsZexG5HtrN0lSeq9sq8RKk3j7CxsbEfws4bSXm7vy1v2nWc2XH88ylsbGzsdexk1aZdkTkZxyaDhxM8NjY29j72yeJOm5byYXCbxvIhNDY2NvY+djsYaA8oCXHW7Rl+GdjY2NhL2W0j6bzMmCFPFomwsbGx97HzhJS/25Y37bg3j7z4arGxsbEfy86DPildZmmp/Wx+xNjY2Nib2CdJK2rEBwkpbzadHNw3UWFjY2MvZSfhzpr+eWrJS5rbqi5sbGzsFex8wfHe0ewrlj6jeLCxsbHfgN3+/c+bO216u2sgjY2Njb2PPVumOSlF8uZ+nibrOLGxsbEXsdtkkLf+Z2kpx+Tj53zMgI2Njf1cdp602nFvnmBOWv95zHV/CxsbG/tR7NkA+HzA0DahZkn3MoFhY2NjvzH7pM30uhbScFMJGxsb+83YSUKaFSdtEko+exknNjY29jr2SQmRt3jyRDhrM+VJFxsbG3sTO2/QHN0iPuKTQmU2osbGxsZ+LPsv/dRT7xNl5+UAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

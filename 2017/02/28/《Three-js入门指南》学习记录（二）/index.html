@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>《Three.js入门指南》学习记录（二） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Three.js">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>《Three.js入门指南》学习记录（二）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">《Three.js入门指南》学习记录（二）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-28T07:07:10.000Z" itemprop="datePublished" class="page-time">
+  2017-02-28
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-《Three-js入门指南》学习记录（二）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">《Three.js入门指南》学习记录（二）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-02-28 15:07:10" datetime="2017-02-28T07:07:10.000Z"  itemprop="datePublished">2017-02-28</time>
+
+            
+
+
+            
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（二）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（二）" title="《Three.js入门指南》学习记录（二）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（二）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（二）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="1-照相机"><a href="#1-照相机" class="headerlink" title="1.照相机"></a>1.照相机</h4><p>定义了三维空间到二维屏幕的投影方式</p>
+<h4 id="2-正交投影照相机（Orthographic-Camera）"><a href="#2-正交投影照相机（Orthographic-Camera）" class="headerlink" title="2.正交投影照相机（Orthographic Camera）"></a>2.正交投影照相机（Orthographic Camera）</h4><figure class="image-box">
+                <img src="http://techbrood.com/threejs/docs/images/ortho.jpg" alt="正交投影相机" title="" class="">
+                <p>正交投影相机</p>
+            </figure>
+<h4 id="3-视体（viewing-frustum）"><a href="#3-视体（viewing-frustum）" class="headerlink" title="3.视体（viewing frustum）"></a>3.视体（viewing frustum）</h4><p>又称视景体、视锥，是三维世界中在屏幕上可见的区域，即虚拟摄像机的视野。</p>
+<pre><code>THREE.OrthographicCamera(left, right, top, bottom, near, far)
+</code></pre><p>为了保持照相机的横竖比例，需要保证 (right - left) 与 (top - bottom) 的比例与 Canvas宽度与高度的比例一致。<br>near 与 far 都是指到照相机位置在深度平面的位置，而照相机不应该拍摄到其后方的物<br>体，因此这两个值应该均为正值。为了保证场景中的物体不会因为太近或太远而被照相机<br>忽略，一般 near 的值设置得较小， far 的值设置得较大，具体值视场景中物体的位置等<br>决定。</p>
+<h4 id="4-观察方向"><a href="#4-观察方向" class="headerlink" title="4.观察方向"></a>4.观察方向</h4><p>照相机沿 z 轴负方向观察</p>
+<pre><code>.lookAt ( vector )
+</code></pre><p>vector — 观察点</p>
+<p>该函数设定相机在全局空间中的位置。</p>
+<pre><code>camera.lookAt(new THREE.Vector3(0, 0, 0));  //看着原点方向
+</code></pre><h4 id="5-正交照相机总结"><a href="#5-正交照相机总结" class="headerlink" title="5.正交照相机总结"></a>5.正交照相机总结</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-2</span>, <span class="number">2</span>, <span class="number">1.5</span>, <span class="number">-1.5</span>, <span class="number">1</span>, <span class="number">10</span>);</div><div class="line">            camera.position.set(<span class="number">4</span>, <span class="number">-3</span>, <span class="number">5</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line">            <span class="comment">//创建边长为1的红色正方体，wireframe（线框）材质，以便看到正方体后方的边</span></div><div class="line">            <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>),</div><div class="line">                    <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                        <span class="attr">color</span>:<span class="number">0xff0000</span>,</div><div class="line">                        <span class="attr">wireframe</span>:<span class="literal">true</span></div><div class="line">                    &#125;)</div><div class="line">            );</div><div class="line">            scene.add(cube);</div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="6-透视投影照相机（Perspective-Camera）"><a href="#6-透视投影照相机（Perspective-Camera）" class="headerlink" title="6.透视投影照相机（Perspective Camera）"></a>6.透视投影照相机（Perspective Camera）</h4><figure class="image-box">
+                <img src="http://techbrood.com/ueditor/php/upload/image/20160525/1464141326848754.png" alt="透视投影照相机" title="" class="">
+                <p>透视投影照相机</p>
+            </figure>
+<pre><code>THREE.PerspectiveCamera(fov, aspect, near, far)
+</code></pre><p>fov — 相机视锥体竖直方向上的张角（是角度制而非弧度制）<br>aspect — 相机视锥体宽高比width / height，通常设为Canvas 的横纵比例<br>near — 相机视锥体近裁剪面<br>far — 相机视锥体远裁剪面</p>
+<p>near 和 far 分别是照相机到视景体最近、最远的距离，均为正值，且 far 应大于near。</p>
+<p>fov增大时视景体变大，物体相对于整个视景体的大小变小，看起来就显得变小了。</p>
+<h4 id="7-透视照相机总结"><a href="#7-透视照相机总结" class="headerlink" title="7.透视照相机总结"></a>7.透视照相机总结</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">      <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          <span class="comment">//渲染器</span></div><div class="line">          <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">              <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">          &#125;);</div><div class="line">          renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">          <span class="comment">//场景</span></div><div class="line">          <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">          <span class="comment">//照相机</span></div><div class="line">          <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.PerspectiveCamera(<span class="number">60</span>, <span class="number">400</span> / <span class="number">300</span>, <span class="number">1</span>, <span class="number">10</span>);</div><div class="line">          camera.position.set(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</div><div class="line">          scene.add(camera);</div><div class="line">          <span class="comment">//创建边长为1的红色正方体，wireframe（线框）材质，以便看到正方体后方的边</span></div><div class="line">          <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>),</div><div class="line">                  <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                      <span class="attr">color</span>:<span class="number">0xff0000</span>,</div><div class="line">                      <span class="attr">wireframe</span>:<span class="literal">true</span></div><div class="line">                  &#125;)</div><div class="line">          );</div><div class="line">          scene.add(cube);</div><div class="line">          <span class="comment">//渲染</span></div><div class="line">          renderer.render(scene,camera);</div><div class="line">      &#125;</div><div class="line">  &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:35:53.346Z" itemprop="dateUpdated">2017-11-21 22:35:53</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/02/28/《Three-js入门指南》学习记录（二）/" target="_blank" rel="external">https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&title=《《Three.js入门指南》学习记录（二）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&title=《《Three.js入门指南》学习记录（二）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（二）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/02/28/《Three-js入门指南》学习记录（三）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">《Three.js入门指南》学习记录（三）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/28/hexo重装/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">hexo重装</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&title=《《Three.js入门指南》学习记录（二）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&title=《《Three.js入门指南》学习记录（二）》 — Renko's blog&source=技术进步之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《《Three.js入门指南》学习记录（二）》 — Renko's blog&url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/02/28/《Three-js入门指南》学习记录（二）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aQXLDMAgF0N7/0ukFavsDIvXiedVxUltPnREU+PmJr8/Flf9W/pyrO8kbmxceHh7eoaVfLWuy0Pvl3t9J3v7HG/Hw8PDWeFeLyB9dXeL2d/Dw8PDew8u/c58EJ4lyvol4eHh47+fdh43eZuUkPDw8vDfw8kQ5L6fmCfd9kMhLIXh4eHjf4eULfc/PK/09PDw8vHFXPWmG5WWCSdhorhYPDw9vgZcvKKdOiry9hPuhNIyHh4e3wKsWJs62qc4WkR/+YHh4eHhHeTkjL1skgDwYjMIGHh4e3iFete1UbVn1BgWS9URpPR4eHt4aLymqVoeuTpFGnT08PDy8Bd488e21xJKQkz+5MFmGh4eHN+ZVD/dqkbc3iNALBlFKjYeHhzfm5UXY+2VNCrjVlDoPM3h4eHh7vOoRX012q7Deu6KIgYeHhzfmJQd9nnZXw0avqFEYX8DDw8P7J16eLveaWHlrrdwYw8PDw1vgTcCTJlkvMMyLGnh4eHineNVg0BsOyFtfvRO+2eXDw8PDK/KqB/e89TUp8pZHEPDw8PDWePkIVJ4WT0JL3hh72FA8PDy8ZV4+IJUvqFo+OFsKwcPDw9vg9RpLebF1HgCqAw14eHh43+GdalzlvMLgVLyhl5/i4eHhLfPyhn117GDCGKXyeHh4eGu8avJaLQFUSx6TcQQ8PDy87/CqxYiNhLtaFmlWVvDw8PAGvE/xyocDJmXiam58+SkeHh7eAu/sGXsqUc4T+sOxEQ8PD6/YW8+DQR4e8hGEXpG30ADDw8PDW+Alj56nvJPn51vQ7Nfh4eHhrfGqJdpJUDkwpoCHh4f3Al5SMsh/N0+yewURPDw8vD1eUow4e6CfSscf7uPh4eEt8Ob/8N9vx/39vNlf3QI8PDy8Bd4vxHmwJdlysrIAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>同源和跨域（四）跨域资源共享 CORS | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>同源和跨域（四）跨域资源共享 CORS</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">同源和跨域（四）跨域资源共享 CORS</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-20T09:52:53.000Z" itemprop="datePublished" class="page-time">
+  2018-03-20
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-同源和跨域（四）跨域资源共享 CORS"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">同源和跨域（四）跨域资源共享 CORS</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-20 17:52:53" datetime="2018-03-20T09:52:53.000Z"  itemprop="datePublished">2018-03-20</time>
+
+            
+
+
+            
+	<span id="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" class="leancloud_visitors" data-flag-title="同源和跨域（四）跨域资源共享 CORS" title="同源和跨域（四）跨域资源共享 CORS">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS" target="_blank" rel="external">跨來源資源共用（CORS）</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制（CORS）</a></p>
+<pre><code>跨來源資源共用（Cross-Origin Resource Sharing (CORS)）是一種使用額外 HTTP 標頭令目前瀏覽網站的使用者代理取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個跨來源 HTTP 請求（cross-origin HTTP request）。
+</code></pre><p>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
+<h3 id="1-Access-Control-Allow-Origin"><a href="#1-Access-Control-Allow-Origin" class="headerlink" title="1. Access-Control-Allow-Origin"></a>1. Access-Control-Allow-Origin</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" target="_blank" rel="external">Access-Control-Allow-Origin</a></p>
+<p>Access-Control-Allow-Origin 响应头指定了该响应的资源是否被允许与给定的origin共享。</p>
+<p>如需允许所有资源都可以访问您的资源，设置：</p>
+<pre><code>Access-Control-Allow-Origin: *
+</code></pre><p>如需允许<a href="https://developer.mozilla.org访问您的资源，设置：" target="_blank" rel="external">https://developer.mozilla.org访问您的资源，设置：</a></p>
+<pre><code>Access-Control-Allow-Origin: https://developer.mozilla.org
+</code></pre><h3 id="2-简单请求（simple-request）和非简单请求（not-so-simple-request）"><a href="#2-简单请求（simple-request）和非简单请求（not-so-simple-request）" class="headerlink" title="2. 简单请求（simple request）和非简单请求（not-so-simple request）"></a>2. 简单请求（simple request）和非简单请求（not-so-simple request）</h3><p>1、简单的COR请求，它可以直接向外域资源发起请求。它必须仅仅包含简单的方法和头。</p>
+<p>2、如果COR包含复杂的方法和头，它需要发出预检验（Preflight）请求，它先向资源服务器发出一个OPTIONS方法、包含“Origin”头的请求。该回复可以控制COR请求的方法，HTTP头以及验证等信息。只有该请求获得允许以后，才会发起真实的外域请求。</p>
+<p>只要同时满足以下两大条件，就属于简单请求。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">（1) 请求方法是以下三种方法之一：</div><div class="line">HEAD</div><div class="line">GET</div><div class="line">POST</div><div class="line"></div><div class="line">（2）HTTP的头信息不超出以下几种字段：</div><div class="line">Accept</div><div class="line">Accept-Language</div><div class="line">Content-Language</div><div class="line">Last-Event-ID</div><div class="line">Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</div></pre></td></tr></table></figure></p>
+<h3 id="3-详细使用"><a href="#3-详细使用" class="headerlink" title="3. 详细使用"></a>3. 详细使用</h3><a id="more"></a>
+<p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">跨域资源共享 CORS 详解</a></p>
+<p>服务器端示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">require(&quot;http&quot;).createServer(function(req,res)&#123;</div><div class="line">  //报头添加Access-Control-Allow-Origin标签，值为特定的URL或“*”</div><div class="line">  //“*”表示允许所有域访问当前域</div><div class="line">  res.setHeader(&quot;Access-Control-Allow-Origin&quot;,&quot;*&quot;);  </div><div class="line">  res.end(&quot;OK&quot;);</div><div class="line">&#125;).listen(1234);</div></pre></td></tr></table></figure></p>
+<p>客户端示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;CORS&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;jq.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div&gt;catching data...&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    $.ajax(&#123;</div><div class="line">        url:&quot;http://127.0.0.1:1234/&quot;,</div><div class="line">        success:function(data)&#123;</div><div class="line">            $(&quot;div&quot;).text(data)</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>CORS默认只支持GET/POST这两种http请求类型，如果要开启PUT/DELETE之类的方式，需要在服务端在添加一个”Access-Control-Allow-Methods”报头标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">require(&quot;http&quot;).createServer(function(req,res)&#123;</div><div class="line">  res.setHeader(&quot;Access-Control-Allow-Origin&quot;,&quot;http://127.0.0.1&quot;);</div><div class="line">  res.setHeader(</div><div class="line">    &quot;Access-Control-Allow-Methods&quot;,</div><div class="line">    &quot;PUT, GET, POST, DELETE, HEAD, PATCH&quot;</div><div class="line">  );</div><div class="line">  res.end(req.method+&quot; &quot;+req.url);</div><div class="line">&#125;).listen(1234);</div></pre></td></tr></table></figure></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-21T15:40:12.683Z" itemprop="dateUpdated">2018-03-21 23:40:12</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" target="_blank" rel="external">https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&title=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&title=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&source=跨來源資源共用（CORS）HTTP访问控制（CORS）
+跨來源資源共用（Cross-Origin Resource Sharing (CORS)）是一種使..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">同源和跨域（五）HTML5、iframe和其他方式跨域</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/17/同源和跨域（三）Fetch API/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">同源和跨域（三）Fetch API</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&title=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&title=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&source=跨來源資源共用（CORS）HTTP访问控制（CORS）
+跨來源資源共用（Cross-Origin Resource Sharing (CORS)）是一種使..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（四）跨域资源共享 CORS》 — Renko's blog&url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACp0lEQVR42u3a0Y4iMQwEQP7/p+9eV9oDuu1k2ZNqnhBSMlODFBvbj0d8/flyff/m6/fPVj1b+2xVfpcDFx4eHt7i0fMH2tw4X/X9jvkz4+Hh4d3m5VvnYSPfp12b7IOHh4f3O3l7Rv7i8PDw8P5f3usUdh9m2mCDh4eH9yleUoxoj/gW/3qf67UWPDw8vJiXF15/z+cr/T08PDy8dVc9P3DbksEs2NRPi4eHh3eBNysN7F9KkqzP0mU8PDy8n+ElW7cZbNviagPDrOSBh4eHd4q3T6Db1LlNmmcJOh4eHt5t3oyRHNbJcT8DR6VePDw8vKO89vDdPMQ+CA27dnh4eHhHeckWecm1zWbzltjrJLuYKcPDw8Nb85IF7QncllxnoSUaX8DDw8O7xsubSW1TahWv1qMGeHh4ePd4m1ZTO3SVPOhmNOHN0AAeHh7emrcpN8wCxmztZpALDw8P7yzvVCNqP3q1aci9CQl4eHh4R3mn2k77skWSoK9+Qzw8PLxDvNlG7QDBLO1uw8k/9sTDw8O7wMv//Odt+yRZ3xcpiuQbDw8P7wKvvdoG2D4dz1/NbFwMDw8PL+fNhq72oWVTziiKyHh4eHgXePmh3I4CJEXhfSE4inJ4eHh4F3gtNS8otK+vLQHXfS48PDy8Q7xEn5do2/pH+zsM4x4eHh7eBd4mkd2nvzksSd/x8PDwPsU7VZbN1z5uXHh4eHgXYG37f1+AuDH78HR0AA8PD+8ob3bGnirXzkoVecsNDw8P7x5v09TP2e04Qvs63kyW4eHh4V3gtaNUbQjJh6tmd4zKuHh4eHgf5W1KFfmebcFieHs8PDy8H+HN0uJNpaRN5fHw8PBu8/IhgP2BnifcSSiKUmo8PDy8o7zZH/5Zwr0ZSjjAwMPDw9vy/gJlSc8Ub862kgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

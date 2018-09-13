@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>GULP学习（二）项目构建 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,gulp">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>GULP学习（二）项目构建</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">GULP学习（二）项目构建</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-10-14T16:01:00.000Z" itemprop="datePublished" class="page-time">
+  2017-10-15
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-GULP学习（二）项目构建"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">GULP学习（二）项目构建</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-10-15 00:01:00" datetime="2017-10-14T16:01:00.000Z"  itemprop="datePublished">2017-10-15</time>
+
+            
+
+
+            
+	<span id="/2017/10/15/GULP学习（二）项目构建/" class="leancloud_visitors" data-flag-title="GULP学习（二）项目构建" title="GULP学习（二）项目构建">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/15/GULP学习（二）项目构建/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/15/GULP学习（二）项目构建/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>内容基本整理于<a href="https://github.com/nimojs/gulp-book/blob/master/chapter7.md" target="_blank" rel="external">gulp-book chapter7</a>，我有一点增改。</p>
+<h3 id="1-初始安装"><a href="#1-初始安装" class="headerlink" title="1. 初始安装"></a>1. 初始安装</h3><pre><code>npm init
+</code></pre><p>创建<code>package.json</code>保存所有<code>npm install --save-dev gulp-xxx</code>模块依赖和模块版本。</p>
+<pre><code>npm install gulp --save-dev
+</code></pre><p>安装gulp到项目<br><code>package.json</code>中增加下列代码，声明此项目的开发依赖 gulp。</p>
+<pre><code>&quot;devDependencies&quot;: {
+&quot;gulp&quot;: &quot;^3.9.1&quot;
+}
+</code></pre><p>安装项目中用到的其他模块<br>例如</p>
+<pre><code>npm install gulp-uglify  --save-dev
+</code></pre><p><code>package.json</code>的”devDependencies”中继续增加依赖声明。</p>
+<p>在<code>gulpfile.js</code>已配置情况下直接输入<code>npm install</code>命令即可检测<code>package.json</code>中的 “devDependencies”并安装所有依赖。</p>
+<a id="more"></a>
+<h3 id="2-设计目录结构"><a href="#2-设计目录结构" class="headerlink" title="2. 设计目录结构"></a>2. 设计目录结构</h3><p><code>src</code>源码存放目录<br><code>dist</code>编译压缩后的文件存放目录</p>
+<p><code>dist</code>和<code>dest</code>区别<a href="https://www.zhihu.com/question/29199796/answer/82862432" target="_blank" rel="external">^foot</a>：<br>dist是指distribution——分配,分发——发布完成的文件夹一般命名dist<br>dest则是destination——目的地,终点——用于grunt文件路径相关的配置项，一般会和src配对出现。比如文件压缩插件：压缩源（src）文件，生成压缩包到（dest）。</p>
+<h3 id="3-用gulp-util设置-CLI-输出文字的颜色"><a href="#3-用gulp-util设置-CLI-输出文字的颜色" class="headerlink" title="3. 用gulp-util设置 CLI 输出文字的颜色"></a>3. 用gulp-util设置 CLI 输出文字的颜色</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp 和 gulp-util 模块</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"></div><div class="line"><span class="comment">//使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">//colors Is an instance of chalk.The default gulp coloring using gutil.colors.</span></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//log 日志输出</span></div><div class="line">    gutil.log(<span class="string">'message'</span>)</div><div class="line">    <span class="comment">// Compose multiple styles using the chainable API</span></div><div class="line">    gutil.log(gutil.colors.red.bgBlue.bold(<span class="string">'error'</span>))</div><div class="line">    <span class="comment">// Combine styled and normal strings</span></div><div class="line">    gutil.log(gutil.colors.green(<span class="string">'message:'</span>) + <span class="string">"some"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>经过测试rgb颜色不支持。<br><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbilgnhsj20j008a74o.jpg" alt="cli输出颜色"></p>
+<h3 id="4-配置-JS-任务"><a href="#4-配置-JS-任务" class="headerlink" title="4. 配置 JS 任务"></a>4. 配置 JS 任务</h3><ol>
+<li><p>glob</p>
+<p><strong>glob模式</strong>是指 shell 所使用的简化了的正则表达式。nodejs的glob模块是glob模式的javascript实现版本。</p>
+<p><a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">node-glob</a></p>
+<p>匹配规则 <a href="http://www.jianshu.com/p/ce7cf53274bb" target="_blank" rel="external">^foot2</a></p>
+<blockquote>
+<p><code>*</code>匹配任意 0 或多个任意字符<br><code>?</code>匹配任意一个字符<br><code>[...]</code>若字符在中括号中，则匹配。若以 <code>!</code> 或<code>^</code>开头，若字符不在中括号中，则匹配 <code>!(pattern|pattern|pattern)</code> 不满足括号中的所有模式则匹配<br><code>?(pattern|pattern|pattern)</code>满足 0 或 1 括号中的模式则匹配<br><code>+(pattern|pattern|pattern)</code> 满足 1 或 更多括号中的模式则匹配 <code>*(a|b|c)</code> 满足 0 或 更多括号中的模式则匹配<br><code>@(pattern|pat*|pat?erN)</code> 满足 1 个括号中的模式则匹配 <code>**</code> 跨路径匹配任意字符</p>
+</blockquote>
+</li>
+<li><p>gulp-uglify 压缩js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'uglifyjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//选则 src/js 目录下的所有 js 文件</span></div><div class="line">    gulp.src(<span class="string">'src/js/**/*.js'</span>)</div><div class="line">        <span class="comment">//压缩</span></div><div class="line">        .pipe(uglify())</div><div class="line">        <span class="comment">//将压缩后的文件输出到 dist/js 目录下</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//当 gulp.watch 检测到 src/js/ 目录下的js文件有修改时会将所有文件全部编译。</span></div><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, [<span class="string">'uglifyjs'</span>])</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>编辑 `src/js/log.js` 文件并保存，命令行更新，表示检测到 `src/js/**/*.js` 文件修改后重新编译所有 js。
+![gulp-uglifyjs][4]
+</code></pre><ol>
+<li><p>gulp-watch-path</p>
+<pre><code>gulp.watch(glob[, opts], tasks)
+gulp.watch(glob[, opts, cb])
+</code></pre><p>监视文件，并且可以在文件发生改动时候做一些事情。它总会返回一个 EventEmitter 来发射（emit） change 事件。详见<a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="external">API</a>。</p>
+<p><code>gulp.watch</code> 第二个参数为 <code>function</code> 时的用法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(event);</div><div class="line">    <span class="comment">/*</span></div><div class="line">	当修改 src/js/log.js 文件时</div><div class="line">    event &#123;</div><div class="line">		// 发生改变的类型，不管是添加，改变或是删除</div><div class="line">        type: 'changed', </div><div class="line">		// 触发事件的文件路径</div><div class="line">        path: '/Users/nimojs/Documents/code/gulp-book/demo/chapter7/src/js/log.js'</div><div class="line">    &#125;</div><div class="line">    */</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">    gulp.watch(<span class="string">'js/**/*.js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'File '</span> + event.path + <span class="string">' was '</span> + event.type + <span class="string">', running tasks...'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>[gulp-watch-path][6]
+</code></pre><p>This is for the expansion of the gulp.watch(event)</p>
+<pre><code>利用 `gulp-watch-path` 配合 `event`(检测当前修改的js文件) 获取编译路径和输出路径:
+
+**`watchPath(event, search, replace, distExt)`**
+
+| 参数 | 说明 |
+|--------|--------|
+|    event    |`gulp.watch` 回调函数的 `event`|
+|    search   |需要被替换的起始字符串|
+|    replace  |第三个参数是新的的字符串|
+|   distExt   |扩展名(非必填)|
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"><span class="keyword">var</span> watchPath = <span class="built_in">require</span>(<span class="string">'gulp-watch-path'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line">        <span class="comment">/*</span></div><div class="line">        paths</div><div class="line">            &#123; srcPath: 'src/js/log.js',</div><div class="line">              srcDir: 'src/js/',</div><div class="line">              distPath: 'dist/js/log.js',</div><div class="line">              distDir: 'dist/js/',</div><div class="line">              srcFilename: 'log.js',</div><div class="line">              distFilename: 'log.js' &#125;</div><div class="line">        */</div><div class="line">        gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(uglify())</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>])</div></pre></td></tr></table></figure>
+
+
+![gulp watchjs][7]
+</code></pre><ol>
+<li><p>stream-combiner2 捕获错误信息</p>
+<p><a href="https://github.com/gulpjs/gulp/blob/master/docs/recipes/combining-streams-to-handle-errors.md" target="_blank" rel="external">Combining streams to handle errors</a></p>
+<p>By using stream-combiner2 you can turn a series of streams into a single stream, meaning you only need to listen to the error event in one place in your code.</p>
+<p><a href="https://github.com/substack/stream-combiner2" target="_blank" rel="external">stream-combiner2</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> combiner = <span class="built_in">require</span>(<span class="string">'stream-combiner2'</span>);</div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">    gulp.src(<span class="string">'bootstrap/js/*.js'</span>),</div><div class="line">    uglify(),</div><div class="line">    gulp.dest(<span class="string">'public/bootstrap'</span>)</div><div class="line">  ]);</div><div class="line"></div><div class="line">  <span class="comment">// any errors in the above streams will get caught</span></div><div class="line">  <span class="comment">// by this listener, instead of being thrown:</span></div><div class="line">  combined.on(<span class="string">'error'</span>, <span class="built_in">console</span>.error.bind(<span class="built_in">console</span>));</div><div class="line"></div><div class="line">  <span class="keyword">return</span> combined;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"><span class="keyword">var</span> watchPath = <span class="built_in">require</span>(<span class="string">'gulp-watch-path'</span>)</div><div class="line"><span class="keyword">var</span> combiner = <span class="built_in">require</span>(<span class="string">'stream-combiner2'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> handleError = <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> colors = gutil.colors;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'\n'</span>)</div><div class="line">    gutil.log(colors.red(<span class="string">'Error!'</span>))</div><div class="line">    gutil.log(<span class="string">'fileName: '</span> + colors.red(err.fileName))</div><div class="line">    gutil.log(<span class="string">'lineNumber: '</span> + colors.red(err.lineNumber))</div><div class="line">    gutil.log(<span class="string">'message: '</span> + err.message)</div><div class="line">    gutil.log(<span class="string">'plugin: '</span> + colors.yellow(err.plugin))</div><div class="line">&#125;</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">        gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(paths.srcPath),</div><div class="line">            uglify(),</div><div class="line">            gulp.dest(paths.distDir)</div><div class="line">        ])</div><div class="line"></div><div class="line">        combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>])</div></pre></td></tr></table></figure>
+
+![捕获错误信息][10]
+</code></pre><ol>
+<li><p>使用 SourceMap 进行压缩代码调试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"><span class="keyword">var</span> watchPath = <span class="built_in">require</span>(<span class="string">'gulp-watch-path'</span>)</div><div class="line"><span class="keyword">var</span> combiner = <span class="built_in">require</span>(<span class="string">'stream-combiner2'</span>)</div><div class="line"><span class="keyword">var</span> sourcemaps = <span class="built_in">require</span>(<span class="string">'gulp-sourcemaps'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> handleError = <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> colors = gutil.colors;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'\n'</span>)</div><div class="line">    gutil.log(colors.red(<span class="string">'Error!'</span>))</div><div class="line">    gutil.log(<span class="string">'fileName: '</span> + colors.red(err.fileName))</div><div class="line">    gutil.log(<span class="string">'lineNumber: '</span> + colors.red(err.lineNumber))</div><div class="line">    gutil.log(<span class="string">'message: '</span> + err.message)</div><div class="line">    gutil.log(<span class="string">'plugin: '</span> + colors.yellow(err.plugin))</div><div class="line">&#125;</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line">        </div><div class="line">        gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(paths.srcPath),</div><div class="line">            sourcemaps.init(),</div><div class="line">            uglify(),</div><div class="line">            sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">            gulp.dest(paths.distDir)</div><div class="line">        ])</div><div class="line"></div><div class="line">        combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>])</div></pre></td></tr></table></figure>
+<p>生成对应的 .map 文件，可在浏览器中调试。</p>
+<p><code>gulp-uglifyjs</code>压缩所有js文件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'uglifyjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">        gulp.src(<span class="string">'src/js/**/*.js'</span>),</div><div class="line">        sourcemaps.init(),</div><div class="line">        uglify(),</div><div class="line">        sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">        gulp.dest(<span class="string">'dist/js/'</span>)</div><div class="line">    ])</div><div class="line">    combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="5-配置-CSS-任务"><a href="#5-配置-CSS-任务" class="headerlink" title="5. 配置 CSS 任务"></a>5. 配置 CSS 任务</h3><ol>
+<li><p>gulp-clean-css<br>同js压缩。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cleancss = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchcss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/css/**/*.css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(sourcemaps.init())</div><div class="line">            .pipe(cleancss())</div><div class="line">            .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>,<span class="string">'watchcss'</span>])</div></pre></td></tr></table></figure>
+</li>
+<li><p>gulp-autoprefixer<br>autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里。<br><a href="https://github.com/sindresorhus/gulp-autoprefixer" target="_blank" rel="external">gulp-autoprefixer</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">    <span class="keyword">const</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>);</div><div class="line"></div><div class="line">    gulp.task(<span class="string">'default'</span>, () =&gt;</div><div class="line">	    gulp.src(<span class="string">'src/app.css'</span>)</div><div class="line">		.pipe(autoprefixer(&#123;</div><div class="line">			    <span class="attr">browsers</span>: [<span class="string">'last 2 versions'</span>],</div><div class="line">			    <span class="attr">cascade</span>: <span class="literal">false</span></div><div class="line">	  	&#125;))</div><div class="line">		.pipe(gulp.dest(<span class="string">'dist'</span>))</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'watchcss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/css/**/*.css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(sourcemaps.init())</div><div class="line">            .pipe(autoprefixer(&#123;</div><div class="line">              <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(cleancss())</div><div class="line">            .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+![添加浏览器前缀][12]
+</code></pre><ol>
+<li><p><code>gulp-clean-css</code>压缩所有css文件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'cleanCss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        gulp.src(<span class="string">'src/css/**/*.css'</span>)</div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">            <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(cleancss())</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css/'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbinevlrj206p061745.jpg" alt="gulp sourcemaps"></p>
+</li>
+</ol>
+<h3 id="6-配置-Less-任务"><a href="#6-配置-Less-任务" class="headerlink" title="6. 配置 Less 任务"></a>6. 配置 Less 任务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchless'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/less/**/*.less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/less/'</span>, <span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line">        <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(paths.srcPath),</div><div class="line">            sourcemaps.init(),</div><div class="line">            autoprefixer(&#123;</div><div class="line">              <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;),</div><div class="line">            less(),</div><div class="line">            cleancss(),</div><div class="line">            sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">            gulp.dest(paths.distDir)</div><div class="line">        ])</div><div class="line">        combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'lesscss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(<span class="string">'src/less/**/*.less'</span>),</div><div class="line">            sourcemaps.init(),</div><div class="line">            autoprefixer(&#123;</div><div class="line">              <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;),</div><div class="line">            less(),</div><div class="line">            cleancss(),</div><div class="line">            sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">            gulp.dest(<span class="string">'dist/css/'</span>)</div><div class="line">        ])</div><div class="line">    combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>])</div></pre></td></tr></table></figure>
+<h3 id="7-配置-Sass-任务"><a href="#7-配置-Sass-任务" class="headerlink" title="7. 配置 Sass 任务"></a>7. 配置 Sass 任务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-sass'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchsass'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/sass/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/sass/'</span>, <span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line">        sass(paths.srcPath)</div><div class="line">            .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">            &#125;)</div><div class="line">            .pipe(sourcemaps.init())</div><div class="line">            .pipe(cleancss())</div><div class="line">            .pipe(autoprefixer(&#123;</div><div class="line">              <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'sasscss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        sass(<span class="string">'src/sass/'</span>)</div><div class="line">        .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">        &#125;)</div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        .pipe(cleancss())</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">          <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>, <span class="string">'watchsass'</span>, <span class="string">'watchsass'</span>])</div></pre></td></tr></table></figure>
+<h3 id="8-配置-image-任务"><a href="#8-配置-image-任务" class="headerlink" title="8. 配置 image 任务"></a>8. 配置 image 任务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchimage'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/images/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(imagemin(&#123;</div><div class="line">                <span class="attr">progressive</span>: <span class="literal">true</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/images/**/*'</span>)</div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            <span class="attr">progressive</span>: <span class="literal">true</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images/'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="9-配置文件复制任务"><a href="#9-配置文件复制任务" class="headerlink" title="9. 配置文件复制任务"></a>9. 配置文件复制任务</h3><p>复制 <code>src/fonts/</code> 文件到 <code>dist/</code> 中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'watchcopy'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/fonts/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'copy'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/fonts/**/*'</span>)</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/fonts/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>, <span class="string">'watchsass'</span>, <span class="string">'watchimage'</span>, <span class="string">'watchcopy'</span>])</div></pre></td></tr></table></figure>
+<h3 id="10-总结"><a href="#10-总结" class="headerlink" title="10. 总结"></a>10. 总结</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// gutil.log gutil.colors</span></div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"><span class="comment">// 压缩js</span></div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"><span class="comment">// 获取编译路径和输出路径</span></div><div class="line"><span class="keyword">var</span> watchPath = <span class="built_in">require</span>(<span class="string">'gulp-watch-path'</span>)</div><div class="line"><span class="comment">// stream-combiner2 捕获错误信息</span></div><div class="line"><span class="keyword">var</span> combiner = <span class="built_in">require</span>(<span class="string">'stream-combiner2'</span>)</div><div class="line"><span class="comment">// 使用 SourceMap 进行压缩代码调试</span></div><div class="line"><span class="keyword">var</span> sourcemaps = <span class="built_in">require</span>(<span class="string">'gulp-sourcemaps'</span>)</div><div class="line"><span class="comment">// 获取 clean-css 模块（用于压缩 CSS）</span></div><div class="line"><span class="keyword">var</span> cleancss = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>)</div><div class="line"><span class="comment">// 获取 gulp-autoprefixer 模块</span></div><div class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>)</div><div class="line"><span class="comment">// 获取 gulp-less 模块</span></div><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>)</div><div class="line"><span class="comment">// 获取 gulp-ruby-sass 模块</span></div><div class="line"><span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-ruby-sass'</span>)</div><div class="line"><span class="comment">// 获取 gulp-imagemin 模块</span></div><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</div><div class="line"></div><div class="line"><span class="comment">//cli错误信息输出颜色</span></div><div class="line"><span class="keyword">var</span> handleError = <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> colors = gutil.colors;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'\n'</span>)</div><div class="line">  gutil.log(colors.red(<span class="string">'Error!'</span>))</div><div class="line">  gutil.log(<span class="string">'fileName: '</span>+ colors.red(err.fileName))</div><div class="line">  gutil.log(<span class="string">'lineNumber: '</span>+ colors.red(err.lineNumber))</div><div class="line">  gutil.log(<span class="string">'message: '</span>+ err.message)</div><div class="line">  gutil.log(<span class="string">'plugin: '</span>+ colors.yellow(err.plugin))</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// gulp.watch('js/**/*.js', function(event) &#123;</span></div><div class="line"><span class="comment">// console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');</span></div><div class="line"><span class="comment">// &#125;);</span></div><div class="line"><span class="comment">//watchjs压缩有修改的js文件</span></div><div class="line">gulp.task(<span class="string">'watchjs'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  gulp.watch(<span class="string">'src/js/**/*.js'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">    gutil.log(gutil.colors.green(event.type)+ <span class="string">' '</span>+ paths.srcPath)</div><div class="line">    gutil.log(<span class="string">'Dist '</span>+ paths.distPath)</div><div class="line"></div><div class="line">    <span class="comment">//   gulp.src('paths.srcPath')</span></div><div class="line">    <span class="comment">//     .pipe(uglify())</span></div><div class="line">    <span class="comment">//     .pipe(gulp.dest('paths.distDir'))</span></div><div class="line">    <span class="comment">// &#125;)</span></div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">      gulp.src(<span class="string">'paths.srcPath'</span>),</div><div class="line">        sourcemaps.init(), <span class="comment">//sourcemaps第一句</span></div><div class="line">        uglify(),</div><div class="line">        sourcemaps.write(<span class="string">'./'</span>),<span class="comment">//sourcemaps第二句</span></div><div class="line">        gulp.dest(<span class="string">'paths.distDir'</span>)</div><div class="line">    ])</div><div class="line">    combined.on(<span class="string">'error'</span>,handleError)</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// gulp.task('uglifyjs', function() &#123;</span></div><div class="line"><span class="comment">//     gulp.src('src/js/**/*.js')</span></div><div class="line"><span class="comment">//         .pipe(uglify())</span></div><div class="line"><span class="comment">//         .pipe(gulp.dest('dist/js'))</span></div><div class="line"><span class="comment">// &#125;)</span></div><div class="line"><span class="comment">// gulp.task('auto',function()&#123;</span></div><div class="line"><span class="comment">//   gulp.watch('src/js/**/*.js',['uglifyjs'])</span></div><div class="line"><span class="comment">// &#125;)</span></div><div class="line"><span class="comment">// gulp.task('default',['uglifyjs','auto'])</span></div><div class="line"></div><div class="line"><span class="comment">//uglifyjs压缩所有js文件</span></div><div class="line">gulp.task(<span class="string">'uglifyjs'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">    gulp.src(<span class="string">'src/js/**/*.js'</span>),</div><div class="line">      sourcemaps.init(), <span class="comment">//sourcemaps第一句</span></div><div class="line">      uglify(),</div><div class="line">      sourcemaps.write(<span class="string">'./'</span>),<span class="comment">//sourcemaps第二句</span></div><div class="line">      gulp.dest(<span class="string">'dist/js/'</span>)</div><div class="line">  ])</div><div class="line">  combined.on(<span class="string">'error'</span>,handleError)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//watchcss压缩有修改的css文件</span></div><div class="line">gulp.task(<span class="string">'watchcss'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  gulp.watch(<span class="string">'src/css/**/*.css'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">    gutil.log(gutil.colors.green(event.type)+ <span class="string">' '</span>+ paths.srcPath)</div><div class="line">    gutil.log(<span class="string">'Dist '</span>+ paths.distPath)</div><div class="line"></div><div class="line">      gulp.src(<span class="string">'paths.srcPath'</span>)</div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        <span class="comment">// autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里</span></div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">          <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line"></div><div class="line">        .pipe(cleancss())</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'paths.distDir'</span>))</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//cleanCss压缩所有css文件</span></div><div class="line">gulp.task(<span class="string">'cleanCss'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  gulp.src(<span class="string">'src/css/**/*.css'</span>)</div><div class="line">    .pipe(sourcemaps.init())</div><div class="line">    <span class="comment">// autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里</span></div><div class="line">    .pipe(autoprefixer(&#123;</div><div class="line">      <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">    &#125;))</div><div class="line"></div><div class="line">    .pipe(cleancss())</div><div class="line">    .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/css/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//watchless压缩有修改的less文件</span></div><div class="line">gulp.task(<span class="string">'watchless'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  gulp.watch(<span class="string">'src/less/**/*.less'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/less/'</span>,<span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">    gutil.log(gutil.colors.green(event.type)+ <span class="string">' '</span>+ paths.srcPath)</div><div class="line">    gutil.log(<span class="string">'Dist '</span>+ paths.distPath)</div><div class="line"></div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">      gulp.src(<span class="string">'paths.srcPath'</span>),</div><div class="line">        sourcemaps.init(),</div><div class="line">        autoprefixer(&#123;</div><div class="line">          <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;),</div><div class="line">        less(),</div><div class="line">        cleancss(),</div><div class="line">        sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">        gulp.dest(<span class="string">'paths.distDir'</span>)</div><div class="line">    ])</div><div class="line">    combined.on(<span class="string">'error'</span>,handleError)</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//lesscss压缩所有less文件</span></div><div class="line">gulp.task(<span class="string">'lesscss'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">    gulp.src(<span class="string">'src/less/**/*.less'</span>),</div><div class="line">      sourcemaps.init(),</div><div class="line">      autoprefixer(&#123;</div><div class="line">        <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">      &#125;),</div><div class="line">      less(),</div><div class="line">      cleancss(),</div><div class="line">      sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">      gulp.dest(<span class="string">'dist/css/'</span>)</div><div class="line">  ])</div><div class="line">  combined.on(<span class="string">'error'</span>,handleError)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//watchsass压缩有修改的css文件</span></div><div class="line"><span class="comment">// gulp.task('sass', function() &#123;</span></div><div class="line"><span class="comment">//     return sass('sass/')</span></div><div class="line"><span class="comment">//     .on('error', function (err) &#123;</span></div><div class="line"><span class="comment">//       console.error('Error!', err.message);</span></div><div class="line"><span class="comment">//    &#125;)</span></div><div class="line"><span class="comment">//     .pipe(gulp.dest('dist/css'))</span></div><div class="line"><span class="comment">// &#125;);</span></div><div class="line">gulp.task(<span class="string">'watchsass'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  gulp.watch(<span class="string">'src/sass/**/*'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/sass/'</span>,<span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">    gutil.log(gutil.colors.green(event.type)+ <span class="string">' '</span>+ paths.srcPath)</div><div class="line">    gutil.log(<span class="string">'Dist '</span>+ paths.distPath)</div><div class="line"></div><div class="line">      sass(<span class="string">'paths.srcPath'</span>)</div><div class="line">        .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">          <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        .pipe(cleancss())</div><div class="line">        <span class="comment">// autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里</span></div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">          <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'paths.distDir'</span>))</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//sasscss压缩所有sass文件</span></div><div class="line">gulp.task(<span class="string">'sasscss'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  sass(<span class="string">'src/sass/'</span>)</div><div class="line">  .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">  &#125;)</div><div class="line">    .pipe(sourcemaps.init())</div><div class="line">    .pipe(cleancss())</div><div class="line">    <span class="comment">// autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里</span></div><div class="line">    .pipe(autoprefixer(&#123;</div><div class="line">      <span class="attr">browsers</span>: <span class="string">'last 2 versions'</span></div><div class="line">    &#125;))</div><div class="line">    .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/css/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//watchimage压缩有修改的image文件</span></div><div class="line"><span class="comment">// gulp.task('images', function () &#123;</span></div><div class="line"><span class="comment">//     // 1. 找到图片</span></div><div class="line"><span class="comment">//     gulp.src('images/*.*')</span></div><div class="line"><span class="comment">//     // 2. 压缩图片</span></div><div class="line">        <span class="comment">// .pipe(imagemin(&#123;</span></div><div class="line">        <span class="comment">//     progressive: true</span></div><div class="line">        <span class="comment">//     //无损压缩jpg图片</span></div><div class="line">        <span class="comment">// &#125;))</span></div><div class="line"><span class="comment">//     // 3. 另存图片</span></div><div class="line"><span class="comment">//         .pipe(gulp.dest('dist/images'))</span></div><div class="line"><span class="comment">// &#125;);</span></div><div class="line">gulp.task(<span class="string">'watchimage'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  gulp.watch(<span class="string">'src/images/**/*'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">    gutil.log(gutil.colors.green(event.type)+ <span class="string">' '</span>+ paths.srcPath)</div><div class="line">    gutil.log(<span class="string">'Dist '</span>+ paths.distPath)</div><div class="line"></div><div class="line">      gulp.src(<span class="string">'paths.srcPath'</span>)</div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            <span class="attr">progressive</span>: <span class="literal">true</span></div><div class="line">            <span class="comment">//无损压缩jpg图片</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(<span class="string">'paths.distDir'</span>))</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//image压缩所有image文件</span></div><div class="line">gulp.task(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  gulp.src(<span class="string">'src/images/**/*'</span>)</div><div class="line">  .pipe(imagemin(&#123;</div><div class="line">      <span class="attr">progressive</span>: <span class="literal">true</span></div><div class="line">      <span class="comment">//无损压缩jpg图片</span></div><div class="line">  &#125;))</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/images/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//watchcopy复制src/fonts/内有修改的文件</span></div><div class="line">gulp.task(<span class="string">'watchcopy'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/fonts/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">        gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//copy复制src/fonts/内所有文件</span></div><div class="line">gulp.task(<span class="string">'copy'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  gulp.src(<span class="string">'src/fonts/**/*'</span>)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/fonts/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [</div><div class="line">    <span class="string">'uglifyjs'</span>, <span class="string">'cleanCss'</span>, <span class="string">'lesscss'</span>, <span class="string">'sasscss'</span>, <span class="string">'image'</span>, <span class="string">'copy'</span>,</div><div class="line">    <span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>, <span class="string">'watchsass'</span>, <span class="string">'watchimage'</span>, <span class="string">'watchcopy'</span></div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbio7uifj20kp0h7wfm.jpg" alt="编译全部"></p>
+<p>周末学习了gulp，最后把学习过的代码完整地打了一遍，调试了一会就全部编译成功了。也终于感觉到了gulp作为构建工具的方便快捷。楽しい！<br>今天再看看相关的扩展和别人的经验总结~</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:35:21.033Z" itemprop="dateUpdated">2017-11-21 22:35:21</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/10/15/GULP学习（二）项目构建/" target="_blank" rel="external">https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&title=《GULP学习（二）项目构建》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&title=《GULP学习（二）项目构建》 — Renko's blog&source=内容基本整理于gulp-book chapter7，我有一点增改。
+1. 初始安装npm init
+创建package.json保存所有npm insta..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（二）项目构建》 — Renko's blog&url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/10/24/Hyperledger Fabric 部署示例/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hyperledger Fabric 部署示例</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/14/GULP学习（一）安装&功能/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">GULP学习（一）安装&amp;功能</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&title=《GULP学习（二）项目构建》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&title=《GULP学习（二）项目构建》 — Renko's blog&source=内容基本整理于gulp-book chapter7，我有一点增改。
+1. 初始安装npm init
+创建package.json保存所有npm insta..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（二）项目构建》 — Renko's blog&url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/15/GULP学习（二）项目构建/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3ay07DUAwFwP7/T8MWCTU5ftwSpMkK0ZB6srg2tl+v+PoKrt93Vv/23f0/f/86ceHh4eGthv4u6DygdyEmoV/fn7wsPDw8vHO8/NG9T2+CuIwnTxJ4eHh4/4uXl8tJsumV13h4eHhP5lUbBFsFOh4eHt5zeEkz4rrMrZJ64IO9Fjw8PLyY1zvW//bnI/M9PDw8vKWFgOpYK08beQO3GS0eHh7eAV5+4CZt2UkxnYzKmnHi4eHhHeDlQ/pewsgHafMB2M2neHh4eKu8vAhOmqq9+/PEUF1BwMPDw9vlbR3u17/Ph/3Jc5qbEXh4eHhj3uQr562KaioaTe3w8PDwVnlJQZwPqHpFdi8l3BTfeHh4eAd41YWnpAVQbQTnhXsz2eDh4eF9nFdttuaVbe8J5QIdDw8P7yO83uFeXURIZlXVsr4wAMPDw8Mb8PISthpub32ql0huosLDw8Nb5fUG89V1gTysvCURvWg8PDy8w7zqgZ43ZKutjTUkHh4e3kd4vaF+XhbnTY3JGAwPDw/vBK/atJ20GLYaH4WXhYeHh3eMVw23mgyqS1pbkyw8PDy8E7w5rNqE3WoTl9vQeHh4eEu83vFdPeJ7Ldp5kxcPDw/vBC8pSfMR13xJa5IYbhIPHh4e3iqvd8TnQ6zkFcxHa4XuBR4eHt4qrzr6yp/QK52rpFHGw8PDwxvw5qP9XpMiH3cV7sHDw8Nb5X0VrxOFeHU5oPCy8PDw8A7w8mtSXufF96Rw761w4eHh4fV4vfF8b/xffWV5a6NZWOPh4eENePmhnH99noUmueuGioeHh/dI3mTYn5fdvUUEPDw8vOfweumhGnr1Na2V1Hh4eHhLzYjq+lQSVt62aA7P8PDw8A7wev/wX7MnSwl5w2IBhoeHh1fjfQO1oUrf1WD5RAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

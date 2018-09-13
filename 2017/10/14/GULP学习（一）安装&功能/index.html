@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>GULP学习（一）安装&amp;功能 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,gulp">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>GULP学习（一）安装&amp;功能</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">GULP学习（一）安装&amp;功能</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-10-13T16:01:00.000Z" itemprop="datePublished" class="page-time">
+  2017-10-14
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-GULP学习（一）安装&amp;功能"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">GULP学习（一）安装&功能</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-10-14 00:01:00" datetime="2017-10-13T16:01:00.000Z"  itemprop="datePublished">2017-10-14</time>
+
+            
+
+
+            
+	<span id="/2017/10/14/GULP学习（一）安装&功能/" class="leancloud_visitors" data-flag-title="GULP学习（一）安装&功能" title="GULP学习（一）安装&功能">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/14/GULP学习（一）安装&功能/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/14/GULP学习（一）安装&功能/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>学习ES6的项目中用到了gulp-babel编译ES6代码，还有gulp-browserify等，所以学习一下gulp。 </p>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文官网</a>写着gulp是增强工作流程的自动化构建工具。<br>通过编写gulp配置代码，能让gulp自动执行前端开发中的重复工作。<br>Gulp通过流和代码优于配置策略来尽量简化任务编写的工作。</p>
+<blockquote>
+<p>根据gulp的文档，它努力实现的<strong>主要特性</strong>是：<a href="http://www.infoq.com/cn/news/2014/02/gulp" target="_blank" rel="external">^footnote</a><br><strong>易于使用</strong>：采用代码优于配置策略，gulp让简单的事情继续简单，复杂的任务变得可管理。<br><strong>高效</strong>：通过利用node.js强大的流，不需要往磁盘写中间文件，可以更快地完成构建。<br><strong>高质量</strong>：gulp严格的插件指导方针，确保插件简单并且按你期望的方式工作。<br><strong>易于学习</strong>：通过把API降到最少，你能在很短的时间内学会gulp。构建工作就像你设想的一样：是一系列流管道。</p>
+</blockquote>
+<p>gulp相比于grunt，配置更简洁运行速度更快<a href="https://segmentfault.com/q/1010000003951849/a-1020000003952258" target="_blank" rel="external">^footnote2</a>。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><ol>
+<li><p>gulp基于node实现，需要先安装node。我在装atom前已经装好啦。</p>
+</li>
+<li><p>使用管理员权限全局安装</p>
+<pre><code>$ sudo npm install -g gulp
+</code></pre><p> 检查一下</p>
+<pre><code>$ gulp -v
+</code></pre></li>
+</ol>
+<h3 id="3-创建项目"><a href="#3-创建项目" class="headerlink" title="3.创建项目"></a>3.创建项目</h3><p>所有的 gulp 代码编写都可以看做是将规律转化为代码的过程。</p>
+<pre><code>$ npm init
+
+$ npm install gulp --save-dev
+</code></pre><p><code>--save-dev</code>保存配置信息至 package.json 的 devDependencies 节点。<br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbiggti1j20km0cb0tg.jpg" alt="npm install gulp --save-dev"></p>
+<a id="more"></a>
+<h3 id="4-使用-gulp-压缩-JS"><a href="#4-使用-gulp-压缩-JS" class="headerlink" title="4.使用 gulp 压缩 JS"></a>4.使用 gulp 压缩 JS</h3><p>接下来的操作都根据参考中的gulp-book进行。</p>
+<p><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">Minify files with UglifyJS</a></p>
+<p>gulpfile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// require() 是 node （CommonJS）中获取模块的语法。在 gulp 中你只需要理解 require() 可以获取模块。</span></div><div class="line"></div><div class="line"><span class="comment">// 获取 uglify 模块（用于压缩 JS）</span></div><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩 js 文件</span></div><div class="line"><span class="comment">// 在命令行使用 gulp script 启动此任务</span></div><div class="line">gulp.task(<span class="string">'script'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到文件</span></div><div class="line">    gulp.src(<span class="string">'js/*.js'</span>)</div><div class="line">    <span class="comment">// 2. 压缩文件</span></div><div class="line">        .pipe(uglify())</div><div class="line">    <span class="comment">// 3. 另存压缩后的文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//实现gulp 压缩 js 文件的自动化代码编写</span></div><div class="line"><span class="comment">//没有命令可以运行 gulp.watch()，需要将 gulp.watch() 包含在一个任务中。</span></div><div class="line"><span class="comment">//在命令行使用 gulp auto 启动此任务,自动监听 js/*.js 文件的修改后压缩js。</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 script 任务</span></div><div class="line">    gulp.watch(<span class="string">'js/*.js'</span>, [<span class="string">'script'</span>])</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 script 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'script'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure></p>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbigwia7j20km0cbq3k.jpg" alt="gulp-script"><br><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbihan5zj20kj0cft9a.jpg" alt="gulp-uglify"><br><img src="http://wx3.sinaimg.cn/large/789d050dgy1fkjbihqhzgj20k202rjrd.jpg" alt="gulp-script"><br><img src="http://wx2.sinaimg.cn/large/789d050dgy1fkjbii7429j20ko036t8p.jpg" alt="gulp-auto"></p>
+<p><a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="external">官方API文档</a></p>
+<ul>
+<li><p><code>gulp.task(name, fn)</code> - 定义任务，name是任务名，fn是任务内容。<br>fn该函数定义任务所要执行的一些操作。通常来说，它会是这种形式：</p>
+<pre><code>gulp.src().pipe(someplugin())。
+</code></pre><p><code>gulp.task(name[, deps], fn)</code>一个包含任务列表的数组，这些任务会在你当前任务运行之前完成。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">   gulp.task(<span class="string">'mytask'</span>, [<span class="string">'array'</span>, <span class="string">'of'</span>, <span class="string">'task'</span>, <span class="string">'names'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 做一些事</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>gulp.src(path)</code> - 选择文件，传入参数是文件路径。</p>
+</li>
+<li><p><code>gulp.dest(path)</code> - 输出文件。</p>
+</li>
+<li><p><code>gulp.pipe()</code> - 管道，你可以暂时将 pipe 理解为将操作加入执行队列。</p>
+</li>
+<li><p><code>gulp.watch(src, fn)</code> - 检测指定目录下文件的修改后执行任务。</p>
+</li>
+<li><p><code>gulp.task(&#39;default&#39;, fn)</code> -  定义默认任务,在命令行直接输入 gulp +回车 运行</p>
+</li>
+</ul>
+<h3 id="4-使用-gulp-压缩-CSS"><a href="#4-使用-gulp-压缩-CSS" class="headerlink" title="4.使用 gulp 压缩 CSS"></a>4.使用 gulp 压缩 CSS</h3><p><a href="https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api" target="_blank" rel="external">clean-css</a><br><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external">gulp-clean-css</a></p>
+<pre><code>$ npm install gulp-clean-css --save-dev
+</code></pre><p>gulpfile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 获取 clean-css 模块（用于压缩 CSS）</span></div><div class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩 css 文件</span></div><div class="line"><span class="comment">// 在命令行使用 gulp css 启动此任务</span></div><div class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到文件</span></div><div class="line">    gulp.src(<span class="string">'css/*.css'</span>)</div><div class="line">    <span class="comment">// 2. 压缩文件</span></div><div class="line">        .pipe(cleanCSS())</div><div class="line">    <span class="comment">// 3. 另存为压缩文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 css 任务</span></div><div class="line">    gulp.watch(<span class="string">'css/*.css'</span>, [<span class="string">'css'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 css 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'css'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure></p>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbiiiblzj20ko0cd0t9.jpg" alt="gulp-clean-css"><br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbijena9j20vo04o74a.jpg" alt="css对比"><br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbij1dmoj20kl069gls.jpg" alt="编译css auto default"></p>
+<h3 id="5-使用-gulp-压缩图片"><a href="#5-使用-gulp-压缩图片" class="headerlink" title="5.使用 gulp 压缩图片"></a>5.使用 gulp 压缩图片</h3><p><a href="https://github.com/imagemin/imagemin" target="_blank" rel="external">imagemin</a><br><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a> </p>
+<pre><code>$ npm install --save-dev gulp-imagemin
+</code></pre><p>gulpfile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 获取 gulp-imagemin 模块</span></div><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩图片任务</span></div><div class="line"><span class="comment">// 在命令行输入 gulp images 启动此任务</span></div><div class="line">gulp.task(<span class="string">'images'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到图片</span></div><div class="line">    gulp.src(<span class="string">'images/*.*'</span>)</div><div class="line">    <span class="comment">// 2. 压缩图片</span></div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            <span class="attr">progressive</span>: <span class="literal">true</span></div><div class="line">            <span class="comment">//无损压缩jpg图片</span></div><div class="line">        &#125;))</div><div class="line">    <span class="comment">// 3. 另存图片</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 images 任务</span></div><div class="line">    gulp.watch(<span class="string">'images/*.*'</span>, [<span class="string">'images'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 images 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'images'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure></p>
+<p>其他参数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.pipe(imagemin(&#123;</div><div class="line">           <span class="attr">optimizationLevel</span>: <span class="number">5</span>, <span class="comment">//类型：Number  默认：3  取值范围：0-7（优化等级）</span></div><div class="line">           progressive: <span class="literal">true</span>, <span class="comment">//类型：Boolean 默认：false 无损压缩jpg图片</span></div><div class="line">           interlaced: <span class="literal">true</span>, <span class="comment">//类型：Boolean 默认：false 隔行扫描gif进行渲染</span></div><div class="line">           multipass: <span class="literal">true</span> <span class="comment">//类型：Boolean 默认：false 多次优化svg直到完全优化</span></div><div class="line">       &#125;))</div></pre></td></tr></table></figure></p>
+<p>深度压缩图片<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>),</div><div class="line">    <span class="comment">//确保本地已安装imagemin-pngquant [npm install imagemin-pngquant --save-dev]</span></div><div class="line">    pngquant = <span class="built_in">require</span>(<span class="string">'imagemin-pngquant'</span>);</div><div class="line"> </div><div class="line">gulp.task(<span class="string">'images'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'images/*.*'</span>)</div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            <span class="attr">progressive</span>: <span class="literal">true</span>,</div><div class="line">            <span class="attr">svgoPlugins</span>: [&#123;<span class="attr">removeViewBox</span>: <span class="literal">false</span>&#125;],<span class="comment">//不要移除svg的viewbox属性</span></div><div class="line">            use: [pngquant()] <span class="comment">//使用pngquant深度压缩png图片的imagemin插件</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>只压缩修改的图片</p>
+<p>使用”gulp-cache”只压缩修改的图片，没有修改的图片直接从缓存文件读取（C:\Users\Administrator\AppData\Local\Temp\gulp-cache）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>),</div><div class="line">    pngquant = <span class="built_in">require</span>(<span class="string">'imagemin-pngquant'</span>),</div><div class="line">    <span class="comment">//确保本地已安装gulp-cache [cnpm install gulp-cache --save-dev]</span></div><div class="line">    cache = <span class="built_in">require</span>(<span class="string">'gulp-cache'</span>);</div><div class="line">    </div><div class="line">gulp.task(<span class="string">'images'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'images/*.*'</span>)</div><div class="line">        .pipe(cache(imagemin(&#123;</div><div class="line">            <span class="attr">progressive</span>: <span class="literal">true</span>,</div><div class="line">            <span class="attr">svgoPlugins</span>: [&#123;<span class="attr">removeViewBox</span>: <span class="literal">false</span>&#125;],</div><div class="line">            <span class="attr">use</span>: [pngquant()]</div><div class="line">        &#125;)))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><img src="http://wx3.sinaimg.cn/large/789d050dgy1fkjbijq91gj20kk0ch0tf.jpg" alt="gulp-imagemin"><br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbik6qrej20k109z0t5.jpg" alt="执行images auto default"></p>
+<h3 id="5-使用-gulp-编译-LESS"><a href="#5-使用-gulp-编译-LESS" class="headerlink" title="5.使用 gulp 编译 LESS"></a>5.使用 gulp 编译 LESS</h3><pre><code>$ npm install gulp-less --save-dev
+</code></pre><p>gulpfile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// 获取 gulp-less 模块</span></div><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 编译less</span></div><div class="line"><span class="comment">// 在命令行输入 gulp less 启动此任务</span></div><div class="line">gulp.task(<span class="string">'less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到 less 文件</span></div><div class="line">    gulp.src(<span class="string">'less/**.less'</span>)</div><div class="line">    <span class="comment">// 2. 编译为css</span></div><div class="line">        .pipe(less())</div><div class="line">    <span class="comment">// 3. 另存文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 less 任务</span></div><div class="line">    gulp.watch(<span class="string">'less/**.less'</span>, [<span class="string">'less'</span>])</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 less 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'less'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure></p>
+<h3 id="5-使用-gulp-编译-Sass"><a href="#5-使用-gulp-编译-Sass" class="headerlink" title="5.使用 gulp 编译 Sass"></a>5.使用 gulp 编译 Sass</h3><p><a href="https://www.npmjs.com/package/gulp-ruby-sass" target="_blank" rel="external">gulp-ruby-sass</a></p>
+<pre><code>$ npm install gulp-ruby-sass --save-dev
+</code></pre><p>gulpfile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// 获取 gulp-ruby-sass 模块</span></div><div class="line"><span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-ruby-sass'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 编译sass</span></div><div class="line"><span class="comment">// 在命令行输入 gulp sass 启动此任务</span></div><div class="line">gulp.task(<span class="string">'sass'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> sass(<span class="string">'sass/'</span>) </div><div class="line">    .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">   &#125;)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 sass 任务</span></div><div class="line">    gulp.watch(<span class="string">'sass/**/*.scss'</span>, [<span class="string">'sass'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 sass 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'sass'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure></p>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fkjbikt1yej20kq0ayt97.jpg" alt="编译 ctrl-c终止"></p>
+<h3 id="6-参考"><a href="#6-参考" class="headerlink" title="6.参考"></a>6.参考</h3><ul>
+<li><a href="https://github.com/nimojs/gulp-book" target="_blank" rel="external">gulp-book</a></li>
+<li><a href="http://www.ydcss.com/archives/18" target="_blank" rel="external">gulp详细入门教程by ydcss</a></li>
+</ul>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-21T14:34:53.370Z" itemprop="dateUpdated">2017-11-21 22:34:53</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/10/14/GULP学习（一）安装&amp;功能/" target="_blank" rel="external">https://renkoq.github.io/2017/10/14/GULP学习（一）安装&amp;功能/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&title=《GULP学习（一）安装&功能》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&title=《GULP学习（一）安装&功能》 — Renko's blog&source=学习ES6的项目中用到了gulp-babel编译ES6代码，还有gulp-browserify等，所以学习一下gulp。 
+1.介绍中文官网写着gulp是..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（一）安装&功能》 — Renko's blog&url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/10/15/GULP学习（二）项目构建/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">GULP学习（二）项目构建</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/01/区块链-共识机制/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">区块链-共识机制</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&title=《GULP学习（一）安装&功能》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&title=《GULP学习（一）安装&功能》 — Renko's blog&source=学习ES6的项目中用到了gulp-babel编译ES6代码，还有gulp-browserify等，所以学习一下gulp。 
+1.介绍中文官网写着gulp是..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GULP学习（一）安装&功能》 — Renko's blog&url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/10/14/GULP学习（一）安装&功能/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwElEQVR42u3aQY5iMQwFQO5/6Z7tSEx/3rMTDYv6qxYQkkpLibH9esXPz9vz9+vvn3wf9du7m7mOPXh4eHjrpf/21b9hnifORyWbla8ZDw8P7zbveVnJZZBMn5/kyfcnY/Hw8PC+gfcctebhb4Jvw2s8PDy87+S1B3ceoLffiYeHh/d/eUkyok2/tgd6ngq5kmvBw8PDi3ltguAb/r5S38PDw8NbV9WfD9zZwd1uYn4Z/GMuPDw8vAu8Tcp1ln7N2w42G4SHh4d3j7f52b+PbJ+Ryao+XDB4eHh4F3j7CWYhbzJvPvbDpuPh4eFd5p1Fbr7heeyqdQAPDw9vzUsKXadSt22AvmoIwMPDw7vGyxeUl6xmCdx2y55fx8PDw7vBSwa3zU+zKyFJ1Obz4uHh4d3jJYPz47iNb2dLn7Up4OHh4Z3i5QX4TSEqv37axO4HBR4eHt4F3j6h0B73eWo4b0H4sAV4eHh4F3j5xMnVkm9HXlTLA/3oesDDw8Nb85IgeBbabi6YJM0RIfHw8PCO8s4exG3Cd9NQFa0TDw8P7wKvDYXzgLvdiLa9oC7L4eHh4R3ltWmCWdGrnWt2JURZajw8PLxDvLylKQ+R21JWHrjn1wkeHh7eDd4mRZu3ZO3bvPK2rVdxb+Dh4eFNeG0zU5uQbS+DTSPXh3sPDw8P7wJvVgabhcuzhoMogJ71Z+Hh4eGNePng2XWSLKgtfUW/FfDw8PAu8NqiVFv0yq+KpNxVfAYPDw/vKO+nfPLju00T580BRbMCHh4e3gVe/uyP9U0KeNYchoeHh3ePNyvP58H37MlD81VgjYeHh7fgtYdy++7hmypuJsDDw8P7Hl6bwG3n2ofaeHh4eN/Ga9uqTiUm8qAfDw8P7zYvGZwvsS1KzVq4on8VHh4e3gVe+4M/Tx/kbVhtc1WRxsXDw8M7yfsDZwkDJ1WCEK4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

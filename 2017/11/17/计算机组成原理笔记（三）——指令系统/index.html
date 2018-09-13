@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>计算机组成原理笔记（三）——指令系统 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="架构">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>计算机组成原理笔记（三）——指令系统</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">计算机组成原理笔记（三）——指令系统</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-16T19:01:30.000Z" itemprop="datePublished" class="page-time">
+  2017-11-17
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-计算机组成原理笔记（三）——指令系统"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">计算机组成原理笔记（三）——指令系统</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-17 03:01:30" datetime="2017-11-16T19:01:30.000Z"  itemprop="datePublished">2017-11-17</time>
+
+            
+
+
+            
+	<span id="/2017/11/17/计算机组成原理笔记（三）——指令系统/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（三）——指令系统" title="计算机组成原理笔记（三）——指令系统">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/17/计算机组成原理笔记（三）——指令系统/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/17/计算机组成原理笔记（三）——指令系统/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-指令的基本格式"><a href="#1-指令的基本格式" class="headerlink" title="1. 指令的基本格式"></a>1. 指令的基本格式</h3><p>一条指令就是机器语言的一个语句，它是一组有意义的二进制代码。</p>
+<p>其中操作码指明了指令的操作性质及功能，地址码则给出了操作数的地址。</p>
+<p>地址码中的地址可以是主存的地址，也可以是寄存器的地址（编号），甚至可以是I/O设备的地址。</p>
+<p>对于双操作数运算指令来说，需要操作数的地址、结果的地址以及下一条指令的地址，这些地址可以在指令中明显给出，称为显地址；<br>也可以依照某种事先的约定，用隐含的地址给出，称为隐地址。</p>
+<p>根据显地址的个数有：三地址和二地址指令（通用寄存器指令）、一地址指令（累加型计算机）和零地址指令（堆栈型计算机）。</p>
+<h3 id="2-定长操作码指令格式"><a href="#2-定长操作码指令格式" class="headerlink" title="2.定长操作码指令格式"></a>2.定长操作码指令格式</h3><p>定长操作码以称为规整型编码，这是一种最简单的编码方法，操作码字段的位数和位置是固定的。</p>
+<p>为了能表示整个系统中的全部指令，指令的操作码字段应当有足够的位数。</p>
+<p>定长编对于简化硬件设计，减少指令的译码时间是非常有利的。</p>
+<a id="more"></a>
+<h3 id="3-扩展操作码指令格式"><a href="#3-扩展操作码指令格式" class="headerlink" title="3.扩展操作码指令格式"></a>3.扩展操作码指令格式</h3><p>扩展操作码以称为非规整编码，操作码字段的位数不固定，且分散地放在指令字的不同位置上。</p>
+<p>这种方式能够有效地压缩指令中操作码字段的平均长度，显然，操作码字段的位数和位置不固定将增加指令译码和分析的难度，使控制器的设计复杂化。</p>
+<p>典型的扩展操作码编码让操作数地址个数多的指令（三地址指令）的操作码字段短些，操作数地址个数少的指令（一或零地址指令）的操作码字段长些，这样既能充分地利用指令的各个字段，又能在不增加指令长度的情况下扩展操作码的位数，使它能表示更多的指令。</p>
+<h3 id="4-指令的寻址方式"><a href="#4-指令的寻址方式" class="headerlink" title="4.指令的寻址方式"></a>4.指令的寻址方式</h3><p><strong>（1）立即寻址</strong></p>
+<p>立即寻址是一种特殊的寻址方式，指令中在操作码字段后面的部分不是通常意义上的操作数地址，而是操作数本身。</p>
+<p><strong>（2）寄存器寻址</strong></p>
+<p>寄存器寻址指令的地址码部分给出某一个通用寄存器的编号Ri，这个指定的寄存器中存放着操作数。<br>有效地址EA=Ri。<br>这种方式可以缩短指令长度，提高指令的执行速度。</p>
+<p><strong>（3）直接寻址</strong></p>
+<p>指令中地址码字段给出的地址A就是操作数的有效地址，即形式地址等于有效地址：EA=A。</p>
+<p>由于这样给出的操作数地址是不能修改的，与程序本所在的位置无关，所以又叫绝对寻址方式。</p>
+<p><strong>（4）间接寻址</strong></p>
+<p>间接寻址意味着指令中给定的地址A不是操作数的地址，而是存放操作数地址的主存单元的地址，简称为操作数地址的地址，即EA=（A）。</p>
+<p>间接寻址的指令在执行阶段要多次访存，可扩大寻址范围，便于编制程序。</p>
+<p><strong>（5）寄存器间接寻址</strong></p>
+<p>寄存器间接寻址指令中的地址码给出某一通用寄存器的编号，在被指定的寄存器中存放操作数的有效地址，EA=（Ri），而操作数则存放在主存单元中。</p>
+<p>这种寻址方式的指令较短，并且在取指后只需一次访存便可得到操作数，因此指令执行的速度较间接寻址方式快。</p>
+<p><strong>（6）变址寻址</strong></p>
+<p>变址寻址就是把变址寄存器Rx的内容与指令中给出的形式地址A相加，形成操作数有效地址，即EA=（Rx）+A。</p>
+<p>Rx的内容称为变址值。</p>
+<p><strong>（7）基址寻址</strong></p>
+<p>基址寻址是将基址寄存器Rb的内容与指令中给出的位移量D相加，形成操作数有效地址，即EA=（Rb）+D。</p>
+<p>Rb的内容称为基址值。</p>
+<p><strong>（8）相对寻址</strong></p>
+<p>相对寻址是基址寻址的一种变通，由程序计数器（PC）提供基准地址，指令中的地址码字段作为位移量D，两者相加后得到操作数的有效地址，即EA=（PC）+D。</p>
+<p>位移量指出的是操作数和现行指令之间的相对位置。</p>
+<p><strong>（9）页面寻址</strong></p>
+<p>存储器的有效地址就被分为两部分：前部分为页面地址，后部为页内地址。</p>
+<p>页内地址是由指令的地址码自动直接提供，它与页面地址通过简单的拼装连接就可得到有效地址，无须进行计算，因此寻址迅速。</p>
+<p>根据页面地址的来源不同，页面寻址以可分为三种不同的方式。</p>
+<p>①基页寻址，又称为零页寻址。由于页面的地址全等于0，所以有效地址EA=0//A。基页寻址实际就是直接寻址。</p>
+<p>②当前页寻址。页面地址就等于程序计数器（PC）的高位部分的内容，所以有效地址EA=（PC）H//A，操作数S与指令本身处于同一页面中。</p>
+<p>③页寄存器地址。页面地址取自页寄存器，与形式地址相拼接形成有效地址。</p>
+<p><strong>（10）堆栈寻址</strong></p>
+<p>堆栈是一种按特定顺序进行存取的存储区，这种特定的顺序可归结为“后进先出（LIFO）”或“先进后出（FILO）”。<br>寄存器堆栈由 一组专门的寄存器构成，又称为硬堆栈。这种堆栈的栈顶是固定的，寄存器组中各寄存器是互相连接的，它们之间具有对应位自动推移的功能，即可将一个寄存器的内容推移到相邻的另一个寄存器中去。<br>利用主存的一段区域构成的堆栈称为软堆栈，软堆栈的大小可变，栈底固定，栈顶浮动，故需要一个专门的硬件寄存器作为堆栈的栈顶，简称堆栈指针（SP）。<br>若软堆栈的栈底地址大于栈顶地址，且栈指针始终指向栈顶的满单元，则</p>
+<p>进栈时的操作：<br>（SP）-1→SP        修改栈指针<br>（A）→（A）       将A中的内容压入栈顶单元</p>
+<p>出栈时操作：<br>（（SP））→A        将栈顶单元的内容弹出送入A中<br>（SP）+1→SP       修改栈指针</p>
+<h3 id="5-CISC和RISC"><a href="#5-CISC和RISC" class="headerlink" title="5.CISC和RISC"></a>5.CISC和RISC</h3><p>基于复杂指令系统设计的计算机称为复杂指令系统计算机（CISC），基于精简指令系统设计的计算机称为精简指令系统计算机（RISC）。</p>
+<p>RISC的中心思想是要求指令系统简化，尽量寄存器-寄存器操作指令，除去访存指令（Load和Store）外，其他指令的操作均在单周期内完成，指令格式力求一致，寻址方式尽可能减少，并提高编译的效率，最终达到加快机器处理速度的目的。</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th style="text-align:right">CISC</th>
+<th style="text-align:center">RISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指令数目</td>
+<td style="text-align:right">一般大于200条</td>
+<td style="text-align:center">一般小于100条</td>
+</tr>
+<tr>
+<td>指令系统</td>
+<td style="text-align:right">复杂，庞大</td>
+<td style="text-align:center">简单，精简</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">\$1</td>
+<td style="text-align:center">234</td>
+</tr>
+<tr>
+<td>指令字长</td>
+<td style="text-align:right">不固定</td>
+<td style="text-align:center">等长</td>
+</tr>
+<tr>
+<td>寻址方式</td>
+<td style="text-align:right">一般大于4</td>
+<td style="text-align:center">一般小于4</td>
+</tr>
+<tr>
+<td>可访存指令</td>
+<td style="text-align:right">不加限制</td>
+<td style="text-align:center">只有LOAD/STORE指令</td>
+</tr>
+<tr>
+<td>各种指令执行时间</td>
+<td style="text-align:right">相差较大</td>
+<td style="text-align:center">绝大多数在一个周期内完成</td>
+</tr>
+<tr>
+<td>通用寄存器数量</td>
+<td style="text-align:right">较少</td>
+<td style="text-align:center">多</td>
+</tr>
+<tr>
+<td>控制方式</td>
+<td style="text-align:right">绝大多数为微程序控制</td>
+<td style="text-align:center">绝大多数为硬布线控制</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-题"><a href="#6-题" class="headerlink" title="6.题"></a>6.题</h3><pre><code>【例4.1】在关于一地址运算类指令的叙述中，正确的是（ B ）。
+</code></pre><p>A.仅有一个操作数，其地址由指令的地址码提供<br>B.可能有一个操作数，也可能有两个操作数<br>C.一定有两个操作数，另一个是隐含的<br>D.指令的地址码字段存放的一定是操作码</p>
+<p>试题分析：一地址运算类指令包括单操作指令（如加1、减1指令）和双操作数指令（如加、减指令）两类。对于单操作数指令只需要一个操作数，对于双操作数指令需要有两个操作数，其中一个操作数的地址是显地址，另一个操作数的地址隐含在累加寄存器中。</p>
+<pre><code>【例4.3】一个计算机系统采用32位单字长指令，地址码为12位，如果定义了250条二地址指令，那么单地址指令的条数有（ D ）。
+</code></pre><p>A. 4K<br>B. 8K<br>C.16K<br>D.24K</p>
+<p>试题分析：二地址指令的操作码字段8位，现定义了250条二地址指令，采用扩展操作码技术，留下6个扩展口，每个扩展窗口可以扩展212=4K 条一地址指令，故共可扩展6×4K=24K条一地址指令。</p>
+<pre><code>【例4.4】指令操作所需的数据不会来自（D  ）。
+</code></pre><p>A.寄存器<br>B.指令本身<br>C.主存<br>D.控制存储器</p>
+<p>试题分析：指令操作所需的数据可能来自于指令本身（立即寻址），可能来自于寄存器（寄存器寻址）或主存单元（多种寻址方式），但不会来自控制存储器。</p>
+<pre><code>【例4.6】在寄存器间接寻址方式中，操作数存放在（  D）。
+</code></pre><p>A.寄存器          B.堆栈栈顶    C.累加器    D.主存单元</p>
+<p>试题分析：在寄存器间接寻址中，指定寄存器里存放着有效地址，而操作数在主存中。</p>
+<pre><code>【例4.7】变址寻址和基址寻址的有效地址形成方式类似，但（ D ）。
+</code></pre><p>A.变址寄存器的内容在程序执行过程中是不可能变的<br>B.基址寄存器的内容在程序执行过程中是不可能变的<br>C.在程序执行过程中，变址寄存器的内容不能改变而基址寄存器的内容可变<br>D.在程序执行过程中，基址寄存器的内容不能改变而变址寄存器的内容可变</p>
+<p>试题分析：通常，变址寻址中变址寄存器提供修改量（可变的），而指令中提供基准值（固定的）；基址寻址中基址寄存器提供基准值（固定的），而指令中提供位移量（可变的）。</p>
+<pre><code>【例4.8】为实现程序浮动提供了较好支持的建起方式是（B  ）。
+</code></pre><p>A.变址寻址<br>B.相对寻址<br>C.间接寻址<br>D.寄存器间接寻址</p>
+<p>试题分析：相对寻址的操作数地址随着PC值的变化而变化，并且与指令地址之间总是相差一个固定值。所以以相对寻址方式编写的程序可在主存中任意浮动。</p>
+<pre><code>【例4.11】设变址寄存器为X，形式地址为D，某机具有先间址后变址的寻址方式，则这种寻址方式的有效地址为（ B ）。
+</code></pre><p>A. EA=(X)+D<br>B. EA=(X)+(D)<br>C. EA=((X)+D)<br>D. EA=X+D</p>
+<p>试题分析：A选项是变址寻址，C选项为先变址后间址，D选项的表达式不对。</p>
+<pre><code>【例4.13】零地址的运算类指令在指令格式中不给出操作数地址，参加运算的两个操作数来自（ C ）。
+</code></pre><p>A.累加器和寄存器<br>B.累加器和暂存器<br>C.堆栈的栈顶和次栈顶单元<br>D.暂存器和堆栈的栈顶单元</p>
+<p>试题分析：零地址运算类指令的两个操作数均来自于堆栈，分别在栈顶和次栈顶单元。</p>
+<pre><code>【例4.18】某机字长32位，指令单字长，指令系统中具有二地址指令、一地址指令和零地址指令若干条，已知每个地址长12位，采用扩展操作码方式，问该指令系统中的二地址指令、一地址指令、零地址指令各最多能有多少条？
+</code></pre><p>解答：28－1，（28－1）×212－1，232－224－212</p>
+<p>试题分析：设指令字长固定，为32位，每个地址字段为12位，因此，零地址指令的操作码占32位，一地址指令的操作码占20位，二地址指令的操作码占8位。<br>对于二地址指令，至少需要留出一个扩展口给一地址指令，显然最多可以有28—1条二地址指令。对于一地址指令，最多的情况是指令系统中只有一条二地址指令，并要为零地址指令留下一个扩展口，显然最多可以有（28－1）×212－1条一地址指令。对于零地址指令，最多的情况是指令系统中只有一条二地址指令和一条一地址指令，其余均为零地址指令。零地址指令的操作码为32位，共有232种编码，其中224种编码用作表示某条二地址指令，212种编码用作表示某条一地址指令，因此零地址指令最多可以有232－224－212条。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-12T09:58:33.988Z" itemprop="dateUpdated">2018-09-12 17:58:33</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/11/17/计算机组成原理笔记（三）——指令系统/" target="_blank" rel="external">https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&title=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&title=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&source=整理自学院网站
+1. 指令的基本格式一条指令就是机器语言的一个语句，它是一组有意义的二进制代码。
+其中操作码指明了指令的操作性质及功能，地址码则给出了操作..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/18/Hyperledger Composer Playground/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hyperledger Composer Playground</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/12/Lorem ipsum 乱数假文/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Lorem ipsum 乱数假文</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&title=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&title=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&source=整理自学院网站
+1. 指令的基本格式一条指令就是机器语言的一个语句，它是一组有意义的二进制代码。
+其中操作码指明了指令的操作性质及功能，地址码则给出了操作..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理笔记（三）——指令系统》 — Renko's blog&url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/11/17/计算机组成原理笔记（三）——指令系统/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJUlEQVR42u3ay24qQQwE0Pz/T+ducxUxVNkgZZrDCsG8Ts/CKru/vuLPd/z5efz1FX4feX3Wo+N/n/WyDzY2NvZN2Dkj//eatGEni3L9tNjY2Ninsh9dNHm4a3zCSH5JjszPwsbGxv5kdr40SSHJf2mDCjY2NjZ22yRKmjvJErStK2xsbGzstt2fIPPAkA8SXls4sbGxsU9i51PRv//9LfNtbGxs7D/M/i4/ebTYb+7ZjCWe3BcbGxv7IHZeANpwMhv35q2utoBhY2Njn8pOHrQtOXljKAk8bcyI7ouNjY19EHuz/WUfPGaNoXzcW7x5bGxs7Juz21CRR4i8sOVhJvklij3Y2NjYB7Hrg0YRZbYELTK5FzY2NvbZ7GSAOgsPbesq+Xe/SRQbGxv7PPas6ZPcuA0bs8ixiiLY2NjYt2W35aGNK7Oi+I5Fx8bGxj6P3bZy8iZREmzy6yTPWWwqwsbGxj6InZSWfCPOrARuyuQLjsHGxsa+OXv/uO0weFbq8rgShRZsbGzs49j70WlbivLSOCuuTwIJNjY29kHst8yKY3AbhzZ3xMbGxj6VnVy6LRubx8qHuMnreXgMNjY29oexN2VpWD8vrzBrM/13FjY2NvZB7FlrPi94s3HsZjxclDFsbGzsg9h1Gz0+Kx8ktNFiNkLGxsbGPpudx4zNgPa1G4Nm4QQbGxv7JHYSKpLykG/02YwZkuARXRMbGxv7IHZLbSPKvtfVLkc99MXGxsa+ObsNFW3Z2w+A2xIbtbewsbGxD2LnPfNNXJnBNtt66gKMjY2NfXN2/oh5oWqLVt5smg2hV5kJGxsb+ybszcbHtuTkFXXfiqprNTY2NvZx7OsL5a2lpPi1TaVNRMHGxsY+g/3azTSz2DALSMnCPWknYWNjYx/BnsWG2e/t99e2q4avARsbG/sm7LYpP6PORg7tEhfvFhsbG/s49mwAnDT3Nwu6iRNRAcPGxsb+SPZsq03bQmrHBvnyYWNjY2O3IaEd7s6aU3VTDBsbG/s4dhIY2mix2b6TI9vXg42NjX0eu40KefOojS55AcvPTZpf2NjY2Ldl/wOGC1PvTjpsjAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

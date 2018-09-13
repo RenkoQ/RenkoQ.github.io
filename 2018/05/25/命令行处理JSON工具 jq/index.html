@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>命令行处理JSON工具 jq | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="工具">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>命令行处理JSON工具 jq</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">命令行处理JSON工具 jq</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-25T05:34:30.000Z" itemprop="datePublished" class="page-time">
+  2018-05-25
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-命令行处理JSON工具 jq"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">命令行处理JSON工具 jq</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-25 13:34:30" datetime="2018-05-25T05:34:30.000Z"  itemprop="datePublished">2018-05-25</time>
+
+            
+
+
+            
+	<span id="/2018/05/25/命令行处理JSON工具 jq/" class="leancloud_visitors" data-flag-title="命令行处理JSON工具 jq" title="命令行处理JSON工具 jq">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/05/25/命令行处理JSON工具 jq/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/25/命令行处理JSON工具 jq/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>所有参考资料都写在文末，侵删致歉。</p>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener">jq</a><br><a href="https://github.com/stedolan/jq" target="_blank" rel="noopener">stedolan/jq</a></p>
+<pre><code>jq is a lightweight and flexible command-line JSON processor.
+</code></pre><p>jq 是一款命令行下处理 JSON 数据的工具。<br>其可以接受标准输入，命令管道或者文件中的 JSON 数据，经过一系列的过滤器(filters)和表达式的转后形成我们需要的数据结构并将结果输出到标准输出中。<br>jq 的这种特性使我们可以很容易地在 Shell 脚本中调用它。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p><a href="https://stedolan.github.io/jq/download/" target="_blank" rel="noopener">Download jq</a></p>
+<pre><code>brew install jq
+sudo apt-get install jq
+yum -y  install epel-release   &amp;&amp;    yum -y install jq
+</code></pre><a id="more"></a>
+<p>手动编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/stedolan/jq.git</span><br><span class="line">cd jq</span><br><span class="line">autoreconf -i</span><br><span class="line">./configure --disable-maintainer-mode</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<h3 id="3-jq表达式-filters"><a href="#3-jq表达式-filters" class="headerlink" title="3. jq表达式(filters)"></a>3. jq表达式(filters)</h3><p><a href="https://stedolan.github.io/jq/manual/#Basicfilters" target="_blank" rel="noopener">jq Manual</a></p>
+<p><a href="https://jqplay.org/" target="_blank" rel="noopener">在线测试</a></p>
+<p><a href="https://www.linux-man.cn/command/jq" target="_blank" rel="noopener">jq命令中文手册</a></p>
+<pre><code>$ jq
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Some of the options include:</span><br><span class="line"> -c		compact instead of pretty-printed output;</span><br><span class="line"> -n		use `null` as the single input value;</span><br><span class="line"> -e		set the exit status code based on the output;</span><br><span class="line"> -s		read (slurp) all inputs into an array; apply filter to it;</span><br><span class="line"> -r		output raw strings, not JSON texts;</span><br><span class="line"> -R		read raw strings, not JSON texts;</span><br><span class="line"> -C		colorize JSON;</span><br><span class="line"> -M		monochrome (don&apos;t colorize JSON);</span><br><span class="line"> -S		sort keys of objects on output;</span><br><span class="line"> --tab	use tabs for indentation;</span><br><span class="line"> --arg a v	set variable $a to value &lt;v&gt;;</span><br><span class="line"> --argjson a v	set variable $a to JSON value &lt;v&gt;;</span><br><span class="line"> --slurpfile a f	set variable $a to an array of JSON texts read from &lt;f&gt;;</span><br></pre></td></tr></table></figure>
+<h4 id="1-格式化输出json"><a href="#1-格式化输出json" class="headerlink" title="1. 格式化输出json"></a>1. 格式化输出json</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#xxx.JSON 中是我们要处理的 JSON 数据，我们可以直接将文件名传给 jq</span><br><span class="line">$ jq -r &apos;.&apos; xxx.JSON</span><br><span class="line">#或者由其他程序读出文件内容，并传给 jq</span><br><span class="line">$ cat xxx.JSON|jq -r &apos;.&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;-r&apos;选项。该选项控制 jq 是输出 raw 格式内容或 JSON 格式内容。所谓的 JSON 格式是指符合 JSON 标准的格式。例如，假设我们要查询 JSON 字符串&#123;&quot;name&quot;:&quot;tom&quot;&#125;中 name 的值. 使用-r 选项时返回的是&apos;tom&apos;. 不使用-r 选项时，返回的是&apos;&quot;tom&quot;&apos;.返回值多了一对双引号。</span><br></pre></td></tr></table></figure>
+<h4 id="2-‘-’-符号"><a href="#2-‘-’-符号" class="headerlink" title="2. ‘.’ 符号"></a>2. ‘.’ 符号</h4><p>单独的一个<code>&#39;.&#39;</code>符号用来表示对作为表达式输入的整个 JSON 对象的引用。</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmk0yh81hj21360d70w4.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="3-JSON-对象操作"><a href="#3-JSON-对象操作" class="headerlink" title="3. JSON 对象操作"></a>3. JSON 对象操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.profile_image&apos;</span><br></pre></td></tr></table></figure>
+<p>如果key不存在则返回null</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmk64k3vjj213c0gxtcp.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="4-迭代器"><a href="#4-迭代器" class="headerlink" title="4. 迭代器"></a>4. 迭代器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[]&apos;</span><br></pre></td></tr></table></figure>
+<p>该表达式的输入可以是数组或者 JSON 对象。输出的是基于数组元素或者 JSON 对象属性值的 iterator。</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmkauycmzj213a0gldkb.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="5-访问属性值"><a href="#5-访问属性值" class="headerlink" title="5. 访问属性值"></a>5. 访问属性值</h4><p>输出数组元素或者 JSON 对象的属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[&lt;value&gt;]&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmkhv2x41j213f0h0jsl.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[&lt;string&gt;]&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmkknaegkj213e0gxtcq.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="6-数组切片"><a href="#6-数组切片" class="headerlink" title="6. 数组切片"></a>6. 数组切片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[startindex:endindex]&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmknawor0j213b0gqaaz.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="7-表达式操作-‘-’和-‘-’"><a href="#7-表达式操作-‘-’和-‘-’" class="headerlink" title="7. 表达式操作(‘,’和 ‘|’)"></a>7. 表达式操作(‘,’和 ‘|’)</h4><p>表达式操作是用来关联多个基础表达式。</p>
+<p>其中逗号表示对同一个输入应用多个表达式。管道符表示将前一个表达式的输出用作后一个表达式的输入。<br>当前一个表达式产生的结果是迭代器时，会将迭代器中的每一个值用作后一个表达式的输入从而形成新的表达式。<br>例如<code>&#39;.[]|.+1&#39;</code>, 在这个表达式中，第一个子表达式<code>&#39;.[]&#39;</code>在输入数组上构建迭代器，第二个子表达式则在迭代器的每个元素上加 1。</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmky6qc19j21380h1ab1.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[] | .name&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frmkvtq50qj213f0h3jsj.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="8-内置运算"><a href="#8-内置运算" class="headerlink" title="8. 内置运算"></a>8. 内置运算</h4><p><a href="https://stedolan.github.io/jq/manual/#Basicfilters" target="_blank" rel="noopener">Builtin operators and functions</a></p>
+<ul>
+<li>数学运算</li>
+</ul>
+<p>对于数字类型，jq 实现了基本的加减乘除<code>/</code>和求余<code>%</code>运算。对于除法运算，jq 最多支持 16 位小数。</p>
+<ul>
+<li><p>字符串操作</p>
+<ul>
+<li><p>连接操作(运算符为<code>+</code>，例如：<code>&quot;tom &quot;+&quot;jerry&quot;</code>结果为<code>&quot;tom jerry&quot;</code>)</p>
+</li>
+<li><p>复制操作(例如：<code>&#39;a&#39;*3</code>结果为<code>&#39;aaa&#39;</code>)</p>
+</li>
+<li><p>字符串分割操作(将字符串按照指定的分割符分成数组，例如<code>&quot;sas&quot;/&quot;s&quot;</code>的结果为<code>[&quot;&quot;,&quot;a&quot;,&quot;&quot;]</code>，而<code>&quot;sas&quot;/&quot;a&quot;</code>的结果为<code>[&quot;s&quot;,&quot;s&quot;]</code>。</p>
+</li>
+</ul>
+</li>
+<li><p>数组操作</p>
+<ul>
+<li>并集<code>&#39;+&#39;</code>运算，结果数组中包含参与运算的数组的所有元素。</li>
+<li>差集运算<code>&#39;-&#39;</code>，例如：有数组 <code>a,b</code>, <code>a-b</code> 的结果为所有在 a 中且不包含在 b 中的元素组成的数组。</li>
+</ul>
+</li>
+<li><p>对象操作</p>
+<ul>
+<li>jq 实现了两个 JSON 对象的合并操作(merge)。当两个参与运算的对象包含相同的属性时则保留运算符右侧对象的属性值。有两种合并运算符：<code>+</code>和<code>*</code>。所不同的是，运算符’+’只做顶层属性的合并，运算符’*’则是递归合并。</li>
+<li>例如：有对象 <code>a={&quot;a&quot;:{&quot;b&quot;:1}}, b={&quot;a&quot;:{&quot;c&quot;:2}}</code>，<code>a+b</code> 的结果为<code>{&quot;a&quot;:{&quot;c&quot;:2}}</code>，而 <code>a*b</code> 的结果为<code>{&quot;a&quot;:{&quot;b&quot;:1,&quot;c&quot;:2}}</code></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://stedolan.github.io/jq/manual/#ConditionalsandComparisons" target="_blank" rel="noopener">Conditionals and Comparisons</a></p>
+<ul>
+<li><p>比较操作<br>jq 内部支持的比较操作符有<code>==</code>, <code>!=</code>,<code>&gt;</code>,<code>&gt;=</code>,<code>&lt;=</code>和<code>&lt;</code>。其中，<code>==</code>的规则和 javascript 中的恒等(<code>===</code>)类似，只有两个操作数的类型和值均相同时其结果才是 true。</p>
+</li>
+<li><p>逻辑运算符: <code>and</code>/<code>or</code>/<code>not</code><br>在 jq 逻辑运算中，除了 <code>false</code> 和 <code>null</code> 外，其余的任何值都等同于 <code>true</code>。</p>
+</li>
+<li>默认操作符(<code>//</code>)<br>表达式<code>a//b</code>表示当表达式 a 的值不是 <code>false</code> 或 <code>null</code> 时，<code>a//b</code> 等于 a，否则等于 b。</li>
+</ul>
+<ul>
+<li>迭代器运算</li>
+</ul>
+<p>类似笛卡尔积方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;([1,2]|.[])+([4,6]|.[])&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frndgnyr6ej213d0grn05.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="9-try-catch"><a href="#9-try-catch" class="headerlink" title="9. try-catch"></a>9. try-catch</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;try .a catch &quot;. is not an object&quot;&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frnduj61paj213g0gs75e.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;[.[]|try .a]&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frndwjmn01j21360gjdgt.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h4 id="10-内置函数"><a href="#10-内置函数" class="headerlink" title="10. 内置函数"></a>10. 内置函数</h4><ul>
+<li><p>map(x), map_values(x)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;map(.+1)&apos;</span><br></pre></td></tr></table></figure>
+<p> <img src="http://ww1.sinaimg.cn/large/789d050dly1frne2gfishj213c0gj759.jpg" alt=""></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;map_values(.+1)&apos;</span><br></pre></td></tr></table></figure>
+<p> <img src="http://ww1.sinaimg.cn/large/789d050dly1frne3d85kfj213c0gtwfm.jpg" alt=""></p>
+</li>
+<li><p>过滤操作</p>
+<ul>
+<li><p>基于数据类型的过滤<br>如表达式<code>jq &#39;.[]|numbers&#39;</code>的结果只包含数组。</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frne992xo3j213k0h3my6.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<p>可以用来过滤的类型过滤器有：<code>arrays</code>, <code>objects</code>, <code>iterables</code>, <code>booleans</code>, <code>numbers</code>, <code>normals</code>, <code>finites</code>, <code>strings</code>, <code>nulls</code>, <code>values</code>, <code>scalars</code>。</p>
+</li>
+<li><p>select 函数<br>select 接受一个条件表达式作为参数。其输入可以是迭代器，或者和 map 函数配合使用来处理数组。当输入中的某个元素使 select 参数中的条件表达式结果为真时，则在结果中保留该元素，否则不保留该元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;.[] | select(.id == &quot;second&quot;)&apos;</span><br></pre></td></tr></table></figure>
+<p>  <img src="http://ww1.sinaimg.cn/large/789d050dly1frneb52jtyj213r0hagmx.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://stedolan.github.io/jq/manual/#Builtinoperatorsandfunctions" target="_blank" rel="noopener">路径操作<code>path(path_expression)</code></a><br>和 xpath 类似，在 jq 中的 <code>path</code> 也是指从根到某个叶子属性的访问路径。<br>在 jq 中有两种表示路径的方式：数组表示法和属性表示法。</p>
+<ul>
+<li>属性表示法类似于我们在 <code>filter</code> 中访问某个属性值的方式，如<code>&#39;.a.b&#39;</code>。</li>
+<li><p>数组表示法是将路径中的每一部分表示为数组的一个元素。</p>
+</li>
+<li><p>jq 提供了一个内置函数 <code>path</code> 用来实现路径从属性表示法到数组表示法的转换。</p>
+</li>
+<li><p>函数用来读取路径的值<code>getpath</code>, 设置路径的值<code>setpath</code>和删除路径<code>del</code>。<br>这三个函数对路径的处理并不一致。其中 <code>getpath</code> 和 <code>setpath</code> 只接受数组表示法的路径，而 <code>del</code> 函数只能正确处理属性表示法的路径。</p>
+</li>
+<li><p>函数<code>paths</code> 用来枚举可能存在的路径。<br>在没有参数的情况下，<code>paths</code> 函数将输出 JSON 数据中所有可能的路径。<code>paths</code> 函数可以接受一个过滤器，来只输出满足条件的路径。</p>
+</li>
+</ul>
+</li>
+<li><p>存在函数<code>contains</code>/<code>inside</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;contains(&#123;foo: 12, bar: [&#123;barp: 12&#125;]&#125;)&apos;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/789d050dly1frnf3k20vmj21380gzjsm.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;inside(&#123;&quot;foo&quot;: 12, &quot;bar&quot;:[1,2,&#123;&quot;barp&quot;:12, &quot;blip&quot;:13&#125;]&#125;)&apos;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/789d050dly1frnf7txdooj21390glmyf.jpg" alt=""></p>
+</li>
+<li><p>数组函数<br>jq 提供内置函数用于完成数组的扁平化<code>flatten</code>，反序<code>reverse</code>，排序<code>sort</code>, <code>sort_by</code>，比较<code>min</code>,<code>min_by</code>,<code>max</code>,<code>max_by</code>和查找<code>indices</code>,<code>index</code>和<code>rindex</code>。</p>
+<p>其中<code>indices</code>函数的输入数据可以是数组，也可以是字符串。和<code>index</code> 函数不同的是，其结果是一个包含所有参数在输入数据中位置的数组，具体请参看下面的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jq 中的数组函数</span><br><span class="line">#结果是[1,2,3,4]</span><br><span class="line">jq -nr &apos;[1,[2,3],4]|flatten&apos;</span><br><span class="line">#结果是[3,2,1]</span><br><span class="line">jq -nr &apos;[1,2,3]|reverse&apos;</span><br><span class="line">jq -nr &apos;[3,1,2]|sort&apos;</span><br><span class="line">jq -nr &apos;[&#123;&quot;a&quot;:1&#125;,&#123;&quot;a&quot;:2&#125;]|sort_by(.a)&apos;</span><br><span class="line">#下面两个表达式的结果都是[1,3]</span><br><span class="line">jq -nr &apos;&quot;abcb&quot;|indices(&quot;b&quot;)&apos;</span><br><span class="line">jq -nr &apos;[1,3,2,3]|indices(3)&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-jq-高级特性"><a href="#4-jq-高级特性" class="headerlink" title="4. jq 高级特性"></a>4. jq 高级特性</h3><p><a href="https://stedolan.github.io/jq/manual/#Advancedfeatures" target="_blank" rel="noopener">Advanced features</a></p>
+<h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><p>Variable / Symbolic Binding Operator: <code>... as $identifier | ...</code></p>
+<p>jq 内部支持两种变量的定义方式。第一种可以通过命令行参数<code>--arg</code>定义。这种方式用来从外部（如：shell)传入数据以供 filter 表达式使用。</p>
+<p>第二种方式，在 jq 表达式内部，我们可以自己声明变量用来保存表达式的结果以供表达式其余部分使用。</p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frnfk2glprj20d40cvt9y.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#在下面的表达式中变量$arraylen 用来保存数组长度，整个表达式结果为 4</span><br><span class="line">jq -nr &apos;[1,2,3]|length as $arraylen|$arraylen+1&apos;</span><br><span class="line">#可以同时定义多个变量</span><br><span class="line">jq -nr &apos;&#123;&quot;firstname&quot;:&quot;tom&quot;,&quot;lastname&quot;:&quot;clancy&quot;&#125;|. as &#123;firstname:$fn, lastname:$ln&#125;|&quot;author is &quot;+$fn+&quot;*&quot;+$ln&apos;</span><br></pre></td></tr></table></figure>
+<p>变量作用域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#会抛出 arraylen 没定义的异常</span><br><span class="line">jq -nr &apos;[1,2,3]|(length as $arraylen|$arraylen)|$arraylen+1&apos;</span><br><span class="line"></span><br><span class="line">#正常执行，结果为 4.</span><br><span class="line">jq -nr &apos;[1,2,3]|(length as $arraylen|$arraylen+1)&apos;</span><br><span class="line"></span><br><span class="line">#函数作用域。该表达式会抛出异常，因为变量$fn 是在函数 fname 中定义，对最后一个子表达式##来说，$fn 是不可见的。</span><br><span class="line">jq -nr &apos;&#123;&quot;firstname&quot;:&quot;tom&quot;,&quot;lastname&quot;:&quot;clancy&quot;&#125;|def fname:. as &#123;firstname:$fn, lastname:$ln&#125;|$fn; fname|$fn&apos;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-迭代器"><a href="#2-迭代器" class="headerlink" title="2. 迭代器"></a>2. 迭代器</h4><ul>
+<li><p>Reduce<br><code>reduce</code> 关键字用来通过运算将迭代器的所有值合并为一个值。<br>其调用形式为：<code>reduce &lt;itexp&gt; as $var (INIT; UPDATE)</code>。<br>其中，表达式 <code>itexp</code> 产生的迭代器被赋值给变量 <code>var</code>, <code>UPDATE</code> 是关于变量 <code>var</code> 的表达式。<code>INIT</code> 是该表达式的初始输入。相对于 <code>itexp</code> 结果中的每个元素，<code>UPDATE</code> 表达式被调用一次，计算出结果用作下一次 <code>UPDATE</code> 调用的输入。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;reduce .[] as $item (0; . + $item)&apos;</span><br></pre></td></tr></table></figure>
+<p> <img src="http://ww1.sinaimg.cn/large/789d050dly1frnft16nluj213e0godgx.jpg" alt=""></p>
+</li>
+<li><p>foreach<br>关键字 <code>foreach</code> 的作用和 <code>reduce</code> 类似。<br>其调用形式为 <code>foreach EXP as $var (INIT; UPDATE; EXTRACT)</code>。<br>和 <code>reduce</code> 关键字不同的是，<code>foreach</code> 关键字的每次迭代是先调用 <code>UPDATE</code> 再调用 <code>EXTRACT</code>，并以一个迭代器保留每一次的中间结果。该迭代器最后作为整个表达式的结果输出。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;[foreach .[] as $item ([[],[]]; if $item == null then [[],.[0]] else [(.[0] + [$item]),[]] end; if $item == null then .[1] else empty end)]&apos;</span><br></pre></td></tr></table></figure>
+<p> <img src="http://ww1.sinaimg.cn/large/789d050dly1frnfvubh7lj213j0gxq4l.jpg" alt=""></p>
+</li>
+</ul>
+<ul>
+<li>内置函数<code>limit(n;exp)</code>用来取得表达式<code>exp</code>结果的前 n 个值。</li>
+</ul>
+<ul>
+<li>内置函数 <code>first</code>, <code>last</code> 和 <code>nth</code><br>这几个函数用来取迭代器中某一个特定的元素。既可以以函数的形式调用，也可以作为子表达式调用。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#下面的表达式按照函数的形式调用 first,结果为 1</span><br><span class="line">jq -nr &apos;first([1,2,3]|.[])&apos;</span><br><span class="line">#下面的表达式以 filter 形式调用 first</span><br><span class="line">jq -nr &apos;[1,2,3]|.[]|first&apos;</span><br><span class="line">#nth 函数的使用，结果为 2</span><br><span class="line">jq -nr &apos;nth(1;[1,2,3]|.[])&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-函数定义"><a href="#3-函数定义" class="headerlink" title="3. 函数定义"></a>3. 函数定义</h4><p>jq 提供了定义函数的能力。<br>其语法规则为：<code>def funcname(arguments) : funcbodyexp;</code></p>
+<p>定义函数时的规则:</p>
+<pre><code>函数名或者参数列表后面应该跟冒号以标志函数体开始。
+如果不需要参数，可以直接把整个参数列表部分省去。
+参数列表中，参数之间以分号(&quot;;&quot;)分隔。
+函数体只能是一个表达式，且表达式需以分号结尾
+如果在表达式内部定义函数，整个子表达式部分不能只包含函数定义，否则 jq 会抛出语法错误
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;def addvalue(f): . + [f]; map(addvalue(.[0]))&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frnip16px8j21360h0dh7.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.json|jq &apos;def addvalue(f): f as $x | map(. + $x); addvalue(.[0])&apos;</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1frniqxkckcj213k0gzabj.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h3 id="5-参考资料"><a href="#5-参考资料" class="headerlink" title="5. 参考资料"></a>5. 参考资料</h3><p><a href="https://www.ibm.com/developerworks/cn/linux/1612_chengg_jq/index.html" target="_blank" rel="noopener">命令行 JSON 处理工具 jq 的使用介绍</a></p>
+<p><a href="https://github.com/stedolan/jq/wiki/Cookbook" target="_blank" rel="noopener">Cookbook</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-13T01:07:39.810Z" itemprop="dateUpdated">2018-09-13 09:07:39</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/05/25/命令行处理JSON工具 jq/" target="_blank" rel="external">https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&title=《命令行处理JSON工具 jq》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&title=《命令行处理JSON工具 jq》 — Renko's blog&source=所有参考资料都写在文末，侵删致歉。
+1. 介绍jqstedolan/jq
+jq is a lightweight and flexible command..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《命令行处理JSON工具 jq》 — Renko's blog&url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/06/05/Code Generation/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Code Generation</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/06/YAML/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">YAML</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&title=《命令行处理JSON工具 jq》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&title=《命令行处理JSON工具 jq》 — Renko's blog&source=所有参考资料都写在文末，侵删致歉。
+1. 介绍jqstedolan/jq
+jq is a lightweight and flexible command..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《命令行处理JSON工具 jq》 — Renko's blog&url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/05/25/命令行处理JSON工具 jq/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aS27DMAwFwNz/0inQVYAm6SMpJl6MV0bgj8YFJPWRt1t83H+P978kdz3+/ni8f0Jy5ejAw8PDaw391fF3oMmVrwaUg9/fm4wZDw8Pb5v3flp/dZ78ktybLw/5mPHw8PCuwMuHMt+gJ4sTHh4e3vV5vfPJ4oGHh4d3ZV4eMeShQw+Z8w5nLXh4eHgxr1oAu8L5Yn0PDw8Pb1BV7x3V4lZvsYlGgoeHh7fAy0tQ1QUjvyb5KL1iGB4eHt4G7zMtUNUloVdae/JkPDw8vI/w8qFUp/UJu/r8qB8BDw8Pr8WbwKqtVHmBbd5kgIeHh7fNy8OI+USfD7rXZPBPZwQeHh7emJdHAPk1eWhbXQDKbV54eHh4C7xJKasXFvQ+Yq9NAQ8PD2+DN2moyj9BMtC8RWCUr+Dh4eEt8E61W+Vb3kkUUghw8fDw8BZ41YHOS2iTJae8pcbDw8M7yusNvfqyPA7uBRBPRoKHh4e3xkum8mowkbRV9ZYlPDw8vO/yqvHo2VaqeZktClbw8PDwlnl52akXv+bb6N6GHg8PD++7vOQ1eZm/ULgab6bx8PDwtnmngtdqGJE3MUxaHPDw8PA2eJMJPbm3+sbeeVTlw8PDwzvEm8PmEUO+2OStBnh4eHjbvGrcUI1Zk88x+SjN/xjw8PDwWrx8wp1sbfN4YhJV4OHh4X2SV31BbzHIY+LqAoCHh4f3Gd69eOR35Rv03sKT/DHw8PDwNni9+nsvVM0j4Enh7UB7AR4eHl7Ay6f4pAxWDXzPRszljTUeHh7egNeblPNpOo9iJ+xCCIOHh4d3Gd7ZIll1+VlfGPDw8PCKvCRQ6E3rvU15dBceHh7eGu9UKas33U8KYIXOCDw8PLxDvF4hKgkOenFw3siVfEQ8PDy8o7wf9AENAVRFTVkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

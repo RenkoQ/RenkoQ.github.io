@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Google 地图 JavaScript API（二） | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,MAP">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Google 地图 JavaScript API（二）</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Google 地图 JavaScript API（二）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-01T16:01:00.000Z" itemprop="datePublished" class="page-time">
+  2017-12-02
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Google 地图 JavaScript API（二）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Google 地图 JavaScript API（二）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-02 00:01:00" datetime="2017-12-01T16:01:00.000Z"  itemprop="datePublished">2017-12-02</time>
+
+            
+
+
+            
+	<span id="/2017/12/02/Google 地图 JavaScript API（二）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（二）" title="Google 地图 JavaScript API（二）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/12/02/Google 地图 JavaScript API（二）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/12/02/Google 地图 JavaScript API（二）/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>根据udacity课程学习的笔记。</p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
+<hr>
+<h3 id="1-层"><a href="#1-层" class="headerlink" title="1. 层"></a>1. 层</h3><p>层是地图上的对象，包含一个或多个单独项，但可作为一个整体进行操作。层通常反映了您添加到地图上用于指定公共关联的对象集合。</p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/layers" target="_blank" rel="external">文档</a></p>
+<p><code>数据层</code><br>    Google 地图数据层提供了一个可用于储存任意地理空间数据的容器。您可以使用数据层储存您的自定义数据，或在 Google 地图上显示 GeoJSON 数据。<br>    <a href="https://developers.google.com/maps/documentation/javascript/datalayer" target="_blank" rel="external">文档</a></p>
+<p><code>Fusion Tables 图层/ 融合表层（试验性）</code><br>使用 FusionTablesLayer 对象将 Google Fusion Tables 中包含的数据呈现为地图上的图层。<br><a href="https://developers.google.com/maps/documentation/javascript/fusiontableslayer" target="_blank" rel="external">文档</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> map;</div><div class="line">  <span class="comment">//加载地图</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Constructor creates a new map - only center and zoom are required.</span></div><div class="line">    map = <span class="keyword">new</span> google.maps.Map(<span class="built_in">document</span>.getElementById(<span class="string">'map'</span>), &#123;</div><div class="line">      <span class="comment">//中心 纬度 经度</span></div><div class="line">      center: &#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;,</div><div class="line">      <span class="comment">//缩放值 越高越详细</span></div><div class="line">      zoom: <span class="number">13</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">var</span> markers = [];</div><div class="line"></div><div class="line">    <span class="comment">//创建一组位置信息</span></div><div class="line">    <span class="keyword">var</span> locations = [</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 1'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310597</span>,<span class="attr">lng</span>:<span class="number">120.343251</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 2'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313089</span>,<span class="attr">lng</span>:<span class="number">120.340934</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 3'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313103</span>,<span class="attr">lng</span>:<span class="number">120.344903</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 4'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310653</span>,<span class="attr">lng</span>:<span class="number">120.347006</span>&#125;&#125;,</div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="comment">//创建信息窗口</span></div><div class="line">    <span class="keyword">var</span> largeInfowindow = <span class="keyword">new</span> google.maps.InfoWindow();</div><div class="line">    <span class="comment">//创建经纬度边界</span></div><div class="line">    <span class="keyword">var</span> bounds = <span class="keyword">new</span> google.maps.LatLngBounds();</div><div class="line"></div><div class="line">    <span class="comment">//通过位置数组初始化创建标识数组</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; locations.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> position = locations[i].location;</div><div class="line">      <span class="keyword">var</span> title = locations[i].title;</div><div class="line">      <span class="comment">//为每个位置创建标识</span></div><div class="line">      <span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">        <span class="attr">map</span>: map,</div><div class="line">        <span class="attr">position</span>: position,</div><div class="line">        <span class="attr">title</span>: title,</div><div class="line"></div><div class="line">        <span class="attr">animation</span>: google.maps.Animation.DROP,</div><div class="line">        <span class="attr">id</span>: i</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//把marker放进markers数组里</span></div><div class="line">      markers.push(marker);</div><div class="line">      <span class="comment">//添加事件使得点击时打开信息窗口</span></div><div class="line">      marker.addListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        populateInfoWindow(<span class="keyword">this</span>, largeInfowindow);</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//传入各标识位置扩展边界</span></div><div class="line">      bounds.extend(markers[i].position);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    map.fitBounds(bounds);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 点击标识时弹出信息窗口。</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">    <span class="comment">// 检查信息窗口还没有在这个标识打开</span></div><div class="line">    <span class="keyword">if</span> (infowindow.marker != marker) &#123;</div><div class="line">      infowindow.marker = marker;</div><div class="line">      infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;'</span>);</div><div class="line">      infowindow.open(map, marker);</div><div class="line">      <span class="comment">// 确保信息窗口关闭时已清空marker属性值</span></div><div class="line">      infowindow.addListener(<span class="string">'closeclick'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        infowindow.setMarker = <span class="literal">null</span>;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="2-标识显隐"><a href="#2-标识显隐" class="headerlink" title="2. 标识显隐"></a>2. 标识显隐</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input id=&quot;show-listings&quot; type=&quot;button&quot; value=&quot;Show Listings&quot;&gt;</div><div class="line">&lt;input id=&quot;hide-listings&quot; type=&quot;button&quot; value=&quot;Hide Listings&quot;&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    map = <span class="keyword">new</span> google.maps.Map(</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">var</span> locations = [</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="keyword">var</span> largeInfowindow = <span class="keyword">new</span> google.maps.InfoWindow();</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; locations.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> position = locations[i].location;</div><div class="line">      <span class="keyword">var</span> title = locations[i].title;</div><div class="line">       <span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">      &#125;);</div><div class="line">      markers.push(marker);</div><div class="line">      marker.addListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        populateInfoWindow(<span class="keyword">this</span>, largeInfowindow);</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//不立即设置标识的地图参数和扩展地图界限，用showListings函数做</span></div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'show-listings'</span>).addEventListener(<span class="string">'click'</span>, showListings);</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'hide-listings'</span>).addEventListener(<span class="string">'click'</span>, hideListings);</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the markers array and display them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">showListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> bounds = <span class="keyword">new</span> google.maps.LatLngBounds();</div><div class="line">    <span class="comment">// Extend the boundaries of the map for each marker and display the marker</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//将每个标识的地图设置为map</span></div><div class="line">      markers[i].setMap(map);</div><div class="line">      <span class="comment">//扩展地图界限来容纳标识</span></div><div class="line">      bounds.extend(markers[i].position);</div><div class="line">    &#125;</div><div class="line">    map.fitBounds(bounds);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the listings and hide them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">hideListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//不删除标识，只隐藏</span></div><div class="line">      markers[i].setMap(<span class="literal">null</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="3-设置地图样式"><a href="#3-设置地图样式" class="headerlink" title="3. 设置地图样式"></a>3. 设置地图样式</h3><p><a href="https://developers.google.com/maps/documentation/javascript/styling" target="_blank" rel="external">设置地图样式入门</a><br>可以利用样式化地图自定义 Google 基础地图的呈现方式，从而更改道路、公园和建成区等元素的视觉显示。</p>
+<a id="more"></a> 
+<p><a href="https://snazzymaps.com/" target="_blank" rel="external">时髦地图</a><br>可获取预先构建的地图样式示例。</p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/styling#creating_a_styledmaptype" target="_blank" rel="external">创建带样式的地图类型</a><br><a href="https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple" target="_blank" rel="external">Styled Map Types</a><br>可以通过创建 <code>StyledMapType</code> 并向构造函数传递选择器和样式设置器信息，新增作为样式应用对象的地图类型。此方法不会影响默认地图类型的样式。</p>
+<p>搜索<code>GOOGLE MAPS API STYLES</code>获得更多样式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> map;</div><div class="line">  <span class="keyword">var</span> markers = [];</div><div class="line"></div><div class="line">  <span class="comment">//加载地图</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 改变地图样式</span></div><div class="line">    <span class="keyword">var</span> styles = [</div><div class="line">      &#123;</div><div class="line">        <span class="comment">//地图特征是可以在地图上作为目标的地理元素</span></div><div class="line">        featureType: <span class="string">'water'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#19a0d8'</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'administrative'</span>,</div><div class="line">        <span class="comment">//元素是想要对特征进行修改的对象(标签、图形等)</span></div><div class="line">        elementType: <span class="string">'labels.text.stroke'</span>,</div><div class="line">        <span class="comment">//应用于地图特征的颜色、可见属性</span></div><div class="line">        stylers: [</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#ffffff'</span> &#125;,</div><div class="line">          &#123; <span class="attr">weight</span>: <span class="number">6</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'administrative'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'labels.text.fill'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#e85113'</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="comment">//蓝色高速公路</span></div><div class="line">        featureType: <span class="string">'road.highway'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'geometry.stroke'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#efe9e4'</span> &#125;,</div><div class="line">          &#123; <span class="attr">lightness</span>: <span class="number">-40</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'transit.station'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">weight</span>: <span class="number">9</span> &#125;,</div><div class="line">          &#123; <span class="attr">hue</span>: <span class="string">'#e85113'</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'road.highway'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'labels.icon'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">visibility</span>: <span class="string">'off'</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'water'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'labels.text.stroke'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">lightness</span>: <span class="number">100</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'water'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'labels.text.fill'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">lightness</span>: <span class="number">-100</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'poi'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'geometry'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">visibility</span>: <span class="string">'on'</span> &#125;,</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#f0e4d3'</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">featureType</span>: <span class="string">'road.highway'</span>,</div><div class="line">        <span class="attr">elementType</span>: <span class="string">'geometry.fill'</span>,</div><div class="line">        <span class="attr">stylers</span>: [</div><div class="line">          &#123; <span class="attr">color</span>: <span class="string">'#efe9e4'</span> &#125;,</div><div class="line">          &#123; <span class="attr">lightness</span>: <span class="number">-25</span> &#125;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="comment">// Constructor creates a new map - only center and zoom are required.</span></div><div class="line">    map = <span class="keyword">new</span> google.maps.Map(<span class="built_in">document</span>.getElementById(<span class="string">'map'</span>), &#123;</div><div class="line">      <span class="comment">//中心 纬度 经度</span></div><div class="line">      center: &#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;,</div><div class="line">      <span class="comment">//缩放值 越高越详细</span></div><div class="line">      zoom: <span class="number">13</span>,</div><div class="line">      <span class="comment">//禁止用户将地图类型改为公路、地形、卫星等</span></div><div class="line">      mapTypeControl: <span class="literal">false</span>,</div><div class="line">      <span class="comment">//设置地图对象选项中的属性</span></div><div class="line">      styles: styles</div><div class="line">    &#125;);</div><div class="line">    <span class="comment">// //创建寝室标识</span></div><div class="line">    <span class="comment">// var dorm  =&#123;lat: 30.317655, lng: 120.343745&#125;;</span></div><div class="line">    <span class="comment">// var marker = new google.maps.Marker(&#123;</span></div><div class="line">    <span class="comment">//   //放置位置</span></div><div class="line">    <span class="comment">//   position: dorm,</span></div><div class="line">    <span class="comment">//   map: map,</span></div><div class="line">    <span class="comment">//   title: 'My Dorm'</span></div><div class="line">    <span class="comment">// &#125;);</span></div><div class="line">    <span class="comment">//</span></div><div class="line">    <span class="comment">// //创建信息窗口</span></div><div class="line">    <span class="comment">// var infowindow = new google.maps.InfoWindow(&#123;</span></div><div class="line">    <span class="comment">//   content: 'this is a infowindow'</span></div><div class="line">    <span class="comment">// &#125;);</span></div><div class="line">    <span class="comment">// //因为窗口不会自动打开，所以在事件监听器中调用方法</span></div><div class="line">    <span class="comment">// marker.addListener('click',function() &#123;</span></div><div class="line">    <span class="comment">//   //传入窗口打开的地图和固定它的标记(后者可换为位置属性)</span></div><div class="line">    <span class="comment">//   infowindow.open(map,marker);</span></div><div class="line">    <span class="comment">// &#125;);</span></div><div class="line"></div><div class="line">    <span class="comment">//创建一组位置信息</span></div><div class="line">    <span class="keyword">var</span> locations = [</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 1'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310597</span>,<span class="attr">lng</span>:<span class="number">120.343251</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 2'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313089</span>,<span class="attr">lng</span>:<span class="number">120.340934</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 3'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313103</span>,<span class="attr">lng</span>:<span class="number">120.344903</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 4'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310653</span>,<span class="attr">lng</span>:<span class="number">120.347006</span>&#125;&#125;,</div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="comment">//创建两个标记图标</span></div><div class="line">    <span class="comment">//标记出现在地图上时的默认图标</span></div><div class="line">    <span class="keyword">var</span> defaultIcon = makeMarkerIcon(<span class="string">'0091ff'</span>);</div><div class="line"></div><div class="line">    <span class="comment">//鼠标移到地图上时突出显示的图标</span></div><div class="line">    <span class="keyword">var</span> highlightedIcon = makeMarkerIcon(<span class="string">'FFFF24'</span>);</div><div class="line"></div><div class="line">    <span class="comment">//创建信息窗口</span></div><div class="line">    <span class="keyword">var</span> largeInfowindow = <span class="keyword">new</span> google.maps.InfoWindow();</div><div class="line"></div><div class="line">    <span class="comment">//通过位置数组初始化创建标识数组</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; locations.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> position = locations[i].location;</div><div class="line">      <span class="keyword">var</span> title = locations[i].title;</div><div class="line">      <span class="comment">//为每个位置创建标识</span></div><div class="line">      <span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">        <span class="attr">map</span>: map,</div><div class="line">        <span class="attr">position</span>: position,</div><div class="line">        <span class="attr">title</span>: title,</div><div class="line">        <span class="comment">//将每个标记的图标设置为默认图标</span></div><div class="line">        icon: defaultIcon,</div><div class="line">        <span class="attr">animation</span>: google.maps.Animation.DROP,</div><div class="line">        <span class="attr">id</span>: i</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//把marker放进markers数组里</span></div><div class="line">      markers.push(marker);</div><div class="line">      <span class="comment">//添加事件使得点击时打开信息窗口</span></div><div class="line">      marker.addListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        populateInfoWindow(<span class="keyword">this</span>, largeInfowindow);</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">// //传入各标识位置扩展边界</span></div><div class="line">      <span class="comment">// bounds.extend(markers[i].position);</span></div><div class="line"></div><div class="line">      <span class="comment">//鼠标悬停时突出显示图标</span></div><div class="line">      marker.addListener(<span class="string">'mouseover'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.setIcon(highlightedIcon);</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//鼠标移开时恢复默认图标</span></div><div class="line">      marker.addListener(<span class="string">'mouseout'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.setIcon(defaultIcon);</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//map.fitBounds(bounds);</span></div><div class="line"></div><div class="line">    <span class="comment">//不立即设置标识的地图参数和扩展地图界限，用showListings函数做</span></div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'show-listings'</span>).addEventListener(<span class="string">'click'</span>, showListings);</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'hide-listings'</span>).addEventListener(<span class="string">'click'</span>, hideListings);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 点击标识时弹出信息窗口。</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">    <span class="comment">// 检查信息窗口还没有在这个标识打开</span></div><div class="line">    <span class="keyword">if</span> (infowindow.marker != marker) &#123;</div><div class="line">      infowindow.marker = marker;</div><div class="line">      infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;'</span>);</div><div class="line">      infowindow.open(map, marker);</div><div class="line">      <span class="comment">// 确保信息窗口关闭时已清空marker属性值</span></div><div class="line">      infowindow.addListener(<span class="string">'closeclick'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        infowindow.setMarker = <span class="literal">null</span>;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the markers array and display them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">showListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//创建经纬度边界</span></div><div class="line">    <span class="keyword">var</span> bounds = <span class="keyword">new</span> google.maps.LatLngBounds();</div><div class="line">    <span class="comment">// Extend the boundaries of the map for each marker and display the marker</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//将每个标识的地图设置为map</span></div><div class="line">      markers[i].setMap(map);</div><div class="line">      <span class="comment">//扩展地图界限来容纳标识</span></div><div class="line">      bounds.extend(markers[i].position);</div><div class="line">    &#125;</div><div class="line">    map.fitBounds(bounds);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the listings and hide them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">hideListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//不删除标识，只隐藏</span></div><div class="line">      markers[i].setMap(<span class="literal">null</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">//创建标记图标对象函数</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">makeMarkerIcon</span>(<span class="params">markerColor</span>) </span>&#123;</div><div class="line">    <span class="comment">//获取标记颜色并创建markerimage(标记图像)使用该颜色，自定义其尺寸</span></div><div class="line">    <span class="keyword">var</span> markerImage = <span class="keyword">new</span> google.maps.MarkerImage(</div><div class="line">      <span class="string">'http://chart.googleapis.com/chart?chst=d_map_spin&amp;chld=1.15|0|'</span>+ markerColor +</div><div class="line">      <span class="string">'|40|_|%E2%80%A2'</span>,</div><div class="line">      <span class="keyword">new</span> google.maps.Size(<span class="number">21</span>, <span class="number">34</span>),</div><div class="line">      <span class="keyword">new</span> google.maps.Point(<span class="number">0</span>, <span class="number">0</span>),</div><div class="line">      <span class="keyword">new</span> google.maps.Point(<span class="number">10</span>, <span class="number">34</span>),</div><div class="line">      <span class="keyword">new</span> google.maps.Size(<span class="number">21</span>,<span class="number">34</span>)</div><div class="line">    );</div><div class="line">    <span class="keyword">return</span> markerImage;</div><div class="line">  &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-11T10:30:37.795Z" itemprop="dateUpdated">2017-12-11 18:30:37</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/12/02/Google 地图 JavaScript API（二）/" target="_blank" rel="external">https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&title=《Google 地图 JavaScript API（二）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&title=《Google 地图 JavaScript API（二）》 — Renko's blog&source=根据udacity课程学习的笔记。
+教程和文档
+Google Maps JavaScript API V3 Reference
+
+1. 层层是地图上的对象..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Google 地图 JavaScript API（二）》 — Renko's blog&url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/12/03/Flickr和Google地图的混搭/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Flickr和Google地图的混搭</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/12/02/Google 地图 JavaScript API（一）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Google 地图 JavaScript API（一）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&title=《Google 地图 JavaScript API（二）》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&title=《Google 地图 JavaScript API（二）》 — Renko's blog&source=根据udacity课程学习的笔记。
+教程和文档
+Google Maps JavaScript API V3 Reference
+
+1. 层层是地图上的对象..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Google 地图 JavaScript API（二）》 — Renko's blog&url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2017/12/02/Google 地图 JavaScript API（二）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aQXLjMAwEQP//07vXrcpKGgCEo0P75Iodis0DQQ/x+cSvPz9eV5/++5er/70aLRnns/HCw8PDG0/9/sHJN3+OP59uPh88PDy87/CS4ZJSkfDyJUgKxoMFDw8P7wW83nLk1N4i4uHh4b2Zd79ZJxOak/Dw8PDewKtOrhfI3k+rN9qxrAUPDw8v5vUi1N99v3K/h4eHhze+Vc/bBe637OTp1fIQzRYPDw9vgZdvuNUjcpXRa/ZKnoWHh4d3lpf8c68kHLjyDy7MHhoR8PDw8BZ41ev8U5FBfljPl+nyuXh4eHhHefNrp422qslF139KAh4eHt4Cb7JZTw7K1Yih/CkeHh7eAq96jK4GtUmccfZKDA8PD2+bl2+4eQNB9VDePC4nxQYPDw9vgZdfa+VXX2e3+yqsnBzj4eHhFXnJcTmPAKoLMblIK/xWwMPDwzvKy7fpZrUpFp68zBSWBg8PD2+B1zsWTwLZSatB79iNh4eHt8HrhbNJFNtr0sqXu4zEw8PDG/Mmm3iyKNWi0otCLsfEw8PDW+PlcUP1eqw6crUgPTwdDw8P7ygvAUy26bwM9CKJh0XHw8PD+yIvP0ZXQ9VTW38UQOPh4eGt8eaH3V4oPCkShZ4IPDw8vKO8ajB6/+B5HJyPVo2M8fDw8M7y8s36/uicj5C3DuTH94eSgIeHh7fAuz9k9678q20EvRaEQusAHh4e3ld4eYtVNSaYNF0VghI8PDy8o7zez/vJ+2obQX70x8PDw/sOb7L5VuODXoA7X0o8PDy8DV6vGFQfn8QcPXbUNICHh4e3wOtt6OXkI/hOtXY9fB8PDw/vNbzqtHpRQi+wwMPDw3s/Lwlq7w/ZOanaTICHh4e3x0uOufnQZ6PeUcHAw8PDW+BNfvDnV2LV0pJHwPO2LTw8PLyY9xc5MJKXMad/IgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

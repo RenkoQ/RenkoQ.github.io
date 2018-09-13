@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>同源和跨域（三）Fetch API | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>同源和跨域（三）Fetch API</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">同源和跨域（三）Fetch API</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-17T01:23:54.000Z" itemprop="datePublished" class="page-time">
+  2018-03-17
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-同源和跨域（三）Fetch API"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">同源和跨域（三）Fetch API</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-17 09:23:54" datetime="2018-03-17T01:23:54.000Z"  itemprop="datePublished">2018-03-17</time>
+
+            
+
+
+            
+	<span id="/2018/03/17/同源和跨域（三）Fetch API/" class="leancloud_visitors" data-flag-title="同源和跨域（三）Fetch API" title="同源和跨域（三）Fetch API">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/17/同源和跨域（三）Fetch API/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/17/同源和跨域（三）Fetch API/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://www.w3ctech.com/topic/854" target="_blank" rel="external">This API is So Fetching</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="external">使用 Fetch</a></p>
+<p><a href="https://fetch.spec.whatwg.org/#simple-header" target="_blank" rel="external">Fetch Living Standard</a></p>
+<p><a href="https://github.com/github/fetch" target="_blank" rel="external">兼容性window.fetch polyfill</a></p>
+<h3 id="1-概览"><a href="#1-概览" class="headerlink" title="1. 概览"></a>1. 概览</h3><pre><code>fetch(url/request[, options])
+var request = new Request(url/request[, options]);
+</code></pre><p><strong>fetch</strong> 是全局量 window 的一个方法<br><strong>request</strong> 是一个 Request 对象，Request 参数和 fetch 参数相同<br><strong>options</strong> 是一个对象，主要key 如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">method: GET/POST等</div><div class="line">headers: 一个普通对象，或者一个 Headers 对象</div><div class="line">body: 传递给服务器的数据，可以是字符串/Buffer/Blob/FormData，如果方法是 GET/HEAD，则不能有此参数</div><div class="line">mode: cors / no-cors / same-origin， 是否跨域，默认是 no-cors</div><div class="line">credentials: omit / same-origin / include</div><div class="line">cache: default / no-store / reload / no-cache / force-cache / only-if-cached</div><div class="line">redirect: follow / error / manual</div><div class="line">referrer: no-referrer / client / 或者一个url</div><div class="line">referrerPolicy: no-referrer / no-referrer-when-downgrade / origin /  origin-when-cross-origin / unsafe-url</div><div class="line">integrity: 资源完整性验证</div><div class="line">fetch() 返回一个 promise，所以这么用</div></pre></td></tr></table></figure></p>
+<p>fetch API 使用 Promises 来处理结果/回调</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 对响应的简单处理</span></div><div class="line">fetch(<span class="string">'/some/url'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="comment">// 出错了;等价于 then 的第二个参数,但这样更直观 :(</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 链式处理,将异步变为类似单线程的写法: 高级用法.</span></div><div class="line">fetch(<span class="string">'/some/url'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="comment">//... 执行成功, 第1步...</span></div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">returnedValue</span>) </span>&#123;</div><div class="line">    <span class="comment">// ... 执行成功, 第2步...</span></div><div class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="comment">// 中途任何地方出错...在此处理 :( </span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="2-Headers"><a href="#2-Headers" class="headerlink" title="2. Headers"></a>2. Headers</h3><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 创建一个空的 Headers 对象,注意是Headers，不是Header</span></div><div class="line"><span class="keyword">var</span> headers = <span class="keyword">new</span> Headers();</div><div class="line"></div><div class="line"><span class="comment">// 添加(append)请求头信息</span></div><div class="line">headers.append(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</div><div class="line">headers.append(<span class="string">'X-My-Custom-Header'</span>, <span class="string">'CustomValue'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 判断(has), 获取(get), 以及修改(set)请求头的值</span></div><div class="line">headers.has(<span class="string">'Content-Type'</span>); <span class="comment">// true</span></div><div class="line">headers.get(<span class="string">'Content-Type'</span>); <span class="comment">// "text/plain"</span></div><div class="line">headers.set(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 删除某条请求头信息(a header)</span></div><div class="line">headers.delete(<span class="string">'X-My-Custom-Header'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 创建对象时设置初始化信息</span></div><div class="line"><span class="keyword">var</span> headers = <span class="keyword">new</span> Headers(&#123;</div><div class="line">    <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>,</div><div class="line">    <span class="string">'X-My-Custom-Header'</span>: <span class="string">'CustomValue'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Headers对象方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">append(key, value)</div><div class="line">delete(key)</div><div class="line">entries()  返回一个遍历器，类似二维数组，每一个 key 和它对应的 value 构成一个数组</div><div class="line">get(key) 获取指定 key 的value，如果key被添加了多次，则返回第一次添加时的 value</div><div class="line">getAll(key) 返回 key 对应的所有 value，组成一个数组</div><div class="line">has(key)</div><div class="line">keys() 所有 key 组成的遍历器</div><div class="line">set(key, value) 更改 key 的值，如果 key 不存在，则相当于 append</div><div class="line">values() 所有 value 组成的遍历器</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建一个 Request 对象来包装请求头(Request Headers)</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> Request(<span class="string">'/some-url'</span>, &#123;</div><div class="line">    <span class="attr">headers</span>: <span class="keyword">new</span> Headers(&#123;</div><div class="line">        <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span></div><div class="line">    &#125;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line">fetch(request).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* handle response */</span> &#125;);</div></pre></td></tr></table></figure>
+<h3 id="3-Request"><a href="#3-Request" class="headerlink" title="3. Request"></a>3. Request</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Request" target="_blank" rel="external">Request接口</a></p>
+<pre><code>var request = new Request(url/request[, options]);
+</code></pre><p>Request 对象表示一次 fetch 调用的请求信息。</p>
+<p>属性（全部只读）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">method - 支持 GET, POST, PUT, DELETE, HEAD</div><div class="line">url - 请求的 URL</div><div class="line">headers - 对应的 Headers 对象</div><div class="line">referrer - 请求的 referrer 信息</div><div class="line">mode - 可以设置 cors, no-cors, same-origin</div><div class="line">credentials - 设置 cookies 是否随请求一起发送。可以设置: omit, same-origin</div><div class="line">redirect - follow, error, manual</div><div class="line">integrity - subresource 完整性值(integrity value)</div><div class="line">cache - 设置 cache 模式 (default, reload, no-cache)</div></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> Request(<span class="string">'/users.json'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'POST'</span>, </div><div class="line">    <span class="attr">mode</span>: <span class="string">'cors'</span>, </div><div class="line">    <span class="attr">redirect</span>: <span class="string">'follow'</span>,</div><div class="line">    <span class="attr">headers</span>: <span class="keyword">new</span> Headers(&#123;</div><div class="line">        <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span></div><div class="line">    &#125;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用!</span></div><div class="line">fetch(request).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* handle response */</span> &#125;);</div></pre></td></tr></table></figure></p>
+<p>在 Request 对象创建完成之后, 所有的属性都变为只读属性。一个 Request 就代表一串流(stream), 如果想要传递给另一个 fetch 方法,则需要进行克隆（clone 方法）。</p>
+<h3 id="4-Response"><a href="#4-Response" class="headerlink" title="4. Response"></a>4. Response</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Response" target="_blank" rel="external">Response接口</a></p>
+<pre><code>var response = new Response([body][, init])
+</code></pre><p>Response 代表响应, fetch 的 then 方法接收一个 Response 实例。</p>
+<p>属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">headers     //与响应相关联的 Headers 对象</div><div class="line">ok      //Boolean值,代表成功响应。status在 200 和 299 之间为 true</div><div class="line">redirected   //表示该Response是否来自一个重定向，如果是的话，它的URL列表将会有多个</div><div class="line">status  //状态码 (例如: 200, 404, 等等)</div><div class="line">statusText  //状态值(例如: OK)</div><div class="line">type    //类型 basic / cors / error / opaque</div><div class="line">url     //包含这个请求的URL</div><div class="line">bodyUsed  //存储一个Boolean判断主体是否已经被用于一个响应中</div><div class="line">useFinalURL  //Boolean 值, 代表 url 是否是最终 URL</div></pre></td></tr></table></figure></p>
+<p>方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">clone() - 创建一个新的 Response 克隆对象.</div><div class="line">error() - 返回一个新的,与网络错误相关的 Response 对象.</div><div class="line">redirect() - 重定向,使用新的 URL 创建新的 response 对象..</div><div class="line">arrayBuffer() - Returns a promise that resolves with an ArrayBuffer.</div><div class="line">blob() - 返回一个 promise, resolves 是一个 Blob.</div><div class="line">formData() - 返回一个 promise, resolves 是一个 FormData 对象.</div><div class="line">json() - 返回一个 promise, resolves 是一个 JSON 对象.</div><div class="line">text() - 返回一个 promise, resolves 是一个 USVString (text).</div></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在 service worker 测试中手动创建 response</span></div><div class="line"><span class="comment">// new Response(BODY, OPTIONS)</span></div><div class="line"><span class="keyword">var</span> response = <span class="keyword">new</span> Response(<span class="string">'.....'</span>, &#123;</div><div class="line">    <span class="attr">ok</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">status</span>: <span class="number">404</span>,</div><div class="line">    <span class="attr">url</span>: <span class="string">'/'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// fetch 的 `then` 会传入一个 Response 对象</span></div><div class="line">fetch(<span class="string">'/'</span>)</div><div class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">responseObj</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'status: '</span>, responseObj.status);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="5-处理-JSON响应"><a href="#5-处理-JSON响应" class="headerlink" title="5. 处理 JSON响应"></a>5. 处理 JSON响应</h3><p>封装了 <code>JSON.parse(jsonString)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fetch(<span class="string">'https://xxx.json'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123; </div><div class="line">    <span class="comment">// 转换为 JSON</span></div><div class="line">    <span class="keyword">return</span> response.json();</div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</div><div class="line">    <span class="comment">// 现在, `j` 是一个 JavaScript object</span></div><div class="line">    <span class="built_in">console</span>.log(j); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="6-处理-Text-HTML响应"><a href="#6-处理-Text-HTML响应" class="headerlink" title="6. 处理 Text / HTML响应"></a>6. 处理 Text / HTML响应</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fetch(<span class="string">'/next/page'</span>)</div><div class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> response.text();</div><div class="line">  &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123; </div><div class="line">    <span class="comment">// &lt;!DOCTYPE ....</span></div><div class="line">    <span class="built_in">console</span>.log(text); </div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+<h3 id="7-处理Blob结果"><a href="#7-处理Blob结果" class="headerlink" title="7. 处理Blob结果"></a>7. 处理Blob结果</h3><pre><code>Blob表示二进制原始数据，一个Blob对象就是一个包含有只读原始数据的类文件对象。
+</code></pre><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank" rel="external">Blob</a><br><a href="File%20API">File API</a></p>
+<p><strong>创建blob</strong></p>
+<h4 id="1-通过构造函数"><a href="#1-通过构造函数" class="headerlink" title="1. 通过构造函数"></a>1. 通过构造函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var blob = new Blob(dataArr:Array&lt;any&gt;, opt:&#123;type:string&#125;);</div><div class="line">    </div><div class="line">//dataArray：数组，包含了要添加到Blob对象中的数据，数据可以是任意多个ArrayBuffer，ArrayBufferView， Blob，或者 DOMString对象。</div><div class="line">//opt：对象，用于设置Blob对象的属性（如：MIME类型）</div></pre></td></tr></table></figure>
+<h4 id="2-通过Blob-slice"><a href="#2-通过Blob-slice" class="headerlink" title="2. 通过Blob.slice()"></a>2. 通过Blob.slice()</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Blob.slice(start:number, end:number, contentType:string)</div><div class="line"></div><div class="line">\\start：开始索引，默认为0</div><div class="line">\\end：截取结束索引（不包括end）</div><div class="line">\\contentType：新Blob的MIME类型，默认为空字符串</div></pre></td></tr></table></figure>
+<h4 id="3-通过canvas-toBlob"><a href="#3-通过canvas-toBlob" class="headerlink" title="3. 通过canvas.toBlob()"></a>3. 通过canvas.toBlob()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line">canvas.toBlob(<span class="function"><span class="keyword">function</span>(<span class="params">blob</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(blob);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>应用</strong><br><a href="https://www.cnblogs.com/hhhyaaon/p/5928152.html" target="_blank" rel="external">https://www.cnblogs.com/hhhyaaon/p/5928152.html</a></p>
+<ol>
+<li>通过Blob.slice方法，可以将大文件分片，轮循向后台提交各文件片段，即可实现文件的分片上传。</li>
+<li>window.URL对象可以为Blob对象生成一个网络地址，结合a标签的download属性，可以实现点击url下载文件。</li>
+<li>把图片转化为Blob对象，生成URL（URL.createObjectURL(blob)），来显示图片。</li>
+</ol>
+<p><strong>通过 fetch 加载图像或者其他二进制数据</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fetch(<span class="string">'flowers.jpg'</span>)</div><div class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> response.blob();</div><div class="line">    &#125;)</div><div class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">imageBlob</span>) </span>&#123;</div><div class="line">      <span class="built_in">document</span>.querySelector(<span class="string">'img'</span>).src = URL.createObjectURL(imageBlob);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h3 id="8-提交表单数据-Posting-Form-Data"><a href="#8-提交表单数据-Posting-Form-Data" class="headerlink" title="8. 提交表单数据(Posting Form Data)"></a>8. 提交表单数据(Posting Form Data)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">fetch(<span class="string">'/submit'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'post'</span>,</div><div class="line">    <span class="attr">body</span>: <span class="keyword">new</span> FormData(<span class="built_in">document</span>.getElementById(<span class="string">'comment-form'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//提交json数据</span></div><div class="line">fetch(<span class="string">'/submit-json'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'post'</span>,</div><div class="line">    <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">        <span class="attr">email</span>: <span class="built_in">document</span>.getElementById(<span class="string">'email'</span>).value</div><div class="line">        answer: <span class="built_in">document</span>.getElementById(<span class="string">'answer'</span>).value</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="9-跨域"><a href="#9-跨域" class="headerlink" title="9. 跨域"></a>9. 跨域</h3><p><a href="https://www.zhihu.com/question/47029864/answer/150069385" target="_blank" rel="external">https://www.zhihu.com/question/47029864/answer/150069385</a><br>如果服务器支持 CORS, 则在客户端设置相应的  <code>Access-Control-Allow-Origin</code>  即可得到数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">let myHeaders = new Headers(&#123;</div><div class="line">    &apos;Access-Control-Allow-Origin&apos;: &apos;*&apos;,</div><div class="line">    &apos;Content-Type&apos;: &apos;text/plain&apos;</div><div class="line">&#125;);</div><div class="line">fetch(url, &#123;</div><div class="line">    method: &apos;GET&apos;,</div><div class="line">    headers: myHeaders,</div><div class="line">    mode: &apos;cors&apos;</div><div class="line">&#125;) .then((res) =&gt; &#123;</div><div class="line">    // TODO </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="10-在fetch中使用jsonp"><a href="#10-在fetch中使用jsonp" class="headerlink" title="10. 在fetch中使用jsonp"></a>10. 在fetch中使用jsonp</h3><p>JSONP only supports GET method, same as <a href="https://github.com/camsong/fetch-jsonp" target="_blank" rel="external">fetch-jsonp</a>.</p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://segmentfault.com/a/1190000007455901" target="_blank" rel="external">https://segmentfault.com/a/1190000007455901</a><br><a href="http://blog.csdn.net/renfufei/article/details/51494396" target="_blank" rel="external">http://blog.csdn.net/renfufei/article/details/51494396</a><br><a href="https://davidwalsh.name/fetch" target="_blank" rel="external">https://davidwalsh.name/fetch</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-21T15:39:57.864Z" itemprop="dateUpdated">2018-03-21 23:39:57</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/03/17/同源和跨域（三）Fetch API/" target="_blank" rel="external">https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&title=《同源和跨域（三）Fetch API》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&title=《同源和跨域（三）Fetch API》 — Renko's blog&source=This API is So Fetching
+使用 Fetch
+Fetch Living Standard
+兼容性window.fetch polyfi..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（三）Fetch API》 — Renko's blog&url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">同源和跨域（四）跨域资源共享 CORS</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/16/同源和跨域（二）概念&JSONP/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">同源和跨域（二）概念&amp;JSONP</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&title=《同源和跨域（三）Fetch API》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&title=《同源和跨域（三）Fetch API》 — Renko's blog&source=This API is So Fetching
+使用 Fetch
+Fetch Living Standard
+兼容性window.fetch polyfi..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（三）Fetch API》 — Renko's blog&url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/17/同源和跨域（三）Fetch API/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3aQW7jMBAEwPz/07vXLBZWumdIwwFKJ0OwJRYPHLo5X1/x9efb9f3Oq2/+/6tX16tvPt8/fOHh4eEthr55TT7c5+8/PzMfMx4eHt5tXjLcTQF4HkQ+BfmY8fDw8D6H1y7ubfF4Llp4eHh4v5c32zQ/vzGPP/Dw8PA+gdcO+jmwaOOGZMN9PWvBw8PDi3n5KdLnfL5yvoeHh4e3PlXfLLj59/NCUo8WDw8P7wJvFg0kQW2+1Z51SeVvx8PDwzvLyxffFpDD2mjjue3gnzt4eHh413ibSKJd7vMjtM3z6309Hh4e3jYfiMpD3nyQt1W1xWMY9eLh4eEd5bWL+/Nmdz99q4YAPDw8vAu8TeNUftifhBR5SSiiEzw8PLzLvBzWbqPb7XJSKqLtOx4eHt41Xlsk9o1QbaAwmyA8PDy8e7zZojxb4jetAO0fADw8PLwbvHy5n01HPsT8SKw+kMPDw8M7yssjhuTR7Xb8FKYuCXh4eHgLXjK42aH+flucT3qExMPDwzvKy0OB/GV5ASj2/rP2Lzw8PLw38jZFYlZUkgg4DzXw8PDwbvA2f/Xb2GI496d6yvDw8PCO8tojq81w2yK0eiYeHh7eNV7bNNC2EWxKwuxQDQ8PD+8er31EQmqPspLf5m95GePi4eHhXeDNgto2JsgHN5u++p8BHh4e3oKXs5OJeP6cBLV588EPv8XDw8O7xkvKQ77Qn2pKOHDh4eHhvQWWg2fI/JmbAzk8PDy8G7wbxaONEs5+brfveHh4eDPeLDzNN9Cz+0ngW7de4eHh4R3l5dvlPOTNN7ibMOKHsBgPDw/vA3ib2DcpP8mxWXEfDw8P72N4m7aDtiGgjTnw8PDw3sPLl+z9gdmszLRBCR4eHt49XvuHf9bXlE9lW5yOtWfh4eHh/cz7Cz0IsYbnugMWAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

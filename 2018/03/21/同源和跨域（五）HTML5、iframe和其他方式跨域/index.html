@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>同源和跨域（五）HTML5、iframe和其他方式跨域 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>同源和跨域（五）HTML5、iframe和其他方式跨域</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">同源和跨域（五）HTML5、iframe和其他方式跨域</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-21T15:23:31.000Z" itemprop="datePublished" class="page-time">
+  2018-03-21
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-同源和跨域（五）HTML5、iframe和其他方式跨域"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">同源和跨域（五）HTML5、iframe和其他方式跨域</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-21 23:23:31" datetime="2018-03-21T15:23:31.000Z"  itemprop="datePublished">2018-03-21</time>
+
+            
+
+
+            
+	<span id="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" class="leancloud_visitors" data-flag-title="同源和跨域（五）HTML5、iframe和其他方式跨域" title="同源和跨域（五）HTML5、iframe和其他方式跨域">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>整理来源,侵删致歉<br><a href="https://www.cnblogs.com/vajoy/p/4295825.html#it5" target="_blank" rel="external">浅谈WEB跨域的实现（前端向）</a><br><a href="https://www.cnblogs.com/sdcs/p/8484905.html" target="_blank" rel="external">前端解决跨域的九种方法</a></p>
+<p>###1. Cross-document messaging</p>
+<p><a href="https://html.spec.whatwg.org/#crossDocumentMessages" target="_blank" rel="external">crossDocumentMessages</a></p>
+<p>在 Cross-document messaging 中，我们可以使用 postMessage 方法和 onmessage 事件来实现不同域之间的通信，其中postMessage用于实时向接收信息的页面发送消息，其语法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  otherWindow.postMessage(message, targetOrigin);</div><div class="line"></div><div class="line">otherWindow: 对接收信息页面的window的引用。可以是页面中iframe的contentWindow属性；window.open的返回值；通过name或下标从window.frames取到的值。</div><div class="line">message: 所要发送的数据，string类型。</div><div class="line">targetOrigin: 允许通信的域的url，“*”表示不作限制。</div></pre></td></tr></table></figure>
+<p>我们可以在父页面中嵌入不同域的子页面（iframe实现，而且常规会把它隐藏掉），在子页面调用 postMessage 方法向父页面发送数据：</p>
+<p>父页面（<a href="http://localhost:10847/sop/a.html）：" target="_blank" rel="external">http://localhost:10847/sop/a.html）：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;postMessage&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;iframe style=&quot;display:none;&quot; id=&quot;ifr&quot; src=&quot;http://127.0.0.1:10847/sop/b.html&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    window.addEventListener(&apos;message&apos;, function(event)&#123;</div><div class="line">        // 通过origin属性判断消息来源地址</div><div class="line">        if (event.origin == &apos;http://127.0.0.1:10847&apos;) &#123;</div><div class="line">            alert(event.data);    // 弹出从子页面post过来的信息</div><div class="line">        &#125;</div><div class="line">    &#125;, false);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>子页面（<a href="http://127.0.0.1:10847/sop/b.html）：" target="_blank" rel="external">http://127.0.0.1:10847/sop/b.html）：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;子页面&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var ifr = window.parent;  //获取父窗体</div><div class="line">    var targetOrigin = &apos;http://localhost:10847&apos;;  // 若写成 http://127.0.0.1:10847 则将无法执行postMessage</div><div class="line">    ifr.postMessage(&apos;这是传递给a.html的信息&apos;, targetOrigin);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-WebSocket"><a href="#2-WebSocket" class="headerlink" title="2. WebSocket"></a>2. WebSocket</h3><p>具体实现 <a href="https://www.cnblogs.com/vajoy/p/4295825.html" target="_blank" rel="external">https://www.cnblogs.com/vajoy/p/4295825.html</a></p>
+<p>WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器全双工通信，同时允许跨域通讯，是server push技术的一种很棒的实现。<br><a href="http://socket.io/" target="_blank" rel="external">socket.io</a>很好地封装了webSocket接口，提供了更简单、灵活的接口，也对不支持webSocket的浏览器提供了向下兼容（例如替换为Flash Socket/Comet）。</p>
+<h3 id="3-document-domain-iframe跨域"><a href="#3-document-domain-iframe跨域" class="headerlink" title="3. document.domain + iframe跨域"></a>3. document.domain + iframe跨域</h3><a id="more"></a>
+<p>该方法只适合主域相同但子域不同的情况，比如 a.com 和 www.a.com，我们只需要给这两个页面都加上一句 document.domain = ‘a.com’ ，就可以在其中一个页面嵌套另一个页面，然后进行窗体间的交互。</p>
+<p><a href="https://segmentfault.com/a/1190000007997430" target="_blank" rel="external">iframe跨域POST无刷新提交</a></p>
+<p>父窗口(<a href="http://www.demo.com/a.html" target="_blank" rel="external">http://www.demo.com/a.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;iframe id=&quot;iframe&quot; src=&quot;http://child.demo.com/b.html&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    document.domain = &apos;demo.com&apos;;</div><div class="line">    var user = &apos;admin&apos;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>子窗口：(<a href="http://child.demo.com/b.html" target="_blank" rel="external">http://child.demo.com/b.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    document.domain = &apos;demo.com&apos;;</div><div class="line">    // 获取父窗口中变量</div><div class="line">    alert(&apos;get js data from parent ---&gt; &apos; + window.parent.user);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="4-location-hash-iframe跨域"><a href="#4-location-hash-iframe跨域" class="headerlink" title="4. location.hash + iframe跨域"></a>4. location.hash + iframe跨域</h3><p>利用url地址改变但不刷新页面的特性（在url： <a href="http://a.com#hello" target="_blank" rel="external">http://a.com#hello</a> 中的 ‘#hello’ 就是location.hash，改变hash并不会导致页面刷新，所以可以利用hash值来进行数据传递）和iframe，我们可以实现跨域传递简单信息。</p>
+<p>实现原理： a欲与b跨域相互通信，通过中间页c来实现。 三个页面，不同域之间利用iframe的location.hash传值，相同域之间直接js访问来通信。</p>
+<p>具体实现：A域：a.html -&gt; B域：b.html -&gt; A域：c.html，a与b不同域只能通过hash值单向通信，b与c也不同域也只能单向通信，但c与a同域，所以c可通过parent.parent访问a页面所有对象。</p>
+<p>a.html：(<a href="http://www.demo1.com/a.html" target="_blank" rel="external">http://www.demo1.com/a.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;iframe id=&quot;iframe&quot; src=&quot;http://www.demo2.com/b.html&quot; style=&quot;display:none;&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var iframe = document.getElementById(&apos;iframe&apos;);</div><div class="line"></div><div class="line">    // 向b.html传hash值</div><div class="line">    setTimeout(function() &#123;</div><div class="line">        iframe.src = iframe.src + &apos;#user=admin&apos;;</div><div class="line">    &#125;, 1000);</div><div class="line">    </div><div class="line">    // 开放给同域c.html的回调方法</div><div class="line">    function onCallback(res) &#123;</div><div class="line">        alert(&apos;data from c.html ---&gt; &apos; + res);</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>b.html：(<a href="http://www.demo2.com/b.html" target="_blank" rel="external">http://www.demo2.com/b.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;iframe id=&quot;iframe&quot; src=&quot;http://www.demo1.com/c.html&quot; style=&quot;display:none;&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var iframe = document.getElementById(&apos;iframe&apos;);</div><div class="line"></div><div class="line">    // 监听a.html传来的hash值，再传给c.html</div><div class="line">    window.onhashchange = function () &#123;</div><div class="line">        iframe.src = iframe.src + location.hash;</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>c.html：(<a href="http://www.demo1.com/c.html" target="_blank" rel="external">http://www.demo1.com/c.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    // 监听b.html传来的hash值</div><div class="line">    window.onhashchange = function () &#123;</div><div class="line">        // 再通过操作同域a.html的js回调，将结果传回</div><div class="line">        window.parent.parent.onCallback(&apos;hello: &apos; + location.hash.replace(&apos;#user=&apos;, &apos;&apos;));</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="5-window-name-iframe跨域"><a href="#5-window-name-iframe跨域" class="headerlink" title="5. window.name + iframe跨域"></a>5. window.name + iframe跨域</h3><p>窗体的name值在页面跳转后依旧存在、保持原值（即使跳转的页面不同域），并且可以支持非常长的 name 值（2MB）。</p>
+<p>如果我们在a页面需要和不同域的b页面通信，我们可以现在a页面嵌入b页面，待b页面有数据要传递时，把数据附加到b页面窗口的window.name上，然后把窗口跳转到一个和a页面同域的c页面，这样a就能轻松获取到内嵌窗体（地址已由跨域的b变为同域的c）的window.name了（如果需要，获取到数据后再把c跳转到b，并重复循环前面的步骤，同时a页面以setInterval的形式来达到轮询的效果）。</p>
+<p>a.html：(<a href="http://www.demo1.com/a.html" target="_blank" rel="external">http://www.demo1.com/a.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">var proxy = function(url, callback) &#123;</div><div class="line">    var state = 0;</div><div class="line">    var iframe = document.createElement(&apos;iframe&apos;);</div><div class="line"></div><div class="line">    // 加载跨域页面</div><div class="line">    iframe.src = url;</div><div class="line"></div><div class="line">    // onload事件会触发2次，第1次加载跨域页，并留存数据于window.name</div><div class="line">    iframe.onload = function() &#123;</div><div class="line">        if (state === 1) &#123;</div><div class="line">            // 第2次onload(同域proxy页)成功后，读取同域window.name中数据</div><div class="line">            callback(iframe.contentWindow.name);</div><div class="line">            destoryFrame();</div><div class="line"></div><div class="line">        &#125; else if (state === 0) &#123;</div><div class="line">            // 第1次onload(跨域页)成功后，切换到同域代理页面</div><div class="line">            iframe.contentWindow.location = &apos;http://www.demo1.com/proxy.html&apos;;</div><div class="line">            state = 1;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    document.body.appendChild(iframe);</div><div class="line"></div><div class="line">    // 获取数据以后销毁这个iframe，释放内存；这也保证了安全（不被其他域frame js访问）</div><div class="line">    function destoryFrame() &#123;</div><div class="line">        iframe.contentWindow.document.write(&apos;&apos;);</div><div class="line">        iframe.contentWindow.close();</div><div class="line">        document.body.removeChild(iframe);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// 请求跨域b页面数据</div><div class="line">proxy(&apos;http://www.demo2.com/b.html&apos;, function(data)&#123;</div><div class="line">    alert(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>proxy.html：(<a href="http://www.demo1.com/proxy" target="_blank" rel="external">http://www.demo1.com/proxy</a>….<br>中间代理页，与a.html同域，内容为空即可。</p>
+<p>b.html：(<a href="http://www.demo2.com/b.html" target="_blank" rel="external">http://www.demo2.com/b.html</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    window.name = &apos;This is demo2 data!&apos;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="6-nginx代理跨域"><a href="#6-nginx代理跨域" class="headerlink" title="6. nginx代理跨域"></a>6. nginx代理跨域</h3><p>具体示例：<a href="https://www.cnblogs.com/sdcs/p/8484905.html" target="_blank" rel="external">https://www.cnblogs.com/sdcs/p/8484905.html</a></p>
+<p><strong>nginx配置解决iconfont跨域</strong><br>浏览器跨域访问js、css、img等常规静态资源被同源策略许可，但iconfont字体文件(eot|otf|ttf|woff|svg)例外，此时可在nginx的静态资源服务器中加入以下配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">  add_header Access-Control-Allow-Origin *;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>nginx反向代理接口跨域</strong><br>通过nginx配置一个代理服务器（域名与demo1相同，端口不同）做跳板机，反向代理访问demo2接口，并且可以顺便修改cookie中demo信息，方便当前域cookie写入，实现跨域登录。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-21T15:39:19.896Z" itemprop="dateUpdated">2018-03-21 23:39:19</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" target="_blank" rel="external">https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&title=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&title=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&source=整理来源,侵删致歉浅谈WEB跨域的实现（前端向）前端解决跨域的九种方法
+###1. Cross-document messaging
+crossDocum..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/01/Linux查询命令/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Linux查询命令</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">同源和跨域（四）跨域资源共享 CORS</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&title=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&title=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&source=整理来源,侵删致歉浅谈WEB跨域的实现（前端向）前端解决跨域的九种方法
+###1. Cross-document messaging
+crossDocum..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源和跨域（五）HTML5、iframe和其他方式跨域》 — Renko's blog&url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJUlEQVR42u3a0W7qQAwE0P7/T3NfK/WWzthBIsvJEyKQ5CxSp7b36ys+Ht+O7+/8PPvb+7Nr/nydnL3swMbGxr4J+/H0eP6I+XIk4PaT+dn/LA02Njb2cezf/sLngbGJt+chlPwA+bNhY2NjY7efTEqFWQHzfAmwsbGxsfeh9bqCJwkzbGxs7E9jt8Ewa/ckD5S0hPKy54JeGjY2Nvbbs/Op6Pu/fsl8GxsbG/uN2Y/yiP7Ff1mTKA+qPxTY2NjYB7Hb9n1bnORXaxe0DTBsbGzss9mbOLlqI04be8m3iqXBxsbGPoKdR9RmDJzHXhtgs6XHxsbGvjv7qnhIrtY2fWZ3iX4ebGxs7IPYm8Ig36yzb+4npMSCjY2NfSr7cdGxKWDyK+TNo+FIABsbG/tW7KsiJ1/EnJE3j+qmFTY2NvZB7M24dFNC5G2gWWgVm3uwsbGxb85uC4DZBsckVNrRwmzhoo9iY2Nj34rdtpba7T4teNZmap8NGxsb+9PY+0FCWzDko4XZO9jY2NinstuyIW/3J3fJtwrNGkzY2NjYp7LbIJndJg/FTZOo+Aw2Njb2cex2s06+HDPkVcEZNZKwsbGxb85ux6JtE2czNm7bWPVyY2NjYx/B3sRSO4iNQuWiIXHUVMLGxsY+gr1pGCXh9IrSpW1R/arAxsbGPoK9uXHbys835WxiMnoebGxs7IPYbamQD4Pz9tBsJDxbRGxsbOzz2PsA249yZ0VLu9wX5zY2Njb227BnI9gkePZxOAutYmmwsbGxj2PPWvybRdkMDDahiI2Njf0J7HbgmodZu2XnqitE+YmNjY19BLu9ZXJ2NgBof5i6IYWNjY19KDsvQvKiYlgqlM/W3gsbGxv7DPYsutrSpb1yXurkcYWNjY19Krsd7m4irc7Vsr01C0hsbGzsM9httLQP3QZh0jCqW0jteAAbGxv7hux9Ayj57iYIZwn8Rx2GjY2N/ZHsa5dp1rTKn/CPLTvY2NjYH8lum1Cb4mFWrkTBiY2NjX0cu92OM2sGtVe+asywGg9gY2Njvz27bc3MRrN5CymPonY5sLGxsY9j/wPs00oVpKdp9QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>
