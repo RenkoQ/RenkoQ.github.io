@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>筛选字段数据以及Lodash与ES6转换 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="后台">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>筛选字段数据以及Lodash与ES6转换</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">筛选字段数据以及Lodash与ES6转换</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-29T09:06:29.000Z" itemprop="datePublished" class="page-time">
+  2018-10-29
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-筛选字段数据以及Lodash与ES6转换"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">筛选字段数据以及Lodash与ES6转换</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-29 17:06:29" datetime="2018-10-29T09:06:29.000Z"  itemprop="datePublished">2018-10-29</time>
+
+            
+
+
+            
+	<span id="/2018/10/29/筛选字段数据以及Lodash与ES6转换/" class="leancloud_visitors" data-flag-title="筛选字段数据以及Lodash与ES6转换" title="筛选字段数据以及Lodash与ES6转换">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/29/筛选字段数据以及Lodash与ES6转换/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/29/筛选字段数据以及Lodash与ES6转换/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="1-lodash中的pick方法"><a href="#1-lodash中的pick方法" class="headerlink" title="1. lodash中的pick方法"></a>1. lodash中的pick方法</h3><p><a href="https://lodash.com/docs/4.17.10#pick" target="_blank" rel="noopener">https://lodash.com/docs/4.17.10#pick</a></p>
+<pre><code>_.pick(object, [paths])
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var _ = require(&quot;lodash&quot;);</span><br><span class="line">var objects = [&#123;</span><br><span class="line">    &quot;user&quot;: &quot;a&quot;,</span><br><span class="line">    &quot;age&quot;: 20,</span><br><span class="line">    &quot;name&quot;: &quot;aname&quot;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">    &quot;user&quot;: &quot;b&quot;,</span><br><span class="line">    &quot;age&quot;: 30,</span><br><span class="line">    &quot;name&quot;: &quot;bname&quot;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">    &quot;user&quot;: &quot;c&quot;,</span><br><span class="line">    &quot;age&quot;: 40,</span><br><span class="line">    &quot;name&quot;: &quot;cname&quot;</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line">var results = [];</span><br><span class="line">console.log(objects.filter(function (object) &#123;</span><br><span class="line">    var a = _.pick(object, [&apos;user&apos;, &apos;name&apos;]);</span><br><span class="line"></span><br><span class="line">    console.log(a);</span><br><span class="line">    results.push(a);</span><br><span class="line">&#125;));</span><br><span class="line">console.log(results);</span><br><span class="line">// =&gt;</span><br><span class="line">// [ &#123; user: &apos;a&apos;, name: &apos;aname&apos; &#125;,</span><br><span class="line">//   &#123; user: &apos;b&apos;, name: &apos;bname&apos; &#125;,</span><br><span class="line">//   &#123; user: &apos;c&apos;, name: &apos;cname&apos; &#125; ]</span><br></pre></td></tr></table></figure>
+<p>加复杂条件用 <code>_.pickBy()</code></p>
+<h3 id="2-ES6-where筛选"><a href="#2-ES6-where筛选" class="headerlink" title="2. ES6 where筛选"></a>2. ES6 where筛选</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var _ = require(&quot;underscore&quot;);</span><br><span class="line"></span><br><span class="line">var json = &apos;[&#123;&quot;user&quot;: &quot;a&quot;, &quot;age&quot;: 20&#125;, &#123;&quot;user&quot;: &quot;b&quot;, &quot;age&quot;: 30&#125;, &#123;&quot;user&quot;: &quot;c&quot;, &quot;age&quot;: 40&#125;]&apos;;</span><br><span class="line">var users = JSON.parse(json);</span><br><span class="line">var filtered = _.where(users, &#123;</span><br><span class="line">    user: &quot;a&quot;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(filtered);</span><br><span class="line">// =&gt; [ &#123; user: &apos;a&apos;, age: 20 &#125; ]</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/lodash/lodash/issues/1247" target="_blank" rel="noopener">https://github.com/lodash/lodash/issues/1247</a></p>
+<a id="more"></a>
+<h3 id="3-Quickly-filter-an-object-by-keys"><a href="#3-Quickly-filter-an-object-by-keys" class="headerlink" title="3. Quickly filter an object by keys"></a>3. Quickly filter an object by keys</h3><p><a href="https://codereview.stackexchange.com/questions/79384/quickly-filter-an-object-by-keys" target="_blank" rel="noopener">https://codereview.stackexchange.com/questions/79384/quickly-filter-an-object-by-keys</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var matchingKey = myKeys.indexOf(myString) !== -1</span><br><span class="line"></span><br><span class="line">var matchingKeys = myKeys.filter(function(key)&#123; return key.indexOf(myString) !== -1 &#125;);</span><br><span class="line"></span><br><span class="line">var matchingValues = matchingKeys .map(function(key)&#123; return myObject[key] &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="4-自己写的es6方式-解构-合并"><a href="#4-自己写的es6方式-解构-合并" class="headerlink" title="4. 自己写的es6方式 解构+合并"></a>4. 自己写的es6方式 解构+合并</h3><p>destructuring and shorthand object literals</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var objects = [&#123;</span><br><span class="line">    &quot;user&quot;: &quot;a&quot;,</span><br><span class="line">    &quot;age&quot;: 20,</span><br><span class="line">    &quot;name&quot;: &quot;aname&quot;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">    &quot;user&quot;: &quot;b&quot;,</span><br><span class="line">    &quot;age&quot;: 30,</span><br><span class="line">    &quot;name&quot;: &quot;bname&quot;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">    &quot;user&quot;: &quot;c&quot;,</span><br><span class="line">    &quot;age&quot;: 40,</span><br><span class="line">    &quot;name&quot;: &quot;cname&quot;</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line">function jsonfilter(json) &#123;</span><br><span class="line">    const &#123; user,name&#125; = json;</span><br><span class="line">    return &#123; user,name&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var args = [];</span><br><span class="line">objects.map((object) =&gt; &#123;</span><br><span class="line">    args = args.concat(jsonfilter(object));</span><br><span class="line">&#125;);</span><br><span class="line">console.log(args);</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="You-don’t-may-not-need-Lodash-Underscore"><a href="#You-don’t-may-not-need-Lodash-Underscore" class="headerlink" title="You don’t (may not) need Lodash/Underscore"></a>You don’t (may not) need Lodash/Underscore</h1><p><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_chunk" target="_blank" rel="noopener">You don’t (may not) need Lodash/Underscore</a></p>
+<p>常用举例<br><a href="https://www.sitepoint.com/lodash-features-replace-es6/" target="_blank" rel="noopener">10 Lodash Features You Can Replace with ES6</a></p>
+<h3 id="1-Map-Filter-Reduce"><a href="#1-Map-Filter-Reduce" class="headerlink" title="1. Map, Filter, Reduce"></a>1. Map, Filter, Reduce</h3><p>搭配箭头函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">_.map([1, 2, 3], function(n) &#123; return n * 3; &#125;);</span><br><span class="line">// [3, 6, 9]</span><br><span class="line">_.reduce([1, 2, 3], function(total, n) &#123; return total + n; &#125;, 0);</span><br><span class="line">// 6</span><br><span class="line">_.filter([1, 2, 3], function(n) &#123; return n &lt;= 2; &#125;);</span><br><span class="line">// [1, 2]</span><br><span class="line"></span><br><span class="line">// becomes</span><br><span class="line"></span><br><span class="line">[1, 2, 3].map(n =&gt; n * 3);</span><br><span class="line">[1, 2, 3].reduce((total, n) =&gt; total + n);</span><br><span class="line">[1, 2, 3].filter(n =&gt; n &lt;= 2);</span><br></pre></td></tr></table></figure>
+<h3 id="2-Head-amp-Tail"><a href="#2-Head-amp-Tail" class="headerlink" title="2. Head &amp; Tail"></a>2. Head &amp; Tail</h3><p>ES6数组解构获取头尾</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_.head([1, 2, 3, 4]);</span><br><span class="line">// 1</span><br><span class="line">_.tail([1, 2, 3, 4]);</span><br><span class="line">// [2, 3, 4]</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">const [head, ...tail] = [1, 2, 3];</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">_.initial([1, 2, 3]);</span><br><span class="line">// -&gt; [1, 2]</span><br><span class="line">_.last([1, 2, 3]);</span><br><span class="line">// 3</span><br><span class="line"></span><br><span class="line">// ES6写法。数组解构和数组reverse反转</span><br><span class="line">const [last, ...initial] = [1, 2, 3].reverse();</span><br><span class="line">//得到initial -&gt; [2, 1]; last -&gt; 3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// ES6写法。不破坏原有数组结构</span><br><span class="line">const xs = [1, 2, 3];</span><br><span class="line">const [last, ...initial] = [...xs].reverse();</span><br></pre></td></tr></table></figure>
+<h3 id="3-Rest-and-Spread"><a href="#3-Rest-and-Spread" class="headerlink" title="3. Rest and Spread"></a>3. Rest and Spread</h3><p>Rest和Spread允许我们定义和调用接受一个可变数量的参数的函数。</p>
+<p><a href="https://lodash.com/docs/4.17.10#rest" target="_blank" rel="noopener">https://lodash.com/docs/4.17.10#rest</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var say = _.rest(function(what, names) &#123;</span><br><span class="line">  var last = _.last(names);</span><br><span class="line">  var initial = _.initial(names);</span><br><span class="line">  var finalSeparator = (_.size(names) &gt; 1 ? &apos;, &amp; &apos; : &apos;&apos;);</span><br><span class="line">  return what + &apos; &apos; + initial.join(&apos;, &apos;) +</span><br><span class="line">    finalSeparator + _.last(names);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">say(&apos;hello&apos;, &apos;fred&apos;, &apos;barney&apos;, &apos;pebbles&apos;);</span><br><span class="line">// &quot;hello fred, barney, &amp; pebbles&quot;</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">const say = (what, ...names) =&gt; &#123;</span><br><span class="line">  const [last, ...initial] = names.reverse();</span><br><span class="line">  const finalSeparator = (names.length &gt; 1 ? &apos;, &amp;&apos; : &apos;&apos;);</span><br><span class="line">  return `$&#123;what&#125; $&#123;initial.join(&apos;, &apos;)&#125; $&#123;finalSeparator&#125; $&#123;last&#125;`;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">say(&apos;hello&apos;, &apos;fred&apos;, &apos;barney&apos;, &apos;pebbles&apos;);</span><br><span class="line">// &quot;hello barney, fred, &amp; pebbles&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="4-Curry"><a href="#4-Curry" class="headerlink" title="4. Curry"></a>4. Curry</h3><p>函数柯里化是指：把接受多个参数的函数转换成接受一个单一参数的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function add(a, b) &#123;</span><br><span class="line">  return a + b;</span><br><span class="line">&#125;</span><br><span class="line">var curriedAdd = _.curry(add);</span><br><span class="line">var add2 = curriedAdd(2);</span><br><span class="line">add2(1);</span><br><span class="line">// 3</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">const add = a =&gt; b =&gt; a + b;</span><br><span class="line">const add2 = add(2);</span><br><span class="line">add2(1);</span><br><span class="line">// 3</span><br></pre></td></tr></table></figure>
+<p>方便debug<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var lodashAdd = _.curry(function(a, b) &#123;</span><br><span class="line">  return a + b;</span><br><span class="line">&#125;);</span><br><span class="line">var add3 = lodashAdd(3);</span><br><span class="line">console.log(add3.length)</span><br><span class="line">// 0</span><br><span class="line">console.log(add3);</span><br><span class="line">// function (a, b) &#123;</span><br><span class="line">// /* [wrapped with _.curry &amp; _.partial] */</span><br><span class="line">//   return a + b;</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">// becomes</span><br><span class="line"></span><br><span class="line">const es6Add = a =&gt; b =&gt; a + b;</span><br><span class="line">const add3 = es6Add(3);</span><br><span class="line">console.log(add3.length);</span><br><span class="line">// 1</span><br><span class="line">console.log(add3);</span><br><span class="line">// function b =&gt; a + b</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-Partial"><a href="#5-Partial" class="headerlink" title="5. Partial"></a>5. Partial</h3><p>分步输入实参</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var greet = function(greeting, name) &#123;</span><br><span class="line">  return greeting + &apos; &apos; + name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var sayHelloTo = _.partial(greet, &apos;hello&apos;);</span><br><span class="line">sayHelloTo(&apos;fred&apos;);</span><br><span class="line">// &quot;hello fred&quot;</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">const sayHelloTo = name =&gt; greet(&apos;hello&apos;, name);</span><br><span class="line">sayHelloTo(&apos;fred&apos;);</span><br><span class="line">// &quot;hello fred&quot;</span><br></pre></td></tr></table></figure>
+<p>use rest parameters with the spread operator to partially apply variadic functions:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const sayHelloTo = (name, ...args) =&gt; greet(&apos;hello&apos;, name, ...args);</span><br><span class="line">sayHelloTo(&apos;fred&apos;, 1, 2, 3);</span><br><span class="line">// &quot;hello fred&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="6-Operators"><a href="#6-Operators" class="headerlink" title="6. Operators"></a>6. Operators</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">_.eq(3, 3);</span><br><span class="line">// true</span><br><span class="line">_.add(10, 1);</span><br><span class="line">// 11</span><br><span class="line">_.map([1, 2, 3], function(n) &#123;</span><br><span class="line">  return _.multiply(n, 10);</span><br><span class="line">&#125;);</span><br><span class="line">// [10, 20, 30]</span><br><span class="line">_.reduce([1, 2, 3], _.add);</span><br><span class="line">// 6</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">3 === 3</span><br><span class="line">10 + 1</span><br><span class="line">[1, 2, 3].map(n =&gt; n * 10);</span><br><span class="line">[1, 2, 3].reduce((total, n) =&gt; total + n);</span><br></pre></td></tr></table></figure>
+<h3 id="7-Path"><a href="#7-Path" class="headerlink" title="7. Path"></a>7. Path</h3><p>返回Object对象中对应的path路径的值的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var object = &#123; &apos;a&apos;: [&#123; &apos;b&apos;: &#123; &apos;c&apos;: 3 &#125; &#125;, 4] &#125;;</span><br><span class="line"></span><br><span class="line">_.at(object, [&apos;a[0].b.c&apos;, &apos;a[1]&apos;]);</span><br><span class="line">// [3, 4]</span><br><span class="line">_.at([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], 0, 2);</span><br><span class="line">// [&apos;a&apos;, &apos;c&apos;]</span><br><span class="line"></span><br><span class="line">// ES6写法</span><br><span class="line">[</span><br><span class="line">  obj =&gt; obj.a[0].b.c,</span><br><span class="line">  obj =&gt; obj.a[1]</span><br><span class="line">].map(path =&gt; path(object));</span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">  arr =&gt; arr[0],</span><br><span class="line">  arr =&gt; arr[2]</span><br><span class="line">].map(path =&gt; path([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]));</span><br></pre></td></tr></table></figure>
+<h3 id="8-Pick"><a href="#8-Pick" class="headerlink" title="8. Pick"></a>8. Pick</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var object = &#123; &apos;a&apos;: 1, &apos;b&apos;: &apos;2&apos;, &apos;c&apos;: 3 &#125;;</span><br><span class="line"></span><br><span class="line">return _.pick(object, [&apos;a&apos;, &apos;c&apos;]);</span><br><span class="line">// &#123; a: 1, c: 3 &#125;</span><br><span class="line"></span><br><span class="line">// becomes</span><br><span class="line"></span><br><span class="line">const &#123; a, c &#125; = &#123; a: 1, b: 2, c: 3 &#125;;</span><br><span class="line"></span><br><span class="line">return &#123; a, c &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="9-Constant-Identity-Noop"><a href="#9-Constant-Identity-Noop" class="headerlink" title="9. Constant, Identity, Noop"></a>9. Constant, Identity, Noop</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_.constant(&#123; &apos;a&apos;: 1 &#125;)();</span><br><span class="line">// &#123; a: 1 &#125;</span><br><span class="line">_.identity(&#123; user: &apos;fred&apos; &#125;);</span><br><span class="line">// &#123; user: &apos;fred&apos; &#125;</span><br><span class="line">_.noop();</span><br><span class="line">// undefined</span><br></pre></td></tr></table></figure>
+<p>使用箭头函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const constant = x =&gt; () =&gt; x;</span><br><span class="line">const identity = x =&gt; x;</span><br><span class="line">const noop = () =&gt; undefined;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">(() =&gt; (&#123; a: 1 &#125;))();</span><br><span class="line">// &#123; a: 1 &#125;</span><br><span class="line">(x =&gt; x)(&#123; user: &apos;fred&apos; &#125;);</span><br><span class="line">// &#123; user: &apos;fred&apos; &#125;</span><br><span class="line">(() =&gt; undefined)();</span><br><span class="line">// undefined</span><br></pre></td></tr></table></figure></p>
+<h3 id="10-Chaining-amp-Flow"><a href="#10-Chaining-amp-Flow" class="headerlink" title="10. Chaining &amp; Flow"></a>10. Chaining &amp; Flow</h3><p>替代链式写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">_([1, 2, 3])</span><br><span class="line"> .tap(function(array) &#123;</span><br><span class="line">   //改变输入数组.</span><br><span class="line">   array.pop();</span><br><span class="line"> &#125;)</span><br><span class="line"> .reverse()</span><br><span class="line"> .value();</span><br><span class="line">// [2, 1]</span><br><span class="line"></span><br><span class="line">// becomes</span><br><span class="line"></span><br><span class="line">const pipeline = [</span><br><span class="line">  array =&gt; &#123; array.pop(); return array; &#125;,</span><br><span class="line">  array =&gt; array.reverse()</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">pipeline.reduce((xs, f) =&gt; f(xs), [1, 2, 3]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const pipe = functions =&gt; data =&gt; &#123;</span><br><span class="line">  return functions.reduce(</span><br><span class="line">    (value, func) =&gt; func(value),</span><br><span class="line">    data</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const pipeline = pipe([</span><br><span class="line">  x =&gt; x * 2,</span><br><span class="line">  x =&gt; x / 3,</span><br><span class="line">  x =&gt; x &gt; 5,</span><br><span class="line">  b =&gt; !b</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">pipeline(5);</span><br><span class="line">// true</span><br><span class="line">pipeline(20);</span><br><span class="line">// false</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-23T02:32:19.710Z" itemprop="dateUpdated">2018-11-23 10:32:19</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/10/29/筛选字段数据以及Lodash与ES6转换/" target="_blank" rel="external">https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&title=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&title=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&source=1. lodash中的pick方法https://lodash.com/docs/4.17.10#pick
+_.pick(object, [paths])..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Developing Node.js Applications on IBM Cloud笔记</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/27/nodejs时间格式化/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nodejs时间格式化</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#You-don’t-may-not-need-Lodash-Underscore"><span class="post-toc-number">1.</span> <span class="post-toc-text">You don’t (may not) need Lodash/Underscore</span></a></li></ol>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&title=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&title=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&source=1. lodash中的pick方法https://lodash.com/docs/4.17.10#pick
+_.pick(object, [paths])..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《筛选字段数据以及Lodash与ES6转换》 — Renko's blog&url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/10/29/筛选字段数据以及Lodash与ES6转换/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3awW7DQAgFwPz/T7dST5Uiuw9YklQan6KqWTM+GAI8HvH19XP9/vz7ev7787euznz+VhLD4QsPDw+vFfrVdc+rBpEznv/z/hFfRoWHh4e3xkuSQXKz3jnJCUnKwcPDw/s03gSZn5OQ8PDw8P4Lr9csyB9NHgMeHh7eJ/CSZkTeDqi+6PPCfbHXgoeHhxfzegOw935en+/h4eHhtabq1VRRvVe+lNCLFg8PD2+D1wu0GlbSmKi2MAoJAw8PD++FvL20kY/B8qRyeQ4eHh7eS3jVQrmXAPIiezQYw8PDw1vm5S/r3vJBL/SkfL+MEw8PD+8oL4fltzk16JrEg4eHh/ca3n0DYlJS58V60tooJDA8PDy8ZV71RZw3CCbbUFenRU0QPDw8vDXe/RFJ8ZoHd7bUjpYG8PDw8I7yJmOw3kt83vAttyTw8PDwjvKSl/tkGStJOXtNEDw8PLxtXt50mBTl9+f3yvQ/BmB4eHh4R3kJaT6ySkKvLnUlBTceHh7eBu9Uo7Zc7I4XsKIHjYeHh7fG21h+qgZUXeGKHgceHh7eAq9cfRdL7UmLNm/+RoU1Hh4e3lFe74gklN7YrLDvUHzoeHh4eHNe72t5wT1JG5NGCR4eHt4er1rI5of2Ct9eDKMFAjw8PLwBLymsm43U+HHk55R/K+Dh4eEd5VWL2jygXik8H7ld/m7Aw8PDO8p7FK/74jUPaJ7HCqsDeHh4eGPeZBx13w6oltcJstqSwMPDw9vgVdNAUoLnzYtqUpmU3Xh4eHhneb1kMB9x5esF+Siu3MbFw8PDG/CSZNBrNMzL9LwtUui14OHh4X0kLy/Qq+sChcUCPDw8vLfyeqOy6rJU3qqIynQ8PDy8NV6vLdtbxsph1fuOei14eHh443l6XgQn7d1qqpiMwfDw8PDWeN+kYJKXxbvdvAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

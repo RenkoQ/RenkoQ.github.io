@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-hyperledger composer-sample-networks（三）"
+                <article id="post-同源和跨域（二）概念&amp;JSONP"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/19/hyperledger composer-sample-networks（三）/">hyperledger composer-sample-networks（三）</a>
+      <a class="post-title-link" href="/2018/03/16/同源和跨域（二）概念&JSONP/">同源和跨域（二）概念&amp;JSONP</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-19 17:54:01" datetime="2017-12-19T09:54:01.000Z"  itemprop="datePublished">2017-12-19</time>
+        <time class="post-time" title="2018-03-16 12:43:11" datetime="2018-03-16T04:43:11.000Z"  itemprop="datePublished">2018-03-16</time>
 
         
 
 
         
-	<span id="/2017/12/19/hyperledger composer-sample-networks（三）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（三）" title="hyperledger composer-sample-networks（三）">
+	<span id="/2018/03/16/同源和跨域（二）概念&JSONP/" class="leancloud_visitors" data-flag-title="同源和跨域（二）概念&JSONP" title="同源和跨域（二）概念&JSONP">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/19/hyperledger composer-sample-networks（三）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/19/hyperledger composer-sample-networks（三）/"></span>
+        <a href="/2018/03/16/同源和跨域（二）概念&JSONP/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/16/同源和跨域（二）概念&JSONP/"></span>
         </a>
     </span>
 
@@ -204,20 +204,97 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-Perishable-Goods-Network"><a href="#1-Perishable-Goods-Network" class="headerlink" title="1. Perishable Goods Network"></a>1. Perishable Goods Network</h3><p><a href="https://github.com/hyperledger/composer-sample-networks/tree/master/packages/perishable-network" target="_blank" rel="external">Perishable Goods Network</a></p>
-<blockquote>
-<p>Example business network that shows growers, shippers and importers defining contracts for the price of perishable goods, based on temperature readings received for shipping containers.</p>
-</blockquote>
-<h4 id="Participants-Grower-Importer-Shipper"><a href="#Participants-Grower-Importer-Shipper" class="headerlink" title="Participants Grower Importer Shipper"></a><strong>Participants</strong> Grower Importer Shipper</h4><h4 id="Assets-Contract-Shipment"><a href="#Assets-Contract-Shipment" class="headerlink" title="Assets Contract Shipment"></a><strong>Assets</strong> Contract Shipment</h4><h4 id="Transactions-TemperatureReading-ShipmentReceived-SetupDemo"><a href="#Transactions-TemperatureReading-ShipmentReceived-SetupDemo" class="headerlink" title="Transactions TemperatureReading ShipmentReceived SetupDemo"></a><strong>Transactions</strong> TemperatureReading ShipmentReceived SetupDemo</h4>
+        <h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><pre><code>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。
+</code></pre><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><h3 id="1-跨域类型"><a href="#1-跨域类型" class="headerlink" title="1. 跨域类型"></a>1. 跨域类型</h3><table>
+<thead>
+<tr>
+<th>URL</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:center">是否允许通信</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名下</td>
+<td style="text-align:center">允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/lab/a.js" target="_blank" rel="external">http://www.a.com/lab/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/script/b.js" target="_blank" rel="external">http://www.a.com/script/b.js</a></td>
+<td style="text-align:right">同一域名下不同文件夹</td>
+<td style="text-align:center">允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com:8000/a.js" target="_blank" rel="external">http://www.a.com:8000/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同端口</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="https://www.a.com/b.js" target="_blank" rel="external">https://www.a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同协议</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://70.32.92.74/b.js" target="_blank" rel="external">http://70.32.92.74/b.js</a></td>
+<td style="text-align:right">域名和域名对应ip</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://script.a.com/b.js" target="_blank" rel="external">http://script.a.com/b.js</a></td>
+<td style="text-align:right">主域相同，子域不同</td>
+<td style="text-align:center">不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://a.com/b.js" target="_blank" rel="external">http://a.com/b.js</a></td>
+<td style="text-align:right">同一域名，不同二级域名（同上）</td>
+<td style="text-align:center">不允许（cookie这种情况下也不允许访问）</td>
+</tr>
+<tr>
+<td><a href="http://www.cnblogs.com/a.js" target="_blank" rel="external">http://www.cnblogs.com/a.js</a></td>
+</tr>
+<tr>
+<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
+<td style="text-align:right">不同域名</td>
+<td style="text-align:center">不允许</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-跨域方案"><a href="#2-跨域方案" class="headerlink" title="2. 跨域方案"></a>2. 跨域方案</h3><p>顶级域名相同的可以通过domain.name来解决，即同时设置 domain.name = 顶级域名（如example.com）</p>
+<p>document.domain + iframe</p>
+<p>window.name + iframe</p>
+<p>location.hash + iframe</p>
+<p>window.postMessage()</p>
+<h3 id="3-JSONP"><a href="#3-JSONP" class="headerlink" title="3. JSONP"></a>3. JSONP</h3>
     
-        <a href="/2017/12/19/hyperledger composer-sample-networks（三）/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/16/同源和跨域（二）概念&JSONP/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -226,7 +303,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-hyperledger composer-sample-networks（二）"
+                <article id="post-同源和跨域（一）Ajax"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -234,20 +311,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/18/hyperledger composer-sample-networks（二）/">hyperledger composer-sample-networks（二）</a>
+      <a class="post-title-link" href="/2018/03/15/同源和跨域（一）Ajax/">同源和跨域（一）Ajax</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-18 23:59:01" datetime="2017-12-18T15:59:01.000Z"  itemprop="datePublished">2017-12-18</time>
+        <time class="post-time" title="2018-03-15 17:56:34" datetime="2018-03-15T09:56:34.000Z"  itemprop="datePublished">2018-03-15</time>
 
         
 
 
         
-	<span id="/2017/12/18/hyperledger composer-sample-networks（二）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（二）" title="hyperledger composer-sample-networks（二）">
+	<span id="/2018/03/15/同源和跨域（一）Ajax/" class="leancloud_visitors" data-flag-title="同源和跨域（一）Ajax" title="同源和跨域（一）Ajax">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -258,8 +335,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/18/hyperledger composer-sample-networks（二）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/18/hyperledger composer-sample-networks（二）/"></span>
+        <a href="/2018/03/15/同源和跨域（一）Ajax/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/15/同源和跨域（一）Ajax/"></span>
         </a>
     </span>
 
@@ -274,20 +351,27 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-Car-Auction-Network"><a href="#1-Car-Auction-Network" class="headerlink" title="1. Car Auction Network"></a>1. Car Auction Network</h3><p><a href="https://github.com/hyperledger/composer-sample-networks/tree/461ed452d8c316a0421b43199b129cad04625277/packages/carauction-network" target="_blank" rel="external">Car Auction拍卖 Network</a></p>
-<blockquote>
-<p> List assets for sale (setting a reserve price), and watch as assets that have met their reserve price are automatically transferred to the highest bidder at the end of the auction.</p>
-</blockquote>
-<h4 id="Participants-Member-Auctioneer"><a href="#Participants-Member-Auctioneer" class="headerlink" title="Participants: Member Auctioneer"></a><strong>Participants</strong>: Member Auctioneer</h4><h4 id="Assets-Vehicle-VehicleListing"><a href="#Assets-Vehicle-VehicleListing" class="headerlink" title="Assets: Vehicle VehicleListing"></a><strong>Assets</strong>: Vehicle VehicleListing</h4><h4 id="Transactions-Offer-CloseBidding"><a href="#Transactions-Offer-CloseBidding" class="headerlink" title="Transactions: Offer CloseBidding"></a><strong>Transactions</strong>: Offer CloseBidding</h4><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1fmlc3d4vrkj20kf04wt94.jpg" alt="car"></p  class="index-item-img">
+        <h3 id="1-原生Ajax写法"><a href="#1-原生Ajax写法" class="headerlink" title="1. 原生Ajax写法"></a>1. 原生Ajax写法</h3><ol>
+<li>建立XMLHTTPRequest对象</li>
+<li>注册回调函数<br>当服务器回应我们了,我们想要执行什么逻辑</li>
+<li>使用open方法设置和服务器端交互的基本信息<br>设置提交的网址,数据,post提交的一些额外内容</li>
+<li>设置发送的数据，开始和服务器端交互<br>发送数据</li>
+<li>更新界面<br>在注册的回调函数中,获取返回的数据,更新界面</li>
+</ol>
+<p><strong>示例代码:GET</strong> get的数据,直接在请求的url中添加即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 创建XMLHttpRequest 对象</span></div><div class="line">  <span class="keyword">var</span> xml = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置跟服务端交互的信息</span></div><div class="line">  xml.open(<span class="string">'get'</span>,<span class="string">'01.ajax.php?name=fox'</span>);</div><div class="line">  xml.send(<span class="literal">null</span>);    <span class="comment">// get请求这里写null即可</span></div><div class="line"></div><div class="line">  <span class="comment">// 接收服务器反馈</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">      <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">          <span class="comment">// 打印响应内容</span></div><div class="line">          alert(xml.responseText);</div><div class="line">      &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p><strong>示例代码:POST</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 异步对象</span></div><div class="line">  <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置属性</span></div><div class="line">  xhr.open(<span class="string">'post'</span>, <span class="string">'02.post.php'</span> );</div><div class="line"></div><div class="line">  <span class="comment">// 如果想要使用post提交数据,必须添加</span></div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 将数据通过send方法传递</span></div><div class="line">  xhr.send(<span class="string">'name=fox&amp;age=18'</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 发送并接受返回值</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">  <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">         alert(xhr.responseText);</div><div class="line">       &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h3 id="2-Ajax工具函数封装"><a href="#2-Ajax工具函数封装" class="headerlink" title="2. Ajax工具函数封装"></a>2. Ajax工具函数封装</h3>
     
-        <a href="/2017/12/18/hyperledger composer-sample-networks（二）/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/15/同源和跨域（一）Ajax/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -296,7 +380,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-hyperledger composer-sample-networks（一）"
+                <article id="post-函数节流&amp;防抖"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -304,20 +388,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/18/hyperledger composer-sample-networks（一）/">hyperledger composer-sample-networks（一）</a>
+      <a class="post-title-link" href="/2018/03/03/函数节流&防抖/">函数节流&amp;防抖</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-18 23:55:01" datetime="2017-12-18T15:55:01.000Z"  itemprop="datePublished">2017-12-18</time>
+        <time class="post-time" title="2018-03-03 23:34:31" datetime="2018-03-03T15:34:31.000Z"  itemprop="datePublished">2018-03-03</time>
 
         
 
 
         
-	<span id="/2017/12/18/hyperledger composer-sample-networks（一）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（一）" title="hyperledger composer-sample-networks（一）">
+	<span id="/2018/03/03/函数节流&防抖/" class="leancloud_visitors" data-flag-title="函数节流&防抖" title="函数节流&防抖">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -328,8 +412,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/18/hyperledger composer-sample-networks（一）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/18/hyperledger composer-sample-networks（一）/"></span>
+        <a href="/2018/03/03/函数节流&防抖/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/03/函数节流&防抖/"></span>
         </a>
     </span>
 
@@ -344,25 +428,26 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://github.com/hyperledger/composer-sample-networks" target="_blank" rel="external">composer-sample-networks</a></p>
-<h3 id="1-创建business-network"><a href="#1-创建business-network" class="headerlink" title="1. 创建business network"></a>1. 创建business network</h3><p>clone官方示例，获取Business Network Definitions</p>
-<pre><code>git clone https://github.com/hyperledger/composer-sample-networks.git
-</code></pre><p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fmlc39sr54j20k704rgmi.jpg" alt="clone"></p  class="index-item-img">
-<h3 id="2-安装-Lerna-来-build-该仓库文件"><a href="#2-安装-Lerna-来-build-该仓库文件" class="headerlink" title="2. 安装 Lerna 来 build 该仓库文件"></a>2. 安装 Lerna 来 build 该仓库文件</h3><pre><code>$ npm install -g lerna
-</code></pre><p><img src="http://wx1.sinaimg.cn/large/789d050dgy1fmlc3a6f1fj20kb02xglv.jpg" alt="lerna1"></p  class="index-item-img">
-<h3 id="3-bootstrap-the-repository"><a href="#3-bootstrap-the-repository" class="headerlink" title="3. bootstrap the repository"></a>3. bootstrap the repository</h3><p>安装依赖，链接package（正如normal node.js package）</p>
-<pre><code>$ lerna bootstrap
-</code></pre><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1fmlc3al8w2j20ow0fsmzk.jpg" alt="lerna2"></p  class="index-item-img">
-<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fmlc3aysw8j20kf06y3zs.jpg" alt="lerna3"></p  class="index-item-img">
+        <h3 id="1-函数防抖（debounce）"><a href="#1-函数防抖（debounce）" class="headerlink" title="1.函数防抖（debounce）"></a>1.函数防抖（debounce）</h3><pre><code>连续的调用，停止t后才会执行该动作，若在这t内又调用此动作则将重新计算t
+</code></pre><p><strong>场景案例1</strong>：</p>
+<pre><code>监听 resize 事件，每缩小（或者放大）一次浏览器，实际上会触发多次，用户玩够了再执行
+</code></pre><p><strong>解决方案</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> foo = debounce(resizeBox, <span class="number">1000</span>);</div><div class="line">  $(<span class="built_in">window</span>).on(<span class="string">'load resize'</span>, foo);</div><div class="line">&#125;);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeBox</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> fullWidth = $(<span class="string">'body'</span>).width(),</div><div class="line">    maxWidth = <span class="number">800</span>;</div><div class="line">  <span class="keyword">if</span> (fullWidth &lt;= maxWidth) &#123;</div><div class="line">    $(<span class="string">'.full'</span>).width(fullWidth);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    $(<span class="string">'.full'</span>).width(maxWidth);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>场景案例2</strong>：</p>
+<pre><code>文本输入的验证（连续输入文字后发送 AJAX 请求进行验证，验证最后一次就好）
+</code></pre><p><strong>解决方案</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> foo = debounce(checkInput, <span class="number">1000</span>);</div><div class="line">  $(<span class="string">'.input'</span>).on(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    foo();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInput</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 替换为异步请求，可减少请求次数</span></div><div class="line">  $(<span class="string">'.type'</span>).text($(<span class="string">'.input'</span>).val());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-函数节流（throttle）"><a href="#2-函数节流（throttle）" class="headerlink" title="2. 函数节流（throttle）"></a>2. 函数节流（throttle）</h3><pre><code>一个不间断的调用，每隔t，执行一次
+</code></pre>
     
-        <a href="/2017/12/18/hyperledger composer-sample-networks（一）/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/03/函数节流&防抖/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -371,7 +456,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-HEXO 新主题mellow"
+                <article id="post-ES6_ES2015语法及Babel"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -379,20 +464,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/16/HEXO 新主题mellow/">HEXO 新主题mellow</a>
+      <a class="post-title-link" href="/2018/02/28/ES6_ES2015语法及Babel/">ES6/ES2015语法及Babel</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-16 11:55:01" datetime="2017-12-16T03:55:01.000Z"  itemprop="datePublished">2017-12-16</time>
+        <time class="post-time" title="2018-02-28 00:01:00" datetime="2018-02-27T16:01:00.000Z"  itemprop="datePublished">2018-02-28</time>
 
         
 
 
         
-	<span id="/2017/12/16/HEXO 新主题mellow/" class="leancloud_visitors" data-flag-title="HEXO 新主题mellow" title="HEXO 新主题mellow">
+	<span id="/2018/02/28/ES6_ES2015语法及Babel/" class="leancloud_visitors" data-flag-title="ES6/ES2015语法及Babel" title="ES6/ES2015语法及Babel">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -403,81 +488,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/16/HEXO 新主题mellow/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/16/HEXO 新主题mellow/"></span>
-        </a>
-    </span>
-
-
-        
-        
-  <span class="music"><i class="icon icon-music"></i></span>
-
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>主题<a href="https://github.com/codefine/hexo-theme-mellow" target="_blank" rel="external">mellow</a><br>作者<a href="http://blog.lujingtao.com/" target="_blank" rel="external">Michael.Lu</a><br><a href="https://github.com/codefine/hexo-theme-mellow/wiki" target="_blank" rel="external">文档</a></p>
-<p>用了一年多的默认主题landscape，虽然简洁但功能欠缺，干脆换个主题。最后选择了mellow，因为UI好看，基础功能全面，非常轻量，而且评论系统valine使用友好。</p>
-<figure class="image-box">
-                <img src="http://wx4.sinaimg.cn/large/789d050dgy1fmhv3xe69oj21hc0xctys.jpg" alt="原banner" title="justify-full" class="index-item-img">
-                <p>justify-full</p>
-            </figure>
-    
-        <a href="/2017/12/16/HEXO 新主题mellow/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（五）"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/05/Google 地图 JavaScript API（五）/">Google 地图 JavaScript API（五）</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-12-05 00:01:00" datetime="2017-12-04T16:01:00.000Z"  itemprop="datePublished">2017-12-05</time>
-
-        
-
-
-        
-	<span id="/2017/12/05/Google 地图 JavaScript API（五）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（五）" title="Google 地图 JavaScript API（五）">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/05/Google 地图 JavaScript API（五）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/05/Google 地图 JavaScript API（五）/"></span>
+        <a href="/2018/02/28/ES6_ES2015语法及Babel/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/28/ES6_ES2015语法及Babel/"></span>
         </a>
     </span>
 
@@ -492,46 +504,54 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
+        <p>偶然在项目中看见，感觉是重要的内容，先了解下基本语法，等有空再深入学习。<br>babel迷之安装 一觉醒来打开webstorm发现装上了Σ(っ °Д °;)っ<br>File Watcher打开添加babel时programa一栏填写:</p>
+<pre><code>$ProjectFileDir$/node_modules/.bin/babel
+</code></pre><p>然后就能自动转码为ES5啦:)</p>
+<h3 id="1-文档转换"><a href="#1-文档转换" class="headerlink" title="1. 文档转换"></a>1. 文档转换</h3><p>Babel的REPL在线编译器，将ES6代码转为ES5代码。<br><a href="https://babeljs.io/repl/" target="_blank" rel="external">https://babeljs.io/repl/</a></p>
+<h3 id="2-ES6部分特性"><a href="#2-ES6部分特性" class="headerlink" title="2. ES6部分特性"></a>2. ES6部分特性</h3><ol>
+<li><code>var</code>声明的内层变量会覆盖外层变量，而<code>let</code>提供块级作用域，变量只在代码块内有效。</li>
+<li>当引用第三方库时声明的变量，用<code>const</code>来声明可以避免未来不小心重命名而导致出现bug</li>
+<li>引入<code>Class</code>（类）概念，可以通过<code>extends</code>关键字实现继承。（这部分感觉有点像java）</li>
+<li><code>arrow function箭头函数的</code>this<code>是继承外层代码块的</code>this`。</li>
+<li><code>template string</code>，用反引号来标识起始，用<code>${}</code>来引用变量，而且所有的空格和缩进都会被保留在输出之中.</li>
+<li><code>destructuring</code>解构:从数组和对象中提取值，对变量进行赋值。</li>
+<li><code>default</code>默认值, <code>rest</code>语法(用Rest操作符以后，args参数就是一个数组了，任何操作数组的方法都可以直接对args使用)</li>
+</ol>
 <hr>
-<h3 id="1-方向API"><a href="#1-方向API" class="headerlink" title="1. 方向API"></a>1. 方向API</h3><p>是一项计算位置间路线的服务。您可以搜索包括公共交通、驾车、步行或骑行在内的几种交通模式的路线。</p>
-<p><a href="https://developers.google.com/maps/documentation/directions/" target="_blank" rel="external">Google Maps Directions API</a> </p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/directions" target="_blank" rel="external">方向服务</a></p>
-<pre><code>https://maps.googleapis.com/maps/api/directions/json?origin=75+9th+Ave+New+York,+NY&amp;destination=MetLife+Stadium+1+MetLife+Stadium+Dr+East+Rutherford,+NJ+07073&amp;waypoints=optimize:true|Providence,+RI|Hartford,+CT&amp;mode=transit&amp;arrival_time=1391374800&amp;departure_time=1541202457&amp;traffic_model=best_guess&amp;key=YOUR_API_KEY
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//添加一个按钮指向新函数displayDirections( origins[i])</span></div><div class="line"><span class="comment">//传入起点是列出的地址，使用的终点是用户输入地址</span></div><div class="line"><span class="keyword">var</span> infowindow = <span class="keyword">new</span> google.maps.InfoWindow(&#123;</div><div class="line">  <span class="attr">content</span>:durationText+<span class="string">'away,'</span>+distanceText+</div><div class="line">  <span class="string">'&lt;div&gt;&lt;input type=\"button\" value=\"View Route\" onclick ='</span> +</div><div class="line">  <span class="string">'\"displayDirections(&amp;quot;'</span> + origins[i] + <span class="string">'&amp;quot;);\"&gt;&lt;/input&gt;&lt;/div&gt;'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//计算实际方向并在地图上显示路线</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayDirections</span>(<span class="params">origin</span>) </span>&#123;</div><div class="line">  hideListings();</div><div class="line">  <span class="comment">//初始化新实例</span></div><div class="line">  <span class="keyword">var</span> directionsService = <span class="keyword">new</span> google.maps.DirectionsService;</div><div class="line">  <span class="comment">//重新捕获用户输入终点和出行模式</span></div><div class="line">  <span class="keyword">var</span> destinationAddress =<span class="built_in">document</span>.getElementById(<span class="string">'search-within-time-text'</span>).value;</div><div class="line">  <span class="keyword">var</span> mode = <span class="built_in">document</span>.getElementById(<span class="string">'mode'</span>).value;</div><div class="line">  <span class="comment">//计算路线，传入起点，终点，出行模式</span></div><div class="line">  directionsService.route(&#123;</div><div class="line">    <span class="comment">// The origin is the passed in marker's position.</span></div><div class="line">    origin: origin,</div><div class="line">    <span class="comment">// The destination is user entered address.</span></div><div class="line">    destination: destinationAddress,</div><div class="line">    <span class="attr">travelMode</span>: google.maps.TravelMode[mode]</div><div class="line">  &#125;,<span class="function"><span class="keyword">function</span> (<span class="params">response, status</span>) </span>&#123;</div><div class="line">    <span class="comment">//获得响应后确保状态为OK</span></div><div class="line">    <span class="keyword">if</span> (status === google.maps.DirectionsStatus.OK) &#123;</div><div class="line">      <span class="comment">//此渲染器负责显示信息，在地图上显示最终的折线</span></div><div class="line">      <span class="keyword">var</span> directionsDisplay = <span class="keyword">new</span> google.maps.DirectionsRenderer(&#123;</div><div class="line">        <span class="comment">//指定地图</span></div><div class="line">        map: map,</div><div class="line">        <span class="comment">//从路线响应中获取方向</span></div><div class="line">        directions: response,</div><div class="line">        <span class="comment">//路线可移动</span></div><div class="line">        draggable: <span class="literal">true</span>,</div><div class="line">        <span class="comment">//路线绿色</span></div><div class="line">        polylineOptions: &#123;</div><div class="line">          <span class="attr">strokeColor</span>: <span class="string">'green'</span></div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="built_in">window</span>.alert(<span class="string">'Directions request failed due to '</span> + status);</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-距离矩阵和方向API注意点"><a href="#2-距离矩阵和方向API注意点" class="headerlink" title="2. 距离矩阵和方向API注意点"></a>2. 距离矩阵和方向API注意点</h3><p><strong>距离矩阵 API 请求</strong> 通过组合使用 ORIGIN、DESTINATION 和 TRAVELMODE 发出。在发出请求时，请注意以下几点：</p>
-<ul>
-<li>无论选择何种出行方式，每个请求最多可以传入 25 个 起点或者 25 个终点，但元素最多仅限 100 个， 且元素个数 =起点数*终点数。例如，10 个起点和 10 个 终点 = 100 个元素。在使用 Web 服务的情况下， 对于高级计划客户，此值最大可达到 625。</li>
-<li>虽然大多数其他服务受速率限制（每秒查询数不超过 50）， 但距离矩阵 API 在元素（而非查询）方面受到 速率 限制。如果某时间段内请求的元素数目 过多，将返回 OVER_QUERY_LIMIT 响应 代码。</li>
-<li>某些参数仅适用于特定出行方式， 例如：<ul>
-<li>如果出行方式为 transit，则将忽略 AvoidTolls 和 AvoidHighways</li>
-<li>仅当出行方式为 transit 时，所有 TransitOptions 才有效 </li>
-<li>departureTime 可在传递DrivingOptions 或 TransitOptions 参数时进行传递</li>
-</ul>
+<p>电脑重装了，反正要重新配置环境，不如找个东西边学边装。就决定是你了，ES6！</p>
+<ol>
+<li>惯例安装nodejs以及express</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save</div><div class="line">$ npm install body-parser --save</div><div class="line">$ npm install cookie-parser --save</div><div class="line">$ npm install multer --save</div><div class="line">$ npm list express</div></pre></td></tr></table></figure>
+<p>途中出现第一个问题，<code>npm ERR! extraneous</code>，<a href="https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o" target="_blank" rel="external">https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o</a><br>第二个问题 <code>express command not found</code> ，解决方法<a href="https://stackoverflow.com/questions/23002448/express-command-not-found" target="_blank" rel="external">https://stackoverflow.com/questions/23002448/express-command-not-found</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g express-generator</div></pre></td></tr></table></figure></p>
+<ol>
+<li>gulp<br><a href="http://www.gulpjs.com.cn/docs/" target="_blank" rel="external">文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ touch .babelrc</div><div class="line"></div><div class="line">$ touch gulpfile.babel.js</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<p><strong>方向 API 请求</strong> 也涉及 ORIGIN、DESTINATION 和 TRAVELMODE，但还具有可选 参数 WAYPOINTS 或 VIA points。在发出请求时， 请注意以下几点：</p>
-<ul>
-<li>对于客户端方向服务（使用 Javascript API）， 除起点和终点外，最多可指定 8 个 途经点/请求 ，即每个请求 共 10个地理编码点。对于 高级计划 客户，这一限值由 8 增加至 23</li>
-<li>对于 Web 服务，只要提供 API 密钥等有效标识符， 即可为每个请求指定最多 23 个途经点。如果超出限制， 响应 代码将给出相应指示。</li>
-<li>TRANSIT 出行方式不支持途经点</li>
-</ul>
-<h3 id="3-道路API"><a href="#3-道路API" class="headerlink" title="3. 道路API"></a>3. 道路API</h3><p>通过 Google Maps Roads API 追踪 GPS 面包屑导航轨迹，以绘制车辆行驶的道路地图和确定这些路段沿线的速度限制。<br>标识车辆行驶的道路，并提供有关这些道路的附加元数据（如速度限制）。</p>
-<p><a href="https://developers.google.com/maps/documentation/roads/intro" target="_blank" rel="external">Google Maps Roads API</a></p>
-<p><a href="https://developers.google.com/maps/documentation/roads/inspector" target="_blank" rel="external">Google Maps Roads API 检查器</a><br>用自定义点测试道路吸附请求</p>
-<h3 id="4-地点自动完成"><a href="#4-地点自动完成" class="headerlink" title="4. 地点自动完成"></a>4. 地点自动完成</h3>
+</ol>
+<p>因为使用ES6语法，所以必须创建<code>gulpfile.babel.js</code>文件而不是<code>gulpfile.js</code></p>
+<hr>
+<p>然后又出现了很多问题，我就先去学习了gulp的详细用法，写了三篇文章总结。又学会了使用yeoman工具直接构建项目骨架。详细参见之前的博文。我发现webstorm里也可以直接选择yeoman构建，神器啊。<br>下面真的开始学习ES6语法了 O_&lt;</p>
+<hr>
+<p>参考阮一峰的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">《ECMAScript 6 入门》</a></p>
+<h3 id="1-let-amp-const"><a href="#1-let-amp-const" class="headerlink" title="1. let &amp; const"></a>1. let &amp; const</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>;i&lt;<span class="number">3</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<ol>
+<li>块作用域（大括号内）第二个<code>console.log(i)</code>脱离了块作用域，于是只能输出1，2。</li>
+<li>严格模式：ES5代码中存在<code>use strict</code>来启动文件采用严格模式，ES6中则强制开启。严格模式中变量未声明则不能引用，会报错。</li>
+<li>使用let时不能重复定义变量。</li>
+<li>使用const声明的常量不能修改。</li>
+<li>第4点注意情况</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> PI =<span class="number">3.1415926</span>;   <span class="comment">//不能修改</span></div><div class="line"><span class="keyword">const</span> K =&#123;</div><div class="line">  <span class="attr">a</span>:<span class="number">1</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//K指向对象存储的指针，对象可变指针不变。</span></div><div class="line">K.b = <span class="number">3</span>;</div></pre></td></tr></table></figure>
+<h3 id="2-解构赋值"><a href="#2-解构赋值" class="headerlink" title="2. 解构赋值"></a>2. 解构赋值</h3>
     
-        <a href="/2017/12/05/Google 地图 JavaScript API（五）/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/28/ES6_ES2015语法及Babel/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -540,7 +560,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（四）"
+                <article id="post-响应式开发"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -548,20 +568,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/04/Google 地图 JavaScript API（四）/">Google 地图 JavaScript API（四）</a>
+      <a class="post-title-link" href="/2018/02/03/响应式开发/">响应式开发总结</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-04 00:01:00" datetime="2017-12-03T16:01:00.000Z"  itemprop="datePublished">2017-12-04</time>
+        <time class="post-time" title="2018-02-03 00:01:00" datetime="2018-02-02T16:01:00.000Z"  itemprop="datePublished">2018-02-03</time>
 
         
 
 
         
-	<span id="/2017/12/04/Google 地图 JavaScript API（四）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（四）" title="Google 地图 JavaScript API（四）">
+	<span id="/2018/02/03/响应式开发/" class="leancloud_visitors" data-flag-title="响应式开发总结" title="响应式开发总结">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -572,8 +592,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/04/Google 地图 JavaScript API（四）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/04/Google 地图 JavaScript API（四）/"></span>
+        <a href="/2018/02/03/响应式开发/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/03/响应式开发/"></span>
         </a>
     </span>
 
@@ -588,39 +608,97 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
-<hr>
-<h3 id="1-地理编码"><a href="#1-地理编码" class="headerlink" title="1. 地理编码"></a>1. 地理编码</h3><p>在地址和经纬度之间转换</p>
-<p><code>地理编码</code>是将地址（如“1600 Amphitheatre Parkway, Mountain View, CA”）转换为地理坐标（如纬度 37.423021 和经度 -122.083739）的过程，您可以借此在地图上放置标记，或在地图上定位。</p>
-<p><code>反向地理编码</code>是将地理坐标转换为可人工读取的地址的过程。反向地理编码器还可让您找到对应于给定的地点 ID 的地址。</p>
-<p><a href="https://google-developers.appspot.com/maps/documentation/utils/geocoder/" target="_blank" rel="external">地理编码查询</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/geocoding" target="_blank" rel="external">地理编码服务</a></p>
-<p>地理编码 API <a href="https://developers.google.com/maps/documentation/geocoding/intro" target="_blank" rel="external">Geocoding API</a> </p>
-<p>地理编码的 <a href="https://developers.google.com/maps/documentation/geocoding/intro#StatusCodes" target="_blank" rel="external">状态代码</a> 和 <a href="https://developers.google.com/maps/documentation/geocoding/intro#Types" target="_blank" rel="external">地址和组成部分类型</a> </p>
-<p>地理寻宝游戏<a href="https://www.geocaching.com/play" target="_blank" rel="external">Geocaching</a></p>
-<hr>
-<p>Google Maps Geocoding API 请求使用以下格式：</p>
-<pre><code>https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters
-
-//json输出
-https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=YOUR_API_KEY
-//XML输出
-https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=YOUR_API_KEY
-//parameters参数：地址&amp;密钥
-</code></pre><p>示例<br>请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://maps.googleapis.com/maps/api/geocode/json?key=输入API&amp;latlng=30.315099,120.342865</div></pre></td></tr></table></figure></p>
-<p>返回<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   &quot;results&quot; : [</div><div class="line">      &#123;</div><div class="line">        &quot;//&quot;:&quot;地址要素部分，分解信息为街道、城镇、社区、州、国家等&quot;,</div><div class="line">        &quot;//&quot;:&quot;详情查阅前面地址类型和地址组成部分类型链接&quot;,</div><div class="line">         &quot;address_components&quot; : [</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;问鼎西路&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;问鼎西路&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;route&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;下沙&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;下沙&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;neighborhood&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;江干区&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;江干区&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;political&quot;, &quot;sublocality&quot;, &quot;sublocality_level_1&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;杭州市&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;杭州市&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;locality&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;浙江省&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;浙江省&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;administrative_area_level_1&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;中国&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;CN&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;country&quot;, &quot;political&quot; ]</div><div class="line">            &#125;</div><div class="line">         ],</div><div class="line">         &quot;//&quot;:&quot;格式化地址&quot;,</div><div class="line">         &quot;formatted_address&quot; : &quot;中国浙江省杭州市江干区下沙问鼎西路&quot;,</div><div class="line">         &quot;//&quot;:&quot;几何图形包含实际位置的经纬度和其他重要信息&quot;,</div><div class="line">         &quot;geometry&quot; : &#123;</div><div class="line">            &quot;bounds&quot; : &#123;</div><div class="line">               &quot;northeast&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.314869,</div><div class="line">                  &quot;lng&quot; : 120.3432986</div><div class="line">               &#125;,</div><div class="line">               &quot;southwest&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.3116694,</div><div class="line">                  &quot;lng&quot; : 120.3429376</div><div class="line">               &#125;</div><div class="line">            &#125;,</div><div class="line">            &quot;//&quot;:&quot;经纬度&quot;,</div><div class="line">            &quot;location&quot; : &#123;</div><div class="line">               &quot;lat&quot; : 30.3131545,</div><div class="line">               &quot;lng&quot; : 120.3429652</div><div class="line">            &#125;,</div><div class="line">            &quot;//&quot;:&quot;位置类型告诉我们返回点的更多信息&quot;,</div><div class="line">            &quot;//&quot;:&quot;rooftop屋顶说明获得了位置的全部匹配&quot;,</div><div class="line">            &quot;//&quot;:&quot;若是range interpolated差值范围：地理编码根据周围点近似的一个点&quot;,</div><div class="line">            &quot;//&quot;:&quot;若是geometric center几何中心：获得一条线的中心点&quot;,</div><div class="line">            &quot;location_type&quot; : &quot;GEOMETRIC_CENTER&quot;,</div><div class="line">            &quot;viewport&quot; : &#123;</div><div class="line">               &quot;northeast&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.314869,</div><div class="line">                  &quot;lng&quot; : 120.3444670802915</div><div class="line">               &#125;,</div><div class="line">               &quot;southwest&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.3116694,</div><div class="line">                  &quot;lng&quot; : 120.3417691197085</div><div class="line">               &#125;</div><div class="line">            &#125;</div><div class="line">         &#125;,</div><div class="line">         &quot;//&quot;:&quot;地点ID是任何地点的另一个唯一标识符&quot;,</div><div class="line">         &quot;place_id&quot; : &quot;ChIJycYN2imYTDQRoLUHSrSQQE8&quot;,</div><div class="line">         &quot;types&quot; : [ &quot;route&quot; ]</div><div class="line">      &#125;,</div><div class="line">   ],</div><div class="line">   &quot;//&quot;:&quot;告诉我们请求是否成功，能在各种web服务间共享，详情查询前面状态代码链接&quot;,</div><div class="line">   &quot;//&quot;:&quot;ok指找到一个或多个结果&quot;,</div><div class="line">   &quot;//&quot;:&quot;ZERO_RESULTS表示地理编码成功，但未返回任何结果&quot;,</div><div class="line">   &quot;//&quot;:&quot;invali request指请求中包含一些错误&quot;,</div><div class="line">   &quot;//&quot;:&quot;unknown error通常指服务器错误并可重复请求直到成功&quot;,</div><div class="line">   &quot;//&quot;:&quot;query limit error超过查询限制错误&quot;,</div><div class="line">   &quot;//&quot;:&quot;request denied error请求被拒错误&quot;,</div><div class="line">   &quot;status&quot; : &quot;OK&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="2-地理编码应用"><a href="#2-地理编码应用" class="headerlink" title="2. 地理编码应用"></a>2. 地理编码应用</h3>
+        <p>之前对于响应式都是用bootstrap等响应式框架，非常肤浅。就学习了具体的响应式开发相关内容，运用媒体查询写出不同的css布局，锻炼了基本技能，对基础概念也有了新了解。还学习了响应式图片的处理和兼容性处理，也收获良多。</p>
+<h3 id="1-响应式网站"><a href="#1-响应式网站" class="headerlink" title="1. 响应式网站"></a>1. 响应式网站</h3><blockquote>
+<p>所谓响应式网站，就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本，在各种分辨率的设备下都能很好地展示页面效果。</p>
+</blockquote>
+<h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><p>flexible grid layout 弹性网格布局<br>flexible image 弹性图片<br>media queries 媒体查询</p>
+<h4 id="优点和缺点"><a href="#优点和缺点" class="headerlink" title="优点和缺点"></a>优点和缺点</h4><p>一套代码适应多终端设备，省人省时省钱，利于SEO。缺点是需要加载更多的样式和脚本资源，造成代码冗余。</p>
+<h4 id="实践原则："><a href="#实践原则：" class="headerlink" title="实践原则："></a>实践原则：</h4><p>制作网站大抵都遵循两个原则：渐近增强(Progressive Enhancement)和优雅降级(Graceful Degradation)，渐近增强是指先制作一个简陋但是兼容各个版本浏览器的网页，然后再添加效果。而优雅降级则刚好相反，直接制作出效果绚烂的兼容主流浏览器的产品，然后根据低版本再做出一些兼容性处理。</p>
+<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>使用相对单位并配合媒体查询来实现页面，我们只需要根据设计图,将绝对单位px转换为相对单位rem或者em并配合@media即可。</p>
+<h3 id="2-非常规文件"><a href="#2-非常规文件" class="headerlink" title="2. 非常规文件"></a>2. 非常规文件</h3>
     
-        <a href="/2017/12/04/Google 地图 JavaScript API（四）/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/03/响应式开发/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-水平垂直居中"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/02/02/水平垂直居中/">CSS水平垂直居中</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-02-02 22:23:31" datetime="2018-02-02T14:23:31.000Z"  itemprop="datePublished">2018-02-02</time>
+
+        
+
+
+        
+	<span id="/2018/02/02/水平垂直居中/" class="leancloud_visitors" data-flag-title="CSS水平垂直居中" title="CSS水平垂直居中">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/02/02/水平垂直居中/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/02/水平垂直居中/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://github.com/yanhaijing/vertical-center" target="_blank" rel="noopener">vertical-center</a><br>全部从该项目转载，侵删。</p>
+<h1 id="仅居中元素定宽高适用："><a href="#仅居中元素定宽高适用：" class="headerlink" title="仅居中元素定宽高适用："></a>仅居中元素定宽高适用：</h1><p>absolute + 负margin</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 50%;</span><br><span class="line">    <span class="selector-tag">left</span>: 50%;</span><br><span class="line">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">    <span class="selector-tag">margin-top</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>absolute + margin auto</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 0;</span><br><span class="line">    <span class="selector-tag">left</span>: 0;</span><br><span class="line">    <span class="selector-tag">right</span>: 0;</span><br><span class="line">    <span class="selector-tag">bottom</span>: 0;</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>absolute + calc</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">    <span class="selector-tag">left</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="居中元素不定宽高适用："><a href="#居中元素不定宽高适用：" class="headerlink" title="居中元素不定宽高适用："></a>居中元素不定宽高适用：</h1><p>absolute + transform</p>
+    
+        <a href="/2018/02/02/水平垂直居中/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -632,7 +710,7 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
     </div>
 </nav>
 

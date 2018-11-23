@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-ES6_ES2015语法及Babel"
+                <article id="post-Go"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/28/ES6_ES2015语法及Babel/">ES6/ES2015语法及Babel</a>
+      <a class="post-title-link" href="/2018/04/25/Go/">Go</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-28 00:01:00" datetime="2018-02-27T16:01:00.000Z"  itemprop="datePublished">2018-02-28</time>
+        <time class="post-time" title="2018-04-25 15:36:30" datetime="2018-04-25T07:36:30.000Z"  itemprop="datePublished">2018-04-25</time>
 
         
 
 
         
-	<span id="/2018/02/28/ES6_ES2015语法及Babel/" class="leancloud_visitors" data-flag-title="ES6/ES2015语法及Babel" title="ES6/ES2015语法及Babel">
+	<span id="/2018/04/25/Go/" class="leancloud_visitors" data-flag-title="Go" title="Go">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/28/ES6_ES2015语法及Babel/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/28/ES6_ES2015语法及Babel/"></span>
+        <a href="/2018/04/25/Go/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/25/Go/"></span>
         </a>
     </span>
 
@@ -204,47 +204,88 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>偶然在项目中看见，感觉是重要的内容，先了解下基本语法，等有空再深入学习。<br>babel迷之安装 一觉醒来打开webstorm发现装上了Σ(っ °Д °;)っ<br>File Watcher打开添加babel时programa一栏填写:</p>
-<pre><code>$ProjectFileDir$/node_modules/.bin/babel
-</code></pre><p>然后就能自动转码为ES5啦:)</p>
-<h3 id="1-文档转换"><a href="#1-文档转换" class="headerlink" title="1. 文档转换"></a>1. 文档转换</h3><p>Babel的REPL在线编译器，将ES6代码转为ES5代码。<br><a href="https://babeljs.io/repl/" target="_blank" rel="external">https://babeljs.io/repl/</a></p>
-<h3 id="2-ES6部分特性"><a href="#2-ES6部分特性" class="headerlink" title="2. ES6部分特性"></a>2. ES6部分特性</h3><ol>
-<li><code>var</code>声明的内层变量会覆盖外层变量，而<code>let</code>提供块级作用域，变量只在代码块内有效。</li>
-<li>当引用第三方库时声明的变量，用<code>const</code>来声明可以避免未来不小心重命名而导致出现bug</li>
-<li>引入<code>Class</code>（类）概念，可以通过<code>extends</code>关键字实现继承。（这部分感觉有点像java）</li>
-<li><code>arrow function箭头函数的</code>this<code>是继承外层代码块的</code>this`。</li>
-<li><code>template string</code>，用反引号来标识起始，用<code>${}</code>来引用变量，而且所有的空格和缩进都会被保留在输出之中.</li>
-<li><code>destructuring</code>解构:从数组和对象中提取值，对变量进行赋值。</li>
-<li><code>default</code>默认值, <code>rest</code>语法(用Rest操作符以后，args参数就是一个数组了，任何操作数组的方法都可以直接对args使用)</li>
-</ol>
-<hr>
-<p>电脑重装了，反正要重新配置环境，不如找个东西边学边装。就决定是你了，ES6！</p>
-<ol>
-<li>惯例安装nodejs以及express</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save</div><div class="line">$ npm install body-parser --save</div><div class="line">$ npm install cookie-parser --save</div><div class="line">$ npm install multer --save</div><div class="line">$ npm list express</div></pre></td></tr></table></figure>
-<p>途中出现第一个问题，<code>npm ERR! extraneous</code>，<a href="https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o" target="_blank" rel="external">https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o</a><br>第二个问题 <code>express command not found</code> ，解决方法<a href="https://stackoverflow.com/questions/23002448/express-command-not-found" target="_blank" rel="external">https://stackoverflow.com/questions/23002448/express-command-not-found</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g express-generator</div></pre></td></tr></table></figure></p>
-<ol>
-<li>gulp<br><a href="http://www.gulpjs.com.cn/docs/" target="_blank" rel="external">文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ touch .babelrc</div><div class="line"></div><div class="line">$ touch gulpfile.babel.js</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>因为使用ES6语法，所以必须创建<code>gulpfile.babel.js</code>文件而不是<code>gulpfile.js</code></p>
-<hr>
-<p>然后又出现了很多问题，我就先去学习了gulp的详细用法，写了三篇文章总结。又学会了使用yeoman工具直接构建项目骨架。详细参见之前的博文。我发现webstorm里也可以直接选择yeoman构建，神器啊。<br>下面真的开始学习ES6语法了 O_&lt;</p>
-<hr>
-<p>参考阮一峰的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">《ECMAScript 6 入门》</a></p>
-<h3 id="1-let-amp-const"><a href="#1-let-amp-const" class="headerlink" title="1. let &amp; const"></a>1. let &amp; const</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>;i&lt;<span class="number">3</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-<ol>
-<li>块作用域（大括号内）第二个<code>console.log(i)</code>脱离了块作用域，于是只能输出1，2。</li>
-<li>严格模式：ES5代码中存在<code>use strict</code>来启动文件采用严格模式，ES6中则强制开启。严格模式中变量未声明则不能引用，会报错。</li>
-<li>使用let时不能重复定义变量。</li>
-<li>使用const声明的常量不能修改。</li>
-<li>第4点注意情况</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> PI =<span class="number">3.1415926</span>;   <span class="comment">//不能修改</span></div><div class="line"><span class="keyword">const</span> K =&#123;</div><div class="line">  <span class="attr">a</span>:<span class="number">1</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//K指向对象存储的指针，对象可变指针不变。</span></div><div class="line">K.b = <span class="number">3</span>;</div></pre></td></tr></table></figure>
-<h3 id="2-解构赋值"><a href="#2-解构赋值" class="headerlink" title="2. 解构赋值"></a>2. 解构赋值</h3>
+        <p><a href="https://blog.csdn.net/wangshubo1989/article/details/73784907" target="_blank" rel="noopener">https://blog.csdn.net/wangshubo1989/article/details/73784907</a></p>
+<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><a href="https://github.com/golang/go/wiki/NonEnglish" target="_blank" rel="noopener">wiki</a></p>
+<p><a href="https://studygolang.com/" target="_blank" rel="noopener">Go语言中文网</a></p>
+<p><a href="https://studygolang.com/pkgdoc" target="_blank" rel="noopener">Golang标准库文档</a></p>
+<p><a href="http://zh-golang.appspot.com/doc/" target="_blank" rel="noopener">Go 编程语言</a> - Chinese Translation of tip.golang.org</p>
+<p><a href="https://books.studygolang.com/gopl-zh/" target="_blank" rel="noopener">Go语言圣经（中文版）</a></p>
     
-        <a href="/2018/02/28/ES6_ES2015语法及Babel/" class="post-more waves-effect waves-button">
+        <a href="/2018/04/25/Go/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-VLC插件实现监控和RTSP视频播放"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/04/23/VLC插件实现监控和RTSP视频播放/">VLC插件实现监控和RTSP视频播放</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-04-23 00:01:00" datetime="2018-04-22T16:01:00.000Z"  itemprop="datePublished">2018-04-23</time>
+
+        
+
+
+        
+	<span id="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="leancloud_visitors" data-flag-title="VLC插件实现监控和RTSP视频播放" title="VLC插件实现监控和RTSP视频播放">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/23/VLC插件实现监控和RTSP视频播放/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://software.intel.com/en-us/html5/hub/blogs/using-the-getusermedia-api-with-the-html5-video-and-canvas-elements/" target="_blank" rel="noopener">Using The Getusermedia API With The HTML5 Video And Canvas Elements</a></p>
+<p>配合海康威视摄像头使用<br>不兼容chrome</p>
+<p>参考链接</p>
+<p><a href="https://www.cnblogs.com/eoooxy/p/6401554.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">海康威视 嵌入到web页面相关问题</a></p>
+<p><a href="https://www.cnblogs.com/shusheng/archive/2011/12/15/2288649.html" target="_blank" rel="noopener">使用海康摄像头实现实时监控</a></p>
+<p><a href="https://www.cnblogs.com/ry-93-dream/articles/7554919.html" target="_blank" rel="noopener">在Chrome上通过vlc插件播放rtsp和rtmp视频</a></p>
+<p><a href="https://blog.csdn.net/hsany330/article/details/73457324?locationNum=2&amp;fps=1" target="_blank" rel="noopener">利用vlc插件将IP摄像头嵌入网页和网页播放RTSP流</a></p>
+<p><a href="https://www.cnblogs.com/jhlong/p/5848490.html" target="_blank" rel="noopener">web网页中使用vlc插件播放相机rtsp流视频</a></p>
+
+    
+        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -260,7 +301,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-响应式开发"
+                <article id="post-Linux查询命令"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -268,20 +309,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/03/响应式开发/">响应式开发总结</a>
+      <a class="post-title-link" href="/2018/04/01/Linux查询命令/">Linux查询命令</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-03 00:01:00" datetime="2018-02-02T16:01:00.000Z"  itemprop="datePublished">2018-02-03</time>
+        <time class="post-time" title="2018-04-01 00:00:00" datetime="2018-03-31T16:00:00.000Z"  itemprop="datePublished">2018-04-01</time>
 
         
 
 
         
-	<span id="/2018/02/03/响应式开发/" class="leancloud_visitors" data-flag-title="响应式开发总结" title="响应式开发总结">
+	<span id="/2018/04/01/Linux查询命令/" class="leancloud_visitors" data-flag-title="Linux查询命令" title="Linux查询命令">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -292,8 +333,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/03/响应式开发/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/03/响应式开发/"></span>
+        <a href="/2018/04/01/Linux查询命令/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/01/Linux查询命令/"></span>
         </a>
     </span>
 
@@ -308,17 +349,87 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>之前对于响应式都是用bootstrap等响应式框架，非常肤浅。就学习了具体的响应式开发相关内容，运用媒体查询写出不同的css布局，锻炼了基本技能，对基础概念也有了新了解。还学习了响应式图片的处理和兼容性处理，也收获良多。</p>
-<h3 id="1-响应式网站"><a href="#1-响应式网站" class="headerlink" title="1. 响应式网站"></a>1. 响应式网站</h3><blockquote>
-<p>所谓响应式网站，就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本，在各种分辨率的设备下都能很好地展示页面效果。</p>
-</blockquote>
-<h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><p>flexible grid layout 弹性网格布局<br>flexible image 弹性图片<br>media queries 媒体查询</p>
-<h4 id="优点和缺点"><a href="#优点和缺点" class="headerlink" title="优点和缺点"></a>优点和缺点</h4><p>一套代码适应多终端设备，省人省时省钱，利于SEO。缺点是需要加载更多的样式和脚本资源，造成代码冗余。</p>
-<h4 id="实践原则："><a href="#实践原则：" class="headerlink" title="实践原则："></a>实践原则：</h4><p>制作网站大抵都遵循两个原则：渐近增强(Progressive Enhancement)和优雅降级(Graceful Degradation)，渐近增强是指先制作一个简陋但是兼容各个版本浏览器的网页，然后再添加效果。而优雅降级则刚好相反，直接制作出效果绚烂的兼容主流浏览器的产品，然后根据低版本再做出一些兼容性处理。</p>
-<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>使用相对单位并配合媒体查询来实现页面，我们只需要根据设计图,将绝对单位px转换为相对单位rem或者em并配合@media即可。</p>
-<h3 id="2-非常规文件"><a href="#2-非常规文件" class="headerlink" title="2. 非常规文件"></a>2. 非常规文件</h3>
+        <p><a href="https://www.linux-man.cn/" target="_blank" rel="noopener">Linux命令手册</a></p>
+<p>wget -qO- bench.sh | bash                一键测试linux性能<br>cat /proc/cpuinfo                查看cpu<br>ifconfig               查看网卡信息<br>free -m                查看内存<br>df -lh                     查看硬盘信息<br>wget <a href="http://cachefly.cachefly.net/100mb.test" target="_blank" rel="noopener">http://cachefly.cachefly.net/100mb.test</a> &amp;&amp; rm -f 100mb.test        端口速度测试<br>smartctl -A /dev/sda         查看硬盘使用时间 (提前安装smartmontools)<br>finger                查看用户信息<br>chkconfig –list                查看服务<br>ps aux            查看系统任务<br>top                实时查看资源占用<br>rpm -qa                查看所有安装的软件包<br>vnstat                查看流量 -l 实时 -d 每天 -m 每月<br>netstat -lunt                查看端口信息<br>iptables -L                查看防火墙<br>getconf LONG_BIT                查看是32位还是64位<br>whereis [name]                查找软件的路径</p>
+
     
-        <a href="/2018/02/03/响应式开发/" class="post-more waves-effect waves-button">
+        <a href="/2018/04/01/Linux查询命令/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-同源和跨域（五）HTML5、iframe和其他方式跨域"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/">同源和跨域（五）HTML5、iframe和其他方式跨域</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-03-21 23:23:31" datetime="2018-03-21T15:23:31.000Z"  itemprop="datePublished">2018-03-21</time>
+
+        
+
+
+        
+	<span id="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" class="leancloud_visitors" data-flag-title="同源和跨域（五）HTML5、iframe和其他方式跨域" title="同源和跨域（五）HTML5、iframe和其他方式跨域">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>整理来源,侵删致歉<br><a href="https://www.cnblogs.com/vajoy/p/4295825.html#it5" target="_blank" rel="external">浅谈WEB跨域的实现（前端向）</a><br><a href="https://www.cnblogs.com/sdcs/p/8484905.html" target="_blank" rel="external">前端解决跨域的九种方法</a></p>
+<p>###1. Cross-document messaging</p>
+<p><a href="https://html.spec.whatwg.org/#crossDocumentMessages" target="_blank" rel="external">crossDocumentMessages</a></p>
+<p>在 Cross-document messaging 中，我们可以使用 postMessage 方法和 onmessage 事件来实现不同域之间的通信，其中postMessage用于实时向接收信息的页面发送消息，其语法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  otherWindow.postMessage(message, targetOrigin);</div><div class="line"></div><div class="line">otherWindow: 对接收信息页面的window的引用。可以是页面中iframe的contentWindow属性；window.open的返回值；通过name或下标从window.frames取到的值。</div><div class="line">message: 所要发送的数据，string类型。</div><div class="line">targetOrigin: 允许通信的域的url，“*”表示不作限制。</div></pre></td></tr></table></figure>
+<p>我们可以在父页面中嵌入不同域的子页面（iframe实现，而且常规会把它隐藏掉），在子页面调用 postMessage 方法向父页面发送数据：</p>
+<p>父页面（<a href="http://localhost:10847/sop/a.html）：" target="_blank" rel="external">http://localhost:10847/sop/a.html）：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;postMessage&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;iframe style=&quot;display:none;&quot; id=&quot;ifr&quot; src=&quot;http://127.0.0.1:10847/sop/b.html&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    window.addEventListener(&apos;message&apos;, function(event)&#123;</div><div class="line">        // 通过origin属性判断消息来源地址</div><div class="line">        if (event.origin == &apos;http://127.0.0.1:10847&apos;) &#123;</div><div class="line">            alert(event.data);    // 弹出从子页面post过来的信息</div><div class="line">        &#125;</div><div class="line">    &#125;, false);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>子页面（<a href="http://127.0.0.1:10847/sop/b.html）：" target="_blank" rel="external">http://127.0.0.1:10847/sop/b.html）：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;子页面&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var ifr = window.parent;  //获取父窗体</div><div class="line">    var targetOrigin = &apos;http://localhost:10847&apos;;  // 若写成 http://127.0.0.1:10847 则将无法执行postMessage</div><div class="line">    ifr.postMessage(&apos;这是传递给a.html的信息&apos;, targetOrigin);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-WebSocket"><a href="#2-WebSocket" class="headerlink" title="2. WebSocket"></a>2. WebSocket</h3><p>具体实现 <a href="https://www.cnblogs.com/vajoy/p/4295825.html" target="_blank" rel="external">https://www.cnblogs.com/vajoy/p/4295825.html</a></p>
+<p>WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器全双工通信，同时允许跨域通讯，是server push技术的一种很棒的实现。<br><a href="http://socket.io/" target="_blank" rel="external">socket.io</a>很好地封装了webSocket接口，提供了更简单、灵活的接口，也对不支持webSocket的浏览器提供了向下兼容（例如替换为Flash Socket/Comet）。</p>
+<h3 id="3-document-domain-iframe跨域"><a href="#3-document-domain-iframe跨域" class="headerlink" title="3. document.domain + iframe跨域"></a>3. document.domain + iframe跨域</h3>
+    
+        <a href="/2018/03/21/同源和跨域（五）HTML5、iframe和其他方式跨域/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -334,7 +445,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-水平垂直居中"
+                <article id="post-同源和跨域（四）跨域资源共享 CORS"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -342,20 +453,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/02/水平垂直居中/">CSS水平垂直居中</a>
+      <a class="post-title-link" href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/">同源和跨域（四）跨域资源共享 CORS</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-02 22:23:31" datetime="2018-02-02T14:23:31.000Z"  itemprop="datePublished">2018-02-02</time>
+        <time class="post-time" title="2018-03-20 17:52:53" datetime="2018-03-20T09:52:53.000Z"  itemprop="datePublished">2018-03-20</time>
 
         
 
 
         
-	<span id="/2018/02/02/水平垂直居中/" class="leancloud_visitors" data-flag-title="CSS水平垂直居中" title="CSS水平垂直居中">
+	<span id="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" class="leancloud_visitors" data-flag-title="同源和跨域（四）跨域资源共享 CORS" title="同源和跨域（四）跨域资源共享 CORS">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -366,8 +477,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/02/水平垂直居中/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/02/水平垂直居中/"></span>
+        <a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/"></span>
         </a>
     </span>
 
@@ -382,23 +493,28 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://github.com/yanhaijing/vertical-center" target="_blank" rel="noopener">vertical-center</a><br>全部从该项目转载，侵删。</p>
-<h1 id="仅居中元素定宽高适用："><a href="#仅居中元素定宽高适用：" class="headerlink" title="仅居中元素定宽高适用："></a>仅居中元素定宽高适用：</h1><p>absolute + 负margin</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 50%;</span><br><span class="line">    <span class="selector-tag">left</span>: 50%;</span><br><span class="line">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">    <span class="selector-tag">margin-top</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>absolute + margin auto</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 0;</span><br><span class="line">    <span class="selector-tag">left</span>: 0;</span><br><span class="line">    <span class="selector-tag">right</span>: 0;</span><br><span class="line">    <span class="selector-tag">bottom</span>: 0;</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>absolute + calc</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">    <span class="selector-tag">left</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="居中元素不定宽高适用："><a href="#居中元素不定宽高适用：" class="headerlink" title="居中元素不定宽高适用："></a>居中元素不定宽高适用：</h1><p>absolute + transform</p>
+        <p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS" target="_blank" rel="external">跨來源資源共用（CORS）</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制（CORS）</a></p>
+<pre><code>跨來源資源共用（Cross-Origin Resource Sharing (CORS)）是一種使用額外 HTTP 標頭令目前瀏覽網站的使用者代理取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個跨來源 HTTP 請求（cross-origin HTTP request）。
+</code></pre><p>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
+<h3 id="1-Access-Control-Allow-Origin"><a href="#1-Access-Control-Allow-Origin" class="headerlink" title="1. Access-Control-Allow-Origin"></a>1. Access-Control-Allow-Origin</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" target="_blank" rel="external">Access-Control-Allow-Origin</a></p>
+<p>Access-Control-Allow-Origin 响应头指定了该响应的资源是否被允许与给定的origin共享。</p>
+<p>如需允许所有资源都可以访问您的资源，设置：</p>
+<pre><code>Access-Control-Allow-Origin: *
+</code></pre><p>如需允许<a href="https://developer.mozilla.org访问您的资源，设置：" target="_blank" rel="external">https://developer.mozilla.org访问您的资源，设置：</a></p>
+<pre><code>Access-Control-Allow-Origin: https://developer.mozilla.org
+</code></pre><h3 id="2-简单请求（simple-request）和非简单请求（not-so-simple-request）"><a href="#2-简单请求（simple-request）和非简单请求（not-so-simple-request）" class="headerlink" title="2. 简单请求（simple request）和非简单请求（not-so-simple request）"></a>2. 简单请求（simple request）和非简单请求（not-so-simple request）</h3><p>1、简单的COR请求，它可以直接向外域资源发起请求。它必须仅仅包含简单的方法和头。</p>
+<p>2、如果COR包含复杂的方法和头，它需要发出预检验（Preflight）请求，它先向资源服务器发出一个OPTIONS方法、包含“Origin”头的请求。该回复可以控制COR请求的方法，HTTP头以及验证等信息。只有该请求获得允许以后，才会发起真实的外域请求。</p>
+<p>只要同时满足以下两大条件，就属于简单请求。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">（1) 请求方法是以下三种方法之一：</div><div class="line">HEAD</div><div class="line">GET</div><div class="line">POST</div><div class="line"></div><div class="line">（2）HTTP的头信息不超出以下几种字段：</div><div class="line">Accept</div><div class="line">Accept-Language</div><div class="line">Content-Language</div><div class="line">Last-Event-ID</div><div class="line">Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</div></pre></td></tr></table></figure></p>
+<h3 id="3-详细使用"><a href="#3-详细使用" class="headerlink" title="3. 详细使用"></a>3. 详细使用</h3>
     
-        <a href="/2018/02/02/水平垂直居中/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/20/同源和跨域（四）跨域资源共享 CORS/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -407,7 +523,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-You2php使用（完全转载）"
+                <article id="post-同源和跨域（三）Fetch API"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -415,20 +531,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/12/You2php使用（完全转载）/">You2php使用（完全转载）</a>
+      <a class="post-title-link" href="/2018/03/17/同源和跨域（三）Fetch API/">同源和跨域（三）Fetch API</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-01-12 19:34:30" datetime="2018-01-12T11:34:30.000Z"  itemprop="datePublished">2018-01-12</time>
+        <time class="post-time" title="2018-03-17 09:23:54" datetime="2018-03-17T01:23:54.000Z"  itemprop="datePublished">2018-03-17</time>
 
         
 
 
         
-	<span id="/2018/01/12/You2php使用（完全转载）/" class="leancloud_visitors" data-flag-title="You2php使用（完全转载）" title="You2php使用（完全转载）">
+	<span id="/2018/03/17/同源和跨域（三）Fetch API/" class="leancloud_visitors" data-flag-title="同源和跨域（三）Fetch API" title="同源和跨域（三）Fetch API">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -439,8 +555,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/01/12/You2php使用（完全转载）/#comment">
-            <span class="valine-comment-count" data-xid="/2018/01/12/You2php使用（完全转载）/"></span>
+        <a href="/2018/03/17/同源和跨域（三）Fetch API/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/17/同源和跨域（三）Fetch API/"></span>
         </a>
     </span>
 
@@ -455,157 +571,25 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h1 id="什么是You2php"><a href="#什么是You2php" class="headerlink" title="什么是You2php?"></a>什么是You2php?</h1><p>You2PHP是一个用PHP开发的Youtube流量代理脚本、通过对接谷歌api获取数据，可用来搭建Youtube视频镜像站、可实现长城之内观看Youtube。<br>详情官网：<a href="https://you2php.github.io" target="_blank" rel="noopener">https://you2php.github.io</a><br>免翻墙：<a href="https://github.com/You2php/you2php/" target="_blank" rel="noopener">https://github.com/You2php/you2php/</a></p>
-<h1 id="简单原理："><a href="#简单原理：" class="headerlink" title="简单原理："></a>简单原理：</h1><p>我是将You2php部署在000webhost的海外免费虚拟主机上，绑定自己免费域名，再通过cloud flare进行DNS免费加速，实现看油管视频的。000webhost为每个free app提供10G/月的流量，所以还得省点使用。</p>
+        <p><a href="https://www.w3ctech.com/topic/854" target="_blank" rel="external">This API is So Fetching</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="external">使用 Fetch</a></p>
+<p><a href="https://fetch.spec.whatwg.org/#simple-header" target="_blank" rel="external">Fetch Living Standard</a></p>
+<p><a href="https://github.com/github/fetch" target="_blank" rel="external">兼容性window.fetch polyfill</a></p>
+<h3 id="1-概览"><a href="#1-概览" class="headerlink" title="1. 概览"></a>1. 概览</h3><pre><code>fetch(url/request[, options])
+var request = new Request(url/request[, options]);
+</code></pre><p><strong>fetch</strong> 是全局量 window 的一个方法<br><strong>request</strong> 是一个 Request 对象，Request 参数和 fetch 参数相同<br><strong>options</strong> 是一个对象，主要key 如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">method: GET/POST等</div><div class="line">headers: 一个普通对象，或者一个 Headers 对象</div><div class="line">body: 传递给服务器的数据，可以是字符串/Buffer/Blob/FormData，如果方法是 GET/HEAD，则不能有此参数</div><div class="line">mode: cors / no-cors / same-origin， 是否跨域，默认是 no-cors</div><div class="line">credentials: omit / same-origin / include</div><div class="line">cache: default / no-store / reload / no-cache / force-cache / only-if-cached</div><div class="line">redirect: follow / error / manual</div><div class="line">referrer: no-referrer / client / 或者一个url</div><div class="line">referrerPolicy: no-referrer / no-referrer-when-downgrade / origin /  origin-when-cross-origin / unsafe-url</div><div class="line">integrity: 资源完整性验证</div><div class="line">fetch() 返回一个 promise，所以这么用</div></pre></td></tr></table></figure></p>
+<p>fetch API 使用 Promises 来处理结果/回调</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 对响应的简单处理</span></div><div class="line">fetch(<span class="string">'/some/url'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="comment">// 出错了;等价于 then 的第二个参数,但这样更直观 :(</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 链式处理,将异步变为类似单线程的写法: 高级用法.</span></div><div class="line">fetch(<span class="string">'/some/url'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="comment">//... 执行成功, 第1步...</span></div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">returnedValue</span>) </span>&#123;</div><div class="line">    <span class="comment">// ... 执行成功, 第2步...</span></div><div class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="comment">// 中途任何地方出错...在此处理 :( </span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="2-Headers"><a href="#2-Headers" class="headerlink" title="2. Headers"></a>2. Headers</h3>
     
-        <a href="/2018/01/12/You2php使用（完全转载）/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/17/同源和跨域（三）Fetch API/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-hyperledger composer-sample-networks（五）"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/31/hyperledger composer-sample-networks（五）/">hyperledger composer-sample-networks（五）</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-12-31 23:30:11" datetime="2017-12-31T15:30:11.000Z"  itemprop="datePublished">2017-12-31</time>
-
-        
-
-
-        
-	<span id="/2017/12/31/hyperledger composer-sample-networks（五）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（五）" title="hyperledger composer-sample-networks（五）">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/31/hyperledger composer-sample-networks（五）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/31/hyperledger composer-sample-networks（五）/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-basic-sample-network"><a href="#1-basic-sample-network" class="headerlink" title="1. basic-sample-network"></a>1. basic-sample-network</h3><p><a href="https://github.com/hyperledger/composer-sample-networks/tree/master/packages/basic-sample-network" target="_blank" rel="external">basic-sample-network</a></p>
-<blockquote>
-<p>This is the “Hello World” of Hyperledger Composer samples, which demonstrates the core functionality of Hyperledger Composer by changing the value of an asset.</p>
-</blockquote>
-<h4 id="Participant-SampleParticipant"><a href="#Participant-SampleParticipant" class="headerlink" title="Participant SampleParticipant"></a><strong>Participant</strong> SampleParticipant</h4><h4 id="Asset-SampleAsset"><a href="#Asset-SampleAsset" class="headerlink" title="Asset SampleAsset"></a><strong>Asset</strong> SampleAsset</h4><h4 id="Transaction-SampleTransaction"><a href="#Transaction-SampleTransaction" class="headerlink" title="Transaction SampleTransaction"></a><strong>Transaction</strong> SampleTransaction</h4><h4 id="Event-SampleEvent"><a href="#Event-SampleEvent" class="headerlink" title="Event SampleEvent"></a><strong>Event</strong> SampleEvent</h4><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1fmlc3hfyudj20kc0degnn.jpg" alt="basic"></p  class="index-item-img">
-    
-        <a href="/2017/12/31/hyperledger composer-sample-networks（五）/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-hyperledger composer-sample-networks（四）"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/24/hyperledger composer-sample-networks（四）/">hyperledger composer-sample-networks（四）</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-12-24 19:30:51" datetime="2017-12-24T11:30:51.000Z"  itemprop="datePublished">2017-12-24</time>
-
-        
-
-
-        
-	<span id="/2017/12/24/hyperledger composer-sample-networks（四）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（四）" title="hyperledger composer-sample-networks（四）">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/24/hyperledger composer-sample-networks（四）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/24/hyperledger composer-sample-networks（四）/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-pii-network"><a href="#1-pii-network" class="headerlink" title="1. pii-network"></a>1. pii-network</h3><p><a href="https://github.com/hyperledger/composer-sample-networks/tree/master/packages/pii-network" target="_blank" rel="external">Personally Identifiable Information Network</a></p>
-<blockquote>
-<p>A business network where members can grant/revoke access to their personal information to other members.</p>
-</blockquote>
-<h4 id="Participant-Member"><a href="#Participant-Member" class="headerlink" title="Participant Member"></a><strong>Participant</strong> Member</h4><h4 id="Transaction-AuthorizeAccess-RevokeAccess"><a href="#Transaction-AuthorizeAccess-RevokeAccess" class="headerlink" title="Transaction AuthorizeAccess RevokeAccess"></a><strong>Transaction</strong> AuthorizeAccess RevokeAccess</h4><p><img src="http://wx1.sinaimg.cn/large/789d050dgy1fmlc3g68xnj20ke088mxy.jpg" alt="pii"></p  class="index-item-img">
-    
-        <a href="/2017/12/24/hyperledger composer-sample-networks（四）/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -617,7 +601,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
     </div>
 </nav>
 

@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-excel转markdown"
+                <article id="post-go时间处理"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/02/excel转markdown/">excel转markdown</a>
+      <a class="post-title-link" href="/2018/10/22/go时间处理/">go时间处理</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-07-02 07:56:30" datetime="2018-07-01T23:56:30.000Z"  itemprop="datePublished">2018-07-02</time>
+        <time class="post-time" title="2018-10-22 10:16:29" datetime="2018-10-22T02:16:29.000Z"  itemprop="datePublished">2018-10-22</time>
 
         
 
 
         
-	<span id="/2018/07/02/excel转markdown/" class="leancloud_visitors" data-flag-title="excel转markdown" title="excel转markdown">
+	<span id="/2018/10/22/go时间处理/" class="leancloud_visitors" data-flag-title="go时间处理" title="go时间处理">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/07/02/excel转markdown/#comment">
-            <span class="valine-comment-count" data-xid="/2018/07/02/excel转markdown/"></span>
+        <a href="/2018/10/22/go时间处理/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/22/go时间处理/"></span>
         </a>
     </span>
 
@@ -204,79 +204,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://github.com/fanfeilong/exceltk" target="_blank" rel="noopener">exceltk</a></p>
-<p><a href="https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exceltk -t md -xls table123.xls</span><br></pre></td></tr></table></figure>
-
+        <p><a href="https://www.36nu.com/post/277" target="_blank" rel="noopener">go语言中日期字符串与时间戳互转</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	now := time.Now()</span><br><span class="line">	fmt.Println(&quot;当前时间:&quot;, now)</span><br><span class="line"></span><br><span class="line">	 //两小时之后的时间</span><br><span class="line">	 h, _ := time.ParseDuration(&quot;2h&quot;)</span><br><span class="line">	 nowAfter2Hour := now.Add(h)</span><br><span class="line">	 fmt.Println(&quot;两小时之后的时间:&quot;, nowAfter2Hour)</span><br><span class="line"></span><br><span class="line">	 //两小时之前的时间</span><br><span class="line">	 negativeH, _ := time.ParseDuration(&quot;-2h&quot;)</span><br><span class="line">	 nowBefore2Hour := now.Add(negativeH)</span><br><span class="line">	 fmt.Println(&quot;两小时之前的时间:&quot;, nowBefore2Hour)</span><br><span class="line"></span><br><span class="line">	// subtime := nowAfter2Hour.Sub(nowBefore2Hour)</span><br><span class="line">	// fmt.Println(&quot;时间差:&quot;, subtime)</span><br><span class="line"></span><br><span class="line">	//datetime := &quot;2015-01-01 00:00:00&quot; //待转化为时间戳的字符串</span><br><span class="line">	datetime1 := &quot;2018-10-22 11:17:20&quot; //待转化为时间戳的字符串</span><br><span class="line">	datetime2 := &quot;2018-10-23 11:17:20&quot; //待转化为时间戳的字符串</span><br><span class="line"></span><br><span class="line">	//日期转化为时间戳</span><br><span class="line">	timeLayout := &quot;2006-01-02 15:04:05&quot; //转化所需模板</span><br><span class="line"></span><br><span class="line">	tmp1, _ := time.Parse(timeLayout, datetime1)</span><br><span class="line">	tmp2, _ := time.Parse(timeLayout, datetime2)</span><br><span class="line">	timestamp1 := tmp1.Unix() //转化为时间戳 类型是int64</span><br><span class="line">	timestamp2 := tmp2.Unix() //转化为时间戳 类型是int64</span><br><span class="line"></span><br><span class="line">	subtime := (timestamp2 - timestamp1) / 3600 / 24</span><br><span class="line"></span><br><span class="line">	fmt.Println(&quot;时间差天数:&quot;, subtime)</span><br><span class="line">	// subtime := strconv.ParseFloat(sub, 64)</span><br><span class="line"></span><br><span class="line">	ProfitAmount := (0.02 * 12 / 365) * 10000 * (float64(subtime))</span><br><span class="line">	fmt.Println(&quot;利润&quot;, ProfitAmount)</span><br><span class="line">	//时间戳转化为日期</span><br><span class="line">	datetime1 = time.Unix(timestamp1, 0).Format(timeLayout)</span><br><span class="line">	datetime2 = time.Unix(timestamp2, 0).Format(timeLayout)</span><br><span class="line">	datetime3 := time.Unix(subtime, 0).Format(timeLayout)</span><br><span class="line">	fmt.Println(datetime3)</span><br><span class="line"></span><br><span class="line">	datetime3day := time.Unix(subtime, 0).Day()</span><br><span class="line">	fmt.Println(datetime3day)</span><br><span class="line"></span><br><span class="line">	 //十分钟之后的时间</span><br><span class="line">	 m, _ := time.ParseDuration(&quot;10m&quot;)</span><br><span class="line">	 nowAfter10Minute := now.Add(m)</span><br><span class="line">	 fmt.Println(&quot;十分钟之后的时间:&quot;, nowAfter10Minute)</span><br><span class="line"></span><br><span class="line">	 //十分钟之前的时间</span><br><span class="line">	 negativeM, _ := time.ParseDuration(&quot;-10m&quot;)</span><br><span class="line">	 nowBefore10Minute := now.Add(negativeM)</span><br><span class="line">	 fmt.Println(&quot;十分钟之前的时间:&quot;, nowBefore10Minute)</span><br><span class="line"></span><br><span class="line">	 //30s之后的时间</span><br><span class="line">	 s, _ := time.ParseDuration(&quot;30s&quot;)</span><br><span class="line">	 nowAfter30Second := now.Add(s)</span><br><span class="line">	 fmt.Println(&quot;30s之后的时间:&quot;, nowAfter30Second)</span><br><span class="line"></span><br><span class="line">	 //30s之前的时间</span><br><span class="line">	 negativeS, _ := time.ParseDuration(&quot;-30s&quot;)</span><br><span class="line">	 nowBefore30Second := now.Add(negativeS)</span><br><span class="line">	 fmt.Println(&quot;30s之前的时间:&quot;, nowBefore30Second)</span><br><span class="line"></span><br><span class="line">	 //1年1个月1天 之后的时间</span><br><span class="line">	 fmt.Println(&quot;1年2个月3天之后的时间:&quot;, now.AddDate(1, 2, 3))</span><br><span class="line"></span><br><span class="line">	 //2年2个月2天之前的时间</span><br><span class="line">	 fmt.Println(&quot;2年3个月4天之前的时间:&quot;, now.AddDate(-2, -3, -4))</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     
-        <a href="/2018/07/02/excel转markdown/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-JAVA GO YAML JSON"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/23/JAVA GO YAML JSON/">JAVA GO YAML JSON</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-23 08:15:30" datetime="2018-06-23T00:15:30.000Z"  itemprop="datePublished">2018-06-23</time>
-
-        
-
-
-        
-	<span id="/2018/06/23/JAVA GO YAML JSON/" class="leancloud_visitors" data-flag-title="JAVA GO YAML JSON" title="JAVA GO YAML JSON">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/23/JAVA GO YAML JSON/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/23/JAVA GO YAML JSON/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>[TOC]</p>
-<h1 id="项目代码"><a href="#项目代码" class="headerlink" title="项目代码"></a>项目代码</h1><h2 id="用Java的snakeYaml解析YAML"><a href="#用Java的snakeYaml解析YAML" class="headerlink" title="用Java的snakeYaml解析YAML"></a>用Java的snakeYaml解析YAML</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.yaml.snakeyaml.Yaml;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">testload</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">load</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException</span>&#123;</span><br><span class="line">        <span class="comment">//初始化Yaml解析器</span></span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        File f=<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>);</span><br><span class="line">        <span class="comment">//读入文件</span></span><br><span class="line">        Object result= yaml.load(<span class="keyword">new</span> FileInputStream(f));</span><br><span class="line">        System.out.println(result.getClass());</span><br><span class="line">        System.out.println( result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadMap</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            map = (Map&lt;String, Object&gt;) yaml.load(is);</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadObjects</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        List&lt;Object&gt; list = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"src/test/resources/example.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            list = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</span><br><span class="line">            <span class="keyword">for</span> (Object obj : yaml.loadAll(is)) &#123;</span><br><span class="line">                list.add(obj);</span><br><span class="line">            &#125;</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(list);</span><br><span class="line">        String json= JSON.toJSONString(list, <span class="keyword">true</span>);</span><br><span class="line">        System.out.println(json);</span><br><span class="line"></span><br><span class="line">        FileWriter fw = <span class="keyword">null</span>;</span><br><span class="line">        fw = <span class="keyword">new</span> FileWriter(<span class="string">"src/test/resources/topology.json"</span>);</span><br><span class="line">        BufferedWriter output = <span class="keyword">new</span> BufferedWriter(fw);</span><br><span class="line">        output.write(json);</span><br><span class="line">        output.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-        <a href="/2018/06/23/JAVA GO YAML JSON/" class="post-more waves-effect waves-button">
+        <a href="/2018/10/22/go时间处理/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -292,7 +223,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-FreeMarker模板生成工具"
+                <article id="post-ES6 异步编程方法"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -300,20 +231,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/07/FreeMarker模板生成工具/">FreeMarker模板生成工具</a>
+      <a class="post-title-link" href="/2018/10/19/ES6 异步编程方法/">ES6 异步编程方法</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-06-07 17:19:30" datetime="2018-06-07T09:19:30.000Z"  itemprop="datePublished">2018-06-07</time>
+        <time class="post-time" title="2018-10-19 10:16:29" datetime="2018-10-19T02:16:29.000Z"  itemprop="datePublished">2018-10-19</time>
 
         
 
 
         
-	<span id="/2018/06/07/FreeMarker模板生成工具/" class="leancloud_visitors" data-flag-title="FreeMarker模板生成工具" title="FreeMarker模板生成工具">
+	<span id="/2018/10/19/ES6 异步编程方法/" class="leancloud_visitors" data-flag-title="ES6 异步编程方法" title="ES6 异步编程方法">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -324,8 +255,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/07/FreeMarker模板生成工具/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/07/FreeMarker模板生成工具/"></span>
+        <a href="/2018/10/19/ES6 异步编程方法/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/19/ES6 异步编程方法/"></span>
         </a>
     </span>
 
@@ -340,20 +271,242 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><blockquote>
-<p>FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
-</blockquote>
-<p><strong>模板 + 数据模型 = 输出</strong><br><figure class="image-box">
-                <img src="http://freemarker.foofun.cn/figures/overview.png" alt="MVC (模型 class="index-item-img">
-                <p>MVC (模型 视图 控制器) 模式</p>
-            </figure></p>
-<p><a href="http://freemarker.foofun.cn/index.html" target="_blank" rel="noopener">官网</a></p>
-<p><a href="http://try.freemarker.org/" target="_blank" rel="noopener">http://try.freemarker.org/</a></p>
-<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h3><p><a href="http://freemarker.foofun.cn/pgui_quickstart_createconfiguration.html" target="_blank" rel="noopener">程序开发指南</a></p>
-<p>参考以下文章，侵删致歉：</p>
-<p><a href="https://segmentfault.com/a/1190000011768799" target="_blank" rel="noopener">FreeMarker 快速入门</a></p>
+        <p>大部分复制整理于以下四篇文章，侵删致歉。</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="noopener">Generator函数的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/thunk.html" target="_blank" rel="noopener">Thunk函数的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/co.html" target="_blank" rel="noopener">co函数库的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/async.html" target="_blank" rel="noopener">async函数的含义与用法</a></p>
+<h3 id="协程coroutine"><a href="#协程coroutine" class="headerlink" title="协程coroutine"></a>协程coroutine</h3><pre><code>多个线程互相协作，完成异步任务。
+</code></pre><ol>
+<li>协程A开始执行。</li>
+<li>协程A执行到一半，进入暂停，执行权转移到协程B。</li>
+<li>（一段时间后）协程B交还执行权。</li>
+<li>协程A恢复执行。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function asnycJob() &#123;</span><br><span class="line">  // ...其他代码</span><br><span class="line">  var f = yield readFile(fileA);</span><br><span class="line">  // ...其他代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码的函数 <code>asyncJob</code> 是一个协程。<br><code>yield</code> 命令表示执行到此处，执行权将交给其他协程。也就是说，<code>yield</code>命令是异步两个阶段的分界线。</p>
+<p>协程遇到 <code>yield</code> 命令就暂停，等到执行权返回，再从暂停的地方继续往后执行。它的最大优点，就是代码的写法非常像同步操作，如果去除yield命令，简直一模一样。</p>
     
-        <a href="/2018/06/07/FreeMarker模板生成工具/" class="post-more waves-effect waves-button">
+        <a href="/2018/10/19/ES6 异步编程方法/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Nodemailer"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/09/Nodemailer/">Nodemailer</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-09 10:16:29" datetime="2018-10-09T02:16:29.000Z"  itemprop="datePublished">2018-10-09</time>
+
+        
+
+
+        
+	<span id="/2018/10/09/Nodemailer/" class="leancloud_visitors" data-flag-title="Nodemailer" title="Nodemailer">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/09/Nodemailer/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/09/Nodemailer/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p> <a href="https://nodemailer.com/about/" target="_blank" rel="noopener">Nodemailer官网</a></p>
+<p> <a href="https://github.com/nodemailer/nodemailer" target="_blank" rel="noopener">nodemailer/nodemailer</a></p>
+<h3 id="1-Gmail直接登录法"><a href="#1-Gmail直接登录法" class="headerlink" title="1. Gmail直接登录法"></a>1. Gmail直接登录法</h3><p>或者<a href="https://support.google.com/accounts/answer/185839" target="_blank" rel="noopener">两步验证</a>开启后<a href="https://support.google.com/mail/answer/185833?hl=zh-Hans" target="_blank" rel="noopener">使用应用专用密码登录</a></p>
+<p>126邮箱类似，但要在设置里开启<code>客户端授权密码</code></p>
+<p> <a href="https://www.w3schools.com/nodejs/nodejs_email.asp" target="_blank" rel="noopener">Node.js Send an Email</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var nodemailer = require(&apos;nodemailer&apos;);</span><br><span class="line"></span><br><span class="line">var transporter = nodemailer.createTransport(&#123;</span><br><span class="line">  service: &apos;gmail&apos;,</span><br><span class="line">  auth: &#123;</span><br><span class="line">    user: &apos;youremail@gmail.com&apos;,</span><br><span class="line">    pass: &apos;yourpassword&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var mailOptions = &#123;</span><br><span class="line">  from: &apos;youremail@gmail.com&apos;,</span><br><span class="line">  to: &apos;myfriend@yahoo.com&apos;,</span><br><span class="line">  subject: &apos;Sending Email using Node.js&apos;,</span><br><span class="line">  text: &apos;That was easy!&apos;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">transporter.sendMail(mailOptions, function(error, info)&#123;</span><br><span class="line">  if (error) &#123;</span><br><span class="line">    console.log(error);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    console.log(&apos;Email sent: &apos; + info.response);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+    
+        <a href="/2018/10/09/Nodemailer/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-微服务（一）介绍"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/10/微服务（一）介绍/">微服务（一）介绍</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-10 17:01:30" datetime="2018-09-10T09:01:30.000Z"  itemprop="datePublished">2018-09-10</time>
+
+        
+
+
+        
+	<span id="/2018/09/10/微服务（一）介绍/" class="leancloud_visitors" data-flag-title="微服务（一）介绍" title="微服务（一）介绍">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/09/10/微服务（一）介绍/#comment">
+            <span class="valine-comment-count" data-xid="/2018/09/10/微服务（一）介绍/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h3 id="1-软件架构"><a href="#1-软件架构" class="headerlink" title="1.软件架构"></a>1.软件架构</h3><p>有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。是在软件内容，经过综合各种因素的考量，权衡，选择特定的技术，将系统划分成不同部分，并使用这些部分相互分工，彼此协作，为用户提供需要的价值。</p>
+<h4 id="影响因素"><a href="#影响因素" class="headerlink" title="影响因素"></a>影响因素</h4><p>业务需求，技术栈，成本，组织架构，可扩展性，可维护性。</p>
+<h4 id="单体架构"><a href="#单体架构" class="headerlink" title="单体架构"></a>单体架构</h4><p>功能，业务集中在一个发布包里，部署运行在同一个进程中。</p>
+<ul>
+<li>优势: 易于开发，易于测试，易于部署，易于水平伸缩</li>
+<li>劣势: 代码膨胀，难以维护，构建成本大，持续交付周期长，新人上周周期长，创新困难，可扩展性差</li>
+</ul>
+<h3 id="2-微服务"><a href="#2-微服务" class="headerlink" title="2. 微服务"></a>2. 微服务</h3><h4 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><pre><code>微服务就是一些可独立运行、可协同工作的小的服务。
+</code></pre><p>使用一套小服务来开发单个应用的方式，每个服务运行在独立的进程里，一般采用轻量级的通讯机制互联，并且他们可以通过自动化方式部署。</p>
+    
+        <a href="/2018/09/10/微服务（一）介绍/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-json editor"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/08/29/json editor/">json editor</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-08-29 18:01:30" datetime="2018-08-29T10:01:30.000Z"  itemprop="datePublished">2018-08-29</time>
+
+        
+
+
+        
+	<span id="/2018/08/29/json editor/" class="leancloud_visitors" data-flag-title="json editor" title="json editor">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/08/29/json editor/#comment">
+            <span class="valine-comment-count" data-xid="/2018/08/29/json editor/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h3 id="1-工具"><a href="#1-工具" class="headerlink" title="1. 工具"></a>1. 工具</h3><h4 id="1-JSON-Editor"><a href="#1-JSON-Editor" class="headerlink" title="1. JSON Editor"></a>1. JSON Editor</h4><p><a href="https://github.com/josdejong/jsoneditor" target="_blank" rel="noopener">https://github.com/josdejong/jsoneditor</a></p>
+<pre><code>A web-based tool to view, edit, format, and validate JSON
+</code></pre><p><a href="http://jsoneditoronline.org" target="_blank" rel="noopener">http://jsoneditoronline.org</a></p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1ftszcj0i7gj20nb0d4jsr.jpg" alt="JSON Editor" class="index-item-img">
+                <p>JSON Editor</p>
+            </figure>
+<h4 id="2-JSON-Handle"><a href="#2-JSON-Handle" class="headerlink" title="2.JSON-Handle"></a>2.JSON-Handle</h4><p><a href="http://jsonhandle.sinaapp.com/" target="_blank" rel="noopener">http://jsonhandle.sinaapp.com/</a></p>
+<figure class="image-box">
+                <img src="http://ww1.sinaimg.cn/large/789d050dly1ftsvf86e0sj20sh0lcdib.jpg" alt="JSON-Handle" title="" class="index-item-img">
+                <p>JSON-Handle</p>
+            </figure>
+    
+        <a href="/2018/08/29/json editor/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -369,7 +522,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-StringTemplate 4"
+                <article id="post-Node.js（二） promise"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -377,20 +530,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/06/StringTemplate 4/">StringTemplate 4</a>
+      <a class="post-title-link" href="/2018/08/16/Node.js（二） promise/">Node.js（二） promise</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-06-06 16:02:30" datetime="2018-06-06T08:02:30.000Z"  itemprop="datePublished">2018-06-06</time>
+        <time class="post-time" title="2018-08-16 11:26:30" datetime="2018-08-16T03:26:30.000Z"  itemprop="datePublished">2018-08-16</time>
 
         
 
 
         
-	<span id="/2018/06/06/StringTemplate 4/" class="leancloud_visitors" data-flag-title="StringTemplate 4" title="StringTemplate 4">
+	<span id="/2018/08/16/Node.js（二） promise/" class="leancloud_visitors" data-flag-title="Node.js（二） promise" title="Node.js（二） promise">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -401,8 +554,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/06/StringTemplate 4/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/06/StringTemplate 4/"></span>
+        <a href="/2018/08/16/Node.js（二） promise/#comment">
+            <span class="valine-comment-count" data-xid="/2018/08/16/Node.js（二） promise/"></span>
         </a>
     </span>
 
@@ -417,166 +570,33 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="http://www.stringtemplate.org/" target="_blank" rel="noopener">官网</a></p>
-<p><a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md" target="_blank" rel="noopener">文档</a></p>
+        <h3 id="1-参考链接"><a href="#1-参考链接" class="headerlink" title="1. 参考链接"></a>1. 参考链接</h3><ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a><br>（基础）</li>
+<li><a href="http://liubin.org/promises-book/" target="_blank" rel="noopener">http://liubin.org/promises-book/</a> （开源 Promise 迷你书）</li>
+<li><a href="http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/</a><br>（进阶）</li>
+<li><a href="https://promisesaplus.com/" target="_blank" rel="noopener">https://promisesaplus.com/</a> （官方定义规范）</li>
+</ol>
+<p>本文大部分都摘抄总结于<a href="http://liubin.org/promises-book/#introduction" target="_blank" rel="noopener">JavaScript Promise迷你书</a>，侵删致歉。</p>
+<h3 id="2-概念"><a href="#2-概念" class="headerlink" title="2. 概念"></a>2. 概念</h3><p>Promise是抽象异步处理对象以及对其进行各种操作的组件。</p>
+<pre><code>The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+</code></pre><blockquote>
+<p>A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action’s eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.</p>
+</blockquote>
 <blockquote>
-<p>StringTemplate is a java template engine (with ports for C#,Objective-C, JavaScript, Scala) for generating source code, web pages, emails, or any other formatted text output. StringTemplate is particularly good at code generators, multiple site skins, and internationalization / localization.</p>
+<p>A Promise is in one of these states:</p>
 </blockquote>
-<pre><code>StringTemplate是一种基于java的模板引擎库。
-</code></pre>
+<blockquote>
+<p><strong>pending</strong>: initial state, neither fulfilled nor rejected.<br><strong>fulfilled</strong>: meaning that the operation completed successfully.<br><strong>rejected</strong>: meaning that the operation failed.</p>
+</blockquote>
     
-        <a href="/2018/06/06/StringTemplate 4/" class="post-more waves-effect waves-button">
+        <a href="/2018/08/16/Node.js（二） promise/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Code Generation"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/05/Code Generation/">Code Generation</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-05 13:34:30" datetime="2018-06-05T05:34:30.000Z"  itemprop="datePublished">2018-06-05</time>
-
-        
-
-
-        
-	<span id="/2018/06/05/Code Generation/" class="leancloud_visitors" data-flag-title="Code Generation" title="Code Generation">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/05/Code Generation/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/05/Code Generation/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-javapoet"><a href="#1-javapoet" class="headerlink" title="1. javapoet"></a>1. javapoet</h3><p><a href="https://github.com/square/javapoet" target="_blank" rel="noopener">https://github.com/square/javapoet</a></p>
-<pre><code>开源java代码生成框架，提供Java Api生成.java源文件。
-可以很方便的使用它根据注解、数据库模式、协议格式等来对应生成代码。
-</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">generateHelloworld</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        MethodSpec main = MethodSpec.methodBuilder(<span class="string">"main"</span>)</span><br><span class="line">        <span class="comment">//main代表方法名</span></span><br><span class="line">                .addModifiers(Modifier.PUBLIC,Modifier.STATIC)</span><br><span class="line">                    <span class="comment">//Modifier 修饰的关键字</span></span><br><span class="line">                .addParameter(String[].class, <span class="string">"args"</span>)</span><br><span class="line">                <span class="comment">//添加string[]类型的名为args的参数</span></span><br><span class="line">                .addStatement(<span class="string">"$T.out.println($S)"</span>, System.class,<span class="string">"Hello World"</span>)</span><br><span class="line">                    <span class="comment">//添加代码，这里$T和$S后面会讲，这里其实就是添加了System,out.println("Hello World");</span></span><br><span class="line">                .build();</span><br><span class="line">                TypeSpec typeSpec = TypeSpec.classBuilder(<span class="string">"HelloWorld"</span>)</span><br><span class="line">                <span class="comment">//HelloWorld是类名</span></span><br><span class="line">                .addModifiers(Modifier.FINAL,Modifier.PUBLIC)</span><br><span class="line">                .addMethod(main)  </span><br><span class="line">                <span class="comment">//在类中添加方法</span></span><br><span class="line">                .build();</span><br><span class="line">        JavaFile javaFile = JavaFile.builder(<span class="string">"com.example.helloworld"</span>, typeSpec)</span><br><span class="line">                .build();</span><br><span class="line">        javaFile.writeTo(System.out);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">作者：尸情化异</span><br><span class="line">链接：https:<span class="comment">//www.jianshu.com/p/95f12f72f69a</span></span><br><span class="line">來源：简书</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
-<h4 id="调用JavaPoet的API生成"><a href="#调用JavaPoet的API生成" class="headerlink" title="调用JavaPoet的API生成"></a>调用JavaPoet的API生成</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.helloworld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Hello, JavaPoet!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-        <a href="/2018/06/05/Code Generation/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-命令行处理JSON工具 jq"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/05/25/命令行处理JSON工具 jq/">命令行处理JSON工具 jq</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-05-25 13:34:30" datetime="2018-05-25T05:34:30.000Z"  itemprop="datePublished">2018-05-25</time>
-
-        
-
-
-        
-	<span id="/2018/05/25/命令行处理JSON工具 jq/" class="leancloud_visitors" data-flag-title="命令行处理JSON工具 jq" title="命令行处理JSON工具 jq">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/05/25/命令行处理JSON工具 jq/#comment">
-            <span class="valine-comment-count" data-xid="/2018/05/25/命令行处理JSON工具 jq/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>所有参考资料都写在文末，侵删致歉。</p>
-<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener">jq</a><br><a href="https://github.com/stedolan/jq" target="_blank" rel="noopener">stedolan/jq</a></p>
-<pre><code>jq is a lightweight and flexible command-line JSON processor.
-</code></pre><p>jq 是一款命令行下处理 JSON 数据的工具。<br>其可以接受标准输入，命令管道或者文件中的 JSON 数据，经过一系列的过滤器(filters)和表达式的转后形成我们需要的数据结构并将结果输出到标准输出中。<br>jq 的这种特性使我们可以很容易地在 Shell 脚本中调用它。</p>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p><a href="https://stedolan.github.io/jq/download/" target="_blank" rel="noopener">Download jq</a></p>
-<pre><code>brew install jq
-sudo apt-get install jq
-yum -y  install epel-release   &amp;&amp;    yum -y install jq
-</code></pre>
-    
-        <a href="/2018/05/25/命令行处理JSON工具 jq/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
 
     </div>
     
@@ -588,7 +608,7 @@ yum -y  install epel-release   &amp;&amp;    yum -y install jq
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
     </div>
 </nav>
 

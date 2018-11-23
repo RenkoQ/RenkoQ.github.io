@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>go时间处理 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="后台">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>go时间处理</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">go时间处理</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-22T02:16:29.000Z" itemprop="datePublished" class="page-time">
+  2018-10-22
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-go时间处理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">go时间处理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-22 10:16:29" datetime="2018-10-22T02:16:29.000Z"  itemprop="datePublished">2018-10-22</time>
+
+            
+
+
+            
+	<span id="/2018/10/22/go时间处理/" class="leancloud_visitors" data-flag-title="go时间处理" title="go时间处理">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/22/go时间处理/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/22/go时间处理/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://www.36nu.com/post/277" target="_blank" rel="noopener">go语言中日期字符串与时间戳互转</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	now := time.Now()</span><br><span class="line">	fmt.Println(&quot;当前时间:&quot;, now)</span><br><span class="line"></span><br><span class="line">	 //两小时之后的时间</span><br><span class="line">	 h, _ := time.ParseDuration(&quot;2h&quot;)</span><br><span class="line">	 nowAfter2Hour := now.Add(h)</span><br><span class="line">	 fmt.Println(&quot;两小时之后的时间:&quot;, nowAfter2Hour)</span><br><span class="line"></span><br><span class="line">	 //两小时之前的时间</span><br><span class="line">	 negativeH, _ := time.ParseDuration(&quot;-2h&quot;)</span><br><span class="line">	 nowBefore2Hour := now.Add(negativeH)</span><br><span class="line">	 fmt.Println(&quot;两小时之前的时间:&quot;, nowBefore2Hour)</span><br><span class="line"></span><br><span class="line">	// subtime := nowAfter2Hour.Sub(nowBefore2Hour)</span><br><span class="line">	// fmt.Println(&quot;时间差:&quot;, subtime)</span><br><span class="line"></span><br><span class="line">	//datetime := &quot;2015-01-01 00:00:00&quot; //待转化为时间戳的字符串</span><br><span class="line">	datetime1 := &quot;2018-10-22 11:17:20&quot; //待转化为时间戳的字符串</span><br><span class="line">	datetime2 := &quot;2018-10-23 11:17:20&quot; //待转化为时间戳的字符串</span><br><span class="line"></span><br><span class="line">	//日期转化为时间戳</span><br><span class="line">	timeLayout := &quot;2006-01-02 15:04:05&quot; //转化所需模板</span><br><span class="line"></span><br><span class="line">	tmp1, _ := time.Parse(timeLayout, datetime1)</span><br><span class="line">	tmp2, _ := time.Parse(timeLayout, datetime2)</span><br><span class="line">	timestamp1 := tmp1.Unix() //转化为时间戳 类型是int64</span><br><span class="line">	timestamp2 := tmp2.Unix() //转化为时间戳 类型是int64</span><br><span class="line"></span><br><span class="line">	subtime := (timestamp2 - timestamp1) / 3600 / 24</span><br><span class="line"></span><br><span class="line">	fmt.Println(&quot;时间差天数:&quot;, subtime)</span><br><span class="line">	// subtime := strconv.ParseFloat(sub, 64)</span><br><span class="line"></span><br><span class="line">	ProfitAmount := (0.02 * 12 / 365) * 10000 * (float64(subtime))</span><br><span class="line">	fmt.Println(&quot;利润&quot;, ProfitAmount)</span><br><span class="line">	//时间戳转化为日期</span><br><span class="line">	datetime1 = time.Unix(timestamp1, 0).Format(timeLayout)</span><br><span class="line">	datetime2 = time.Unix(timestamp2, 0).Format(timeLayout)</span><br><span class="line">	datetime3 := time.Unix(subtime, 0).Format(timeLayout)</span><br><span class="line">	fmt.Println(datetime3)</span><br><span class="line"></span><br><span class="line">	datetime3day := time.Unix(subtime, 0).Day()</span><br><span class="line">	fmt.Println(datetime3day)</span><br><span class="line"></span><br><span class="line">	 //十分钟之后的时间</span><br><span class="line">	 m, _ := time.ParseDuration(&quot;10m&quot;)</span><br><span class="line">	 nowAfter10Minute := now.Add(m)</span><br><span class="line">	 fmt.Println(&quot;十分钟之后的时间:&quot;, nowAfter10Minute)</span><br><span class="line"></span><br><span class="line">	 //十分钟之前的时间</span><br><span class="line">	 negativeM, _ := time.ParseDuration(&quot;-10m&quot;)</span><br><span class="line">	 nowBefore10Minute := now.Add(negativeM)</span><br><span class="line">	 fmt.Println(&quot;十分钟之前的时间:&quot;, nowBefore10Minute)</span><br><span class="line"></span><br><span class="line">	 //30s之后的时间</span><br><span class="line">	 s, _ := time.ParseDuration(&quot;30s&quot;)</span><br><span class="line">	 nowAfter30Second := now.Add(s)</span><br><span class="line">	 fmt.Println(&quot;30s之后的时间:&quot;, nowAfter30Second)</span><br><span class="line"></span><br><span class="line">	 //30s之前的时间</span><br><span class="line">	 negativeS, _ := time.ParseDuration(&quot;-30s&quot;)</span><br><span class="line">	 nowBefore30Second := now.Add(negativeS)</span><br><span class="line">	 fmt.Println(&quot;30s之前的时间:&quot;, nowBefore30Second)</span><br><span class="line"></span><br><span class="line">	 //1年1个月1天 之后的时间</span><br><span class="line">	 fmt.Println(&quot;1年2个月3天之后的时间:&quot;, now.AddDate(1, 2, 3))</span><br><span class="line"></span><br><span class="line">	 //2年2个月2天之前的时间</span><br><span class="line">	 fmt.Println(&quot;2年3个月4天之前的时间:&quot;, now.AddDate(-2, -3, -4))</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><a href="http://kiritor.github.io/2015/04/15/Go%E8%AF%AD%E8%A8%80%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86/" target="_blank" rel="noopener">Go语言时间处理</a></p>
+<p>格式化时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fmt.Println(time.Now().Format(&quot;2006-01-02 15:04:05&quot;))</span><br><span class="line">//2014-01-07 09:42:20</span><br></pre></td></tr></table></figure></p>
+<p>时间戳转换为格式化字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str_time := time.Unix(1389058332, 0).Format(&quot;2006-01-02 15:04:05&quot;)</span><br><span class="line">fmt.Println(str_time)</span><br><span class="line">//2014-01-07 09:32:12</span><br></pre></td></tr></table></figure></p>
+<p>格式化字符串转时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">the_time := time.Date(2014, 1, 7, 5, 50, 4, 0, time.Local)</span><br><span class="line">unix_time := the_time.Unix()</span><br><span class="line">fmt.Println(unix_time)</span><br><span class="line">//389045004</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">=====================</span><br><span class="line"></span><br><span class="line">the_time, err := time.Parse(&quot;2006-01-02 15:04:05&quot;, &quot;2014-01-08 09:04:41&quot;)</span><br><span class="line">if err == nil &#123;</span><br><span class="line">        unix_time := the_time.Unix()</span><br><span class="line">    fmt.Println(unix_time)     </span><br><span class="line">&#125;</span><br><span class="line">//1389171881</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-23T02:27:04.870Z" itemprop="dateUpdated">2018-11-23 10:27:04</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/10/22/go时间处理/" target="_blank" rel="external">https://renkoq.github.io/2018/10/22/go时间处理/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/10/22/go时间处理/&title=《go时间处理》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/10/22/go时间处理/&title=《go时间处理》 — Renko's blog&source=go语言中日期字符串与时间戳互转
+123456789101112131415161718192021222324252627282930313233343..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《go时间处理》 — Renko's blog&url=https://renkoq.github.io/2018/10/22/go时间处理/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/10/22/go时间处理/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/10/27/nodejs时间格式化/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">nodejs时间格式化</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/19/ES6 异步编程方法/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES6 异步编程方法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/10/22/go时间处理/&title=《go时间处理》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/10/22/go时间处理/&title=《go时间处理》 — Renko's blog&source=go语言中日期字符串与时间戳互转
+123456789101112131415161718192021222324252627282930313233343..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《go时间处理》 — Renko's blog&url=https://renkoq.github.io/2018/10/22/go时间处理/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/10/22/go时间处理/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQU7EMAwFUO5/6WELgma+7YLU5GU10sA0r4uvOPbHR7xeX9b626v18++rT7lhYWBgPJaRPD7Z1vq/1hvNn3tJxcDAOIBxlWC9z1Xemr3eGwYGBsZ6i9WjYfXgiIGBgTEJ3GqpmW8aAwMDY1LE5qTqL/SiHAMD4xxGHpf///lP+hsYGBiPYryKa349d9dOvu0KAwNja8b8MfNiNX9Nb56CgYFxACNvNN474JWXxOUDIgYGxhaM6gVW8z0FsHyk7JdvMTAwtmZMHtwrX6vxesMNIgYGxsMZ1bich+k8RgvTIhgYGBsx5sOp1cDtXdtd8jAwMLZm5AE6Gc/qHRyTOC5cw2FgYGzNyEcrEnyOTF4BBgbGCYz10TAPxOp2e+F7uTcMDIytGXmo3RXB1cAtIDEwMLZm5IfCXpHZG/zqtT8xMDD2Y1QLy+QQeVdToXDnj4GBcQCj2hrM87tXJOeDHRgYGCcwegMWhQ7DuFNRjmYMDIxNGdVmZNIYyMc18jbDGwwGBsYBjF7gzo+P1eZEVtdiYGDszKg2FHttzknxfPkLGBgYmzJexTUpOydxH9XfGBgYmzJ6YVcdiciL2LyB2otsDAyM5zKqJWv1Gi7ZYi+yMTAwTmNMhsOq25q3Qi8DFwMDAyMuQdcHxzxMk8MoBgYGRnVD8/hODpS3BS4GBsajGNWhrjxwqwNh1fYDBgbGCYy8dOwNWPRCfBLuGBgYGzE+AfgA2xnuNJDQAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

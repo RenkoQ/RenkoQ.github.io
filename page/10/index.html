@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-ATOM&amp;NPM"
+                <article id="post-计算机组成原理笔记（一）——计算机系统概述"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/06/29/ATOM&NPM/">ATOM&amp;NPM</a>
+      <a class="post-title-link" href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/">计算机组成原理笔记（一）——计算机系统概述</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-06-29 00:01:00" datetime="2017-06-28T16:01:00.000Z"  itemprop="datePublished">2017-06-29</time>
+        <time class="post-time" title="2017-11-11 02:01:30" datetime="2017-11-10T18:01:30.000Z"  itemprop="datePublished">2017-11-11</time>
 
         
 
 
         
-	<span id="/2017/06/29/ATOM&NPM/" class="leancloud_visitors" data-flag-title="ATOM&NPM" title="ATOM&NPM">
+	<span id="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（一）——计算机系统概述" title="计算机组成原理笔记（一）——计算机系统概述">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/06/29/ATOM&NPM/#comment">
-            <span class="valine-comment-count" data-xid="/2017/06/29/ATOM&NPM/"></span>
+        <a href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/"></span>
         </a>
     </span>
 
@@ -204,62 +204,27 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><pre><code>https://nodejs.org
-</code></pre><h4 id="2-安装cnpm"><a href="#2-安装cnpm" class="headerlink" title="2.安装cnpm"></a>2.安装<a href="https://cnpmjs.org/" target="_blank" rel="external">cnpm</a></h4><p>管理员模式开cmd</p>
-<pre><code>npm install -g cnpm –registry=https://registry.npm.taobao.org
-</code></pre><p>安装完后<code>npm config list</code>显示淘宝源</p>
-<h4 id="3-npm使用"><a href="#3-npm使用" class="headerlink" title="3.npm使用"></a>3.npm使用</h4><p>npm（node package manager）：<br>nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）。</p>
+        <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-计算机发展历程"><a href="#1-计算机发展历程" class="headerlink" title="1. 计算机发展历程"></a>1. 计算机发展历程</h3><p>计算机的发展史包括硬件和软件两方面。<strong>硬件</strong>的发展主要体现在组成计算机基本电路的电子元器件的性能上，<strong>软件</strong>的发展始终以如何提高计算机的效率和如何方便用户为目标。</p>
+<p>通常，根据组成计算机的电子器件，把电子计算机分为4个发展阶段，习惯上称为四代：<strong>电子管、晶体管、中小规模集成电路、大规模超大规模集成电路</strong>。</p>
+<h3 id="2-计算机硬件的基本组成"><a href="#2-计算机硬件的基本组成" class="headerlink" title="2. 计算机硬件的基本组成"></a>2. 计算机硬件的基本组成</h3><p>中央处理器（CPU）=运算器+控制器。<br>主机=CPU+主存储器。<br>除去主机以外的硬件装置（如输入设备﹑输出设备﹑辅助存储器等）称为外围设备或外部设备。</p>
+<p>计算机的硬件系统由以下五大基本部件组成。</p>
 <ul>
-<li><p>使用npm安装插件</p>
-<pre><code>npm install &lt;name&gt; [-g] [--save-dev]
-</code></pre><p>例：npm install gulp-less –save-dev</p>
-</li>
+<li><strong>输入设备</strong>：把程序和原始数据送到计算机中去的设备。</li>
+<li><strong>输出设</strong>备：把计算机的处理结果送到计算机的设备。</li>
+<li><strong>存储器</strong>：用来存放程序和数据的部件，是计算机实现“存储程序控制“的基础。</li>
+<li><strong>运算器</strong>：对信息进行处理和运算的部件，经常进行的运算是算术运算和逻辑运算。</li>
+<li><strong>控制器</strong>：控制器是整个计算机的指挥中心，它的主要功能是按照人们预先确定的操作步骤，控制整个计算机的各部件有条不紊地自动工作。</li>
 </ul>
-<ul>
-<li><p><code>-g</code><br>全局安装。将会安装在C:\Users\Administrator\AppData\Roaming\npm，并且写入系统环境变量；<br>非全局安装：将会安装在当前定位目录；<br>全局安装可以通过命令行在任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过require()调用；</p>
-</li>
-<li><p><code>--save</code><br>将保存配置信息至package.json（package.json是nodejs项目配置文件）；</p>
-</li>
-<li><p><code>-dev</code><br>保存至package.json的devDependencies节点，不指定-dev将保存至dependencies节点；<br>一般保存在dependencies的像这些express/ejs/body-parser等等。</p>
-</li>
-<li><p>为什么要保存至package.json<br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p>
-<ul>
-<li><p>使用npm卸载插件</p>
-<pre><code>npm uninstall &lt;name&gt; [-g] [--save-dev] 
-</code></pre><p>不要直接删除本地插件包</p>
-<p>删除全部插件<br>使用rimraf：</p>
-<pre><code>npm install rimraf -g
-</code></pre><p>用法：rimraf node_modules</p>
-</li>
-<li><p>使用npm更新插件</p>
-<pre><code>npm update &lt;name&gt; [-g] [--save-dev]
-</code></pre><p>更新全部插件</p>
-<pre><code>npm update [--save-dev]
-</code></pre></li>
-<li><p>查看npm帮助</p>
-<pre><code>npm help
-</code></pre></li>
-<li><p>当前目录已安装插件</p>
-<pre><code>npm list
-</code></pre></li>
-</ul>
-</li>
-</ul>
-<h4 id="4-atom安装"><a href="#4-atom安装" class="headerlink" title="4.atom安装"></a>4.atom安装</h4><p><a href="https://atom.io/" target="_blank" rel="external">Atom</a> <a href="https://npm.taobao.org/mirrors/atom/" target="_blank" rel="external">下载镜像</a></p>
-<p>便携安装参考了<a href="http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html" target="_blank" rel="external">http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html</a></p>
-<p>然后在系统环境变量<code>path</code>中添加路径<code>C:\Users\~\AppData\Local\atom\bin</code></p>
-<h4 id="5-插件安装"><a href="#5-插件安装" class="headerlink" title="5.插件安装"></a>5.插件安装</h4><p>离线安装：<br>先cmd输入<code>apm -version</code>检查环境配置，然后从github上下载插件，<code>npm install</code>命令安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$export ATOM_ELECTRON_URL=https://npm.taobao.org/mirrors/atom-shell</div><div class="line">$ apm install --check</div></pre></td></tr></table></figure></p>
-<p>在线安装：<br><a href="https://www.sockscap64.com/sstap/" target="_blank" rel="external">ss-tap</a>不仅可以代理游戏，还可以……<br>总之强烈推荐。</p>
-
     
-        <a href="/2017/06/29/ATOM&NPM/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/11/计算机组成原理笔记（一）——计算机系统概述/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
 
     </div>
     
@@ -268,7 +233,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-krpano实践"
+                <article id="post-yeoman"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -276,20 +241,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/06/24/krpano实践/">krpano实践</a>
+      <a class="post-title-link" href="/2017/11/03/yeoman/">yeoman</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-06-24 17:01:30" datetime="2017-06-24T09:01:30.000Z"  itemprop="datePublished">2017-06-24</time>
+        <time class="post-time" title="2017-11-03 00:01:00" datetime="2017-11-02T16:01:00.000Z"  itemprop="datePublished">2017-11-03</time>
 
         
 
 
         
-	<span id="/2017/06/24/krpano实践/" class="leancloud_visitors" data-flag-title="krpano实践" title="krpano实践">
+	<span id="/2017/11/03/yeoman/" class="leancloud_visitors" data-flag-title="yeoman" title="yeoman">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -300,8 +265,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/06/24/krpano实践/#comment">
-            <span class="valine-comment-count" data-xid="/2017/06/24/krpano实践/"></span>
+        <a href="/2017/11/03/yeoman/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/03/yeoman/"></span>
         </a>
     </span>
 
@@ -316,18 +281,101 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>基于<a href="http://www.krpano360.com/" target="_blank" rel="noopener">krpano中文网</a>整理</p>
-<h3 id="1-官网"><a href="#1-官网" class="headerlink" title="1.官网"></a>1.官网</h3><p><a href="http://www.krpano.com/download/" target="_blank" rel="noopener">下载地址</a></p>
-<h3 id="2-krpano-Droplet"><a href="#2-krpano-Droplet" class="headerlink" title="2.krpano Droplet"></a>2.krpano Droplet</h3><p>krpano Droplet 基本上就是krpano命令行工具加上特定配置文件config的一个快捷方式。krpano droplet 的使用方式非常简单，将文件直接拖放在droplet图标上松开即可。</p>
-<p>一般用<code>MAKE VTOUR (VR-OPT) droplet.bat</code>生成VR漫游</p>
-<p><a href="http://www.krpano360.com/krpano-dropletzhongwenwendang/" target="_blank" rel="noopener">droplet详细</a></p>
-<p><a href="http://www.krpano360.com/解决make-vtour可生成场景数的限制/" target="_blank" rel="noopener">场景限制</a></p>
-<h3 id="3-标题修改、热点设置、起始视角"><a href="#3-标题修改、热点设置、起始视角" class="headerlink" title="3.标题修改、热点设置、起始视角"></a>3.标题修改、热点设置、起始视角</h3><p><a href="http://www.krpano360.com/xunxujianjin8-weimorenmanyoujiaruzhongwenxinxi/" target="_blank" rel="noopener">教程</a></p>
-<p><a href="http://www.macromedia.com/support/documentation/cn/flashplayer/help/settings_manager04.html#117502" target="_blank" rel="noopener">flash“全局安全设置”面板</a></p>
-<h3 id="4-tour-xml解析"><a href="#4-tour-xml解析" class="headerlink" title="4.tour.xml解析"></a>4.tour.xml解析</h3><p>(教程)[<a href="http://www.krpano360.com/xunxujianjin11-tour-xmldejingtaidaimadouyoushenmezuoyong/]" target="_blank" rel="noopener">http://www.krpano360.com/xunxujianjin11-tour-xmldejingtaidaimadouyoushenmezuoyong/]</a></p>
+        <blockquote>
+<p>THE WEB’S SCAFFOLDING TOOL FOR MODERN WEBAPPS</p>
+</blockquote>
+<p><a href="http://yeoman.io/" target="_blank" rel="external">yeoman官网</a><br>参考资料已注明出处，引用源在最后。</p>
+<h3 id="1-使用"><a href="#1-使用" class="headerlink" title="1. 使用"></a>1. 使用</h3><h4 id="1-安装工具箱"><a href="#1-安装工具箱" class="headerlink" title="1. 安装工具箱"></a>1. 安装工具箱</h4><pre><code>$ npm install -g yo
 
+$ yo --version
+</code></pre><blockquote>
+<p>YO：Yeoman核心工具，项目工程依赖目录和文件生成工具，项目生产环境和编译环境生成工具</p>
+</blockquote>
+<h4 id="2-安装bower"><a href="#2-安装bower" class="headerlink" title="2. 安装bower"></a>2. 安装bower</h4><p><a href="https://bower.io/" target="_blank" rel="external">bower官网</a></p>
+<pre><code>npm install -g bower
+</code></pre><blockquote>
+<p>BOWER: Web开发的包管理器，概念上类似npm，npm专注于nodeJs模块，而bower专注于CSS、JavaScript、图像等前端相关内容的管理。<a href="http://ju.outofmemory.cn/entry/36120" target="_blank" rel="external">^foot2</a></p>
+</blockquote>
+<h4 id="3-安装生成器"><a href="#3-安装生成器" class="headerlink" title="3. 安装生成器"></a>3. 安装生成器</h4><pre><code>$ npm install -g generator-webapp
+</code></pre>
     
-        <a href="/2017/06/24/krpano实践/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/03/yeoman/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Surface3装ubuntu实现双系统"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/02/Surface3装ubuntu实现双系统/">Surface3装ubuntu实现双系统</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-02 00:01:00" datetime="2017-11-01T16:01:00.000Z"  itemprop="datePublished">2017-11-02</time>
+
+        
+
+
+        
+	<span id="/2017/11/02/Surface3装ubuntu实现双系统/" class="leancloud_visitors" data-flag-title="Surface3装ubuntu实现双系统" title="Surface3装ubuntu实现双系统">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/02/Surface3装ubuntu实现双系统/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/02/Surface3装ubuntu实现双系统/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>15年首发买的surface3，用到现在基本打开5分钟内必蓝屏。检测过是硬件问题导致的过热蓝屏。美国买的没地方修。重装过各种版本win10，禁用windows update等，甚至装过win8，都没用，救不了。我想ubuntu对系统需求小，不妨试一试。</p>
+<p><strong>安装参考：</strong><br><a href="http://tieba.baidu.com/p/4821863536?pn=1" target="_blank" rel="external">【技术攻略】surface3装ubuntu16.10</a><br><a href="http://www.cnblogs.com/Duane/p/5424218.html" target="_blank" rel="external">Windows下安装Ubuntu 16.04双系统</a><br><a href="https://www.reddit.com/r/SurfaceLinux/comments/2pbcwj/stepbystep_guide_for_install_ubuntu_on_the/" target="_blank" rel="external">Step-by-step guide for install Ubuntu on the Surface Pro 3</a><br><a href="https://www.reddit.com/r/SurfaceLinux/" target="_blank" rel="external">reddit社区讨论版</a></p>
+<p><strong>安装版本：</strong><br>ubuntu-17.10-desktop-amd64.iso</p>
+<p><strong>安装工具：</strong><br>HUB：连usb键盘，typecover安装的时候会出问题，要把typecover暂时取下。<br>U盘：一开始直接把ISO文件内的东西导进去安装不成功，用UltraISO制作了一下就没问题了。</p>
+<p><strong>安装前要做的：</strong><br>在windows里搜索磁盘管理，选择C盘分区压缩一部分用来装linux。<br>备份重要文件，防止意外发生。<br>关闭security boot选项。</p>
+<p><strong>开始安装：</strong><br>1.首先进入grub界面，按e编辑启动命令（try或直接安装都可以），找到 quiet splash 然后在这两个词前面加上nomodeset(别忘了空格)。</p>
+<p>2.grub改分辨率，否则过会只会有600*800的分辨率点不到选项。这部分我找了很多资料后来改成功了，但不知道是哪个方法对的，都试下好了。</p>
+<ul>
+<li>在grub界面增加一行：gfxmode=1920*1280。</li>
+<li>在进入ubuntu后<code>sudo gedit /etc/default/grub</code>把<code>#GRUB_GFXMODE=640×480</code><br>改成<code>GRUB_GFXMODE=1360x768</code><strong>注意，不要#号</strong></li>
+</ul>
+    
+        <a href="/2017/11/02/Surface3装ubuntu实现双系统/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -343,7 +391,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-solidity编程（一）开发环境搭建"
+                <article id="post-Hyperledger Fabric开发环境"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -351,20 +399,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/06/08/solidity编程（一）开发环境搭建/">solidity编程（一）开发环境搭建</a>
+      <a class="post-title-link" href="/2017/10/30/Hyperledger Fabric开发环境/">Hyperledger Fabric 开发环境</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-06-08 18:01:52" datetime="2017-06-08T10:01:52.000Z"  itemprop="datePublished">2017-06-08</time>
+        <time class="post-time" title="2017-10-30 21:09:30" datetime="2017-10-30T13:09:30.000Z"  itemprop="datePublished">2017-10-30</time>
 
         
 
 
         
-	<span id="/2017/06/08/solidity编程（一）开发环境搭建/" class="leancloud_visitors" data-flag-title="solidity编程（一）开发环境搭建" title="solidity编程（一）开发环境搭建">
+	<span id="/2017/10/30/Hyperledger Fabric开发环境/" class="leancloud_visitors" data-flag-title="Hyperledger Fabric 开发环境" title="Hyperledger Fabric 开发环境">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -375,8 +423,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/06/08/solidity编程（一）开发环境搭建/#comment">
-            <span class="valine-comment-count" data-xid="/2017/06/08/solidity编程（一）开发环境搭建/"></span>
+        <a href="/2017/10/30/Hyperledger Fabric开发环境/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/30/Hyperledger Fabric开发环境/"></span>
         </a>
     </span>
 
@@ -391,24 +439,28 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-Visual-Studio-2015（坑）"><a href="#1-Visual-Studio-2015（坑）" class="headerlink" title="1.Visual Studio 2015（坑）"></a>1.Visual Studio 2015（坑）</h3><p><a href="https://blogs.msdn.microsoft.com/caleteet/2016/04/01/solidity-integration-with-visual-studio/" target="_blank" rel="external">微软官网参考</a></p>
-<p>(1) 下载<a href="https://marketplace.visualstudio.com/items?itemName=ConsenSys.Solidity" target="_blank" rel="external">solidity扩展</a><br>目前不支持高亮显示，下载了<a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.SyntaxHighlightingPack" target="_blank" rel="external">Syntax Highlighting Pack</a>没用==<br>node.js必须装，<a href="https://nodejs.org/en/" target="_blank" rel="external">下载</a></p>
-<p>(2) 建立solidity项目<br><a href="https://www.youtube.com/watch?v=yoffoNRk-Xg" target="_blank" rel="external">视频参考</a><br><figure class="image-box">
-                <img src="http://wx3.sinaimg.cn/large/789d050dgy1ff1l7r9vbfj20wy0mtacb.jpg" alt="新建" title="" class="index-item-img">
-                <p>新建</p>
-            </figure><br>错误是因为没装bloc<br><figure class="image-box">
-                <img src="http://wx2.sinaimg.cn/large/789d050dgy1ff1l7rtdm4j20ry0lgwgc.jpg" alt="错误" title="" class="index-item-img">
-                <p>错误</p>
-            </figure></p>
+        <p>所有参考资料贴在最后。</p>
+<h3 id="1-Vagrant"><a href="#1-Vagrant" class="headerlink" title="1. Vagrant"></a>1. Vagrant</h3><p><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">官方下载</a></p>
+<p>Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟机的管理，包括建立和删除虚拟机、配置虚拟机运行参数、管理虚拟机运行状态、自动化配置和安装开发环境必须的各类软件、打包和分发虚拟机运行环境等。 <a href="http://www.ituring.com.cn/article/131600" target="_blank" rel="external">^foot1</a></p>
+<p>简单地说，Vagrant让我们可以通过代码的方式快速地、可重复地创建针对不同虚拟环境的虚拟机，包括Virtualbox、AWS、Docker等。它使得我们可以一次性地、自动创建多个环境相同的虚拟机，对于软件开发和测试尤其有用。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
+<p>使用Vagrant能尽可能避免”Work on my machine“错误，缩短搭建开发环境的时间。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
+<h3 id="2-go"><a href="#2-go" class="headerlink" title="2. go"></a>2. go</h3><p><a href="https://golang.org/dl/" target="_blank" rel="external">官方下载</a></p>
+<p><a href="https://golang.org/doc/" target="_blank" rel="external">官方文档</a></p>
+<p>Go语言需要配置<code>GOPATH</code>环境变量，指向代码目录。</p>
+<p>管理员模式打开CMD输入<code>go env</code>验证。</p>
+<h3 id="3-下载源码"><a href="#3-下载源码" class="headerlink" title="3. 下载源码"></a>3. 下载源码</h3><p><a href="https://github.com/hyperledger/fabric" target="_blank" rel="external">fabric</a><br><a href="https://github.com/hyperledger/fabric-ca" target="_blank" rel="external">fabric-ca</a></p>
+<pre><code>git clone https://github.com/hyperledger/fabric.git                        
+git clone https://github.com/hyperledger/fabric-ca.git    
+</code></pre>
     
-        <a href="/2017/06/08/solidity编程（一）开发环境搭建/" class="post-more waves-effect waves-button">
+        <a href="/2017/10/30/Hyperledger Fabric开发环境/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ethereum/">Ethereum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
 
     </div>
     
@@ -417,7 +469,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-后台学习(三)——框架测试"
+                <article id="post-GULP学习（三）插件&amp;补充"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -425,20 +477,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/04/20/后台学习(三)——框架测试/">后台学习(三)——框架测试</a>
+      <a class="post-title-link" href="/2017/10/27/GULP学习（三）插件&补充/">GULP学习（三）插件&amp;补充</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-04-20 21:21:02" datetime="2017-04-20T13:21:02.000Z"  itemprop="datePublished">2017-04-20</time>
+        <time class="post-time" title="2017-10-27 00:01:00" datetime="2017-10-26T16:01:00.000Z"  itemprop="datePublished">2017-10-27</time>
 
         
 
 
         
-	<span id="/2017/04/20/后台学习(三)——框架测试/" class="leancloud_visitors" data-flag-title="后台学习(三)——框架测试" title="后台学习(三)——框架测试">
+	<span id="/2017/10/27/GULP学习（三）插件&补充/" class="leancloud_visitors" data-flag-title="GULP学习（三）插件&补充" title="GULP学习（三）插件&补充">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -449,8 +501,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/04/20/后台学习(三)——框架测试/#comment">
-            <span class="valine-comment-count" data-xid="/2017/04/20/后台学习(三)——框架测试/"></span>
+        <a href="/2017/10/27/GULP学习（三）插件&补充/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/27/GULP学习（三）插件&补充/"></span>
         </a>
     </span>
 
@@ -465,189 +517,108 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <hr>
-<p>跟着教程<a href="http://blog.csdn.net/lxfhahaha/article/details/57078994" target="_blank" rel="external">http://blog.csdn.net/lxfhahaha/article/details/57078994</a></p>
-<h3 id="1-tomcat测试启动"><a href="#1-tomcat测试启动" class="headerlink" title="1. tomcat测试启动"></a>1. tomcat测试启动</h3><p><img src="http://wx3.sinaimg.cn/large/789d050dgy1fetg8yh5hfj219u0rs0y8.jpg" alt="tomcat"></p>
-<h3 id="2-mybatis-generator"><a href="#2-mybatis-generator" class="headerlink" title="2. mybatis-generator"></a>2. mybatis-generator</h3><p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fetgany37kj212h0qcae3.jpg" alt="tomcat"></p>
-<h3 id="3-junit测试"><a href="#3-junit测试" class="headerlink" title="3. junit测试"></a>3. junit测试</h3><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1fetg8wthvrj212l0segph.jpg" alt="tomcat"></p>
-
-    
-        <a href="/2017/04/20/后台学习(三)——框架测试/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/">后台学习(二)——MySql绿色版配置&amp;Navicat for MySQL</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-04-20 21:21:01" datetime="2017-04-20T13:21:01.000Z"  itemprop="datePublished">2017-04-20</time>
-
-        
-
-
-        
-	<span id="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" class="leancloud_visitors" data-flag-title="后台学习(二)——MySql绿色版配置&Navicat for MySQL" title="后台学习(二)——MySql绿色版配置&Navicat for MySQL">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/#comment">
-            <span class="valine-comment-count" data-xid="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <hr>
-<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">Windows (x86, 64-bit), ZIP Archive</a><br>No thanks, just start my download.</p>
-<h3 id="2-添加系统环境变量"><a href="#2-添加系统环境变量" class="headerlink" title="2. 添加系统环境变量"></a>2. 添加系统环境变量</h3><pre><code>变量名： Path    变量值：E:\mysql\mysql-5.7.18-winx64\bin；
-</code></pre><h3 id="3-配置my-ini文件"><a href="#3-配置my-ini文件" class="headerlink" title="3. 配置my.ini文件"></a>3. 配置my.ini文件</h3><p>解压目录下新建<code>my.ini</code>文件，编辑为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[mysqld]  </div><div class="line">basedir=E:\mysql\mysql-5.7.18-winx64    # 设置mysql的安装目录  </div><div class="line">datadir=E:\mysql\mysqldbms\data   # 设置mysql数据库的数据的存放目录，必须是data，或者是//xxx/data  </div><div class="line">  </div><div class="line">*************************分割线*******************  </div><div class="line"></div><div class="line">&lt;!--more--&gt;</div><div class="line"></div><div class="line">port = 3306  </div><div class="line">socket = /tmp/mysql.sock  </div><div class="line">default-character-set=gbk   # 设置mysql服务器的字符集  </div><div class="line">skip-locking  </div><div class="line">key_buffer = 16K  </div><div class="line">max_allowed_packet = 1M  </div><div class="line">table_cache = 4  </div><div class="line">sort_buffer_size = 64K  </div><div class="line">read_buffer_size = 256K  </div><div class="line">read_rnd_buffer_size = 256K  </div><div class="line">net_buffer_length = 2K  </div><div class="line">thread_stack = 64K  </div><div class="line">  </div><div class="line">[client]   </div><div class="line">#password = your_password  </div><div class="line">port = 3306  </div><div class="line">socket = /tmp/mysql.sock  </div><div class="line">default-character-set=gbk   </div><div class="line">*************************分割线*******************</div></pre></td></tr></table></figure></p>
-<h3 id="4-安装服务"><a href="#4-安装服务" class="headerlink" title="4. 安装服务"></a>4. 安装服务</h3><p><strong>管理员模式</strong>下cmd输入<code>mysqld --install MySQL --defaults-file=&quot;E:\mysql\mysql-5.7.18-winx64\my.ini&quot;</code><br>显示Service successfully installed</p>
-<p>同理删除服务<code>mysqld --remove MySQL</code></p>
-<h3 id="5-启动MySQL服务"><a href="#5-启动MySQL服务" class="headerlink" title="5. 启动MySQL服务"></a>5. 启动MySQL服务</h3><p><code>mysqld  --initialize</code>自动生成带随机密码的root用户<br><code>mysqld --initialize-insecure</code>自动生成无密码的root用户（我先执行了这个命令）<br>data文件夹不为空是不能执行这个命令的。可以先删除data目录下的所有文件或者移走。</p>
-<p>cmd管理员模式在bin目录下<code>net start mysql</code>即可启动服务。<br>同理，停止服务器命令<code>net stop MySQL</code></p>
-<ul>
-<li><p>服务无法启动-“NET HELPMSG 3534”问题解决<br>参考<a href="http://bbs.csdn.net/topics/391851148" target="_blank" rel="external">http://bbs.csdn.net/topics/391851148</a><br>先<code>mysqld  --initialize</code>初始化data目录。<br>5.7版本还可以把5.6的data目录拷过去解决。</p>
-</li>
-<li><p>服务无法启动-1067错误问题解决<br>参考<a href="http://www.cnblogs.com/mr-hero/p/5817142.html" target="_blank" rel="external">http://www.cnblogs.com/mr-hero/p/5817142.html</a></p>
-</li>
-</ul>
-<h3 id="6-设置密码"><a href="#6-设置密码" class="headerlink" title="6. 设置密码"></a>6. 设置密码</h3><p><code>mysql -uroot -p password 123456</code> </p>
-<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fet9ibojlsj20es02kmxe.jpg" alt="密码设置"></p>
-<h3 id="7-本地连接"><a href="#7-本地连接" class="headerlink" title="7. 本地连接"></a>7. 本地连接</h3><p>cmd输入<code>mysql -u root -p</code>再输密码连接<br>退出<code>exit</code>（bye真的好萌(*ﾟ∇ﾟ)）<br><figure class="image-box">
-                <img src="http://wx1.sinaimg.cn/large/789d050dgy1fet9p2fskqj20m8095jsi.jpg" alt="连接操作" title="" class="">
-                <p>连接操作</p>
-            </figure></p>
-<h3 id="8-Navicat-for-MySQL"><a href="#8-Navicat-for-MySQL" class="headerlink" title="8. Navicat for MySQL"></a>8. Navicat for MySQL</h3><p>图形化数据库管理工具，<a href="https://navicatformysql.en.softonic.com/" target="_blank" rel="external">官网下载</a>。<br>安装后<code>新建连接</code>连接数据库就行。</p>
-
-    
-        <a href="/2017/04/20/后台学习(二)——MySql绿色版配置&Navicat for MySQL/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-后台学习(一)——Apache Tomcat&amp;Maven配置"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/">后台学习(一)——Apache Tomcat&amp;Maven配置</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-04-20 21:21:00" datetime="2017-04-20T13:21:00.000Z"  itemprop="datePublished">2017-04-20</time>
-
-        
-
-
-        
-	<span id="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" class="leancloud_visitors" data-flag-title="后台学习(一)——Apache Tomcat&Maven配置" title="后台学习(一)——Apache Tomcat&Maven配置">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/#comment">
-            <span class="valine-comment-count" data-xid="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <hr>
-<h3 id="1-Apache-Tomcat"><a href="#1-Apache-Tomcat" class="headerlink" title="1. Apache Tomcat"></a>1. Apache Tomcat</h3><blockquote>
-<p>The Apache Tomcat® software is an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies.<br>Web 应用服务器</p>
+        <p>整理一些网上查到的资料(已注明出处、侵删)，再对gulp相关进行补充。</p>
+<p><a href="https://github.com/Platform-CUF/use-gulp" target="_blank" rel="external">use-gulp</a><br><a href="https://gulpjs.com/plugins/" target="_blank" rel="external">gulp插件网</a><br><a href="https://github.com/alferov/awesome-gulp" target="_blank" rel="external">awesome-gulp</a><br><a href="http://www.tangshuang.net/3126.html" target="_blank" rel="external">gulp中文入门教程</a></p>
+<h3 id="1-为静态文件添加-MD5-指纹-foot1"><a href="#1-为静态文件添加-MD5-指纹-foot1" class="headerlink" title="1. 为静态文件添加 MD5 指纹^foot1"></a>1. 为静态文件添加 MD5 指纹<a href="https://zhuanlan.zhihu.com/p/24975955" target="_blank" rel="external">^foot1</a></h3><p>使用 Gulp 自动对 HTML 中引用的静态文件添加<code>MD5 指纹戳</code>，有效解决旧文件缓存，新文件无法更新的问题。</p>
+<p><code>MD5</code>的作用是让大容量信息在用数字签名软件签署私人密钥前被”压缩”成一种保密的格式（就是把一个任意长度的字节串变换成一定长的十六进制数字串）。</p>
+<p><a href="https://www.npmjs.com/package/gulp-rev" target="_blank" rel="external">gulp-rev</a></p>
+<blockquote>
+<p> Static asset revisioning by appending content hash to filenames: unicorn.css → unicorn-d41d8cd98f.css</p>
 </blockquote>
-<p><a href="http://tomcat.apache.org/" target="_blank" rel="external">官网下载</a></p>
-<h4 id="1-添加系统环境变量"><a href="#1-添加系统环境变量" class="headerlink" title="1. 添加系统环境变量"></a>1. 添加系统环境变量</h4><pre><code>（1）变量名： CATALINA_BASE 变量值： F:\apache-tomcat-7.0.77
-（2）变量名： CATALINA_HOME     变量值： F:\apache-tomcat-7.0.77
-（3）变量名： CATALINA_TMPDIR     变量值： F:\apache-tomcat-7.0.77\temp
-（4）变量名： Path    变量值：F:\apache-tomcat-7.0.77\bin
-</code></pre><h4 id="2-检查配置"><a href="#2-检查配置" class="headerlink" title="2. 检查配置"></a>2. 检查配置</h4><p>cmd输入<code>startup.bat</code>,再访问<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a></p>
-<figure class="image-box">
-                <img src="http://wx1.sinaimg.cn/large/789d050dgy1felf0gnhc3j20mw0i20wo.jpg" alt="tomcat运行" title="" class="index-item-img">
-                <p>tomcat运行</p>
-            </figure> 
-<h4 id="3-中文乱码问题解决"><a href="#3-中文乱码问题解决" class="headerlink" title="3. 中文乱码问题解决"></a>3. 中文乱码问题解决</h4><p>修改在<code>apache-tomcat-7.0.77\conf</code>路径下的<code>server.xml</code>文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</div><div class="line">               connectionTimeout=&quot;20000&quot;</div><div class="line">               redirectPort=&quot;8443&quot; </div><div class="line">			   URIEncoding=&quot;UTF-8&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>完美规避更新时短时间内客户端请求结果不一致的问题，但易造成文件冗余。</p>
+<p><a href="https://www.npmjs.com/package/gulp-rev-append" target="_blank" rel="external">gulp-rev-append</a></p>
+<pre><code>转换后变为&lt;script src=&apos;BearD01001.min.js?rev=366dc531e1&apos;&gt;&lt;/script&gt;
+</code></pre><p>每次更新不会产生新文件，有效避免文件冗余，但更新时短时间内，客户端请求到的静态文件可能不一致。</p>
+<pre><code>$ npm install --save-dev gulp-rev --save-dev
+$ npm install --save-dev gulp-rev-append --save-dev
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">const</span> rev = <span class="built_in">require</span>(<span class="string">'gulp-rev'</span>);</div><div class="line"><span class="comment">// const revAppend = require('gulp-rev-append');</span></div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, () =&gt;</div><div class="line">	gulp.src(<span class="string">'src/*.css'</span>)</div><div class="line">		.pipe(rev())</div><div class="line">		<span class="comment">// .pipe(revAppend())</span></div><div class="line">		.pipe(gulp.dest(<span class="string">'dist'</span>))</div><div class="line">);</div></pre></td></tr></table></figure>
     
-        <a href="/2017/04/20/后台学习(一)——Apache Tomcat&Maven配置/" class="post-more waves-effect waves-button">
+        <a href="/2017/10/27/GULP学习（三）插件&补充/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Hyperledger Fabric 部署示例"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/10/24/Hyperledger Fabric 部署示例/">Hyperledger Fabric 部署示例</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-10-24 19:06:52" datetime="2017-10-24T11:06:52.000Z"  itemprop="datePublished">2017-10-24</time>
+
+        
+
+
+        
+	<span id="/2017/10/24/Hyperledger Fabric 部署示例/" class="leancloud_visitors" data-flag-title="Hyperledger Fabric 部署示例" title="Hyperledger Fabric 部署示例">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/24/Hyperledger Fabric 部署示例/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/24/Hyperledger Fabric 部署示例/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>所有参考资料贴在最后。</p>
+<h3 id="1-virtualbox"><a href="#1-virtualbox" class="headerlink" title="1. virtualbox"></a>1. virtualbox</h3><p><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">下载</a></p>
+<h3 id="2-ubuntu"><a href="#2-ubuntu" class="headerlink" title="2. ubuntu"></a>2. ubuntu</h3><p><a href="https://www.ubuntu.com/download/alternative-downloads" target="_blank" rel="external">下载</a></p>
+<p>在虚拟机里安装ubuntu。</p>
+<p><a href="http://wiki.ubuntu.org.cn/Ubuntu%E6%A1%8C%E9%9D%A2%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97#1.3.1..E2.80.83.E7.9B.AE.E5.BD.95.E5.92.8C.E6.96.87.E4.BB.B6.E7.B3.BB.E7.BB.9F" target="_blank" rel="external">Ubuntu桌面入门指南</a></p>
+<p>su获取root权限。</p>
+<p><img src="http://wx3.sinaimg.cn/large/789d050dgy1fktocaheu2j20an05hq3c.jpg" alt="su"></p  class="index-item-img">
+<h3 id="3-git"><a href="#3-git" class="headerlink" title="3. git"></a>3. git</h3><pre><code>$ apt-get update                                                            
+$ apt-get install git   
+</code></pre><blockquote>
+<p>apt-get，是一条linux命令，适用于deb包管理式的操作系统，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统。</p>
+</blockquote>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fktocax43nj20k70ayjtx.jpg" alt="安装git"></p  class="index-item-img">
+    
+        <a href="/2017/10/24/Hyperledger Fabric 部署示例/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
 
     </div>
     
@@ -659,7 +630,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/9/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/9/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/">下一页</a>
     </div>
 </nav>
 

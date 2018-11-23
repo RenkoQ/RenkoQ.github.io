@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-python基础学习笔记"
+                <article id="post-GULP学习（二）项目构建"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/04/01/python基础学习笔记/">python基础学习笔记</a>
+      <a class="post-title-link" href="/2017/10/15/GULP学习（二）项目构建/">GULP学习（二）项目构建</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-04-01 00:01:00" datetime="2017-03-31T16:01:00.000Z"  itemprop="datePublished">2017-04-01</time>
+        <time class="post-time" title="2017-10-15 00:01:00" datetime="2017-10-14T16:01:00.000Z"  itemprop="datePublished">2017-10-15</time>
 
         
 
 
         
-	<span id="/2017/04/01/python基础学习笔记/" class="leancloud_visitors" data-flag-title="python基础学习笔记" title="python基础学习笔记">
+	<span id="/2017/10/15/GULP学习（二）项目构建/" class="leancloud_visitors" data-flag-title="GULP学习（二）项目构建" title="GULP学习（二）项目构建">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/04/01/python基础学习笔记/#comment">
-            <span class="valine-comment-count" data-xid="/2017/04/01/python基础学习笔记/"></span>
+        <a href="/2017/10/15/GULP学习（二）项目构建/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/15/GULP学习（二）项目构建/"></span>
         </a>
     </span>
 
@@ -204,21 +204,112 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-python基础"><a href="#1-python基础" class="headerlink" title="1. python基础"></a>1. python基础</h3><p><a href="https://www.python.org/downloads/" target="_blank" rel="external">python下载</a><br><a href="https://docs.python.org/2/library/" target="_blank" rel="external">python文档</a><br><a href="http://www.tutorialspoint.com/python/python_exceptions.htm" target="_blank" rel="external">python异常</a></p>
-<h3 id="2-Anaconda"><a href="#2-Anaconda" class="headerlink" title="2. Anaconda"></a>2. Anaconda</h3><p>(1)基本</p>
+        <p>内容基本整理于<a href="https://github.com/nimojs/gulp-book/blob/master/chapter7.md" target="_blank" rel="external">gulp-book chapter7</a>，我有一点增改。</p>
+<h3 id="1-初始安装"><a href="#1-初始安装" class="headerlink" title="1. 初始安装"></a>1. 初始安装</h3><pre><code>npm init
+</code></pre><p>创建<code>package.json</code>保存所有<code>npm install --save-dev gulp-xxx</code>模块依赖和模块版本。</p>
+<pre><code>npm install gulp --save-dev
+</code></pre><p>安装gulp到项目<br><code>package.json</code>中增加下列代码，声明此项目的开发依赖 gulp。</p>
+<pre><code>&quot;devDependencies&quot;: {
+&quot;gulp&quot;: &quot;^3.9.1&quot;
+}
+</code></pre><p>安装项目中用到的其他模块<br>例如</p>
+<pre><code>npm install gulp-uglify  --save-dev
+</code></pre><p><code>package.json</code>的”devDependencies”中继续增加依赖声明。</p>
+<p>在<code>gulpfile.js</code>已配置情况下直接输入<code>npm install</code>命令即可检测<code>package.json</code>中的 “devDependencies”并安装所有依赖。</p>
+    
+        <a href="/2017/10/15/GULP学习（二）项目构建/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-GULP学习（一）安装&amp;功能"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/10/14/GULP学习（一）安装&功能/">GULP学习（一）安装&amp;功能</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-10-14 00:01:00" datetime="2017-10-13T16:01:00.000Z"  itemprop="datePublished">2017-10-14</time>
+
+        
+
+
+        
+	<span id="/2017/10/14/GULP学习（一）安装&功能/" class="leancloud_visitors" data-flag-title="GULP学习（一）安装&功能" title="GULP学习（一）安装&功能">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/14/GULP学习（一）安装&功能/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/14/GULP学习（一）安装&功能/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>学习ES6的项目中用到了gulp-babel编译ES6代码，还有gulp-browserify等，所以学习一下gulp。 </p>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文官网</a>写着gulp是增强工作流程的自动化构建工具。<br>通过编写gulp配置代码，能让gulp自动执行前端开发中的重复工作。<br>Gulp通过流和代码优于配置策略来尽量简化任务编写的工作。</p>
 <blockquote>
-<p>Anaconda is a completely free Python distribution (including for commercial use and redistribution). It includes more than 300 of the most popular Python packages for science, math, engineering, and data analysis.</p>
+<p>根据gulp的文档，它努力实现的<strong>主要特性</strong>是：<a href="http://www.infoq.com/cn/news/2014/02/gulp" target="_blank" rel="external">^footnote</a><br><strong>易于使用</strong>：采用代码优于配置策略，gulp让简单的事情继续简单，复杂的任务变得可管理。<br><strong>高效</strong>：通过利用node.js强大的流，不需要往磁盘写中间文件，可以更快地完成构建。<br><strong>高质量</strong>：gulp严格的插件指导方针，确保插件简单并且按你期望的方式工作。<br><strong>易于学习</strong>：通过把API降到最少，你能在很短的时间内学会gulp。构建工作就像你设想的一样：是一系列流管道。</p>
 </blockquote>
-<p><a href="https://www.continuum.io/downloads" target="_blank" rel="external">下载</a><br><a href="https://docs.continuum.io/" target="_blank" rel="external">文档</a><br><a href="https://conda.io/docs/index.html" target="_blank" rel="external">CONDA文档</a></p>
+<p>gulp相比于grunt，配置更简洁运行速度更快<a href="https://segmentfault.com/q/1010000003951849/a-1020000003952258" target="_blank" rel="external">^footnote2</a>。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><ol>
+<li><p>gulp基于node实现，需要先安装node。我在装atom前已经装好啦。</p>
+</li>
+<li><p>使用管理员权限全局安装</p>
+<pre><code>$ sudo npm install -g gulp
+</code></pre><p> 检查一下</p>
+<pre><code>$ gulp -v
+</code></pre></li>
+</ol>
+<h3 id="3-创建项目"><a href="#3-创建项目" class="headerlink" title="3.创建项目"></a>3.创建项目</h3><p>所有的 gulp 代码编写都可以看做是将规律转化为代码的过程。</p>
+<pre><code>$ npm init
+
+$ npm install gulp --save-dev
+</code></pre><p><code>--save-dev</code>保存配置信息至 package.json 的 devDependencies 节点。<br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbiggti1j20km0cb0tg.jpg" alt="npm install class="index-item-img">
     
-        <a href="/2017/04/01/python基础学习笔记/" class="post-more waves-effect waves-button">
+        <a href="/2017/10/14/GULP学习（一）安装&功能/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -227,7 +318,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-VR控件"
+                <article id="post-区块链-共识机制"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -235,20 +326,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/13/VR控件/">VR控件</a>
+      <a class="post-title-link" href="/2017/10/01/区块链-共识机制/">区块链-共识机制</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-03-13 00:01:00" datetime="2017-03-12T16:01:00.000Z"  itemprop="datePublished">2017-03-13</time>
+        <time class="post-time" title="2017-10-01 00:01:00" datetime="2017-09-30T16:01:00.000Z"  itemprop="datePublished">2017-10-01</time>
 
         
 
 
         
-	<span id="/2017/03/13/VR控件/" class="leancloud_visitors" data-flag-title="VR控件" title="VR控件">
+	<span id="/2017/10/01/区块链-共识机制/" class="leancloud_visitors" data-flag-title="区块链-共识机制" title="区块链-共识机制">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -259,8 +350,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/03/13/VR控件/#comment">
-            <span class="valine-comment-count" data-xid="/2017/03/13/VR控件/"></span>
+        <a href="/2017/10/01/区块链-共识机制/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/01/区块链-共识机制/"></span>
         </a>
     </span>
 
@@ -275,16 +366,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h4 id="1-OrbitControls-js"><a href="#1-OrbitControls-js" class="headerlink" title="1 . OrbitControls.js"></a>1 . OrbitControls.js</h4><p>控制视口（相机）的平移、缩放、旋转。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*OrbitControls轨道控制视口（相机）的平移、缩放、旋转*/</span></div><div class="line">       <span class="comment">/*如果 alpha 值不存在，我们也就不可以访问设备的定位事件，这替代了通过摄像头拖拽鼠标的技术*/</span></div><div class="line">       controls = <span class="keyword">new</span> THREE.OrbitControls(camera, renderer.domElement);</div><div class="line">       <span class="comment">//controls.target.set(0,0,0);</span></div><div class="line">       controls.target.set(</div><div class="line">           camera.position.x,</div><div class="line">           camera.position.y,</div><div class="line">           camera.position.z - <span class="number">0.15</span></div><div class="line">       );</div><div class="line">       controls.noPan = <span class="literal">true</span>;</div><div class="line">       controls.noZoom = <span class="literal">true</span>;</div></pre></td></tr></table></figure></p>
+        <p>区块链解决了在不可信信道上传输可信信息、价值转移的问题，而共识机制解决了区块链如何在分布式场景下达成一致性的问题，奠定了比特币系统的安全性。</p>
+<h3 id="1-分布式一致性问题（共识算法）"><a href="#1-分布式一致性问题（共识算法）" class="headerlink" title="1.分布式一致性问题（共识算法）"></a>1.分布式一致性问题（共识算法）</h3><h4 id="1-一致性问题（Consensus-Problem）"><a href="#1-一致性问题（Consensus-Problem）" class="headerlink" title="1. 一致性问题（Consensus Problem）"></a>1. 一致性问题（Consensus Problem）</h4><p>一致（Agreement） :每个正确的执行过程应该在相同的值上达成一致；<br>完整（Integrity） :每个正确的执行过程最多只能决定一个值。如果它决定了某个值的话，这个值一定是被某个执行过程提出的；<br>终止（Termination） :所有的执行过程最终会做出一个决定；<br>正确（Validity） :如果所有正确的执行过程提出了相同的值V，那么所有正确的执行过程都会决定值V。</p>
+<h4 id="2-FLP不可能性（FLP-impossibility）"><a href="#2-FLP不可能性（FLP-impossibility）" class="headerlink" title="2. FLP不可能性（FLP impossibility）"></a>2. <strong>FLP不可能性（FLP impossibility）</strong></h4><p>实际的计算机集群中，可能会存在以下问题:<br>1.节点处理事务的能力不同，网络节点数据的吞吐量有差异<br>2.节点间通讯的信道可能不安全<br>3.可能会有作恶节点出现<br>4.当异步处理能力达到高度一致时，系统的可扩展性就会变差（容不下新节点的加入）。</p>
+<p>FLP不可能性定理证明了在分布式情景下，无论任何算法，即使是只有一个进程挂掉，对于其他非失败进程，都存在着无法达成一致的可能。<strong>在假设网络可靠、计算节点只会因崩溃而失效的最小化异步模型系统中，仍然不存在一个可以解决一致性问题的确定性算法。</strong><br>FLP是Fischer, Lynch，Patterson三位作者名字组合的简写，表明这定理是由它们三位发明的。<br><a href="http://loopjump.com/flp_proof_note/" target="_blank" rel="external">证明</a><br><a href="http://blog.csdn.net/chen77716/article/details/27963079" target="_blank" rel="external">更多参考</a></p>
+<h4 id="3-CAP定理"><a href="#3-CAP定理" class="headerlink" title="3. CAP定理"></a>3. <strong>CAP定理</strong></h4><p><strong>分布式计算系统不可能同时确保一致性、可用性和分区容忍性。</strong><br>一致性（Consistency） :所有节点在同一时刻能够看到同样的数据，也即“强一致性”；<br>可用性（Availability） ：确保每个请求都可以收到确定其是否成功的响应；<br>分区容忍性（Partition tolerance） :因为网络故障导致的系统分区不影响系统正常运行。</p>
+<p>这也就意味着，我们虽然不能使某个分布式场景同时满足三个性质，但可以使之同时满足三个中的两个。更进一步说，对于包含多个分布式场景的分布式系统，我们甚至可以在三个性质的程度上进行适当的权衡<a href="http://www.cnblogs.com/firstdream/p/6585923.html" target="_blank" rel="external">^footnote</a>。</p>
     
-        <a href="/2017/03/13/VR控件/" class="post-more waves-effect waves-button">
+        <a href="/2017/10/01/区块链-共识机制/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
 
     </div>
     
@@ -293,7 +389,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-FPS记录控件stat.js"
+                <article id="post-ATOM&amp;NPM"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -301,20 +397,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/12/FPS记录控件stat.js/">FPS记录控件stat.js</a>
+      <a class="post-title-link" href="/2017/06/29/ATOM&NPM/">ATOM&amp;NPM</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-03-12 00:01:00" datetime="2017-03-11T16:01:00.000Z"  itemprop="datePublished">2017-03-12</time>
+        <time class="post-time" title="2017-06-29 00:01:00" datetime="2017-06-28T16:01:00.000Z"  itemprop="datePublished">2017-06-29</time>
 
         
 
 
         
-	<span id="/2017/03/12/FPS记录控件stat.js/" class="leancloud_visitors" data-flag-title="FPS记录控件stat.js" title="FPS记录控件stat.js">
+	<span id="/2017/06/29/ATOM&NPM/" class="leancloud_visitors" data-flag-title="ATOM&NPM" title="ATOM&NPM">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -325,8 +421,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/03/12/FPS记录控件stat.js/#comment">
-            <span class="valine-comment-count" data-xid="/2017/03/12/FPS记录控件stat.js/"></span>
+        <a href="/2017/06/29/ATOM&NPM/#comment">
+            <span class="valine-comment-count" data-xid="/2017/06/29/ATOM&NPM/"></span>
         </a>
     </span>
 
@@ -341,20 +437,62 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>1 . 在init()函数中添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stat = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">stat = <span class="keyword">new</span> Stats();</div><div class="line">stat.domElement.style.position = <span class="string">'absolute'</span>;</div><div class="line">stat.domElement.style.right = <span class="string">'0px'</span>;</div><div class="line">stat.domElement.style.top = <span class="string">'0px'</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(stat.domElement);</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>2 . 设置开始帧和结束帧<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">stat.begin();</div><div class="line"></div><div class="line"><span class="comment">//动画函数</span></div><div class="line"><span class="comment">//renderer.render(scene, camera);</span></div><div class="line"></div><div class="line">stat.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>也可以直接添加</p>
-<pre><code>stat.update();
-</code></pre>
+        <h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><pre><code>https://nodejs.org
+</code></pre><h4 id="2-安装cnpm"><a href="#2-安装cnpm" class="headerlink" title="2.安装cnpm"></a>2.安装<a href="https://cnpmjs.org/" target="_blank" rel="external">cnpm</a></h4><p>管理员模式开cmd</p>
+<pre><code>npm install -g cnpm –registry=https://registry.npm.taobao.org
+</code></pre><p>安装完后<code>npm config list</code>显示淘宝源</p>
+<h4 id="3-npm使用"><a href="#3-npm使用" class="headerlink" title="3.npm使用"></a>3.npm使用</h4><p>npm（node package manager）：<br>nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）。</p>
+<ul>
+<li><p>使用npm安装插件</p>
+<pre><code>npm install &lt;name&gt; [-g] [--save-dev]
+</code></pre><p>例：npm install gulp-less –save-dev</p>
+</li>
+</ul>
+<ul>
+<li><p><code>-g</code><br>全局安装。将会安装在C:\Users\Administrator\AppData\Roaming\npm，并且写入系统环境变量；<br>非全局安装：将会安装在当前定位目录；<br>全局安装可以通过命令行在任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过require()调用；</p>
+</li>
+<li><p><code>--save</code><br>将保存配置信息至package.json（package.json是nodejs项目配置文件）；</p>
+</li>
+<li><p><code>-dev</code><br>保存至package.json的devDependencies节点，不指定-dev将保存至dependencies节点；<br>一般保存在dependencies的像这些express/ejs/body-parser等等。</p>
+</li>
+<li><p>为什么要保存至package.json<br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p>
+<ul>
+<li><p>使用npm卸载插件</p>
+<pre><code>npm uninstall &lt;name&gt; [-g] [--save-dev] 
+</code></pre><p>不要直接删除本地插件包</p>
+<p>删除全部插件<br>使用rimraf：</p>
+<pre><code>npm install rimraf -g
+</code></pre><p>用法：rimraf node_modules</p>
+</li>
+<li><p>使用npm更新插件</p>
+<pre><code>npm update &lt;name&gt; [-g] [--save-dev]
+</code></pre><p>更新全部插件</p>
+<pre><code>npm update [--save-dev]
+</code></pre></li>
+<li><p>查看npm帮助</p>
+<pre><code>npm help
+</code></pre></li>
+<li><p>当前目录已安装插件</p>
+<pre><code>npm list
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="4-atom安装"><a href="#4-atom安装" class="headerlink" title="4.atom安装"></a>4.atom安装</h4><p><a href="https://atom.io/" target="_blank" rel="external">Atom</a> <a href="https://npm.taobao.org/mirrors/atom/" target="_blank" rel="external">下载镜像</a></p>
+<p>便携安装参考了<a href="http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html" target="_blank" rel="external">http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html</a></p>
+<p>然后在系统环境变量<code>path</code>中添加路径<code>C:\Users\~\AppData\Local\atom\bin</code></p>
+<h4 id="5-插件安装"><a href="#5-插件安装" class="headerlink" title="5.插件安装"></a>5.插件安装</h4><p>离线安装：<br>先cmd输入<code>apm -version</code>检查环境配置，然后从github上下载插件，<code>npm install</code>命令安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$export ATOM_ELECTRON_URL=https://npm.taobao.org/mirrors/atom-shell</div><div class="line">$ apm install --check</div></pre></td></tr></table></figure></p>
+<p>在线安装：<br><a href="https://www.sockscap64.com/sstap/" target="_blank" rel="external">ss-tap</a>不仅可以代理游戏，还可以……<br>总之强烈推荐。</p>
+
     
-        <a href="/2017/03/12/FPS记录控件stat.js/" class="post-more waves-effect waves-button">
+        <a href="/2017/06/29/ATOM&NPM/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -363,7 +501,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Koch曲线实现"
+                <article id="post-krpano实践"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -371,20 +509,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/11/Koch曲线实现/">Koch曲线实现</a>
+      <a class="post-title-link" href="/2017/06/24/krpano实践/">krpano实践</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-03-11 20:58:51" datetime="2017-03-11T12:58:51.000Z"  itemprop="datePublished">2017-03-11</time>
+        <time class="post-time" title="2017-06-24 17:01:30" datetime="2017-06-24T09:01:30.000Z"  itemprop="datePublished">2017-06-24</time>
 
         
 
 
         
-	<span id="/2017/03/11/Koch曲线实现/" class="leancloud_visitors" data-flag-title="Koch曲线实现" title="Koch曲线实现">
+	<span id="/2017/06/24/krpano实践/" class="leancloud_visitors" data-flag-title="krpano实践" title="krpano实践">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -395,8 +533,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/03/11/Koch曲线实现/#comment">
-            <span class="valine-comment-count" data-xid="/2017/03/11/Koch曲线实现/"></span>
+        <a href="/2017/06/24/krpano实践/#comment">
+            <span class="valine-comment-count" data-xid="/2017/06/24/krpano实践/"></span>
         </a>
     </span>
 
@@ -411,17 +549,25 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <hr>
-<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank" rel="noopener">摘自维基</a>：<br>科赫曲线是一种分形，是de Rham曲线的特例。<br>给定线段AB，科赫曲线可以由以下步骤生成：<br>1.将线段分成三等份（AC,CD,DB）<br>2.以CD为底，向外（内外随意）画一个等边三角形DMC<br>3.将线段CD移去<br>4.分别对AC,CM,MD,DB重复1~3。<br>科赫雪花是以等边三角形三边生成的科赫曲线组成的。每条科赫曲线的长度是无限大，它是连续而无处可微的曲线。</p>
+        <p>基于<a href="http://www.krpano360.com/" target="_blank" rel="noopener">krpano中文网</a>整理</p>
+<h3 id="1-官网"><a href="#1-官网" class="headerlink" title="1.官网"></a>1.官网</h3><p><a href="http://www.krpano.com/download/" target="_blank" rel="noopener">下载地址</a></p>
+<h3 id="2-krpano-Droplet"><a href="#2-krpano-Droplet" class="headerlink" title="2.krpano Droplet"></a>2.krpano Droplet</h3><p>krpano Droplet 基本上就是krpano命令行工具加上特定配置文件config的一个快捷方式。krpano droplet 的使用方式非常简单，将文件直接拖放在droplet图标上松开即可。</p>
+<p>一般用<code>MAKE VTOUR (VR-OPT) droplet.bat</code>生成VR漫游</p>
+<p><a href="http://www.krpano360.com/krpano-dropletzhongwenwendang/" target="_blank" rel="noopener">droplet详细</a></p>
+<p><a href="http://www.krpano360.com/解决make-vtour可生成场景数的限制/" target="_blank" rel="noopener">场景限制</a></p>
+<h3 id="3-标题修改、热点设置、起始视角"><a href="#3-标题修改、热点设置、起始视角" class="headerlink" title="3.标题修改、热点设置、起始视角"></a>3.标题修改、热点设置、起始视角</h3><p><a href="http://www.krpano360.com/xunxujianjin8-weimorenmanyoujiaruzhongwenxinxi/" target="_blank" rel="noopener">教程</a></p>
+<p><a href="http://www.macromedia.com/support/documentation/cn/flashplayer/help/settings_manager04.html#117502" target="_blank" rel="noopener">flash“全局安全设置”面板</a></p>
+<h3 id="4-tour-xml解析"><a href="#4-tour-xml解析" class="headerlink" title="4.tour.xml解析"></a>4.tour.xml解析</h3><p>(教程)[<a href="http://www.krpano360.com/xunxujianjin11-tour-xmldejingtaidaimadouyoushenmezuoyong/]" target="_blank" rel="noopener">http://www.krpano360.com/xunxujianjin11-tour-xmldejingtaidaimadouyoushenmezuoyong/]</a></p>
+
     
-        <a href="/2017/03/11/Koch曲线实现/" class="post-more waves-effect waves-button">
+        <a href="/2017/06/24/krpano实践/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -430,7 +576,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-第一人称视角(FPV)Three.js相机控件"
+                <article id="post-solidity编程（一）开发环境搭建"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -438,20 +584,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/">第一人称视角(FPV)Three.js相机控件</a>
+      <a class="post-title-link" href="/2017/06/08/solidity编程（一）开发环境搭建/">solidity编程（一）开发环境搭建</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-03-01 00:01:00" datetime="2017-02-28T16:01:00.000Z"  itemprop="datePublished">2017-03-01</time>
+        <time class="post-time" title="2017-06-08 18:01:52" datetime="2017-06-08T10:01:52.000Z"  itemprop="datePublished">2017-06-08</time>
 
         
 
 
         
-	<span id="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" class="leancloud_visitors" data-flag-title="第一人称视角(FPV)Three.js相机控件" title="第一人称视角(FPV)Three.js相机控件">
+	<span id="/2017/06/08/solidity编程（一）开发环境搭建/" class="leancloud_visitors" data-flag-title="solidity编程（一）开发环境搭建" title="solidity编程（一）开发环境搭建">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -462,8 +608,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/#comment">
-            <span class="valine-comment-count" data-xid="/2017/03/01/第一人称视角(FPV)Three.js相机控件/"></span>
+        <a href="/2017/06/08/solidity编程（一）开发环境搭建/#comment">
+            <span class="valine-comment-count" data-xid="/2017/06/08/solidity编程（一）开发环境搭建/"></span>
         </a>
     </span>
 
@@ -478,93 +624,24 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/FirstPersonControls.js" target="_blank" rel="external">FirstPersonControls.js</a></p>
-<p><a href="https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html" target="_blank" rel="external">https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html</a></p>
-<p>代码参考了<br>知乎作者：AanYip So  <a href="https://zhuanlan.zhihu.com/p/20796329" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/20796329</a></p>
-<h4 id="1-先定义相机控件和间隔时间"><a href="#1-先定义相机控件和间隔时间" class="headerlink" title="1 . 先定义相机控件和间隔时间"></a>1 . 先定义相机控件和间隔时间</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> control;</div><div class="line"><span class="keyword">const</span> clock = <span class="keyword">new</span> THREE.Clock(); <span class="comment">//用于计算两次animationFrame之间间隔时间</span></div></pre></td></tr></table></figure>
-<h4 id="2-在init（）函数里添加"><a href="#2-在init（）函数里添加" class="headerlink" title="2 . 在init（）函数里添加"></a>2 . 在init（）函数里添加</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*第一人称视觉*/</span></div><div class="line">        control = <span class="keyword">new</span> THREE.FirstPersonControls( camera, canvas);</div><div class="line">        control.movementSpeed = <span class="number">100</span>;   <span class="comment">//镜头移速</span></div><div class="line">        control.lookSpeed = <span class="number">0.125</span>;  <span class="comment">//视觉改变速度</span></div><div class="line">        control.lookVertical = <span class="literal">true</span>;  <span class="comment">//是否允许视觉上下改变</span></div><div class="line"></div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">       <span class="comment">// window.addEventListener('mousemove', this.onMouseMove, false);</span></div><div class="line">       <span class="comment">//根据官方源码写的话如下</span></div><div class="line">        <span class="keyword">var</span> _onMouseMove = bind( control, control.onMouseMove );</div><div class="line">        control.domElement.addEventListener( <span class="string">'mousemove'</span>, _onMouseMove, <span class="literal">false</span> );</div><div class="line">        </div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params"> scope, fn </span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">                fn.apply( scope, <span class="built_in">arguments</span> );</div><div class="line"></div><div class="line">            &#125;;</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<h4 id="3-添加到动画中再渲染"><a href="#3-添加到动画中再渲染" class="headerlink" title="3 . 添加到动画中再渲染"></a>3 . 添加到动画中再渲染</h4><pre><code>firstPersoncontrols.update(clock.getDelta());  //此处传入的delta是两次animationFrame的间隔时间，用于计算速度 
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">move() &#123;</div><div class="line">  control.update( clock.getDelta() );   </div><div class="line"></div><div class="line">  renderer.render(scene,camera);</div><div class="line">  requestAnimationFrame(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">this</span>.move());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+        <h3 id="1-Visual-Studio-2015（坑）"><a href="#1-Visual-Studio-2015（坑）" class="headerlink" title="1.Visual Studio 2015（坑）"></a>1.Visual Studio 2015（坑）</h3><p><a href="https://blogs.msdn.microsoft.com/caleteet/2016/04/01/solidity-integration-with-visual-studio/" target="_blank" rel="external">微软官网参考</a></p>
+<p>(1) 下载<a href="https://marketplace.visualstudio.com/items?itemName=ConsenSys.Solidity" target="_blank" rel="external">solidity扩展</a><br>目前不支持高亮显示，下载了<a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.SyntaxHighlightingPack" target="_blank" rel="external">Syntax Highlighting Pack</a>没用==<br>node.js必须装，<a href="https://nodejs.org/en/" target="_blank" rel="external">下载</a></p>
+<p>(2) 建立solidity项目<br><a href="https://www.youtube.com/watch?v=yoffoNRk-Xg" target="_blank" rel="external">视频参考</a><br><figure class="image-box">
+                <img src="http://wx3.sinaimg.cn/large/789d050dgy1ff1l7r9vbfj20wy0mtacb.jpg" alt="新建" title="" class="index-item-img">
+                <p>新建</p>
+            </figure><br>错误是因为没装bloc<br><figure class="image-box">
+                <img src="http://wx2.sinaimg.cn/large/789d050dgy1ff1l7rtdm4j20ry0lgwgc.jpg" alt="错误" title="" class="index-item-img">
+                <p>错误</p>
+            </figure></p>
     
-        <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" class="post-more waves-effect waves-button">
+        <a href="/2017/06/08/solidity编程（一）开发环境搭建/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-《Three-js入门指南》学习记录（五）"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/28/《Three-js入门指南》学习记录（五）/">《Three.js入门指南》学习记录（五）</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-02-28 15:08:07" datetime="2017-02-28T07:08:07.000Z"  itemprop="datePublished">2017-02-28</time>
-
-        
-
-
-        
-	<span id="/2017/02/28/《Three-js入门指南》学习记录（五）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（五）" title="《Three.js入门指南》学习记录（五）">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（五）/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h4 id="1-每秒帧数-FPS（Frames-Per-Second）"><a href="#1-每秒帧数-FPS（Frames-Per-Second）" class="headerlink" title="1.每秒帧数 FPS（Frames Per Second）"></a>1.每秒帧数 FPS（Frames Per Second）</h4><p>对于Three.js 动画而言，一般 FPS 在 30 到 60 之间都是可取的。</p>
-<h4 id="2-setInterval-方法"><a href="#2-setInterval-方法" class="headerlink" title="2.setInterval 方法"></a>2.setInterval 方法</h4><pre><code>setInterval(func, msec)
-</code></pre><p>其中， <code>func</code> 是每过 <code>msec</code> 毫秒执行的函数，如果将 <code>func</code>定义为重绘画面的函数，就能实<br>现动画效果。 <code>setInterval</code> 函数返回一个 <code>id</code> ，如果需要停止重绘，需要使用<br><code>clearInterval</code> 方法，并传入该 <code>id</code></p>
-<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    <span class="keyword">var</span> scene = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> camera = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> renderer = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> mesh = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> id = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> stat = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat = <span class="keyword">new</span> Stats();</div><div class="line">        stat.domElement.style.position = <span class="string">'absolute'</span>;</div><div class="line">        stat.domElement.style.right = <span class="string">'0px'</span>;</div><div class="line">        stat.domElement.style.top = <span class="string">'0px'</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(stat.domElement);</div><div class="line"></div><div class="line">        renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">            <span class="attr">canvas</span>: <span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">        &#125;);</div><div class="line">        renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">        scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line"></div><div class="line">        camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-5</span>, <span class="number">5</span>, <span class="number">3.75</span>, <span class="number">-3.75</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">        camera.position.set(<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>);</div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">        scene.add(camera);</div><div class="line"></div><div class="line">        mesh = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</div><div class="line">                <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</div><div class="line">                    <span class="attr">color</span>: <span class="number">0xffff00</span></div><div class="line">                &#125;));</div><div class="line">        scene.add(mesh);</div><div class="line"></div><div class="line">        <span class="keyword">var</span> light = <span class="keyword">new</span> THREE.DirectionalLight(<span class="number">0xffffff</span>);</div><div class="line">        light.position.set(<span class="number">20</span>, <span class="number">10</span>, <span class="number">5</span>);</div><div class="line">        scene.add(light);</div><div class="line"></div><div class="line">        id = setInterval(draw, <span class="number">20</span>);  <span class="comment">//每 20 毫秒执行 draw 函数</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat.begin();</div><div class="line"></div><div class="line">        mesh.rotation.y = (mesh.rotation.y + <span class="number">0.01</span>) % (<span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">        renderer.render(scene, camera);</div><div class="line"></div><div class="line">        stat.end();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (id !== <span class="literal">null</span>) &#123;</div><div class="line">            clearInterval(id);</div><div class="line">            id = <span class="literal">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-
-    
-        <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ethereum/">Ethereum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
 
     </div>
     
@@ -576,7 +653,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/10/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/10/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/">下一页</a>
     </div>
 </nav>
 

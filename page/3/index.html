@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-YAML"
+                <article id="post-Node.js (一) Express"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/05/06/YAML/">YAML</a>
+      <a class="post-title-link" href="/2018/08/15/Node.js (一) Express/">Node.js (一) Express</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-05-06 21:27:30" datetime="2018-05-06T13:27:30.000Z"  itemprop="datePublished">2018-05-06</time>
+        <time class="post-time" title="2018-08-15 11:26:30" datetime="2018-08-15T03:26:30.000Z"  itemprop="datePublished">2018-08-15</time>
 
         
 
 
         
-	<span id="/2018/05/06/YAML/" class="leancloud_visitors" data-flag-title="YAML" title="YAML">
+	<span id="/2018/08/15/Node.js (一) Express/" class="leancloud_visitors" data-flag-title="Node.js (一) Express" title="Node.js (一) Express">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/05/06/YAML/#comment">
-            <span class="valine-comment-count" data-xid="/2018/05/06/YAML/"></span>
+        <a href="/2018/08/15/Node.js (一) Express/#comment">
+            <span class="valine-comment-count" data-xid="/2018/08/15/Node.js (一) Express/"></span>
         </a>
     </span>
 
@@ -205,14 +205,19 @@
     
     
         <p>[TOC]</p>
-<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><a href="http://yaml.org/" target="_blank" rel="noopener">官网</a></p>
-<p><a href="http://yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener">文档</a></p>
-<pre><code>YAML Ain&apos;t Markup Language
-YAML is a human friendly data serialization standard for all programming languages.
-</code></pre><p><a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/07/yaml.html</a></p>
-<p>YAML实质上是一种通用的数据串行化格式。</p>
+<p><a href="https://github.com/nswbmw/N-blog/" target="_blank" rel="noopener">https://github.com/nswbmw/N-blog/</a></p>
+<h3 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1. 环境变量"></a>1. 环境变量</h3><p><code>环境变量（environment variables）</code>一般是指在操作系统中用来指定操作系统运行环境的一些参数。</p>
+<p>简单来讲，环境变量就是传递参数给运行程序的。</p>
+<pre><code>env  //显示环境变量
+</code></pre><p>nodejs使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=test node app</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(process.env.NODE_ENV) <span class="comment">//test</span></span><br></pre></td></tr></table></figure>
+<p>debug模块使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DEBUG=* node app</span><br><span class="line"></span><br><span class="line">-------</span><br><span class="line"><span class="comment">//windows用户设置</span></span><br><span class="line"></span><br><span class="line">set DEBUG=*</span><br><span class="line">set NODE_ENV=test</span><br><span class="line">node app</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/cross-env" target="_blank" rel="noopener">cross-env</a></p>
+<pre><code>Run scripts that set and use environment variables across platforms
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cross-env NODE_ENV=test node app</span><br></pre></td></tr></table></figure>
     
-        <a href="/2018/05/06/YAML/" class="post-more waves-effect waves-button">
+        <a href="/2018/08/15/Node.js (一) Express/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -228,7 +233,7 @@ YAML is a human friendly data serialization standard for all programming languag
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-terminal、shell、tty、console"
+                <article id="post-JWT规范"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -236,20 +241,20 @@ YAML is a human friendly data serialization standard for all programming languag
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/05/01/terminal、shell、tty、console/">terminal、shell、tty、console</a>
+      <a class="post-title-link" href="/2018/07/27/JWT规范/">JWT规范</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-05-01 02:01:30" datetime="2018-04-30T18:01:30.000Z"  itemprop="datePublished">2018-05-01</time>
+        <time class="post-time" title="2018-07-27 11:26:30" datetime="2018-07-27T03:26:30.000Z"  itemprop="datePublished">2018-07-27</time>
 
         
 
 
         
-	<span id="/2018/05/01/terminal、shell、tty、console/" class="leancloud_visitors" data-flag-title="terminal、shell、tty、console" title="terminal、shell、tty、console">
+	<span id="/2018/07/27/JWT规范/" class="leancloud_visitors" data-flag-title="JWT规范" title="JWT规范">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -260,8 +265,8 @@ YAML is a human friendly data serialization standard for all programming languag
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/05/01/terminal、shell、tty、console/#comment">
-            <span class="valine-comment-count" data-xid="/2018/05/01/terminal、shell、tty、console/"></span>
+        <a href="/2018/07/27/JWT规范/#comment">
+            <span class="valine-comment-count" data-xid="/2018/07/27/JWT规范/"></span>
         </a>
     </span>
 
@@ -276,167 +281,12 @@ YAML is a human friendly data serialization standard for all programming languag
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="无关本文比较的TTY"><a href="#无关本文比较的TTY" class="headerlink" title="无关本文比较的TTY"></a>无关本文比较的TTY</h3><blockquote>
-<p>TTY is a toolbox for developing beautiful command line clients in Ruby<br>with a fluid interface for gathering input, querying terminal<br>properties and displaying information.</p>
-</blockquote>
-<p><a href="https://github.com/piotrmurach/tty" target="_blank" rel="noopener">github</a><br><a href="http://piotrmurach.github.io/tty/" target="_blank" rel="noopener">官网</a></p>
-<hr>
-<p><strong>但此处比较的不是这个RUBY命令行工具。</strong></p>
-<p><a href="https://blog.csdn.net/on_1y/article/details/20203963" target="_blank" rel="noopener">控制台，终端，tty，shell等概念的区别</a></p>
-<p><a href="https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con" target="_blank" rel="noopener">What is the exact difference between a ‘terminal’, a ‘shell’, a ‘tty’ and a ‘console’?</a></p>
-<p><a href="https://www.zhihu.com/question/21711307" target="_blank" rel="noopener">终端，Shell，“tty”和控制台（console）有什么区别？</a></p>
-<p>(以下内容皆从上述链接中复制粘贴整理所得，侵删致歉)</p>
-<blockquote>
-<p><strong>A terminal is at the end of an electric wire, a shell is the home of a turtle, tty is a strange abbreviation and a console is a kind of cabinet.</strong></p>
-</blockquote>
-<p>In unix terminology, the short answer is that</p>
-<p><code>terminal</code> = <code>tty</code> = text input/output environment（文本的输入输出环境）<br><code>console</code> = physical terminal（物理终端）<br><code>shell</code> = command line interpreter(命令行解释器)</p>
-<h3 id="Teleprinter（TTY）-amp-Terminal"><a href="#Teleprinter（TTY）-amp-Terminal" class="headerlink" title="Teleprinter（TTY）&amp; Terminal"></a>Teleprinter（TTY）&amp; Terminal</h3>
+        <p>文章参考</p>
+<p><a href="https://jwt.io/introduction/" target="_blank" rel="noopener">Introduction to JSON Web Tokens</a></p>
+<p><a href="https://blog.leapoahead.com/2015/09/06/understanding-jwt/" target="_blank" rel="noopener">JSON Web Token - 在Web应用间安全地传递信息</a></p>
+<h3 id="JSON-Web-Token"><a href="#JSON-Web-Token" class="headerlink" title="JSON Web Token"></a>JSON Web Token</h3><p>使用JWT规范在用户和服务器之间传递安全可靠的信息。<br>适合用于向Web应用传递一些<strong>非敏感</strong>信息。</p>
     
-        <a href="/2018/05/01/terminal、shell、tty、console/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Red Hat"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/05/01/Red Hat/">Red Hat</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-05-01 00:01:00" datetime="2018-04-30T16:01:00.000Z"  itemprop="datePublished">2018-05-01</time>
-
-        
-
-
-        
-	<span id="/2018/05/01/Red Hat/" class="leancloud_visitors" data-flag-title="Red Hat" title="Red Hat">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/05/01/Red Hat/#comment">
-            <span class="valine-comment-count" data-xid="/2018/05/01/Red Hat/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-yum安装"><a href="#1-yum安装" class="headerlink" title="1. yum安装"></a>1. yum安装</h3><pre><code>This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.  
-</code></pre><p>以下全部引用自：<br><a href="https://blog.csdn.net/qq_34182808/article/details/80345476" target="_blank" rel="noopener">Redhat7中yum安装以及问题解决办法(YUM和wget都无法使用的情况下)</a></p>
-<p>解决：</p>
-<h4 id="1-检查系统环境"><a href="#1-检查系统环境" class="headerlink" title="1. 检查系统环境"></a>1. 检查系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
-<h4 id="2-检查yum包安装情况"><a href="#2-检查yum包安装情况" class="headerlink" title="2. 检查yum包安装情况"></a>2. 检查yum包安装情况</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep yum</span><br></pre></td></tr></table></figure>
-<h4 id="3-绝对不能先删除系统自带的yum包"><a href="#3-绝对不能先删除系统自带的yum包" class="headerlink" title="3. 绝对不能先删除系统自带的yum包"></a>3. 绝对不能先删除系统自带的yum包</h4><h4 id="4-先安装wget"><a href="#4-先安装wget" class="headerlink" title="4. 先安装wget"></a>4. 先安装wget</h4><p>yum安装不上就只能手动下载传上去了</p>
-<h4 id="5-删除系统自带的yum包"><a href="#5-删除系统自带的yum包" class="headerlink" title="5. 删除系统自带的yum包"></a>5. 删除系统自带的yum包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep yum|xargs rpm -e --nodeps（不检查依赖，直接删除rpm包）  </span><br><span class="line">rpm -qa |grep yum （查询确认）</span><br></pre></td></tr></table></figure>
-    
-        <a href="/2018/05/01/Red Hat/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Go"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/04/25/Go/">Go</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-04-25 15:36:30" datetime="2018-04-25T07:36:30.000Z"  itemprop="datePublished">2018-04-25</time>
-
-        
-
-
-        
-	<span id="/2018/04/25/Go/" class="leancloud_visitors" data-flag-title="Go" title="Go">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/04/25/Go/#comment">
-            <span class="valine-comment-count" data-xid="/2018/04/25/Go/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p><a href="https://blog.csdn.net/wangshubo1989/article/details/73784907" target="_blank" rel="noopener">https://blog.csdn.net/wangshubo1989/article/details/73784907</a></p>
-<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><a href="https://github.com/golang/go/wiki/NonEnglish" target="_blank" rel="noopener">wiki</a></p>
-<p><a href="https://studygolang.com/" target="_blank" rel="noopener">Go语言中文网</a></p>
-<p><a href="https://studygolang.com/pkgdoc" target="_blank" rel="noopener">Golang标准库文档</a></p>
-<p><a href="http://zh-golang.appspot.com/doc/" target="_blank" rel="noopener">Go 编程语言</a> - Chinese Translation of tip.golang.org</p>
-<p><a href="https://books.studygolang.com/gopl-zh/" target="_blank" rel="noopener">Go语言圣经（中文版）</a></p>
-    
-        <a href="/2018/04/25/Go/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/27/JWT规范/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -452,7 +302,7 @@ YAML is a human friendly data serialization standard for all programming languag
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-VLC插件实现监控和RTSP视频播放"
+                <article id="post-word &amp; git版本控制"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -460,20 +310,20 @@ YAML is a human friendly data serialization standard for all programming languag
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/04/23/VLC插件实现监控和RTSP视频播放/">VLC插件实现监控和RTSP视频播放</a>
+      <a class="post-title-link" href="/2018/07/13/word & git版本控制/">word &amp; git版本控制</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-04-23 00:01:00" datetime="2018-04-22T16:01:00.000Z"  itemprop="datePublished">2018-04-23</time>
+        <time class="post-time" title="2018-07-13 09:19:30" datetime="2018-07-13T01:19:30.000Z"  itemprop="datePublished">2018-07-13</time>
 
         
 
 
         
-	<span id="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="leancloud_visitors" data-flag-title="VLC插件实现监控和RTSP视频播放" title="VLC插件实现监控和RTSP视频播放">
+	<span id="/2018/07/13/word & git版本控制/" class="leancloud_visitors" data-flag-title="word & git版本控制" title="word & git版本控制">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -484,8 +334,8 @@ YAML is a human friendly data serialization standard for all programming languag
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/#comment">
-            <span class="valine-comment-count" data-xid="/2018/04/23/VLC插件实现监控和RTSP视频播放/"></span>
+        <a href="/2018/07/13/word & git版本控制/#comment">
+            <span class="valine-comment-count" data-xid="/2018/07/13/word & git版本控制/"></span>
         </a>
     </span>
 
@@ -500,24 +350,20 @@ YAML is a human friendly data serialization standard for all programming languag
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://software.intel.com/en-us/html5/hub/blogs/using-the-getusermedia-api-with-the-html5-video-and-canvas-elements/" target="_blank" rel="noopener">Using The Getusermedia API With The HTML5 Video And Canvas Elements</a></p>
-<p>配合海康威视摄像头使用<br>不兼容chrome</p>
-<p>参考链接</p>
-<p><a href="https://www.cnblogs.com/eoooxy/p/6401554.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">海康威视 嵌入到web页面相关问题</a></p>
-<p><a href="https://www.cnblogs.com/shusheng/archive/2011/12/15/2288649.html" target="_blank" rel="noopener">使用海康摄像头实现实时监控</a></p>
-<p><a href="https://www.cnblogs.com/ry-93-dream/articles/7554919.html" target="_blank" rel="noopener">在Chrome上通过vlc插件播放rtsp和rtmp视频</a></p>
-<p><a href="https://blog.csdn.net/hsany330/article/details/73457324?locationNum=2&amp;fps=1" target="_blank" rel="noopener">利用vlc插件将IP摄像头嵌入网页和网页播放RTSP流</a></p>
-<p><a href="https://www.cnblogs.com/jhlong/p/5848490.html" target="_blank" rel="noopener">web网页中使用vlc插件播放相机rtsp流视频</a></p>
-
+        <p>为了毕设学习一下:-D</p>
+<p>原文<a href="https://github.com/vigente/gerardus/wiki/Integrate-git-diffs-with-word-docx-files" target="_blank" rel="noopener">Integrate git diffs with word docx files</a><br>以下基本为简要翻译</p>
+<h3 id="1-安装Pandoc"><a href="#1-安装Pandoc" class="headerlink" title="1. 安装Pandoc"></a>1. 安装Pandoc</h3><pre><code>a universal document converter
+</code></pre><p><a href="http://pandoc.org/installing.html" target="_blank" rel="noopener">安装地址</a></p>
+<p><a href="http://pandoc.org/MANUAL.html" target="_blank" rel="noopener">Pandoc User’s Guide</a></p>
     
-        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/13/word & git版本控制/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -526,7 +372,7 @@ YAML is a human friendly data serialization standard for all programming languag
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Linux查询命令"
+                <article id="post-excel转markdown"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -534,20 +380,20 @@ YAML is a human friendly data serialization standard for all programming languag
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/04/01/Linux查询命令/">Linux查询命令</a>
+      <a class="post-title-link" href="/2018/07/02/excel转markdown/">excel转markdown</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-04-01 00:00:00" datetime="2018-03-31T16:00:00.000Z"  itemprop="datePublished">2018-04-01</time>
+        <time class="post-time" title="2018-07-02 07:56:30" datetime="2018-07-01T23:56:30.000Z"  itemprop="datePublished">2018-07-02</time>
 
         
 
 
         
-	<span id="/2018/04/01/Linux查询命令/" class="leancloud_visitors" data-flag-title="Linux查询命令" title="Linux查询命令">
+	<span id="/2018/07/02/excel转markdown/" class="leancloud_visitors" data-flag-title="excel转markdown" title="excel转markdown">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -558,8 +404,8 @@ YAML is a human friendly data serialization standard for all programming languag
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/04/01/Linux查询命令/#comment">
-            <span class="valine-comment-count" data-xid="/2018/04/01/Linux查询命令/"></span>
+        <a href="/2018/07/02/excel转markdown/#comment">
+            <span class="valine-comment-count" data-xid="/2018/07/02/excel转markdown/"></span>
         </a>
     </span>
 
@@ -574,18 +420,163 @@ YAML is a human friendly data serialization standard for all programming languag
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://www.linux-man.cn/" target="_blank" rel="noopener">Linux命令手册</a></p>
-<p>wget -qO- bench.sh | bash                一键测试linux性能<br>cat /proc/cpuinfo                查看cpu<br>ifconfig               查看网卡信息<br>free -m                查看内存<br>df -lh                     查看硬盘信息<br>wget <a href="http://cachefly.cachefly.net/100mb.test" target="_blank" rel="noopener">http://cachefly.cachefly.net/100mb.test</a> &amp;&amp; rm -f 100mb.test        端口速度测试<br>smartctl -A /dev/sda         查看硬盘使用时间 (提前安装smartmontools)<br>finger                查看用户信息<br>chkconfig –list                查看服务<br>ps aux            查看系统任务<br>top                实时查看资源占用<br>rpm -qa                查看所有安装的软件包<br>vnstat                查看流量 -l 实时 -d 每天 -m 每月<br>netstat -lunt                查看端口信息<br>iptables -L                查看防火墙<br>getconf LONG_BIT                查看是32位还是64位<br>whereis [name]                查找软件的路径</p>
+        <p><a href="https://github.com/fanfeilong/exceltk" target="_blank" rel="noopener">exceltk</a></p>
+<p><a href="https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exceltk -t md -xls table123.xls</span><br></pre></td></tr></table></figure>
 
     
-        <a href="/2018/04/01/Linux查询命令/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/02/excel转markdown/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-JAVA GO YAML JSON"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/23/JAVA GO YAML JSON/">JAVA GO YAML JSON</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-23 08:15:30" datetime="2018-06-23T00:15:30.000Z"  itemprop="datePublished">2018-06-23</time>
+
+        
+
+
+        
+	<span id="/2018/06/23/JAVA GO YAML JSON/" class="leancloud_visitors" data-flag-title="JAVA GO YAML JSON" title="JAVA GO YAML JSON">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/06/23/JAVA GO YAML JSON/#comment">
+            <span class="valine-comment-count" data-xid="/2018/06/23/JAVA GO YAML JSON/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>[TOC]</p>
+<h1 id="项目代码"><a href="#项目代码" class="headerlink" title="项目代码"></a>项目代码</h1><h2 id="用Java的snakeYaml解析YAML"><a href="#用Java的snakeYaml解析YAML" class="headerlink" title="用Java的snakeYaml解析YAML"></a>用Java的snakeYaml解析YAML</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.yaml.snakeyaml.Yaml;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">testload</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">load</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException</span>&#123;</span><br><span class="line">        <span class="comment">//初始化Yaml解析器</span></span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        File f=<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>);</span><br><span class="line">        <span class="comment">//读入文件</span></span><br><span class="line">        Object result= yaml.load(<span class="keyword">new</span> FileInputStream(f));</span><br><span class="line">        System.out.println(result.getClass());</span><br><span class="line">        System.out.println( result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadMap</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            map = (Map&lt;String, Object&gt;) yaml.load(is);</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadObjects</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        List&lt;Object&gt; list = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"src/test/resources/example.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            list = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</span><br><span class="line">            <span class="keyword">for</span> (Object obj : yaml.loadAll(is)) &#123;</span><br><span class="line">                list.add(obj);</span><br><span class="line">            &#125;</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(list);</span><br><span class="line">        String json= JSON.toJSONString(list, <span class="keyword">true</span>);</span><br><span class="line">        System.out.println(json);</span><br><span class="line"></span><br><span class="line">        FileWriter fw = <span class="keyword">null</span>;</span><br><span class="line">        fw = <span class="keyword">new</span> FileWriter(<span class="string">"src/test/resources/topology.json"</span>);</span><br><span class="line">        BufferedWriter output = <span class="keyword">new</span> BufferedWriter(fw);</span><br><span class="line">        output.write(json);</span><br><span class="line">        output.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+        <a href="/2018/06/23/JAVA GO YAML JSON/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-FreeMarker模板生成工具"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/07/FreeMarker模板生成工具/">FreeMarker模板生成工具</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-07 17:19:30" datetime="2018-06-07T09:19:30.000Z"  itemprop="datePublished">2018-06-07</time>
+
+        
+
+
+        
+	<span id="/2018/06/07/FreeMarker模板生成工具/" class="leancloud_visitors" data-flag-title="FreeMarker模板生成工具" title="FreeMarker模板生成工具">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/06/07/FreeMarker模板生成工具/#comment">
+            <span class="valine-comment-count" data-xid="/2018/06/07/FreeMarker模板生成工具/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><blockquote>
+<p>FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
+</blockquote>
+<p><strong>模板 + 数据模型 = 输出</strong><br><figure class="image-box">
+                <img src="http://freemarker.foofun.cn/figures/overview.png" alt="MVC (模型 class="index-item-img">
+                <p>MVC (模型 视图 控制器) 模式</p>
+            </figure></p>
+<p><a href="http://freemarker.foofun.cn/index.html" target="_blank" rel="noopener">官网</a></p>
+<p><a href="http://try.freemarker.org/" target="_blank" rel="noopener">http://try.freemarker.org/</a></p>
+<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h3><p><a href="http://freemarker.foofun.cn/pgui_quickstart_createconfiguration.html" target="_blank" rel="noopener">程序开发指南</a></p>
+<p>参考以下文章，侵删致歉：</p>
+<p><a href="https://segmentfault.com/a/1190000011768799" target="_blank" rel="noopener">FreeMarker 快速入门</a></p>
+    
+        <a href="/2018/06/07/FreeMarker模板生成工具/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -597,7 +588,7 @@ YAML is a human friendly data serialization standard for all programming languag
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
     </div>
 </nav>
 

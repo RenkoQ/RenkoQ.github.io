@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-git版本控制"
+                <article id="post-Koch曲线实现"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/12/01/git版本控制/">git版本控制</a>
+      <a class="post-title-link" href="/2017/03/11/Koch曲线实现/">Koch曲线实现</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2016-12-01 00:01:00" datetime="2016-11-30T16:01:00.000Z"  itemprop="datePublished">2016-12-01</time>
+        <time class="post-time" title="2017-03-11 20:58:51" datetime="2017-03-11T12:58:51.000Z"  itemprop="datePublished">2017-03-11</time>
 
         
 
 
         
-	<span id="/2016/12/01/git版本控制/" class="leancloud_visitors" data-flag-title="git版本控制" title="git版本控制">
+	<span id="/2017/03/11/Koch曲线实现/" class="leancloud_visitors" data-flag-title="Koch曲线实现" title="Koch曲线实现">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2016/12/01/git版本控制/#comment">
-            <span class="valine-comment-count" data-xid="/2016/12/01/git版本控制/"></span>
+        <a href="/2017/03/11/Koch曲线实现/#comment">
+            <span class="valine-comment-count" data-xid="/2017/03/11/Koch曲线实现/"></span>
         </a>
     </span>
 
@@ -204,62 +204,17 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h3 id="1-版本控制类型"><a href="#1-版本控制类型" class="headerlink" title="1. 版本控制类型"></a>1. 版本控制类型</h3><p>版本控制系统模型包括两大主要类型：</p>
-<ul>
-<li>集中式模型 - 所有用户都连接到一个中央的主仓库（master repository）</li>
-<li>分布式模型 - 每个用户都在自己的计算机上拥有完整的仓库</li>
-</ul>
-<p><a href="https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs" target="_blank" rel="external">What is version control: centralized vs. DVCS</a><br><a href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%A3%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6" target="_blank" rel="external">分散式版本控制</a></p>
-<h3 id="2-术语"><a href="#2-术语" class="headerlink" title="2. 术语"></a>2. 术语</h3><p><strong>版本控制系统 / 源代码管理器</strong><br><code>版本控制系统</code>（简称<code>VCS</code>）是一个管理源代码不同版本的工具。<code>源代码管理器</code>（简称 <code>SCM</code>）是版本控制系统的另一个名称。</p>
-<p>Git 是一个 SCM（因此也是 VCS！）。Git 网站的 URL 是 <a href="https://git-scm.com/" target="_blank" rel="external">https://git-scm.com/</a> （注意它的域名中直接包含“SCM”！）。</p>
-<p><strong>提交（Commit）</strong><br>Git 将数据看做微型文件系统的一组快照。每次 <code>commit</code>（在 Git 中保持项目状态），它都对文件当时的状况拍照，并存储对该快照的引用。你可以将其看做游戏中的保存点，它会保存项目的文件和关于文件的所有信息。</p>
-<p>你在 Git 中的所有操作都是帮助你进行 commit，因此 commit 是 Git 中的基本单位。</p>
-<p><strong>仓库（Repository / repo）</strong><br>仓库是一个包含项目内容以及几个文件（在 Mac OS X 上默认地处于隐藏状态）的目录，用来与 Git 进行通信。仓库可以存储在本地，或作为远程副本存储在其他计算机上。仓库是由 commit 构成的。</p>
-<p><strong>工作目录 / 工作区（Working Directory）</strong><br>工作目录是你在计算机的文件系统中看到的文件。当你在代码编辑器中打开项目文件时，你是在工作目录中处理文件。</p>
-<p>与这些文件形成对比的是保持在仓库中（在 commit 中！）的文件。</p>
-<p>在使用 Git 时，工作目录与命令行工具的 <code>current working directory</code> （当前工作目录）不一样，后者是 shell 当前正在查看的目录。</p>
-<p><strong>检出（Checkout）</strong><br>检出是指将仓库中的内容复制到工作目录下。</p>
-<p><strong>暂存区 / 暂存索引 / 索引（Staging Area / Staging Index / Index）</strong><br>Git 目录下的一个文件，存储的是即将进入下个 commit 内容的信息。可以将暂存区看做准备工作台，Git 将在此区域获取下个 commit。暂存索引中的文件是准备添加到仓库中的文件。</p>
-<p><strong>SHA</strong><br>SHA 是每个 commit 的 ID 编号。以下是 commit 的 SHA 示例：e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6。</p>
-<p>它是一个长 40 个字符的字符串（由 0–9 和 a–f 组成），并根据 Git 中的文件或目录结构的内容计算得出。SHA 的全称是”Secure Hash Algorithm”（安全哈希算法）。</p>
-<p><strong>分支（Branch）</strong><br>分支是从主开发流程中分支出来的新的开发流程。这种分支开发流程可以在不更改主流程的情况下继续延伸下去。</p>
-<p>回到之前关于游戏保存点的示例，你可以将分支看做在游戏中设立保存点后，尝试一个有风险的招式。如果有风险的招式不奏效，则回到保存的位置。令分支非常强大的关键之处是你可以在一个分支上设定保存点，然后切换到另一个分支并继续设定保存点。</p>
-<h3 id="3-git设置"><a href="#3-git设置" class="headerlink" title="3. git设置"></a>3. git设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># 设置你的 Git 用户名</div><div class="line">git config --global user.name &quot;&lt;Your-Full-Name&gt;&quot;</div><div class="line"></div><div class="line"># 设置你的 Git 邮箱</div><div class="line">git config --global user.email &quot;&lt;your-email-address&gt;&quot;</div><div class="line"></div><div class="line"># 确保 Git 输出内容带有颜色标记</div><div class="line">git config --global color.ui auto</div><div class="line"></div><div class="line"># 对比显示原始状态</div><div class="line">git config --global merge.conflictstyle diff3</div><div class="line"></div><div class="line">git config --list</div></pre></td></tr></table></figure>
-<p>Atom Editor 设置</p>
-<pre><code>git config --global core.editor &quot;atom --wait&quot;
-</code></pre><h3 id="3-git-init"><a href="#3-git-init" class="headerlink" title="3. git init"></a>3. git init</h3><p>运行 <code>git init</code> 命令会初始化 Git 跟踪所有内容会用到的所有必要文件和目录。所有这些文件都存储在叫做 <code>.git</code>（隐藏目录）的目录下。这个<code>.git</code> 目录是一个库！Git 会将所有 <code>commit</code> 记录在这里，并跟踪所有内容！</p>
-<p><strong>.git 目录内容</strong></p>
-<ul>
-<li>配置文件 - 存储了所有与项目有关的配置设置。</li>
-<li>description 文件 - 此文件仅用于 GitWeb 程序，因此可以忽略</li>
-<li>hooks 目录 - 我们会在此处放置客户端或服务器端脚本，以便用来连接到 Git 的不同生命周期事件</li>
-<li>info 目录 - 包含全局排除文件</li>
-<li>objects 目录 - 此目录将存储我们提交的所有 commit</li>
-<li>refs 目录 - 此目录存储了指向 commit 的指针（通常是“分支”和“标签”）</li>
-</ul>
-<p><a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain" target="_blank" rel="external">Git 内部原理 - 底层命令和高层命令</a></p>
-<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">自定义 Git - Git Hooks</a></p>
-<p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" target="_blank" rel="external">在现有目录中初始化仓库</a><br><a href="https://git-scm.com/docs/git-init" target="_blank" rel="external">git init 文档</a><br><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory" target="_blank" rel="external">git init 教程</a></p>
-<h3 id="4-git-clone"><a href="#4-git-clone" class="headerlink" title="4. git clone"></a>4. git clone</h3><p><strong>验证终端位置</strong><br>提示：在克隆任何内容之前，确保命令行工具已定位于正确的目录下。克隆项目会新建一个目录，并将克隆的 Git 仓库放在其中。问题是无法创建嵌套的 Git 仓库。因此，确保终端的当前工作目录没有位于 Git 仓库中。如果当前工作目录没有在 shell 的提示符中显示，输入 pwd 输出工作目录。</p>
-<p>git clone 命令用于创建一个与现有仓库完全相同的副本。</p>
-<pre><code>$ git clone &lt;path-to-repository-to-clone&gt;
-</code></pre><p>该命令：</p>
-<ul>
-<li>会获取现有仓库的路径</li>
-<li>默认地将创建一个与被克隆的仓库名称相同的目录</li>
-<li>可以提供第二个参数，作为该目录的名称</li>
-<li>将在现有工作目录下创建一个新的仓库</li>
-</ul>
-<p><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository" target="_blank" rel="external">克隆现有仓库</a><br><a href="https://git-scm.com/docs/git-clone" target="_blank" rel="external">git 克隆文档</a><br><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" target="_blank" rel="external">git 克隆教程</a></p>
+        <hr>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank" rel="noopener">摘自维基</a>：<br>科赫曲线是一种分形，是de Rham曲线的特例。<br>给定线段AB，科赫曲线可以由以下步骤生成：<br>1.将线段分成三等份（AC,CD,DB）<br>2.以CD为底，向外（内外随意）画一个等边三角形DMC<br>3.将线段CD移去<br>4.分别对AC,CM,MD,DB重复1~3。<br>科赫雪花是以等边三角形三边生成的科赫曲线组成的。每条科赫曲线的长度是无限大，它是连续而无处可微的曲线。</p>
     
-        <a href="/2016/12/01/git版本控制/" class="post-more waves-effect waves-button">
+        <a href="/2017/03/11/Koch曲线实现/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
 
     </div>
     
@@ -268,7 +223,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-千里之行，始于足下"
+                <article id="post-第一人称视角(FPV)Three.js相机控件"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -276,20 +231,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/10/千里之行，始于足下/">千里之行，始于足下</a>
+      <a class="post-title-link" href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/">第一人称视角(FPV)Three.js相机控件</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2016-11-10 11:51:51" datetime="2016-11-10T03:51:51.000Z"  itemprop="datePublished">2016-11-10</time>
+        <time class="post-time" title="2017-03-01 00:01:00" datetime="2017-02-28T16:01:00.000Z"  itemprop="datePublished">2017-03-01</time>
 
         
 
 
         
-	<span id="/2016/11/10/千里之行，始于足下/" class="leancloud_visitors" data-flag-title="千里之行，始于足下" title="千里之行，始于足下">
+	<span id="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" class="leancloud_visitors" data-flag-title="第一人称视角(FPV)Three.js相机控件" title="第一人称视角(FPV)Three.js相机控件">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -300,8 +255,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2016/11/10/千里之行，始于足下/#comment">
-            <span class="valine-comment-count" data-xid="/2016/11/10/千里之行，始于足下/"></span>
+        <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/#comment">
+            <span class="valine-comment-count" data-xid="/2017/03/01/第一人称视角(FPV)Three.js相机控件/"></span>
         </a>
     </span>
 
@@ -316,24 +271,23 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要:"></a>摘要:</h2><blockquote>
-<ul>
-<li>建博客起因</li>
-<li>hexo配置环境</li>
-<li>配置过程</li>
-<li>总结</li>
-</ul>
-</blockquote>
-<hr>
+        <p><a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/FirstPersonControls.js" target="_blank" rel="external">FirstPersonControls.js</a></p>
+<p><a href="https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html" target="_blank" rel="external">https://github.com/josdirksen/learning-threejs/blob/master/chapter-09/07-first-person-camera.html</a></p>
+<p>代码参考了<br>知乎作者：AanYip So  <a href="https://zhuanlan.zhihu.com/p/20796329" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/20796329</a></p>
+<h4 id="1-先定义相机控件和间隔时间"><a href="#1-先定义相机控件和间隔时间" class="headerlink" title="1 . 先定义相机控件和间隔时间"></a>1 . 先定义相机控件和间隔时间</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> control;</div><div class="line"><span class="keyword">const</span> clock = <span class="keyword">new</span> THREE.Clock(); <span class="comment">//用于计算两次animationFrame之间间隔时间</span></div></pre></td></tr></table></figure>
+<h4 id="2-在init（）函数里添加"><a href="#2-在init（）函数里添加" class="headerlink" title="2 . 在init（）函数里添加"></a>2 . 在init（）函数里添加</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*第一人称视觉*/</span></div><div class="line">        control = <span class="keyword">new</span> THREE.FirstPersonControls( camera, canvas);</div><div class="line">        control.movementSpeed = <span class="number">100</span>;   <span class="comment">//镜头移速</span></div><div class="line">        control.lookSpeed = <span class="number">0.125</span>;  <span class="comment">//视觉改变速度</span></div><div class="line">        control.lookVertical = <span class="literal">true</span>;  <span class="comment">//是否允许视觉上下改变</span></div><div class="line"></div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">       <span class="comment">// window.addEventListener('mousemove', this.onMouseMove, false);</span></div><div class="line">       <span class="comment">//根据官方源码写的话如下</span></div><div class="line">        <span class="keyword">var</span> _onMouseMove = bind( control, control.onMouseMove );</div><div class="line">        control.domElement.addEventListener( <span class="string">'mousemove'</span>, _onMouseMove, <span class="literal">false</span> );</div><div class="line">        </div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params"> scope, fn </span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">                fn.apply( scope, <span class="built_in">arguments</span> );</div><div class="line"></div><div class="line">            &#125;;</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h4 id="3-添加到动画中再渲染"><a href="#3-添加到动画中再渲染" class="headerlink" title="3 . 添加到动画中再渲染"></a>3 . 添加到动画中再渲染</h4><pre><code>firstPersoncontrols.update(clock.getDelta());  //此处传入的delta是两次animationFrame的间隔时间，用于计算速度 
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">move() &#123;</div><div class="line">  control.update( clock.getDelta() );   </div><div class="line"></div><div class="line">  renderer.render(scene,camera);</div><div class="line">  requestAnimationFrame(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">this</span>.move());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
     
-        <a href="/2016/11/10/千里之行，始于足下/" class="post-more waves-effect waves-button">
+        <a href="/2017/03/01/第一人称视角(FPV)Three.js相机控件/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
 
     </div>
     
@@ -342,7 +296,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-hello-world"
+                <article id="post-《Three-js入门指南》学习记录（五）"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -350,20 +304,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/10/hello-world/">Hello World</a>
+      <a class="post-title-link" href="/2017/02/28/《Three-js入门指南》学习记录（五）/">《Three.js入门指南》学习记录（五）</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2016-11-10 11:11:11" datetime="2016-11-10T03:11:11.000Z"  itemprop="datePublished">2016-11-10</time>
+        <time class="post-time" title="2017-02-28 15:08:07" datetime="2017-02-28T07:08:07.000Z"  itemprop="datePublished">2017-02-28</time>
 
         
 
 
         
-	<span id="/2016/11/10/hello-world/" class="leancloud_visitors" data-flag-title="Hello World" title="Hello World">
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（五）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（五）" title="《Three.js入门指南》学习记录（五）">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -374,8 +328,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2016/11/10/hello-world/#comment">
-            <span class="valine-comment-count" data-xid="/2016/11/10/hello-world/"></span>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（五）/"></span>
         </a>
     </span>
 
@@ -390,25 +344,284 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h4 id="1-每秒帧数-FPS（Frames-Per-Second）"><a href="#1-每秒帧数-FPS（Frames-Per-Second）" class="headerlink" title="1.每秒帧数 FPS（Frames Per Second）"></a>1.每秒帧数 FPS（Frames Per Second）</h4><p>对于Three.js 动画而言，一般 FPS 在 30 到 60 之间都是可取的。</p>
+<h4 id="2-setInterval-方法"><a href="#2-setInterval-方法" class="headerlink" title="2.setInterval 方法"></a>2.setInterval 方法</h4><pre><code>setInterval(func, msec)
+</code></pre><p>其中， <code>func</code> 是每过 <code>msec</code> 毫秒执行的函数，如果将 <code>func</code>定义为重绘画面的函数，就能实<br>现动画效果。 <code>setInterval</code> 函数返回一个 <code>id</code> ，如果需要停止重绘，需要使用<br><code>clearInterval</code> 方法，并传入该 <code>id</code></p>
+<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    <span class="keyword">var</span> scene = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> camera = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> renderer = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> mesh = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> id = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">var</span> stat = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat = <span class="keyword">new</span> Stats();</div><div class="line">        stat.domElement.style.position = <span class="string">'absolute'</span>;</div><div class="line">        stat.domElement.style.right = <span class="string">'0px'</span>;</div><div class="line">        stat.domElement.style.top = <span class="string">'0px'</span>;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(stat.domElement);</div><div class="line"></div><div class="line">        renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">            <span class="attr">canvas</span>: <span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">        &#125;);</div><div class="line">        renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">        scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line"></div><div class="line">        camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-5</span>, <span class="number">5</span>, <span class="number">3.75</span>, <span class="number">-3.75</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">        camera.position.set(<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>);</div><div class="line">        camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">        scene.add(camera);</div><div class="line"></div><div class="line">        mesh = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</div><div class="line">                <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</div><div class="line">                    <span class="attr">color</span>: <span class="number">0xffff00</span></div><div class="line">                &#125;));</div><div class="line">        scene.add(mesh);</div><div class="line"></div><div class="line">        <span class="keyword">var</span> light = <span class="keyword">new</span> THREE.DirectionalLight(<span class="number">0xffffff</span>);</div><div class="line">        light.position.set(<span class="number">20</span>, <span class="number">10</span>, <span class="number">5</span>);</div><div class="line">        scene.add(light);</div><div class="line"></div><div class="line">        id = setInterval(draw, <span class="number">20</span>);  <span class="comment">//每 20 毫秒执行 draw 函数</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        stat.begin();</div><div class="line"></div><div class="line">        mesh.rotation.y = (mesh.rotation.y + <span class="number">0.01</span>) % (<span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">        renderer.render(scene, camera);</div><div class="line"></div><div class="line">        stat.end();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (id !== <span class="literal">null</span>) &#123;</div><div class="line">            clearInterval(id);</div><div class="line">            id = <span class="literal">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
 
     
-        <a href="/2016/11/10/hello-world/" class="post-more waves-effect waves-button">
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（五）/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-《Three-js入门指南》学习记录（四）"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/02/28/《Three-js入门指南》学习记录（四）/">《Three.js入门指南》学习记录（四）</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-02-28 15:07:48" datetime="2017-02-28T07:07:48.000Z"  itemprop="datePublished">2017-02-28</time>
+
+        
+
+
+        
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（四）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（四）" title="《Three.js入门指南》学习记录（四）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（四）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（四）/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h4 id="1-基本材质（BasicMaterial）"><a href="#1-基本材质（BasicMaterial）" class="headerlink" title="1.基本材质（BasicMaterial）"></a>1.基本材质（BasicMaterial）</h4><pre><code>THREE.MeshLambertMaterial(opt)
+</code></pre><p>渲染后物体的颜色始终为该材质的颜色，而不会由于光照产生明暗、阴影效果。如果没有指定材质的颜色，则颜色是随机的。</p>
+<h4 id="2-Lambert-材质（MeshLambertMaterial）"><a href="#2-Lambert-材质（MeshLambertMaterial）" class="headerlink" title="2.Lambert 材质（MeshLambertMaterial）"></a>2.Lambert 材质（MeshLambertMaterial）</h4><p>只考虑漫反射而不考虑镜面反射</p>
+<pre><code>Idiffuse = Kd * Id * cos(theta)
+</code></pre><p>其中， <code>Idiffuse</code> 是漫反射光强， <code>Kd</code> 是物体表面的漫反射属性， <code>Id</code> 是光强， <code>theta</code> 是光的入射角弧度</p>
+<p><code>color</code>  表现材质对散射光的反射能力，也是最常用来设置材质颜色的属性<br><code>ambient</code> 表示对环境光的反射能力，只有当设置了 AmbientLight后，该值才是有效的，<br>材质对环境光的反射能力与环境光强相乘后得到材质实际表现的颜色。<br><code>emissive</code> 是材质的自发光颜色，可以用来表现光源的颜色。</p>
+<h4 id="3-Phong-材质（MeshPhongMaterial）"><a href="#3-Phong-材质（MeshPhongMaterial）" class="headerlink" title="3.Phong 材质（MeshPhongMaterial）"></a>3.Phong 材质（MeshPhongMaterial）</h4><p>考虑了镜面反射的效果</p>
+<pre><code>Ispecular = Ks * Is * (cos(alpha)) ^ n
+</code></pre><p> <code>Ispecular</code> 是镜面反射的光强，<code>Ks</code> 是材质表面镜面反射系数， <code>Is</code> 是光源强度，<br><code>alpha</code> 是反射光与视线的夹角，<code>n</code> 是高光指数，越大则高光光斑越小。</p>
+<p><code>specular</code> 值指定镜面反射系数</p>
+<h4 id="4-法向材质"><a href="#4-法向材质" class="headerlink" title="4.法向材质"></a>4.法向材质</h4><p>将材质的颜色设置为其法向量的方向</p>
+<pre><code>new THREE.MeshNormalMaterial()
+</code></pre><h4 id="5-纹理贴图"><a href="#5-纹理贴图" class="headerlink" title="5.纹理贴图"></a>5.纹理贴图</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-10</span>, <span class="number">10</span>, <span class="number">7.5</span>, <span class="number">-7.5</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">            camera.position.set(<span class="number">-5</span>, <span class="number">25</span>, <span class="number">25</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//光照</span></div><div class="line">            <span class="keyword">var</span> light = <span class="keyword">new</span> THREE.PointLight(<span class="number">0xffffff</span>, <span class="number">1</span>, <span class="number">1000</span>);</div><div class="line">            light.position.set(<span class="number">15</span>,<span class="number">25</span>,<span class="number">20</span>);</div><div class="line">            scene.add(light);</div><div class="line"></div><div class="line">            <span class="comment">//材质</span></div><div class="line"><span class="comment">//            var texture = THREE.ImageUtils.loadTexture('img',&#123;&#125;,function()&#123;</span></div><div class="line"><span class="comment">//                renderer.render(scene,camera);</span></div><div class="line"><span class="comment">//            &#125;);</span></div><div class="line"></div><div class="line">            <span class="keyword">var</span> materials = [];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">6</span>;++i)&#123;</div><div class="line">                materials.push(<span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                    <span class="attr">map</span>: THREE.ImageUtils.loadTexture(<span class="string">'img/'</span>+i+<span class="string">'.png'</span>,&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                    renderer.render(scene,camera);</div><div class="line">                &#125;),</div><div class="line">                    <span class="attr">overdraw</span>: <span class="literal">true</span></div><div class="line"></div><div class="line">                &#125;));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>),</div><div class="line">                <span class="keyword">new</span> THREE.MeshFaceMaterial(materials));</div><div class="line">            scene.add(cube);</div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="6-棋盘格（重复贴图）"><a href="#6-棋盘格（重复贴图）" class="headerlink" title="6.棋盘格（重复贴图）"></a>6.棋盘格（重复贴图）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-10</span>, <span class="number">10</span>, <span class="number">7.5</span>, <span class="number">-7.5</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">            camera.position.set(<span class="number">0</span>, <span class="number">0</span>, <span class="number">25</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//光照</span></div><div class="line">            <span class="keyword">var</span> light = <span class="keyword">new</span> THREE.PointLight(<span class="number">0xffffff</span>, <span class="number">1</span>, <span class="number">1000</span>);</div><div class="line">            light.position.set(<span class="number">15</span>,<span class="number">25</span>,<span class="number">20</span>);</div><div class="line">            scene.add(light);</div><div class="line"></div><div class="line">            <span class="comment">//材质</span></div><div class="line">            <span class="keyword">var</span> texture = THREE.ImageUtils.loadTexture(<span class="string">'img/chess.png'</span>,&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                renderer.render(scene,camera);</div><div class="line">            &#125;);</div><div class="line">            <span class="comment">//重复4次为8行8列</span></div><div class="line">            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;</div><div class="line">            texture.repeat.set(<span class="number">4</span>,<span class="number">4</span>);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> material = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</div><div class="line">                <span class="attr">map</span>: texture</div><div class="line">            &#125;);</div><div class="line"></div><div class="line"></div><div class="line">            <span class="keyword">var</span> plane = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.PlaneGeometry(<span class="number">12</span>, <span class="number">12</span>), material);</div><div class="line">            scene.add(plane);</div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+    
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（四）/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-《Three-js入门指南》学习记录（三）"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/02/28/《Three-js入门指南》学习记录（三）/">《Three.js入门指南》学习记录（三）</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-02-28 15:07:29" datetime="2017-02-28T07:07:29.000Z"  itemprop="datePublished">2017-02-28</time>
+
+        
+
+
+        
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（三）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（三）" title="《Three.js入门指南》学习记录（三）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（三）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（三）/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h4 id="1-立方体（CubeGeometry）"><a href="#1-立方体（CubeGeometry）" class="headerlink" title="1.立方体（CubeGeometry）"></a>1.立方体（CubeGeometry）</h4><pre><code>THREE.CubeGeometry(width, height,depth,widthSegments,heightSegments,depthSegments)
+</code></pre><p><code>width</code> : x 方向上的长度<br><code>height</code>: y 方向上的长度<br><code>depth</code>: z 方向上的长度<br>后三个参数分别是在三个方向上的分段数，如 widthSegments为3的话，代表x方向上水平分为三份。后三个参数的缺省值为 1。<br>（对六个面进行分段，而不是对立方体的体素分段）</p>
+<h4 id="2-平面（PlaneGeometry）"><a href="#2-平面（PlaneGeometry）" class="headerlink" title="2.平面（PlaneGeometry）"></a>2.平面（PlaneGeometry）</h4><pre><code>THREE.PlaneGeometry(width, height, widthSegments, heightSegments)
+</code></pre><h4 id="3-球体（SphereGeometry）"><a href="#3-球体（SphereGeometry）" class="headerlink" title="3.球体（SphereGeometry）"></a>3.球体（SphereGeometry）</h4><pre><code>THREE.SphereGeometry(radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength)
+</code></pre><p><code>radius</code>: 半径<br><code>segmentsWidth</code>: 表示经度上的切片<br><code>segmentsHeight</code>: 表示纬度上的切片数<br><code>phiStart</code>: 表示经度开始的弧度<br><code>phiLength</code>: 表示经度跨过的弧度<br><code>thetaStart</code>: 表示纬度开始的弧度<br><code>thetaLength</code>: 表示纬度跨过的弧度</p>
+<h4 id="4-圆形（CircleGeometry）"><a href="#4-圆形（CircleGeometry）" class="headerlink" title="4.圆形（CircleGeometry）"></a>4.圆形（CircleGeometry）</h4><pre><code>THREE.CircleGeometry(radius, segments, thetaStart, thetaLength)
+</code></pre><h4 id="5-圆柱体（CylinderGeometry）"><a href="#5-圆柱体（CylinderGeometry）" class="headerlink" title="5.圆柱体（CylinderGeometry）"></a>5.圆柱体（CylinderGeometry）</h4><pre><code>THREE.CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
+</code></pre><p><code>radiusTop</code> 顶面半径<br><code>radiusBottom</code> 底面半径<br><code>height</code> 圆柱体的高度；<br><code>radiusSegments</code> 与 <code>heightSegments</code> 可类比球体中的分段<br><code>openEnded</code> 是一个布尔值，表示是否没有顶面和底面，缺省值为 false ，表示有顶面和底面。</p>
+<h4 id="6-正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）"><a href="#6-正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）" class="headerlink" title="6.正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）"></a>6.正四面体（TetrahedronGeometry）、正八面体（OctahedronGeometry）、正二十面体（IcosahedronGeometry）</h4><pre><code>THREE.TetrahedronGeometry(radius, detail)
+THREE.OctahedronGeometry(radius, detail)
+THREE.IcosahedronGeometry(radius, detail)
+</code></pre><p><code>radius</code> 半径<br><code>detail</code> 细节层次（Level of Detail）的层数，一般可以对这个值缺省   </p>
+<h4 id="7-圆环面（TorusGeometry）"><a href="#7-圆环面（TorusGeometry）" class="headerlink" title="7.圆环面（TorusGeometry）"></a>7.圆环面（TorusGeometry）</h4><pre><code>THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
+</code></pre><p> <code>radius</code> 圆环半径<br> <code>tube</code> 管道半径<br> <code>radialSegments</code> 与 <code>tubularSegments</code> 分别是两个分段数<br> <code>arc</code> 圆环面的弧度，缺省值为 Math.PI * 2     </p>
+<h4 id="8-文字形状（TextGeometry）"><a href="#8-文字形状（TextGeometry）" class="headerlink" title="8.文字形状（TextGeometry）"></a>8.文字形状（TextGeometry）</h4><pre><code>THREE.TextGeometry(text, parameters)
+</code></pre><p><code>text</code> 文字字符串<br><code>parameters</code> 是以下参数组成的对象：</p>
+<ul>
+<li>size ：字号大小，一般为大写字母的高度</li>
+<li>height ：文字的厚度</li>
+<li>curveSegments ：弧线分段数，使得文字的曲线更加光滑</li>
+<li>font ：字体，默认是 ‘helvetiker’ ，需对应引用的字体文件</li>
+<li>weight ：值为 ‘normal’ 或 ‘bold’ ，表示是否加粗</li>
+<li>style ：值为 ‘normal’ 或 ‘italics’ ，表示是否斜体</li>
+<li>bevelEnabled ：布尔值，是否使用倒角，意为在边缘处斜切</li>
+<li>bevelThickness ：倒角厚度</li>
+<li>bevelSize ：倒角宽度</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-2.5</span>, <span class="number">2.5</span>, <span class="number">1.875</span>, <span class="number">-1.875</span>, <span class="number">0.1</span>, <span class="number">100</span>);</div><div class="line">            camera.position.set(<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> material = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                <span class="attr">color</span>: <span class="number">0xffff00</span></div><div class="line">            &#125;);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> loader = <span class="keyword">new</span> THREE.FontLoader();</div><div class="line">            loader.load(<span class="string">'gothical_Regular.json'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">font</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> mesh = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.TextGeometry(<span class="string">'Hello'</span>, &#123;</div><div class="line">                    <span class="attr">font</span>: font,</div><div class="line">                    <span class="attr">size</span>: <span class="number">1</span>,</div><div class="line">                    <span class="attr">height</span>: <span class="number">1</span></div><div class="line">                &#125;), material);</div><div class="line">                scene.add(mesh);</div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="9-自定义形状"><a href="#9-自定义形状" class="headerlink" title="9.自定义形状"></a>9.自定义形状</h4><pre><code>THREE.Geometry()
+</code></pre><p><a href="https://threejs.org/docs/index.html?q=ge#Reference/Core/Geometry" target="_blank" rel="external">https://threejs.org/docs/index.html?q=ge#Reference/Core/Geometry</a></p>
+
+    
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（三）/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-《Three-js入门指南》学习记录（二）"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/02/28/《Three-js入门指南》学习记录（二）/">《Three.js入门指南》学习记录（二）</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-02-28 15:07:10" datetime="2017-02-28T07:07:10.000Z"  itemprop="datePublished">2017-02-28</time>
+
+        
+
+
+        
+	<span id="/2017/02/28/《Three-js入门指南》学习记录（二）/" class="leancloud_visitors" data-flag-title="《Three.js入门指南》学习记录（二）" title="《Three.js入门指南》学习记录（二）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（二）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/02/28/《Three-js入门指南》学习记录（二）/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h4 id="1-照相机"><a href="#1-照相机" class="headerlink" title="1.照相机"></a>1.照相机</h4><p>定义了三维空间到二维屏幕的投影方式</p>
+<h4 id="2-正交投影照相机（Orthographic-Camera）"><a href="#2-正交投影照相机（Orthographic-Camera）" class="headerlink" title="2.正交投影照相机（Orthographic Camera）"></a>2.正交投影照相机（Orthographic Camera）</h4><figure class="image-box">
+                <img src="http://techbrood.com/threejs/docs/images/ortho.jpg" alt="正交投影相机" title="" class="">
+                <p>正交投影相机</p>
+            </figure>
+<h4 id="3-视体（viewing-frustum）"><a href="#3-视体（viewing-frustum）" class="headerlink" title="3.视体（viewing frustum）"></a>3.视体（viewing frustum）</h4><p>又称视景体、视锥，是三维世界中在屏幕上可见的区域，即虚拟摄像机的视野。</p>
+<pre><code>THREE.OrthographicCamera(left, right, top, bottom, near, far)
+</code></pre><p>为了保持照相机的横竖比例，需要保证 (right - left) 与 (top - bottom) 的比例与 Canvas宽度与高度的比例一致。<br>near 与 far 都是指到照相机位置在深度平面的位置，而照相机不应该拍摄到其后方的物<br>体，因此这两个值应该均为正值。为了保证场景中的物体不会因为太近或太远而被照相机<br>忽略，一般 near 的值设置得较小， far 的值设置得较大，具体值视场景中物体的位置等<br>决定。</p>
+<h4 id="4-观察方向"><a href="#4-观察方向" class="headerlink" title="4.观察方向"></a>4.观察方向</h4><p>照相机沿 z 轴负方向观察</p>
+<pre><code>.lookAt ( vector )
+</code></pre><p>vector — 观察点</p>
+<p>该函数设定相机在全局空间中的位置。</p>
+<pre><code>camera.lookAt(new THREE.Vector3(0, 0, 0));  //看着原点方向
+</code></pre><h4 id="5-正交照相机总结"><a href="#5-正交照相机总结" class="headerlink" title="5.正交照相机总结"></a>5.正交照相机总结</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//渲染器</span></div><div class="line">            <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">                <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">            &#125;);</div><div class="line">            renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">            <span class="comment">//场景</span></div><div class="line">            <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">            <span class="comment">//照相机</span></div><div class="line">            <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">-2</span>, <span class="number">2</span>, <span class="number">1.5</span>, <span class="number">-1.5</span>, <span class="number">1</span>, <span class="number">10</span>);</div><div class="line">            camera.position.set(<span class="number">4</span>, <span class="number">-3</span>, <span class="number">5</span>);</div><div class="line">            camera.lookAt(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</div><div class="line">            scene.add(camera);</div><div class="line">            <span class="comment">//创建边长为1的红色正方体，wireframe（线框）材质，以便看到正方体后方的边</span></div><div class="line">            <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>),</div><div class="line">                    <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                        <span class="attr">color</span>:<span class="number">0xff0000</span>,</div><div class="line">                        <span class="attr">wireframe</span>:<span class="literal">true</span></div><div class="line">                    &#125;)</div><div class="line">            );</div><div class="line">            scene.add(cube);</div><div class="line">            <span class="comment">//渲染</span></div><div class="line">            renderer.render(scene,camera);</div><div class="line">        &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="6-透视投影照相机（Perspective-Camera）"><a href="#6-透视投影照相机（Perspective-Camera）" class="headerlink" title="6.透视投影照相机（Perspective Camera）"></a>6.透视投影照相机（Perspective Camera）</h4><figure class="image-box">
+                <img src="http://techbrood.com/ueditor/php/upload/image/20160525/1464141326848754.png" alt="透视投影照相机" title="" class="">
+                <p>透视投影照相机</p>
+            </figure>
+<pre><code>THREE.PerspectiveCamera(fov, aspect, near, far)
+</code></pre><p>fov — 相机视锥体竖直方向上的张角（是角度制而非弧度制）<br>aspect — 相机视锥体宽高比width / height，通常设为Canvas 的横纵比例<br>near — 相机视锥体近裁剪面<br>far — 相机视锥体远裁剪面</p>
+<p>near 和 far 分别是照相机到视景体最近、最远的距离，均为正值，且 far 应大于near。</p>
+<p>fov增大时视景体变大，物体相对于整个视景体的大小变小，看起来就显得变小了。</p>
+<h4 id="7-透视照相机总结"><a href="#7-透视照相机总结" class="headerlink" title="7.透视照相机总结"></a>7.透视照相机总结</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">      <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          <span class="comment">//渲染器</span></div><div class="line">          <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;</div><div class="line">              <span class="attr">canvas</span>:<span class="built_in">document</span>.getElementById(<span class="string">'mainCanvas'</span>)</div><div class="line">          &#125;);</div><div class="line">          renderer.setClearColor(<span class="number">0x000000</span>);</div><div class="line">          <span class="comment">//场景</span></div><div class="line">          <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</div><div class="line">          <span class="comment">//照相机</span></div><div class="line">          <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.PerspectiveCamera(<span class="number">60</span>, <span class="number">400</span> / <span class="number">300</span>, <span class="number">1</span>, <span class="number">10</span>);</div><div class="line">          camera.position.set(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</div><div class="line">          scene.add(camera);</div><div class="line">          <span class="comment">//创建边长为1的红色正方体，wireframe（线框）材质，以便看到正方体后方的边</span></div><div class="line">          <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(<span class="keyword">new</span> THREE.CubeGeometry(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>),</div><div class="line">                  <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123;</div><div class="line">                      <span class="attr">color</span>:<span class="number">0xff0000</span>,</div><div class="line">                      <span class="attr">wireframe</span>:<span class="literal">true</span></div><div class="line">                  &#125;)</div><div class="line">          );</div><div class="line">          scene.add(cube);</div><div class="line">          <span class="comment">//渲染</span></div><div class="line">          renderer.render(scene,camera);</div><div class="line">      &#125;</div><div class="line">  &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+
+    
+        <a href="/2017/02/28/《Three-js入门指南》学习记录（二）/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Three-js/">Three.js</a></li></ul>
 
     </div>
     
@@ -420,7 +633,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/12/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+    <a class="extend prev" rel="prev" href="/page/12/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/">下一页</a>
     </div>
 </nav>
 

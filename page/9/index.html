@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-Hyperledger Fabric开发环境"
+                <article id="post-Google 地图 JavaScript API（一）"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/30/Hyperledger Fabric开发环境/">Hyperledger Fabric 开发环境</a>
+      <a class="post-title-link" href="/2017/12/02/Google 地图 JavaScript API（一）/">Google 地图 JavaScript API（一）</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-10-30 21:09:30" datetime="2017-10-30T13:09:30.000Z"  itemprop="datePublished">2017-10-30</time>
+        <time class="post-time" title="2017-12-02 00:00:00" datetime="2017-12-01T16:00:00.000Z"  itemprop="datePublished">2017-12-02</time>
 
         
 
 
         
-	<span id="/2017/10/30/Hyperledger Fabric开发环境/" class="leancloud_visitors" data-flag-title="Hyperledger Fabric 开发环境" title="Hyperledger Fabric 开发环境">
+	<span id="/2017/12/02/Google 地图 JavaScript API（一）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（一）" title="Google 地图 JavaScript API（一）">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,95 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/30/Hyperledger Fabric开发环境/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/30/Hyperledger Fabric开发环境/"></span>
+        <a href="/2017/12/02/Google 地图 JavaScript API（一）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/12/02/Google 地图 JavaScript API（一）/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>根据udacity课程学习的笔记。</p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
+<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
+<h3 id="1-首先需要在控制台创建一个项目。"><a href="#1-首先需要在控制台创建一个项目。" class="headerlink" title="1. 首先需要在控制台创建一个项目。"></a>1. 首先需要在<a href="https://console.developers.google.com" target="_blank" rel="external">控制台</a>创建一个项目。</h3><h3 id="2-然后启用API。"><a href="#2-然后启用API。" class="headerlink" title="2. 然后启用API。"></a>2. 然后启用API。</h3><pre><code>[Google Maps JavaScript API](https://console.developers.google.com/apis/library/maps-backend.googleapis.com)
+
+
+
+[Google Maps Roads API][4]
+[Google Static Maps API][5]
+[Google Street View Image API][6]
+[Google Places API Web Service][7]
+[Google Maps Geocoding API][8]
+[Google Maps Geolocation API][9]
+[Google Maps Directions API][10]
+[Google Maps Distance Matrix API][11]
+[Google Maps Elevation API][12]
+[Google Maps Time Zone API][13]
+</code></pre><h3 id="3-创建凭据"><a href="#3-创建凭据" class="headerlink" title="3. 创建凭据"></a>3. 创建凭据</h3><pre><code>创建 API 密钥，在您的应用中使用此密钥的方法是：使用 key=API_KEY 参数传递此密钥。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 用于异步加载API --&gt;</div><div class="line">&lt;script async defer</div><div class="line">    src=&quot;https://maps.googleapis.com/maps/api/js?key=填写api密钥&amp;v=3&amp;callback=initMap&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="4-创建地图"><a href="#4-创建地图" class="headerlink" title="4. 创建地图"></a>4. 创建地图</h3><p><code>a lat long literal</code>经纬度字面量</p>
+<p><a href="https://google-developers.appspot.com/maps/documentation/utils/geocoder/" target="_blank" rel="external">获取特定位置的坐标</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> map;</div><div class="line"><span class="comment">//加载地图</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// Constructor creates a new map - only center and zoom are required.</span></div><div class="line">  map = <span class="keyword">new</span> google.maps.Map(<span class="built_in">document</span>.getElementById(<span class="string">'map'</span>), &#123;</div><div class="line">    <span class="comment">//中心 纬度 经度</span></div><div class="line">    center: &#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;,</div><div class="line">    <span class="comment">//缩放值 越高越详细</span></div><div class="line">    zoom: <span class="number">13</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    
+        <a href="/2017/12/02/Google 地图 JavaScript API（一）/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Hyperledger Composer（一）"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/19/Hyperledger Composer（一）/">Hyperledger Composer（一）</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-19 22:15:09" datetime="2017-11-19T14:15:09.000Z"  itemprop="datePublished">2017-11-19</time>
+
+        
+
+
+        
+	<span id="/2017/11/19/Hyperledger Composer（一）/" class="leancloud_visitors" data-flag-title="Hyperledger Composer（一）" title="Hyperledger Composer（一）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/19/Hyperledger Composer（一）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/19/Hyperledger Composer（一）/"></span>
         </a>
     </span>
 
@@ -205,20 +292,40 @@
     
     
         <p>所有参考资料贴在最后。</p>
-<h3 id="1-Vagrant"><a href="#1-Vagrant" class="headerlink" title="1. Vagrant"></a>1. Vagrant</h3><p><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">官方下载</a></p>
-<p>Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟机的管理，包括建立和删除虚拟机、配置虚拟机运行参数、管理虚拟机运行状态、自动化配置和安装开发环境必须的各类软件、打包和分发虚拟机运行环境等。 <a href="http://www.ituring.com.cn/article/131600" target="_blank" rel="external">^foot1</a></p>
-<p>简单地说，Vagrant让我们可以通过代码的方式快速地、可重复地创建针对不同虚拟环境的虚拟机，包括Virtualbox、AWS、Docker等。它使得我们可以一次性地、自动创建多个环境相同的虚拟机，对于软件开发和测试尤其有用。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
-<p>使用Vagrant能尽可能避免”Work on my machine“错误，缩短搭建开发环境的时间。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
-<h3 id="2-go"><a href="#2-go" class="headerlink" title="2. go"></a>2. go</h3><p><a href="https://golang.org/dl/" target="_blank" rel="external">官方下载</a></p>
-<p><a href="https://golang.org/doc/" target="_blank" rel="external">官方文档</a></p>
-<p>Go语言需要配置<code>GOPATH</code>环境变量，指向代码目录。</p>
-<p>管理员模式打开CMD输入<code>go env</code>验证。</p>
-<h3 id="3-下载源码"><a href="#3-下载源码" class="headerlink" title="3. 下载源码"></a>3. 下载源码</h3><p><a href="https://github.com/hyperledger/fabric" target="_blank" rel="external">fabric</a><br><a href="https://github.com/hyperledger/fabric-ca" target="_blank" rel="external">fabric-ca</a></p>
-<pre><code>git clone https://github.com/hyperledger/fabric.git                        
-git clone https://github.com/hyperledger/fabric-ca.git    
+<h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1flq2afpkbgj20yg0kqtd6.jpg" alt="架构图"><br>Hyperledger Composer class="index-item-img">
+<p>它包含一组API、一种建模语言和一个编程模型，可以使用它们快速定义和部署业务网络和应用程序，使参与者能执行交易来交换资产。</p>
+<p>Composer 编程模型以定义并部署业务网络定义为基础，它包含一个数据模型，该模型定义了业务网络中的资产、参与者和交易的名称与结构。该业务网络还指定了交易处理器函数（ES5 编写），在客户端提交交易时，这些函数会自动在一个 Hyperledger Fabric 上运行。<br>Composer 定义了 JavaScript API 来提交交易，并在资产注册表中创建、检索、更新和删除资产。</p>
+<h3 id="2-前置环境"><a href="#2-前置环境" class="headerlink" title="2.前置环境"></a>2.前置环境</h3><ul>
+<li>Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or<br>Mac OS 10.12</li>
+<li>Docker Engine: Version 17.03 or higher</li>
+<li>Docker-Compose: Version 1.8 or higher</li>
+<li>Node: 8.9 or higher <strong><em>(note version 9 is not supported)</em></strong></li>
+<li>npm: v5.x</li>
+<li>git: 2.9.x or higher</li>
+<li>Python: 2.7.x</li>
+<li>A code editor of your choice, we recommend VSCode.</li>
+</ul>
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1flq09wyl3ej20a8026q2w.jpg" alt="node"></p  class="index-item-img">
+<p><strong>LINUX环境下注意点</strong></p>
+<ol>
+<li>Login as a normal user, rather than root.</li>
+<li>Do not su to root.</li>
+<li>When installing prerequisites, use curl, then unzip using sudo.</li>
+<li>Run prereqs-ubuntu.sh as a normal user. It may prompt for root<br>password as some of it’s actions are required to be run as root.</li>
+<li>Do not use npm with sudo or su to root to use it.</li>
+<li>Avoid installing node globally as root.</li>
+</ol>
+<p>总之尽力避免在root模式下操作。</p>
+<p><strong>ubuntu直接用官方bash文件完成上述依赖项的安装：</strong></p>
+<p>下载脚本文件</p>
+<pre><code>curl -O https://hyperledger.github.io/composer/prereqs-ubuntu.sh
+</code></pre><p>修改权限</p>
+<pre><code>chmod u+x prereqs-ubuntu.sh
+</code></pre><p>运行脚本文件</p>
+<pre><code>./prereqs-ubuntu.sh
 </code></pre>
     
-        <a href="/2017/10/30/Hyperledger Fabric开发环境/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/19/Hyperledger Composer（一）/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -234,7 +341,7 @@ git clone https://github.com/hyperledger/fabric-ca.git
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-GULP学习（三）插件&amp;补充"
+                <article id="post-Hyperledger Composer Playground"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -242,20 +349,20 @@ git clone https://github.com/hyperledger/fabric-ca.git
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/27/GULP学习（三）插件&补充/">GULP学习（三）插件&amp;补充</a>
+      <a class="post-title-link" href="/2017/11/18/Hyperledger Composer Playground/">Hyperledger Composer Playground</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-10-27 00:01:00" datetime="2017-10-26T16:01:00.000Z"  itemprop="datePublished">2017-10-27</time>
+        <time class="post-time" title="2017-11-18 18:30:00" datetime="2017-11-18T10:30:00.000Z"  itemprop="datePublished">2017-11-18</time>
 
         
 
 
         
-	<span id="/2017/10/27/GULP学习（三）插件&补充/" class="leancloud_visitors" data-flag-title="GULP学习（三）插件&补充" title="GULP学习（三）插件&补充">
+	<span id="/2017/11/18/Hyperledger Composer Playground/" class="leancloud_visitors" data-flag-title="Hyperledger Composer Playground" title="Hyperledger Composer Playground">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -266,88 +373,8 @@ git clone https://github.com/hyperledger/fabric-ca.git
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/27/GULP学习（三）插件&补充/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/27/GULP学习（三）插件&补充/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>整理一些网上查到的资料(已注明出处、侵删)，再对gulp相关进行补充。</p>
-<p><a href="https://github.com/Platform-CUF/use-gulp" target="_blank" rel="external">use-gulp</a><br><a href="https://gulpjs.com/plugins/" target="_blank" rel="external">gulp插件网</a><br><a href="https://github.com/alferov/awesome-gulp" target="_blank" rel="external">awesome-gulp</a><br><a href="http://www.tangshuang.net/3126.html" target="_blank" rel="external">gulp中文入门教程</a></p>
-<h3 id="1-为静态文件添加-MD5-指纹-foot1"><a href="#1-为静态文件添加-MD5-指纹-foot1" class="headerlink" title="1. 为静态文件添加 MD5 指纹^foot1"></a>1. 为静态文件添加 MD5 指纹<a href="https://zhuanlan.zhihu.com/p/24975955" target="_blank" rel="external">^foot1</a></h3><p>使用 Gulp 自动对 HTML 中引用的静态文件添加<code>MD5 指纹戳</code>，有效解决旧文件缓存，新文件无法更新的问题。</p>
-<p><code>MD5</code>的作用是让大容量信息在用数字签名软件签署私人密钥前被”压缩”成一种保密的格式（就是把一个任意长度的字节串变换成一定长的十六进制数字串）。</p>
-<p><a href="https://www.npmjs.com/package/gulp-rev" target="_blank" rel="external">gulp-rev</a></p>
-<blockquote>
-<p> Static asset revisioning by appending content hash to filenames: unicorn.css → unicorn-d41d8cd98f.css</p>
-</blockquote>
-<p>完美规避更新时短时间内客户端请求结果不一致的问题，但易造成文件冗余。</p>
-<p><a href="https://www.npmjs.com/package/gulp-rev-append" target="_blank" rel="external">gulp-rev-append</a></p>
-<pre><code>转换后变为&lt;script src=&apos;BearD01001.min.js?rev=366dc531e1&apos;&gt;&lt;/script&gt;
-</code></pre><p>每次更新不会产生新文件，有效避免文件冗余，但更新时短时间内，客户端请求到的静态文件可能不一致。</p>
-<pre><code>$ npm install --save-dev gulp-rev --save-dev
-$ npm install --save-dev gulp-rev-append --save-dev
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">const</span> rev = <span class="built_in">require</span>(<span class="string">'gulp-rev'</span>);</div><div class="line"><span class="comment">// const revAppend = require('gulp-rev-append');</span></div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, () =&gt;</div><div class="line">	gulp.src(<span class="string">'src/*.css'</span>)</div><div class="line">		.pipe(rev())</div><div class="line">		<span class="comment">// .pipe(revAppend())</span></div><div class="line">		.pipe(gulp.dest(<span class="string">'dist'</span>))</div><div class="line">);</div></pre></td></tr></table></figure>
-    
-        <a href="/2017/10/27/GULP学习（三）插件&补充/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Hyperledger Fabric 部署示例"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/24/Hyperledger Fabric 部署示例/">Hyperledger Fabric 部署示例</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-10-24 19:06:52" datetime="2017-10-24T11:06:52.000Z"  itemprop="datePublished">2017-10-24</time>
-
-        
-
-
-        
-	<span id="/2017/10/24/Hyperledger Fabric 部署示例/" class="leancloud_visitors" data-flag-title="Hyperledger Fabric 部署示例" title="Hyperledger Fabric 部署示例">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/24/Hyperledger Fabric 部署示例/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/24/Hyperledger Fabric 部署示例/"></span>
+        <a href="/2017/11/18/Hyperledger Composer Playground/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/18/Hyperledger Composer Playground/"></span>
         </a>
     </span>
 
@@ -363,20 +390,23 @@ $ npm install --save-dev gulp-rev-append --save-dev
     
     
         <p>所有参考资料贴在最后。</p>
-<h3 id="1-virtualbox"><a href="#1-virtualbox" class="headerlink" title="1. virtualbox"></a>1. virtualbox</h3><p><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">下载</a></p>
-<h3 id="2-ubuntu"><a href="#2-ubuntu" class="headerlink" title="2. ubuntu"></a>2. ubuntu</h3><p><a href="https://www.ubuntu.com/download/alternative-downloads" target="_blank" rel="external">下载</a></p>
-<p>在虚拟机里安装ubuntu。</p>
-<p><a href="http://wiki.ubuntu.org.cn/Ubuntu%E6%A1%8C%E9%9D%A2%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97#1.3.1..E2.80.83.E7.9B.AE.E5.BD.95.E5.92.8C.E6.96.87.E4.BB.B6.E7.B3.BB.E7.BB.9F" target="_blank" rel="external">Ubuntu桌面入门指南</a></p>
-<p>su获取root权限。</p>
-<p><img src="http://wx3.sinaimg.cn/large/789d050dgy1fktocaheu2j20an05hq3c.jpg" alt="su"></p  class="index-item-img">
-<h3 id="3-git"><a href="#3-git" class="headerlink" title="3. git"></a>3. git</h3><pre><code>$ apt-get update                                                            
-$ apt-get install git   
-</code></pre><blockquote>
-<p>apt-get，是一条linux命令，适用于deb包管理式的操作系统，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统。</p>
-</blockquote>
-<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1fktocax43nj20k70ayjtx.jpg" alt="安装git"></p  class="index-item-img">
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p>在线试验场<br><a href="http://composer-playground.mybluemix.net/" target="_blank" rel="external">Composer Playground</a></p>
+<p><a href="https://hyperledger.github.io/composer/tutorials/playground-tutorial.html" target="_blank" rel="external">文档</a></p>
+<h3 id="2-创建新business-network"><a href="#2-创建新business-network" class="headerlink" title="2. 创建新business network"></a>2. 创建新business network</h3><p><img src="http://wx4.sinaimg.cn/large/789d050dgy1flq09iqcjaj20qi0lkq3v.jpg" alt="Deploy a class="index-item-img">
+<p><img src="http://wx4.sinaimg.cn/large/789d050dgy1flq0g4uphej21di0kiju1.jpg" alt="Deploy a class="index-item-img">
+<h3 id="3-链接business-network"><a href="#3-链接business-network" class="headerlink" title="3. 链接business network"></a>3. 链接business network</h3><p><img src="http://wx4.sinaimg.cn/large/789d050dgy1flq09j4x1mj20b80cijre.jpg" alt="connect"></p  class="index-item-img">
+<p><img src="http://wx2.sinaimg.cn/large/789d050dgy1flq09jym5wj21fa0nrmys.jpg" alt="ALC FILE"></p class="index-item-img">
+<ul>
+<li>About文件 – Markdown格式的说明文件，试验场默认将显示该文件的内容。</li>
+<li>Access Control List – 决定了哪些参与者可以看到哪些资产。</li>
+<li>Add按钮 – 必要时可向项目中添加额外的文件。</li>
+<li>Deploy按钮 – 可将对项目文件的改动应用给当前已连接的区块链实例或模拟器。</li>
+<li>Import功能可将试验场的内容替换为指定的其他内容。</li>
+<li>Export功能可将整个解决方案打包为一个文件，并转移到其他环境中使用。</li>
+</ul>
+<p>界面右侧的主区域显示了所选文件的编辑器或查看器。此外页面顶部的Define/Test选项卡可供我们在开发或测试模式之间切换。最后，页面右上角可供我们（在本地版本中）模拟另一个区块链用户的身份，连接至自己的线上区块链实例，或开始在Web浏览器中模拟。在线版试验场目前仅支持模拟器模式。<a href="http://www.infoq.com/cn/articles/blockchain-poc-hyperledger" target="_blank" rel="external">^foot1</a></p>
     
-        <a href="/2017/10/24/Hyperledger Fabric 部署示例/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/18/Hyperledger Composer Playground/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
@@ -392,7 +422,7 @@ $ apt-get install git
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-GULP学习（二）项目构建"
+                <article id="post-计算机组成原理笔记（三）——指令系统"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -400,20 +430,20 @@ $ apt-get install git
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/15/GULP学习（二）项目构建/">GULP学习（二）项目构建</a>
+      <a class="post-title-link" href="/2017/11/17/计算机组成原理笔记（三）——指令系统/">计算机组成原理笔记（三）——指令系统</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-10-15 00:01:00" datetime="2017-10-14T16:01:00.000Z"  itemprop="datePublished">2017-10-15</time>
+        <time class="post-time" title="2017-11-17 03:01:30" datetime="2017-11-16T19:01:30.000Z"  itemprop="datePublished">2017-11-17</time>
 
         
 
 
         
-	<span id="/2017/10/15/GULP学习（二）项目构建/" class="leancloud_visitors" data-flag-title="GULP学习（二）项目构建" title="GULP学习（二）项目构建">
+	<span id="/2017/11/17/计算机组成原理笔记（三）——指令系统/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（三）——指令系统" title="计算机组成原理笔记（三）——指令系统">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -424,8 +454,8 @@ $ apt-get install git
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/15/GULP学习（二）项目构建/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/15/GULP学习（二）项目构建/"></span>
+        <a href="/2017/11/17/计算机组成原理笔记（三）——指令系统/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/17/计算机组成原理笔记（三）——指令系统/"></span>
         </a>
     </span>
 
@@ -440,27 +470,24 @@ $ apt-get install git
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>内容基本整理于<a href="https://github.com/nimojs/gulp-book/blob/master/chapter7.md" target="_blank" rel="external">gulp-book chapter7</a>，我有一点增改。</p>
-<h3 id="1-初始安装"><a href="#1-初始安装" class="headerlink" title="1. 初始安装"></a>1. 初始安装</h3><pre><code>npm init
-</code></pre><p>创建<code>package.json</code>保存所有<code>npm install --save-dev gulp-xxx</code>模块依赖和模块版本。</p>
-<pre><code>npm install gulp --save-dev
-</code></pre><p>安装gulp到项目<br><code>package.json</code>中增加下列代码，声明此项目的开发依赖 gulp。</p>
-<pre><code>&quot;devDependencies&quot;: {
-&quot;gulp&quot;: &quot;^3.9.1&quot;
-}
-</code></pre><p>安装项目中用到的其他模块<br>例如</p>
-<pre><code>npm install gulp-uglify  --save-dev
-</code></pre><p><code>package.json</code>的”devDependencies”中继续增加依赖声明。</p>
-<p>在<code>gulpfile.js</code>已配置情况下直接输入<code>npm install</code>命令即可检测<code>package.json</code>中的 “devDependencies”并安装所有依赖。</p>
+        <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-指令的基本格式"><a href="#1-指令的基本格式" class="headerlink" title="1. 指令的基本格式"></a>1. 指令的基本格式</h3><p>一条指令就是机器语言的一个语句，它是一组有意义的二进制代码。</p>
+<p>其中操作码指明了指令的操作性质及功能，地址码则给出了操作数的地址。</p>
+<p>地址码中的地址可以是主存的地址，也可以是寄存器的地址（编号），甚至可以是I/O设备的地址。</p>
+<p>对于双操作数运算指令来说，需要操作数的地址、结果的地址以及下一条指令的地址，这些地址可以在指令中明显给出，称为显地址；<br>也可以依照某种事先的约定，用隐含的地址给出，称为隐地址。</p>
+<p>根据显地址的个数有：三地址和二地址指令（通用寄存器指令）、一地址指令（累加型计算机）和零地址指令（堆栈型计算机）。</p>
+<h3 id="2-定长操作码指令格式"><a href="#2-定长操作码指令格式" class="headerlink" title="2.定长操作码指令格式"></a>2.定长操作码指令格式</h3><p>定长操作码以称为规整型编码，这是一种最简单的编码方法，操作码字段的位数和位置是固定的。</p>
+<p>为了能表示整个系统中的全部指令，指令的操作码字段应当有足够的位数。</p>
+<p>定长编对于简化硬件设计，减少指令的译码时间是非常有利的。</p>
     
-        <a href="/2017/10/15/GULP学习（二）项目构建/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/17/计算机组成原理笔记（三）——指令系统/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
 
     </div>
     
@@ -469,7 +496,7 @@ $ apt-get install git
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-GULP学习（一）安装&amp;功能"
+                <article id="post-Lorem ipsum 乱数假文"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -477,20 +504,20 @@ $ apt-get install git
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/14/GULP学习（一）安装&功能/">GULP学习（一）安装&amp;功能</a>
+      <a class="post-title-link" href="/2017/11/12/Lorem ipsum 乱数假文/">Lorem ipsum 乱数假文</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-10-14 00:01:00" datetime="2017-10-13T16:01:00.000Z"  itemprop="datePublished">2017-10-14</time>
+        <time class="post-time" title="2017-11-12 17:11:12" datetime="2017-11-12T09:11:12.000Z"  itemprop="datePublished">2017-11-12</time>
 
         
 
 
         
-	<span id="/2017/10/14/GULP学习（一）安装&功能/" class="leancloud_visitors" data-flag-title="GULP学习（一）安装&功能" title="GULP学习（一）安装&功能">
+	<span id="/2017/11/12/Lorem ipsum 乱数假文/" class="leancloud_visitors" data-flag-title="Lorem ipsum 乱数假文" title="Lorem ipsum 乱数假文">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -501,8 +528,8 @@ $ apt-get install git
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/14/GULP学习（一）安装&功能/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/14/GULP学习（一）安装&功能/"></span>
+        <a href="/2017/11/12/Lorem ipsum 乱数假文/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/12/Lorem ipsum 乱数假文/"></span>
         </a>
     </span>
 
@@ -517,106 +544,101 @@ $ apt-get install git
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>学习ES6的项目中用到了gulp-babel编译ES6代码，还有gulp-browserify等，所以学习一下gulp。 </p>
-<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文官网</a>写着gulp是增强工作流程的自动化构建工具。<br>通过编写gulp配置代码，能让gulp自动执行前端开发中的重复工作。<br>Gulp通过流和代码优于配置策略来尽量简化任务编写的工作。</p>
-<blockquote>
-<p>根据gulp的文档，它努力实现的<strong>主要特性</strong>是：<a href="http://www.infoq.com/cn/news/2014/02/gulp" target="_blank" rel="external">^footnote</a><br><strong>易于使用</strong>：采用代码优于配置策略，gulp让简单的事情继续简单，复杂的任务变得可管理。<br><strong>高效</strong>：通过利用node.js强大的流，不需要往磁盘写中间文件，可以更快地完成构建。<br><strong>高质量</strong>：gulp严格的插件指导方针，确保插件简单并且按你期望的方式工作。<br><strong>易于学习</strong>：通过把API降到最少，你能在很短的时间内学会gulp。构建工作就像你设想的一样：是一系列流管道。</p>
+        <blockquote>
+<p>Lorem ipsum是指一篇常用于排版设计领域的拉丁文文章，主要的目的为测试文章或文字在不同字型、版型下看起来的效果。中文的类似用法则称为乱数假文、随机假文。</p>
 </blockquote>
-<p>gulp相比于grunt，配置更简洁运行速度更快<a href="https://segmentfault.com/q/1010000003951849/a-1020000003952258" target="_blank" rel="external">^footnote2</a>。</p>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><ol>
-<li><p>gulp基于node实现，需要先安装node。我在装atom前已经装好啦。</p>
+<p><a href="https://zh.wikipedia.org/wiki/Lorem_ipsum" target="_blank" rel="external">起源</a></p>
+<h3 id="1-Chinese-“Lorem-Ipsum”-Text-Generator"><a href="#1-Chinese-“Lorem-Ipsum”-Text-Generator" class="headerlink" title="1. Chinese “Lorem Ipsum” Text Generator"></a>1. <a href="http://technology.chtsai.org/pseudotext/" target="_blank" rel="external">Chinese “Lorem Ipsum” Text Generator</a></h3><p>每次产生5段，每段6-8句子组成的假文。</p>
+<h3 id="2-Blind-Text-Generator"><a href="#2-Blind-Text-Generator" class="headerlink" title="2. Blind Text Generator"></a>2. <a href="http://www.blindtextgenerator.com/lorem-ipsum" target="_blank" rel="external">Blind Text Generator</a></h3><p>能产生10种风格文字并调整字距大小数量位置，生成css代码</p>
+<h3 id="3-Lipsum"><a href="#3-Lipsum" class="headerlink" title="3. Lipsum"></a>3. <a href="https://www.lipsum.com/" target="_blank" rel="external">Lipsum</a></h3><p>能调整段落和单词数，生成多种国家语言。</p>
+<h3 id="4-Lorem-Ipsum-Generator"><a href="#4-Lorem-Ipsum-Generator" class="headerlink" title="4. Lorem Ipsum Generator"></a>4. <a href="http://generator.lorem-ipsum.info/" target="_blank" rel="external">Lorem Ipsum Generator</a></h3><p>能生成摩斯密码假文，能复制和下载html代码。</p>
+<h3 id="5-HTML-Ipsum"><a href="#5-HTML-Ipsum" class="headerlink" title="5. HTML-Ipsum"></a>5. <a href="https://www.webpagefx.com/web-design/html-ipsum/" target="_blank" rel="external">HTML-Ipsum</a></h3><p>产生随机html元素</p>
+
+    
+        <a href="/2017/11/12/Lorem ipsum 乱数假文/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-计算机组成原理笔记（二）——存储器"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/11/计算机组成原理笔记（二）——存储器/">计算机组成原理笔记（二）——存储器</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-11 03:01:30" datetime="2017-11-10T19:01:30.000Z"  itemprop="datePublished">2017-11-11</time>
+
+        
+
+
+        
+	<span id="/2017/11/11/计算机组成原理笔记（二）——存储器/" class="leancloud_visitors" data-flag-title="计算机组成原理笔记（二）——存储器" title="计算机组成原理笔记（二）——存储器">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/11/计算机组成原理笔记（二）——存储器/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/11/计算机组成原理笔记（二）——存储器/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>整理自<a href="http://jpkc.hdu.edu.cn/computer/zcyl/kcxx.asp?id=2" target="_blank" rel="noopener">学院网站</a></p>
+<h3 id="1-存储器的分类"><a href="#1-存储器的分类" class="headerlink" title="1. 存储器的分类"></a>1. 存储器的分类</h3><ol>
+<li><p><strong>按存储器在计算机系统中的作用分类</strong><br>① <strong>高速缓冲存储器（Cache）</strong>：位于主存和CPU之间，用来存放正在执行的程序段和数据，以便CPU能高速地使用它们。<br>② <strong>主存储器</strong>：用来存放计算机运行期间所需要的程序和数据，CPU可直接随机地进行读/写访问。<br>③ <strong>辅助存储器</strong>：用来存放当前暂不参与运行的程序和数据，以及一些需要永久性保存的信息。CPU不能直接访问辅存，辅存中的信息必须调入主存后，CPU才能使用。</p>
 </li>
-<li><p>使用管理员权限全局安装</p>
-<pre><code>$ sudo npm install -g gulp
-</code></pre><p> 检查一下</p>
-<pre><code>$ gulp -v
-</code></pre></li>
+<li><p><strong>按存取方式分类</strong><br>① 随机存取存储器（<strong>RAM</strong>）：CPU可以对存储器中的内容进行随机存取，存取时间相同，与其所处的物理位置无关。<br>② 只读存储器（<strong>ROM</strong>）：ROM可以看做RAM的一种特殊形式，存储器的内容只能随机读出而不能写入。<br>③ 顺序存取存储器（<strong>SAM</strong>）：SAM的内容只能按某种顺序存取，存取时间的长短与信息在存储体上的物理位置有关。磁带机就是这样一类存储器。<br>④ 直接存取存储器（<strong>DAM</strong>）：介于RAM和SAM再者之间。第1步直接指向整个存储器中的某个小区域（如磁盘上的磁道）；第2步在小区域内顺序检索或等待，直至找到目的地后再进行读/写操作。磁盘机就属于这类存储器。</p>
+</li>
+<li><p><strong>按存储介质分类</strong><br>① 磁芯存储器：信息可以长期存储，不会因数断电而丢失；但磁芯存储器的读出是破坏性读出。<br>② 半导体存储器：主要是MOS型存储器和双极型（TTL电路或ECL电路）存储器两大类。半导体RAM存储的信息会因为断电而丢失。<br>③ 磁表面存储器：用磁层存储信息，常见的有磁盘、磁带等。由于它的容量大、价格低、存取速度慢，帮多用做辅助存储器。<br>④ 光存储器：采用激光技术控制访问的存储器，一般分为只读式、一次写入式、可改写式几种，它们的存储容量都很大，是目前使用非常广泛的辅助存储器。</p>
+</li>
+<li><p><strong>按信息的可保存性分类</strong><br>断电后，存储信息即消失的存储器，称易失性存储器；断电后信息仍然保存的存储器，称非易失性存储器。<br>如果读出时，原存信息被破坏，则称破坏性读出；如果读出时，被读单元原存信息不被破坏，则称非破坏性读出。</p>
+</li>
 </ol>
-<h3 id="3-创建项目"><a href="#3-创建项目" class="headerlink" title="3.创建项目"></a>3.创建项目</h3><p>所有的 gulp 代码编写都可以看做是将规律转化为代码的过程。</p>
-<pre><code>$ npm init
-
-$ npm install gulp --save-dev
-</code></pre><p><code>--save-dev</code>保存配置信息至 package.json 的 devDependencies 节点。<br><img src="http://wx1.sinaimg.cn/large/789d050dgy1fkjbiggti1j20km0cb0tg.jpg" alt="npm install class="index-item-img">
     
-        <a href="/2017/10/14/GULP学习（一）安装&功能/" class="post-more waves-effect waves-button">
+        <a href="/2017/11/11/计算机组成原理笔记（二）——存储器/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-区块链-共识机制"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/01/区块链-共识机制/">区块链-共识机制</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-10-01 00:01:00" datetime="2017-09-30T16:01:00.000Z"  itemprop="datePublished">2017-10-01</time>
-
-        
-
-
-        
-	<span id="/2017/10/01/区块链-共识机制/" class="leancloud_visitors" data-flag-title="区块链-共识机制" title="区块链-共识机制">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/10/01/区块链-共识机制/#comment">
-            <span class="valine-comment-count" data-xid="/2017/10/01/区块链-共识机制/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>区块链解决了在不可信信道上传输可信信息、价值转移的问题，而共识机制解决了区块链如何在分布式场景下达成一致性的问题，奠定了比特币系统的安全性。</p>
-<h3 id="1-分布式一致性问题（共识算法）"><a href="#1-分布式一致性问题（共识算法）" class="headerlink" title="1.分布式一致性问题（共识算法）"></a>1.分布式一致性问题（共识算法）</h3><h4 id="1-一致性问题（Consensus-Problem）"><a href="#1-一致性问题（Consensus-Problem）" class="headerlink" title="1. 一致性问题（Consensus Problem）"></a>1. 一致性问题（Consensus Problem）</h4><p>一致（Agreement） :每个正确的执行过程应该在相同的值上达成一致；<br>完整（Integrity） :每个正确的执行过程最多只能决定一个值。如果它决定了某个值的话，这个值一定是被某个执行过程提出的；<br>终止（Termination） :所有的执行过程最终会做出一个决定；<br>正确（Validity） :如果所有正确的执行过程提出了相同的值V，那么所有正确的执行过程都会决定值V。</p>
-<h4 id="2-FLP不可能性（FLP-impossibility）"><a href="#2-FLP不可能性（FLP-impossibility）" class="headerlink" title="2. FLP不可能性（FLP impossibility）"></a>2. <strong>FLP不可能性（FLP impossibility）</strong></h4><p>实际的计算机集群中，可能会存在以下问题:<br>1.节点处理事务的能力不同，网络节点数据的吞吐量有差异<br>2.节点间通讯的信道可能不安全<br>3.可能会有作恶节点出现<br>4.当异步处理能力达到高度一致时，系统的可扩展性就会变差（容不下新节点的加入）。</p>
-<p>FLP不可能性定理证明了在分布式情景下，无论任何算法，即使是只有一个进程挂掉，对于其他非失败进程，都存在着无法达成一致的可能。<strong>在假设网络可靠、计算节点只会因崩溃而失效的最小化异步模型系统中，仍然不存在一个可以解决一致性问题的确定性算法。</strong><br>FLP是Fischer, Lynch，Patterson三位作者名字组合的简写，表明这定理是由它们三位发明的。<br><a href="http://loopjump.com/flp_proof_note/" target="_blank" rel="external">证明</a><br><a href="http://blog.csdn.net/chen77716/article/details/27963079" target="_blank" rel="external">更多参考</a></p>
-<h4 id="3-CAP定理"><a href="#3-CAP定理" class="headerlink" title="3. CAP定理"></a>3. <strong>CAP定理</strong></h4><p><strong>分布式计算系统不可能同时确保一致性、可用性和分区容忍性。</strong><br>一致性（Consistency） :所有节点在同一时刻能够看到同样的数据，也即“强一致性”；<br>可用性（Availability） ：确保每个请求都可以收到确定其是否成功的响应；<br>分区容忍性（Partition tolerance） :因为网络故障导致的系统分区不影响系统正常运行。</p>
-<p>这也就意味着，我们虽然不能使某个分布式场景同时满足三个性质，但可以使之同时满足三个中的两个。更进一步说，对于包含多个分布式场景的分布式系统，我们甚至可以在三个性质的程度上进行适当的权衡<a href="http://www.cnblogs.com/firstdream/p/6585923.html" target="_blank" rel="external">^footnote</a>。</p>
-    
-        <a href="/2017/10/01/区块链-共识机制/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
 
     </div>
     
@@ -628,7 +650,7 @@ $ npm install gulp --save-dev
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
     </div>
 </nav>
 

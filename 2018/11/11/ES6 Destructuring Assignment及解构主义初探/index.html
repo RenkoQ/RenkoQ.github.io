@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>ES6 Destructuring Assignment及解构主义初探 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>ES6 Destructuring Assignment及解构主义初探</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">ES6 Destructuring Assignment及解构主义初探</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-11T02:16:29.000Z" itemprop="datePublished" class="page-time">
+  2018-11-11
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-ES6 Destructuring Assignment及解构主义初探"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">ES6 Destructuring Assignment及解构主义初探</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-11 10:16:29" datetime="2018-11-11T02:16:29.000Z"  itemprop="datePublished">2018-11-11</time>
+
+            
+
+
+            
+	<span id="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" class="leancloud_visitors" data-flag-title="ES6 Destructuring Assignment及解构主义初探" title="ES6 Destructuring Assignment及解构主义初探">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/#comment">
+            <span class="valine-comment-count" data-xid="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://www.sitepoint.com/es6-destructuring-assignment/" target="_blank" rel="noopener">ES6 in Action: Destructuring Assignment</a></p>
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><blockquote>
+<p>In essence, ECMAScript 6 (ES2015) destructuring assignment allows you<br>to extract individual items from arrays or objects and place them into<br>variables using a shorthand syntax.</p>
+</blockquote>
+<p>ES6允许按照一定模式，从数组和对象（以及字符串、数值、布尔值、函数参数等）中提取值，按照对应位置给变量进行赋值，这被称为解构赋值。</p>
+<h3 id="1-数组解构"><a href="#1-数组解构" class="headerlink" title="1. 数组解构"></a>1. 数组解构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">var myArray = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">ES5提取数值方式</span><br><span class="line"></span><br><span class="line">var</span><br><span class="line">  one   = myArray[0],</span><br><span class="line">  two   = myArray[1],</span><br><span class="line">  three = myArray[2];</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, two = &apos;b&apos;, three = &apos;c&apos;</span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">ES6提取数值方式</span><br><span class="line"></span><br><span class="line">const [one, two, three] = myArray;</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, two = &apos;b&apos;, three = &apos;c&apos;</span><br><span class="line"></span><br><span class="line">//可以跳过某值</span><br><span class="line">const [one, , three] = myArray;</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, three = &apos;c&apos;</span><br><span class="line"></span><br><span class="line">//使用rest操作符获取剩余元素</span><br><span class="line">const [one, ...two] = myArray;</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, two = [&apos;b, &apos;c&apos;]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-对象解构"><a href="#2-对象解构" class="headerlink" title="2. 对象解构"></a>2. 对象解构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var myObject = &#123;</span><br><span class="line">  one:   &apos;a&apos;,</span><br><span class="line">  two:   &apos;b&apos;,</span><br><span class="line">  three: &apos;c&apos;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">// ES5 example</span><br><span class="line">var</span><br><span class="line">  one   = myObject.one,</span><br><span class="line">  two   = myObject.two,</span><br><span class="line">  three = myObject.three;</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, two = &apos;b&apos;, three = &apos;c&apos;</span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">// ES6 destructuring example</span><br><span class="line">const &#123;one, two, three&#125; = myObject;</span><br><span class="line"></span><br><span class="line">// one = &apos;a&apos;, two = &apos;b&apos;, three = &apos;c&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="3-属性赋值"><a href="#3-属性赋值" class="headerlink" title="3. 属性赋值"></a>3. 属性赋值</h3><ul>
+<li>the left-hand side of the assignment is the <strong>destructuring target</strong> —<br>the pattern which defines the variables being assigned</li>
+<li>the right-hand side of the assignment is the <strong>destructuring source</strong> —<br>the array or object which holds the data being extracted.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">const myObject = &#123;</span><br><span class="line">  one:   &apos;a&apos;,</span><br><span class="line">  two:   &apos;b&apos;,</span><br><span class="line">  three: &apos;c&apos;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// ES6 destructuring example</span><br><span class="line">const &#123;one: first, two: second, three: third&#125; = myObject;</span><br><span class="line"></span><br><span class="line">// first = &apos;a&apos;, second = &apos;b&apos;, third = &apos;c&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">const meta = &#123;</span><br><span class="line">  title: &apos;Destructuring Assignment&apos;,</span><br><span class="line">  authors: [</span><br><span class="line">    &#123;</span><br><span class="line">      firstname: &apos;Craig&apos;,</span><br><span class="line">      lastname: &apos;Buckler&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  publisher: &#123;</span><br><span class="line">    name: &apos;SitePoint&apos;,</span><br><span class="line">    url: &apos;http://www.sitepoint.com/&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const &#123;</span><br><span class="line">    title: doc,</span><br><span class="line">    authors: [&#123; firstname: name &#125;],</span><br><span class="line">    publisher: &#123; url: web &#125;</span><br><span class="line">  &#125; = meta;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">  doc   = &apos;Destructuring Assignment&apos;</span><br><span class="line">  name  = &apos;Craig&apos;</span><br><span class="line">  web   = &apos;http://www.sitepoint.com/&apos;</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a>4. 注意事项</h3><h4 id="1-不能用花括号开始赋值"><a href="#1-不能用花括号开始赋值" class="headerlink" title="1.  不能用花括号开始赋值"></a>1.  不能用花括号开始赋值</h4><p>因为看起来像代码块。</p>
+<p>要么声明变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// THIS WORKS</span><br><span class="line">const &#123; a, b, c &#125; = myObject;</span><br></pre></td></tr></table></figure></p>
+<p>如果变量已经声明，使用圆括号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// THIS WORKS</span><br><span class="line">(&#123; a, b, c &#125; = myObject);</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-小心混合已声明和未声明的变量"><a href="#2-小心混合已声明和未声明的变量" class="headerlink" title="2. 小心混合已声明和未声明的变量"></a>2. 小心混合已声明和未声明的变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// THIS FAILS</span><br><span class="line">let a;</span><br><span class="line">let &#123; a, b, c &#125; = myObject;</span><br><span class="line"></span><br><span class="line">// THIS WORKS</span><br><span class="line">let a, b, c;</span><br><span class="line">(&#123; a, b, c &#125; = myObject);</span><br></pre></td></tr></table></figure>
+<h3 id="5-简易声明"><a href="#5-简易声明" class="headerlink" title="5. 简易声明"></a>5. 简易声明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// ES5</span><br><span class="line">var a = &apos;one&apos;, b = &apos;two&apos;, c = &apos;three&apos;;</span><br><span class="line"></span><br><span class="line">// ES6</span><br><span class="line">const [a, b, c] = [&apos;one&apos;, &apos;two&apos;, &apos;three&apos;];</span><br></pre></td></tr></table></figure>
+<h3 id="6-数值交换"><a href="#6-数值交换" class="headerlink" title="6. 数值交换"></a>6. 数值交换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var a = 1, b = 2;</span><br><span class="line"></span><br><span class="line">// ES5 swap</span><br><span class="line">var temp = a;</span><br><span class="line">a = b;</span><br><span class="line">b = temp;</span><br><span class="line"></span><br><span class="line">// a = 2, b = 1</span><br><span class="line"></span><br><span class="line">// ES6 swap back</span><br><span class="line">[a, b] = [b, a];</span><br><span class="line"></span><br><span class="line">// a = 1, b = 2</span><br></pre></td></tr></table></figure>
+<p>任何数都可以被任意交换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// rotate left</span><br><span class="line">[b, c, d, e, a] = [a, b, c, d, e];</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-函数参数默认值"><a href="#7-函数参数默认值" class="headerlink" title="7. 函数参数默认值"></a>7. 函数参数默认值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">var meta = &#123;</span><br><span class="line">  title: &apos;Destructuring Assignment&apos;,</span><br><span class="line">  authors: [</span><br><span class="line">    &#123;</span><br><span class="line">      firstname: &apos;Craig&apos;,</span><br><span class="line">      lastname: &apos;Buckler&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  publisher: &#123;</span><br><span class="line">    name: &apos;SitePoint&apos;,</span><br><span class="line">    url: &apos;http://www.sitepoint.com/&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">prettyPrint(meta);</span><br><span class="line"></span><br><span class="line">// ES5 default values</span><br><span class="line">function prettyPrint(param) &#123;</span><br><span class="line">  param = param || &#123;&#125;;</span><br><span class="line">  var</span><br><span class="line">    pubTitle = param.title || &apos;No title&apos;,</span><br><span class="line">    pubName = (param.publisher &amp;amp;&amp;amp; param.publisher.name) || &apos;No publisher&apos;;</span><br><span class="line"></span><br><span class="line">  return pubTitle + &apos;, &apos; + pubName;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">=====================</span><br><span class="line">ES6方式</span><br><span class="line"></span><br><span class="line">// ES6 默认值</span><br><span class="line">function prettyPrint(param = &#123;&#125;) &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// ES6 解构默认值</span><br><span class="line">function prettyPrint(</span><br><span class="line">  &#123;</span><br><span class="line">    title: pubTitle = &apos;No title&apos;,</span><br><span class="line">    publisher: &#123; name: pubName = &apos;No publisher&apos; &#125;</span><br><span class="line">  &#125; = &#123;&#125;</span><br><span class="line">) &#123;</span><br><span class="line">  return pubTitle + &apos;, &apos; + pubName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-复杂返回值函数"><a href="#8-复杂返回值函数" class="headerlink" title="8. 复杂返回值函数"></a>8. 复杂返回值函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function f() &#123;</span><br><span class="line">  return [1, 2, 3];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const [a, b, c] = f();</span><br><span class="line"></span><br><span class="line">// a = 1, b = 2, c = 3</span><br></pre></td></tr></table></figure>
+<h3 id="9-ES6-for-of-循环"><a href="#9-ES6-for-of-循环" class="headerlink" title="9. ES6 for-of 循环"></a>9. ES6 for-of 循环</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank" rel="noopener">for…of</a></p>
+<p>The ES6 for-of is similar to for-in, except that it extracts each value rather than the index/key<br>for-of与for-in类似，但它取出的是每个值而不是索引/键名</p>
+<p>数组信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">const books = [</span><br><span class="line">  &#123;</span><br><span class="line">    title: &apos;Full Stack JavaScript&apos;,</span><br><span class="line">    author: &apos;Colin Ihrig and Adam Bretz&apos;,</span><br><span class="line">    url: &apos;http://www.sitepoint.com/store/full-stack-javascript-development-mean/&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    title: &apos;JavaScript: Novice to Ninja&apos;,</span><br><span class="line">    author: &apos;Darren Jones&apos;,</span><br><span class="line">    url: &apos;http://www.sitepoint.com/store/leaern-javascript-novice-to-ninja/&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    title: &apos;Jump Start CSS&apos;,</span><br><span class="line">    author: &apos;Louis Lazaris&apos;,</span><br><span class="line">    url: &apos;http://www.sitepoint.com/store/jump-start-css/&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<p>for-of使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (const b of books) &#123;</span><br><span class="line">  console.log(b.title + &apos; by &apos; + b.author + &apos;: &apos; + b.url);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解构赋值方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (const &#123;title, author, url&#125; of books) &#123;</span><br><span class="line">  console.log(title + &apos; by &apos; + author + &apos;: &apos; + url);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-正则表达式处理"><a href="#10-正则表达式处理" class="headerlink" title="10. 正则表达式处理"></a>10. 正则表达式处理</h3><p>Regular expressions functions such as match return an array of matched items, which can form the source of a destructuring assignment:<br>正则表达式中的一些方法如<code>match</code>会返回匹配到的元素数组。可以用来进行解构赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const [a, b, c, d] = &apos;one two three&apos;.match(/\w+/g);</span><br><span class="line"></span><br><span class="line">// a = &apos;one&apos;, b = &apos;two&apos;, c = &apos;three&apos;, d = undefined</span><br></pre></td></tr></table></figure>
+<h2 id="Deconstruction"><a href="#Deconstruction" class="headerlink" title="Deconstruction"></a>Deconstruction</h2><p><a href="https://en.wikipedia.org/wiki/Deconstruction" target="_blank" rel="noopener">Deconstruction</a></p>
+<p><a href="https://zh.wikipedia.org/zh/%E8%A7%A3%E6%A7%8B%E4%B8%BB%E7%BE%A9" target="_blank" rel="noopener">解構主義</a></p>
+<blockquote>
+<p>Deconstruction is a critique of the relationship between text and<br>meaning originated by the philosopher Jacques Derrida. Derrida’s<br>approach consisted in conducting readings of texts with an ear to what<br>runs counter to the intended meaning or structural unity of a<br>particular text. The purpose of deconstruction is to show that the<br>usage of language in a given text, and language as a whole, are<br>irreducibly complex, unstable, or impossible. Throughout his readings,<br>Derrida hoped to show deconstruction at work.</p>
+</blockquote>
+<p>在欧陆哲学与文学批评中，<code>解构主义（法语：déconstruction；英语：deconstruction）</code>是由法国后结构主义哲学<code>德希达（Jacque Derrida）</code>所创立的批评学派。</p>
+<p><strong>解构主义流派反对结构主义</strong>，解构主义认为结构没有中心，结构也不是固定不变的，结构由一系列的差别组成。由于差别在变化，结构也跟随着变化，所以结构是不稳定和开放的。因此<strong>解构主义又被称为后结构主义</strong>。德里达认为<em>文本没有固定的意义，作品的终极不变的意义是不存在的</em>。</p>
+<p>解构分析的主要方法是去看一个文本中的<strong>二元对立</strong>（比如说，男性与女性、同性恋与异性恋），并且呈现出这两个对立的面向事实上是流动与不可能完全分离的，而非两个严格划分开来的类别。而其通常结论便是，这些分类实际上不是以任何固定或绝对的形式存在着的。</p>
+<p>解构主义在学术界与大众刊物中都极具争议性。在学术界中，它被指控为虚无主义、寄生性太重以及太过疯狂。而在大众刊物中，它被当作是学术界已经完全与现实脱离的一个象征。尽管有这些争议的存在，解构主义仍旧是一个当代哲学与文学批评理论里的一股主要力量。</p>
+<p>解构主义的特点是反传统，反权威，反理性，是对西方历来的“逻各斯中心主义”的反叛。</p>
+<p>在建筑，解构主义（英语：deconstructivism）是20世纪最后的20几年中，通过分裂来表达自己、影响社会的建筑和打破了传统方式的区分上与下、左与右、里与外的建筑。</p>
+<p>解构主义更像一种文本分析法。文本如同洋葱，我们要如同剥洋葱一般，将文本的意义一层一层地剥开，才能得到文本背后的真实（注意，这个真实是可知的）。由于解构主义更接近于一种文本分析方法，因而在近代翻译研究中占有独特的地位，解构主义影响翻译理论的结果是解构主义翻译理论流派的创立。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>德希达被问及解构主义的意思时，他这么说：「对于这个问题，我没有简单而公式化的答案。我的所有文章都是写来避开这种令人恐惧的问题。」</p>
+<p>解构主义的意思涉及许许多多的混淆——究竟是一个思想的学派，一种阅读事物的方法（很多人在尝试公式化的定义它时都选择这种解释），或者，有些人称它为「文本物体」（一个在德希达的话中暗示的意思）——而且在尝试限定它的时候，可以决定听取那一个来源的说法。</p>
+<p>德希达提出了一种他称之为解构阅读西方哲学的方法。<br>大体来说，<code>解构阅读</code>是一种揭露文本结构与其西方形上本质（Western metaphysical essence）之间差异的<strong>文本分析方法</strong>。解构阅读呈现出文本不能只是被解读成单一作者在传达一个明显的讯息，而应该被解读为在某个文化或世界观中各种冲突的体现。一个被解构的文本会显示出许多同时存在的各种观点，而这些观点通常会彼此冲突。将一个文本的解构阅读与其传统阅读来相比较的话，也会显示出这当中的许多观点是被压抑与忽视的。</p>
+<h3 id="诞生"><a href="#诞生" class="headerlink" title="诞生"></a>诞生</h3><p><a href="https://segmentfault.com/a/1190000016166863" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016166863</a></p>
+<p>1968年，一场激进学生运动席卷整个欧美。在法国，这场抗议运动被称作<code>五月风暴</code>，一度使法国资产阶级国家机器受到威胁，但终究还是被平息下去了。情绪受到严重压抑的大学生，对在学潮中持冰冷中立态度的结构主义导师们十分不满，嘲笑其“结构，结构，从不上街参加战斗”。同时，结构主义强调结构稳定性、整体性的思想和眼光也遭到怀疑与冷落。</p>
+<p>法国一些文论家、作家、哲学家组成“太凯系”集团，明确打出后结构主义旗号，对法国学术界产生了强大影响。德里达正是其重要成员和经常撰稿人之一。</p>
+<p>雅克·德里达，法国哲学家、文论家。这位出生在阿尔及利亚近郊一个犹太裔家庭的叛逆者，是当之无愧的解构主义领袖，他致力于<strong>颠覆“逻各斯中心主义”</strong>，拉开了西方对一切中心化传统进行颠覆的序幕。</p>
+<p><code>逻各斯</code>出自古希腊语，为λὀγος（logos）的音译，意即“语言”、“定义”，其别称是：存在、本质、本源、真理、绝对等等。在德里达看来，从柏拉图和亚里士多德一直到黑格尔和列维—斯特劳斯的整个西方形而上学传统，都是“逻各斯中心主义”的。</p>
+<p><strong>“逻各斯中心主义”使得西方传统的形而上学思维方法建立在二元对立的基础之上</strong>，如：灵魂/肉体、自然/文化、男性/女性、语言/文字、真理/谬误等。这种二元项的对立并非是平等并置的，“逻各斯中心主义”通过设立第一项的优先性而迫使第二项从属于它，例如，把女人视为第二性。</p>
+<p>德里达认为，<strong>“传统哲学的一个二元对立中，我们所见到的唯有一种鲜明的对比及关系，绝无两个对象的和平相处，其中一项在逻辑价值等等方面统治着另一项，高居发号施令的地位。”</strong>而这正是逻各斯中心主义的要害所在。</p>
+<p>德里达的解构为20世纪整个思想界提供了一个维度，让人们重新去考察那些长期以来被奉为中心的本原，从既定的文化秩序开始，震荡、动摇各个领域的中心主义思维。</p>
+<p>60年代末起，随着德里达连续赴美讲学，解构主义思想在美国大学和知识界广为传播。建筑理论家伯纳德-屈米把德里达的解构主义理论引入建筑理论，经济学领域，哈耶克用货币的非国家化诠释去中心哲学，而在科技领域，互联网的诞生，也是去中心化的典型。</p>
+<p>从人类诞生至今，中心化一直都以各种面貌来收割信任，它的自我包装，包括了德里达所涉及的二元对立中，一切被居于高等级的一方。而它们的获利是显而易见的，教会收割信任（常常被置换为信仰，第三方机构也有这种运作趋势），换来了漫长的中世纪，第三方机构收割信任，换来了源源不断的财富。也许上帝真的死了，然而，新的信任代言人正迫不及待成为下一代贪婪众神。我们对信任的渴求一日存在欠缺，便一日会滋养出新的中心化场。</p>
+<p>“延异”是“差异的本源或生产,差异之间的差异,差异的游戏”。“延异既没有存在也没有本质。它不属于存在、在场或不在场的范畴”。因此,延异不是一个词,也不是一个概念,“<strong>它不是一种存在场,无论人把它描述得多么优越,多么独特,多么重要,或者多么超验。延异什么也不支配,什么也不统治,无论如何都不炫示任何权威。它不以大写字母来标示自身。不仅没有延异的领地,而且延异还是任何一个领地的颠覆</strong>。”与“延异”相同的,还有“增补”“播撒”“痕迹”等属于德里达式的解构概念。</p>
+<p><strong>解构的过程实际上就“解—建—构”的过程</strong>,所有的过程在这个过程中都是统一于“延异”之中。德里达还反复地强调,应该将“语言”看作“书写”,言说的语词是业已中断的符号,在本体论不可归的路上,被失去意义的语词本身并不作为单个的语词存在,而是将由语词构成的文本看做一个“差异的系统”。</p>
+<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><p>“解构”源于《存在与时间》中的“deconstruction”一词，由钱钟书翻译，指每一次解构都对结构产生分裂和分解，但是解构的结果是又产生新的结构。</p>
+<ul>
+<li>延异（Différance）</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Diff%C3%A9rance" target="_blank" rel="noopener">Différance</a></p>
+<blockquote>
+<p>Différance is a French term coined by Jacques Derrida. It is a central<br>concept in Derrida’s deconstruction, a critical outlook concerned with<br>the relationship between text and meaning. The term différance means<br>“<strong>difference and deferral of meaning</strong>.”</p>
+</blockquote>
+<p>延异有两层意义：一，是向外「扩散」；二，是「延宕」，即语言的意义最终都不可获得。意义只能是一个不断各外扩散的过程。意义的随意性、零乱性、不完整性不断地拆解形而上学的中心和本源，并且拒绝成为新的中心和本源。意义不断地生成、转换，又不断消失，最终消解了意义的本身。中心的消解就意味着取消意义，意义的延异就否定了世界上存在着终极不变的意义。</p>
+<ul>
+<li>踪迹（Trace）</li>
+</ul>
+<p>踪迹一词描述延异的动态过程，踪迹指经过磨损而残留下来的痕迹，他若隐若现，既指向此前的状态，又指向此后的倾向，却对自己打上问号。文本是一种意义和词语在其中不断被抹除、不断留下痕迹，其终极目标却永远处于变动和不稳定之中的过程。</p>
+<p><a href="https://www.zhihu.com/question/31552837" target="_blank" rel="noopener">https://www.zhihu.com/question/31552837</a></p>
+<p>质疑二元对立思维<br>德里达认为二元对立的两个符号（如内在和外在）中，一个符号包含了另一个符号的“印迹”（trace）——没有“内在”这个概念就没有“外在”这个概念，没有“外在”这个概念就没有“内在”这个概念。所以，“内在”这个概念中包含了“外在”这个概念的印迹，说明“内在”这个概念并没有一个独立存在的、本质性的意义，它只有与“外在”这个概念相对考虑时才可以被定义。一切人类语言和思维全都是基于这种二元对立的思维之上建立起来的。一切意义、一切符号都是通过延异（Différance）得到定义的。</p>
+<p>延异（Différance）：这个德里达发明的词有两层含义：第一层含义是差异（Difference，正常的拼法）——语言和思维对现实世界进行的分类、区分都是通过不同概念之间的差异进行的，没有任何概念拥有内在的、独立的现实。第二层含义是延迟（Deferral）——每一个概念都是通过延迟对它的定义而产生的。比如说，如果你去查字典，每一个词都是通过其他词来定义的。如果你去查一个词的定义中的词，那个词也是通过别的词来定义的。这样的话没有一个概念拥有一个独立的、自成一体的定义。对所有概念的定义都是无限延迟的。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-23T02:25:45.045Z" itemprop="dateUpdated">2018-11-23 10:25:45</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" target="_blank" rel="external">https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&title=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&title=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&source=ES6 in Action: Destructuring Assignment
+解构赋值
+In essence, ECMAScript 6 (ES2015..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/13/Debugger on Chrome/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Debugger on Chrome</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Developing Node.js Applications on IBM Cloud笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解构赋值"><span class="post-toc-number">1.</span> <span class="post-toc-text">解构赋值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deconstruction"><span class="post-toc-number">2.</span> <span class="post-toc-text">Deconstruction</span></a></li></ol>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&title=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&title=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&source=ES6 in Action: Destructuring Assignment
+解构赋值
+In essence, ECMAScript 6 (ES2015..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6 Destructuring Assignment及解构主义初探》 — Renko's blog&url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADN0lEQVR42u3ay44iQQwEwPn/n2alPa00PDJt0EIRfUIw3VTUHIyd9fMTX5e/1+93/n3/8uu6//6t5+Trmd37g42NjX0c+3L3ur+4/N5b29du+v1VJevBxsbGPpWdfFnOS96ZvZ5tKzY2Njb2/cKTLygpjUmbkW89NjY2NnZbVDYLTbYjf42NjY39bey2zWgLSTKQuv/85NOXzNKwsbGx3569H9C/z+sX5tvY2NjYb8m+lNesOLUHgNoBVq3AxsbGPog9G7UnzUBbWvIn7FeIjY2NfR77WXHvvlC125QXvBem3NjY2Nj/lZ03DHmzkQe37d/M4gpsbGzsb2AnJWcWwbatS7L0vFgWtRobGxv7Y9n7QDcfS7VHM/ODOPnfY2NjY5/Hzm/OG5JNWLsJAIrCiY2NjX0cOy9Fm6M8ryiHeatzpYBhY2NjH8GejY3yUjc7gvmsf8DqsA42Njb2h7BnAWq+0E1Au4mcH6wEGxsb+wvY+Vin/bTdmjwSKC5sbGzsg9jt2H3TPLT/gH38UBzZwcbGxj6CnYx+ZsjZUZ59c4KNjY39Dew2TG2DgbydaLfmsriwsbGxT2K3AUBbWmYxQD6KmkUU2NjY2Oex8yM17cHKJ3dLo7uwsbGxz2ZvfsTvD9+0YXAbGN/cLGxsbOzj2PlRm7bIzQ4P5Y1Hst1XXmNjY2N/Abv90d8GCbPDPXnz8yBgwMbGxj6IvS9Xs/j2ftvQNjDJd115DjY2NvbXsPNjPbPRf7HQOAB4ULqwsbGxD2K3P+7b9iOPDZLntIXq5nZgY2NjH8TOxzftockidl0PoWYHOrGxsbHPYO/H9KsB/WLM1G5cnQljY2NjfyC7bTBmBzeHTULZ6jwob9jY2NgHsffFYH/IZhZORB1VMizDxsbG/nD2vgjlR3k2TU4eJxQzM2xsbOwj2Pm1byfyJiHZ+vZgEDY2NvbZ7FnRmsUG7bDpWZ9eWQ82Njb2cey2MORfkxe/9mmzCoWNjY39zex26DMbV+UNxmYTsbGxsbHzofzsrn1IUCTb2NjY2Eew9+FuO0iaBcNJEY22FRsbG/sgdhv0JhuRf3Ee9O4T7PpebGxs7Hdn/wGOXpunqfQYOgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>
