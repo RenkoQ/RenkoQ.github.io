@@ -213,13 +213,18 @@ aud: 接收该JWT的一方
 exp(expires): 什么时候过期，这里是一个Unix时间戳
 iat(issued at): 在什么时候签发的
 </code></pre><p>将上面的JSON对象进行[base64编码]可以得到下面的字符串。这个字符串我们将它称作JWT的Payload（载荷）。</p>
-<pre><code>eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
+<pre><code>eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjox
+NDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9j
+a2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
 </code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> base64url = <span class="built_in">require</span>(<span class="string">'base64url'</span>)</span><br><span class="line"><span class="keyword">var</span> header = &#123;</span><br><span class="line">    <span class="string">"from_user"</span>: <span class="string">"B"</span>,</span><br><span class="line">    <span class="string">"target_user"</span>: <span class="string">"A"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(base64url(<span class="built_in">JSON</span>.stringify(header)))</span><br><span class="line"><span class="comment">// 输出：eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9</span></span><br></pre></td></tr></table></figure>
 <h4 id="签名（Signature）"><a href="#签名（Signature）" class="headerlink" title="签名（Signature）"></a>签名（Signature）</h4><p>To create the signature part you have to take the <code>encoded header</code>, the <code>encoded payload</code>, a <code>secret</code>(密钥), the <code>algorithm specified in the header</code>, and sign that.</p>
 <p>使用HMAC SHA256 算法创建signature</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HMACSHA256(</span><br><span class="line">  base64UrlEncode(header) + <span class="string">"."</span> +</span><br><span class="line">  base64UrlEncode(payload),</span><br><span class="line">  secret)</span><br></pre></td></tr></table></figure>
 <p>将上面的两个编码后的字符串都用句号.连接在一起（头部在前），就形成了</p>
-<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
+<pre><code>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huI
+Fd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzI
+yLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0Q
+GV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9
 </code></pre><p>如果我们用mystar作为密钥的话，那么就可以得到我们加密后的内容</p>
 <pre><code>rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM
 </code></pre><p>最后将这一部分签名也拼接在被签名的字符串后面，我们就得到了完整的JWT,然后更改URL等（?jwt=字符串）</p>
@@ -231,7 +236,7 @@ iat(issued at): 在什么时候签发的
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-13T01:53:06.278Z" itemprop="dateUpdated">2018-09-13 09:53:06</time>
+    最后更新时间：<time datetime="2019-04-04T02:25:03.150Z" itemprop="dateUpdated">2019-04-04 10:25:03</time>
 </span><br>
 
 
@@ -343,7 +348,7 @@ JSON Web..." data-title=" QQ">
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

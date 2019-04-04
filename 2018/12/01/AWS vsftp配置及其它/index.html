@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>AWS vsftp配置及其它 | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="运维">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>AWS vsftp配置及其它</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">AWS vsftp配置及其它</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-01T03:21:00.000Z" itemprop="datePublished" class="page-time">
+  2018-12-01
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-AWS vsftp配置及其它"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">AWS vsftp配置及其它</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-01 11:21:00" datetime="2018-12-01T03:21:00.000Z"  itemprop="datePublished">2018-12-01</time>
+
+            
+
+
+            
+	<span id="/2018/12/01/AWS vsftp配置及其它/" class="leancloud_visitors" data-flag-title="AWS vsftp配置及其它" title="AWS vsftp配置及其它">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/12/01/AWS vsftp配置及其它/#comment">
+            <span class="valine-comment-count" data-xid="/2018/12/01/AWS vsftp配置及其它/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p><a href="https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#Instances:sort=launchTime" target="_blank" rel="noopener">https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#Instances:sort=launchTime</a></p>
+<p>我们的实例是<code>bc-demo</code></p>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-22/32633179.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<p><code>公有DNS</code><br>ec2-13-230-150-206.ap-northeast-1.compute.amazonaws.com</p>
+<p><code>公有IP</code><br>13.230.150.206</p>
+<p><code>私有IP</code><br>172.31.27.220</p>
+<a id="more"></a>
+<h2 id="连接实例"><a href="#连接实例" class="headerlink" title="连接实例"></a>连接实例</h2><h3 id="1-打开-SSH-客户端。"><a href="#1-打开-SSH-客户端。" class="headerlink" title="1. 打开 SSH 客户端。"></a>1. 打开 SSH 客户端。</h3><h3 id="2-查找您的私有密钥文件-bcdemo-pem-。向导会自动检测您用于启动实例的密钥"><a href="#2-查找您的私有密钥文件-bcdemo-pem-。向导会自动检测您用于启动实例的密钥" class="headerlink" title="2. 查找您的私有密钥文件 (bcdemo.pem)。向导会自动检测您用于启动实例的密钥"></a>2. 查找您的私有密钥文件 (bcdemo.pem)。向导会自动检测您用于启动实例的密钥</h3><pre><code>您的密钥必须不公开可见，SSH 才能工作。如果需要，请使用此命令：
+
+chmod 400 bcdemo.pem
+
+通过其 公有 DNS 连接到您的实例:
+
+ec2-13-230-150-206.ap-northeast-1.compute.amazonaws.com
+</code></pre><h3 id="3-示例："><a href="#3-示例：" class="headerlink" title="3. 示例："></a>3. 示例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i &quot;bcdemo.pem&quot; ec2-user@ec2-13-230-150-206.ap-northeast-1.compute.amazonaws.com</span><br></pre></td></tr></table></figure>
+<h2 id="filezilla登录"><a href="#filezilla登录" class="headerlink" title="filezilla登录"></a>filezilla登录</h2><figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-22/75339052.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<p><code>主机</code>处填公有DNS，<code>密钥文件</code>为bcdemo.pem文件地址</p>
+<p>##vsftp配置</p>
+<p><a href="http://www.anttoweb.com/kb/amazon-ec2-ftp/" target="_blank" rel="noopener">http://www.anttoweb.com/kb/amazon-ec2-ftp/</a></p>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-22/88112861.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h3 id="1-安装vsftpd"><a href="#1-安装vsftpd" class="headerlink" title="1. 安装vsftpd"></a>1. 安装vsftpd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd</span><br></pre></td></tr></table></figure>
+<h3 id="2-编辑-vsftpd-conf"><a href="#2-编辑-vsftpd-conf" class="headerlink" title="2. 编辑 vsftpd.conf"></a>2. 编辑 vsftpd.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable=NO</span><br><span class="line">xferlog_file=/var/log/vsftpd.log</span><br><span class="line">chroot_local_user=YES</span><br><span class="line"></span><br><span class="line">添加</span><br><span class="line">pasv_max_port=41000</span><br><span class="line">pasv_min_port=40000</span><br><span class="line">port_enable=YES</span><br><span class="line">pasv_enable=YES</span><br><span class="line"></span><br><span class="line">user_config_dir=/var/ftp</span><br></pre></td></tr></table></figure>
+<p>编辑完成后，输入<code>:wq</code>保存退出</p>
+<h3 id="3-添加用户"><a href="#3-添加用户" class="headerlink" title="3. 添加用户"></a>3. 添加用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#useradd -s /sbin/nologin antto</span><br></pre></td></tr></table></figure>
+<p>上面的antto是你准备使用FTP软件登陆服务器的用户名</p>
+<p>设置密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd antto</span><br></pre></td></tr></table></figure></p>
+<p>系统会提示你输入密码，输入两次（输入时字符不可见）</p>
+<h3 id="4-配置用户目录"><a href="#4-配置用户目录" class="headerlink" title="4. 配置用户目录"></a>4. 配置用户目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#vi /var/ftp/antto</span><br></pre></td></tr></table></figure>
+<p>添加如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">local_root=/var/www/</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-启动vsftp和随机启动"><a href="#5-启动vsftp和随机启动" class="headerlink" title="5. 启动vsftp和随机启动"></a>5. 启动vsftp和随机启动</h3><p>执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br><span class="line">chkconfig vsftpd on</span><br></pre></td></tr></table></figure></p>
+<p>基础配置完毕。</p>
+<h3 id="6-更改安全组"><a href="#6-更改安全组" class="headerlink" title="6. 更改安全组"></a>6. 更改安全组</h3><p>打开AWS控制台。找到“Security Groups” 然后找到你的实例应用的rule</p>
+<p>打开tcp 40000-41000 端口（pasv_min_port-pasv_max_port）和20-21端口</p>
+<h3 id="7-其它参考"><a href="#7-其它参考" class="headerlink" title="7. 其它参考"></a>7. 其它参考</h3><p><a href="https://blog.csdn.net/wangyaninglm/article/details/80400078" target="_blank" rel="noopener">https://blog.csdn.net/wangyaninglm/article/details/80400078</a></p>
+<p><a href="http://nzflew.blogspot.com/2008/03/setting-up-ftp-on-virtual-machine.html" target="_blank" rel="noopener">http://nzflew.blogspot.com/2008/03/setting-up-ftp-on-virtual-machine.html</a></p>
+<p><a href="https://www.skyarch.cn/blog/aws/ftp-on-ec2/" target="_blank" rel="noopener">https://www.skyarch.cn/blog/aws/ftp-on-ec2/</a></p>
+<p><a href="https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/Configure_Instance.html" target="_blank" rel="noopener">https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/Configure_Instance.html</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-04-04T03:22:55.523Z" itemprop="dateUpdated">2019-04-04 11:22:55</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/12/01/AWS vsftp配置及其它/" target="_blank" rel="external">https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&title=《AWS vsftp配置及其它》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&title=《AWS vsftp配置及其它》 — Renko's blog&source=登录https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northea..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《AWS vsftp配置及其它》 — Renko's blog&url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/02/mac/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mac</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/11/23/Loopback/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Loopback</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#登录"><span class="post-toc-number">1.</span> <span class="post-toc-text">登录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连接实例"><span class="post-toc-number">2.</span> <span class="post-toc-text">连接实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#filezilla登录"><span class="post-toc-number">3.</span> <span class="post-toc-text">filezilla登录</span></a></li></ol>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2019
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&title=《AWS vsftp配置及其它》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&title=《AWS vsftp配置及其它》 — Renko's blog&source=登录https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northea..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《AWS vsftp配置及其它》 — Renko's blog&url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2018/12/01/AWS vsftp配置及其它/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aS27jMBAFQN//0h4gqwAZy++x5SCiiisjjimWFg325/GI1/Nrvfr8fb361fE+P3d7fGJhYGBclvE8XK8ecHyIyf8fv6aXVAwMjBswkiCbhN3jffLd8rNhYGBg5NfB5JqYB1kMDAyMCeM4f0x2Pg67GBgYGJMktq10nRVwT87FMTAwLsiYNwY+9/lX+xsYGBh/kvEs11rJrL0+1qfCwMDYmpGUz9pYl4xZTAYsihsuBgbGFoy2xN+G1HnzMgr3GBgYWzPOSm6TYJo/uB0Uw8DAuAMjv9KttRDyA+UJbVERxMDAuDgjCZcJaZLWtqMVb6qGGBgYmzLWRrXav6wlsdH+GBgYWzPyIn4SfNeC9VnlOQwMjL0ZZz1s3pjMr6d1Xo6BgXFZxiR9nTcJkv2j/8TAwNia0Y47HAfQNiXOv41eNwYGxqaM9mdtopsE5bVxtDfTbRgYGBsx2vGs9rI4GdeYhH4MDIz9GPmBkoGtfGgseUGjZgAGBsamjLWxrXkjM7kavtkfAwNjU0Zb2FobkmgbCe2VEQMD426M9ujRY8rhiTYlxsDA2JuRf712oMn4Vxv0MTAwdmXMS2ZrafAklf3PrzAwMLZm5GuteTCBTcI6BgbGfoxPDEDknyftAQwMjLsx1oJsfqFsU+K8UYqBgYHRthvXGpY56c3VEAMDA6McyJgU/evXioGBcQNGnsS2gbgtwOWXTgwMjPsw5o2Btrk4nxBZbE5gYGBcj/EP7c8UGRwEYB8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

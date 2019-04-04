@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-Node.js (一) Express"
+                <article id="post-ES6 Destructuring Assignment及解构主义初探"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/15/Node.js (一) Express/">Node.js (一) Express</a>
+      <a class="post-title-link" href="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/">ES6 Destructuring Assignment及解构主义初探</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-08-15 11:26:30" datetime="2018-08-15T03:26:30.000Z"  itemprop="datePublished">2018-08-15</time>
+        <time class="post-time" title="2018-11-11 10:16:29" datetime="2018-11-11T02:16:29.000Z"  itemprop="datePublished">2018-11-11</time>
 
         
 
 
         
-	<span id="/2018/08/15/Node.js (一) Express/" class="leancloud_visitors" data-flag-title="Node.js (一) Express" title="Node.js (一) Express">
+	<span id="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" class="leancloud_visitors" data-flag-title="ES6 Destructuring Assignment及解构主义初探" title="ES6 Destructuring Assignment及解构主义初探">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/08/15/Node.js (一) Express/#comment">
-            <span class="valine-comment-count" data-xid="/2018/08/15/Node.js (一) Express/"></span>
+        <a href="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/#comment">
+            <span class="valine-comment-count" data-xid="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/"></span>
         </a>
     </span>
 
@@ -204,379 +204,383 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>[TOC]</p>
-<p><a href="https://github.com/nswbmw/N-blog/" target="_blank" rel="noopener">https://github.com/nswbmw/N-blog/</a></p>
-<h3 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1. 环境变量"></a>1. 环境变量</h3><p><code>环境变量（environment variables）</code>一般是指在操作系统中用来指定操作系统运行环境的一些参数。</p>
-<p>简单来讲，环境变量就是传递参数给运行程序的。</p>
-<pre><code>env  //显示环境变量
-</code></pre><p>nodejs使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=test node app</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(process.env.NODE_ENV) <span class="comment">//test</span></span><br></pre></td></tr></table></figure>
-<p>debug模块使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DEBUG=* node app</span><br><span class="line"></span><br><span class="line">-------</span><br><span class="line"><span class="comment">//windows用户设置</span></span><br><span class="line"></span><br><span class="line">set DEBUG=*</span><br><span class="line">set NODE_ENV=test</span><br><span class="line">node app</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.npmjs.com/package/cross-env" target="_blank" rel="noopener">cross-env</a></p>
-<pre><code>Run scripts that set and use environment variables across platforms
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cross-env NODE_ENV=test node app</span><br></pre></td></tr></table></figure>
-    
-        <a href="/2018/08/15/Node.js (一) Express/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-JWT规范"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/27/JWT规范/">JWT规范</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-27 11:26:30" datetime="2018-07-27T03:26:30.000Z"  itemprop="datePublished">2018-07-27</time>
-
-        
-
-
-        
-	<span id="/2018/07/27/JWT规范/" class="leancloud_visitors" data-flag-title="JWT规范" title="JWT规范">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/07/27/JWT规范/#comment">
-            <span class="valine-comment-count" data-xid="/2018/07/27/JWT规范/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>文章参考</p>
-<p><a href="https://jwt.io/introduction/" target="_blank" rel="noopener">Introduction to JSON Web Tokens</a></p>
-<p><a href="https://blog.leapoahead.com/2015/09/06/understanding-jwt/" target="_blank" rel="noopener">JSON Web Token - 在Web应用间安全地传递信息</a></p>
-<h3 id="JSON-Web-Token"><a href="#JSON-Web-Token" class="headerlink" title="JSON Web Token"></a>JSON Web Token</h3><p>使用JWT规范在用户和服务器之间传递安全可靠的信息。<br>适合用于向Web应用传递一些<strong>非敏感</strong>信息。</p>
-    
-        <a href="/2018/07/27/JWT规范/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-word &amp; git版本控制"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/13/word & git版本控制/">word &amp; git版本控制</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-13 09:19:30" datetime="2018-07-13T01:19:30.000Z"  itemprop="datePublished">2018-07-13</time>
-
-        
-
-
-        
-	<span id="/2018/07/13/word & git版本控制/" class="leancloud_visitors" data-flag-title="word & git版本控制" title="word & git版本控制">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/07/13/word & git版本控制/#comment">
-            <span class="valine-comment-count" data-xid="/2018/07/13/word & git版本控制/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>为了毕设学习一下:-D</p>
-<p>原文<a href="https://github.com/vigente/gerardus/wiki/Integrate-git-diffs-with-word-docx-files" target="_blank" rel="noopener">Integrate git diffs with word docx files</a><br>以下基本为简要翻译</p>
-<h3 id="1-安装Pandoc"><a href="#1-安装Pandoc" class="headerlink" title="1. 安装Pandoc"></a>1. 安装Pandoc</h3><pre><code>a universal document converter
-</code></pre><p><a href="http://pandoc.org/installing.html" target="_blank" rel="noopener">安装地址</a></p>
-<p><a href="http://pandoc.org/MANUAL.html" target="_blank" rel="noopener">Pandoc User’s Guide</a></p>
-    
-        <a href="/2018/07/13/word & git版本控制/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-excel转markdown"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/02/excel转markdown/">excel转markdown</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-02 07:56:30" datetime="2018-07-01T23:56:30.000Z"  itemprop="datePublished">2018-07-02</time>
-
-        
-
-
-        
-	<span id="/2018/07/02/excel转markdown/" class="leancloud_visitors" data-flag-title="excel转markdown" title="excel转markdown">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/07/02/excel转markdown/#comment">
-            <span class="valine-comment-count" data-xid="/2018/07/02/excel转markdown/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p><a href="https://github.com/fanfeilong/exceltk" target="_blank" rel="noopener">exceltk</a></p>
-<p><a href="https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/math/p/exceltk.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exceltk -t md -xls table123.xls</span><br></pre></td></tr></table></figure>
-
-    
-        <a href="/2018/07/02/excel转markdown/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-JAVA GO YAML JSON"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/23/JAVA GO YAML JSON/">JAVA GO YAML JSON</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-23 08:15:30" datetime="2018-06-23T00:15:30.000Z"  itemprop="datePublished">2018-06-23</time>
-
-        
-
-
-        
-	<span id="/2018/06/23/JAVA GO YAML JSON/" class="leancloud_visitors" data-flag-title="JAVA GO YAML JSON" title="JAVA GO YAML JSON">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/23/JAVA GO YAML JSON/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/23/JAVA GO YAML JSON/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>[TOC]</p>
-<h1 id="项目代码"><a href="#项目代码" class="headerlink" title="项目代码"></a>项目代码</h1><h2 id="用Java的snakeYaml解析YAML"><a href="#用Java的snakeYaml解析YAML" class="headerlink" title="用Java的snakeYaml解析YAML"></a>用Java的snakeYaml解析YAML</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.yaml.snakeyaml.Yaml;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">testload</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">load</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException</span>&#123;</span><br><span class="line">        <span class="comment">//初始化Yaml解析器</span></span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        File f=<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>);</span><br><span class="line">        <span class="comment">//读入文件</span></span><br><span class="line">        Object result= yaml.load(<span class="keyword">new</span> FileInputStream(f));</span><br><span class="line">        System.out.println(result.getClass());</span><br><span class="line">        System.out.println( result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadMap</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"/Users/wangzulong/mycode/yamtest/src/main/resources/testload.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            map = (Map&lt;String, Object&gt;) yaml.load(is);</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadObjects</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Yaml yaml = <span class="keyword">new</span> Yaml();</span><br><span class="line">        List&lt;Object&gt; list = <span class="keyword">null</span>;</span><br><span class="line">        InputStream is = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">"src/test/resources/example.yaml"</span>));</span><br><span class="line">        <span class="keyword">if</span> (is != <span class="keyword">null</span>) &#123;</span><br><span class="line">            list = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</span><br><span class="line">            <span class="keyword">for</span> (Object obj : yaml.loadAll(is)) &#123;</span><br><span class="line">                list.add(obj);</span><br><span class="line">            &#125;</span><br><span class="line">            is.close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(list);</span><br><span class="line">        String json= JSON.toJSONString(list, <span class="keyword">true</span>);</span><br><span class="line">        System.out.println(json);</span><br><span class="line"></span><br><span class="line">        FileWriter fw = <span class="keyword">null</span>;</span><br><span class="line">        fw = <span class="keyword">new</span> FileWriter(<span class="string">"src/test/resources/topology.json"</span>);</span><br><span class="line">        BufferedWriter output = <span class="keyword">new</span> BufferedWriter(fw);</span><br><span class="line">        output.write(json);</span><br><span class="line">        output.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-        <a href="/2018/06/23/JAVA GO YAML JSON/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-FreeMarker模板生成工具"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/07/FreeMarker模板生成工具/">FreeMarker模板生成工具</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-07 17:19:30" datetime="2018-06-07T09:19:30.000Z"  itemprop="datePublished">2018-06-07</time>
-
-        
-
-
-        
-	<span id="/2018/06/07/FreeMarker模板生成工具/" class="leancloud_visitors" data-flag-title="FreeMarker模板生成工具" title="FreeMarker模板生成工具">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/06/07/FreeMarker模板生成工具/#comment">
-            <span class="valine-comment-count" data-xid="/2018/06/07/FreeMarker模板生成工具/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><blockquote>
-<p>FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
+        <p><a href="https://www.sitepoint.com/es6-destructuring-assignment/" target="_blank" rel="noopener">ES6 in Action: Destructuring Assignment</a></p>
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><blockquote>
+<p>In essence, ECMAScript 6 (ES2015) destructuring assignment allows you<br>to extract individual items from arrays or objects and place them into<br>variables using a shorthand syntax.</p>
 </blockquote>
-<p><strong>模板 + 数据模型 = 输出</strong><br><figure class="image-box">
-                <img src="http://freemarker.foofun.cn/figures/overview.png" alt="MVC (模型 class="index-item-img">
-                <p>MVC (模型 视图 控制器) 模式</p>
-            </figure></p>
-<p><a href="http://freemarker.foofun.cn/index.html" target="_blank" rel="noopener">官网</a></p>
-<p><a href="http://try.freemarker.org/" target="_blank" rel="noopener">http://try.freemarker.org/</a></p>
-<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h3><p><a href="http://freemarker.foofun.cn/pgui_quickstart_createconfiguration.html" target="_blank" rel="noopener">程序开发指南</a></p>
-<p>参考以下文章，侵删致歉：</p>
-<p><a href="https://segmentfault.com/a/1190000011768799" target="_blank" rel="noopener">FreeMarker 快速入门</a></p>
+<p>ES6允许按照一定模式，从数组和对象（以及字符串、数值、布尔值、函数参数等）中提取值，按照对应位置给变量进行赋值，这被称为解构赋值。</p>
+<h3 id="1-数组解构"><a href="#1-数组解构" class="headerlink" title="1. 数组解构"></a>1. 数组解构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">ES5提取数值方式</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">  one   = myArray[<span class="number">0</span>],</span><br><span class="line">  two   = myArray[<span class="number">1</span>],</span><br><span class="line">  three = myArray[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// one = 'a', two = 'b', three = 'c'</span></span><br><span class="line"></span><br><span class="line">=============================</span><br><span class="line">ES6提取数值方式</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> [one, two, three] = myArray;</span><br><span class="line"></span><br><span class="line"><span class="comment">// one = 'a', two = 'b', three = 'c'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//可以跳过某值</span></span><br><span class="line"><span class="keyword">const</span> [one, , three] = myArray;</span><br><span class="line"></span><br><span class="line"><span class="comment">// one = 'a', three = 'c'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用rest操作符获取剩余元素</span></span><br><span class="line"><span class="keyword">const</span> [one, ...two] = myArray;</span><br><span class="line"></span><br><span class="line"><span class="comment">// one = 'a', two = ['b, 'c']</span></span><br></pre></td></tr></table></figure>
     
-        <a href="/2018/06/07/FreeMarker模板生成工具/" class="post-more waves-effect waves-button">
+        <a href="/2018/11/11/ES6 Destructuring Assignment及解构主义初探/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Developing Node.js Applications on IBM Cloud笔记"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/">Developing Node.js Applications on IBM Cloud笔记</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-11-01 10:16:29" datetime="2018-11-01T02:16:29.000Z"  itemprop="datePublished">2018-11-01</time>
+
+        
+
+
+        
+	<span id="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/" class="leancloud_visitors" data-flag-title="Developing Node.js Applications on IBM Cloud笔记" title="Developing Node.js Applications on IBM Cloud笔记">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/#comment">
+            <span class="valine-comment-count" data-xid="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>书籍地址<br><a href="https://www.safaribooksonline.com/library/view/developing-nodejs-applications/9780738442853/" target="_blank" rel="noopener">https://www.safaribooksonline.com/library/view/developing-nodejs-applications/9780738442853/</a></p>
+<h3 id="1-创建一个hello-world应用"><a href="#1-创建一个hello-world应用" class="headerlink" title="1. 创建一个hello world应用"></a>1. 创建一个hello world应用</h3><p><a href="http://bluemix.net/" target="_blank" rel="noopener">http://bluemix.net/</a><br>创建账号并登陆</p>
+<p>进入控制台<br><figure class="image-box">
+                <img src="http://phi3oetv6.bkt.clouddn.com/18-11-6/78645814.jpg" alt="" title="" class="index-item-img">
+                <p></p>
+            </figure></p>
+<p>选择nodejs SDK<br><figure class="image-box">
+                <img src="http://phi3oetv6.bkt.clouddn.com/18-11-6/2084621.jpg" alt="" title="" class="index-item-img">
+                <p></p>
+            </figure></p>
+<p>创建node应用<br><figure class="image-box">
+                <img src="http://phi3oetv6.bkt.clouddn.com/18-11-6/83480719.jpg" alt="" title="" class="index-item-img">
+                <p></p>
+            </figure></p>
+    
+        <a href="/2018/11/01/Developing Node.js Applications on IBM Cloud笔记/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-筛选字段数据以及Lodash与ES6转换"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/29/筛选字段数据以及Lodash与ES6转换/">筛选字段数据以及Lodash与ES6转换</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-29 17:06:29" datetime="2018-10-29T09:06:29.000Z"  itemprop="datePublished">2018-10-29</time>
+
+        
+
+
+        
+	<span id="/2018/10/29/筛选字段数据以及Lodash与ES6转换/" class="leancloud_visitors" data-flag-title="筛选字段数据以及Lodash与ES6转换" title="筛选字段数据以及Lodash与ES6转换">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/29/筛选字段数据以及Lodash与ES6转换/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/29/筛选字段数据以及Lodash与ES6转换/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h3 id="1-lodash中的pick方法"><a href="#1-lodash中的pick方法" class="headerlink" title="1. lodash中的pick方法"></a>1. lodash中的pick方法</h3><p><a href="https://lodash.com/docs/4.17.10#pick" target="_blank" rel="noopener">https://lodash.com/docs/4.17.10#pick</a></p>
+<pre><code>_.pick(object, [paths])
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _ = <span class="built_in">require</span>(<span class="string">"lodash"</span>);</span><br><span class="line"><span class="keyword">var</span> objects = [&#123;</span><br><span class="line">    <span class="string">"user"</span>: <span class="string">"a"</span>,</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">20</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"aname"</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="string">"user"</span>: <span class="string">"b"</span>,</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">30</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"bname"</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="string">"user"</span>: <span class="string">"c"</span>,</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">40</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"cname"</span></span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> results = [];</span><br><span class="line"><span class="built_in">console</span>.log(objects.filter(<span class="function"><span class="keyword">function</span> (<span class="params">object</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = _.pick(object, [<span class="string">'user'</span>, <span class="string">'name'</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    results.push(a);</span><br><span class="line">&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(results);</span><br><span class="line"><span class="comment">// =&gt;</span></span><br><span class="line"><span class="comment">// [ &#123; user: 'a', name: 'aname' &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; user: 'b', name: 'bname' &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; user: 'c', name: 'cname' &#125; ]</span></span><br></pre></td></tr></table></figure>
+<p>加复杂条件用 <code>_.pickBy()</code></p>
+<h3 id="2-ES6-where筛选"><a href="#2-ES6-where筛选" class="headerlink" title="2. ES6 where筛选"></a>2. ES6 where筛选</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _ = <span class="built_in">require</span>(<span class="string">"underscore"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> json = <span class="string">'[&#123;"user": "a", "age": 20&#125;, &#123;"user": "b", "age": 30&#125;, &#123;"user": "c", "age": 40&#125;]'</span>;</span><br><span class="line"><span class="keyword">var</span> users = <span class="built_in">JSON</span>.parse(json);</span><br><span class="line"><span class="keyword">var</span> filtered = _.where(users, &#123;</span><br><span class="line">    user: <span class="string">"a"</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(filtered);</span><br><span class="line"><span class="comment">// =&gt; [ &#123; user: 'a', age: 20 &#125; ]</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/lodash/lodash/issues/1247" target="_blank" rel="noopener">https://github.com/lodash/lodash/issues/1247</a></p>
+    
+        <a href="/2018/10/29/筛选字段数据以及Lodash与ES6转换/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-nodejs时间格式化"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/27/nodejs时间格式化/">nodejs时间格式化</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-27 10:16:29" datetime="2018-10-27T02:16:29.000Z"  itemprop="datePublished">2018-10-27</time>
+
+        
+
+
+        
+	<span id="/2018/10/27/nodejs时间格式化/" class="leancloud_visitors" data-flag-title="nodejs时间格式化" title="nodejs时间格式化">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/27/nodejs时间格式化/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/27/nodejs时间格式化/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> adate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> newdate = adate.toLocaleString();</span><br><span class="line"><span class="built_in">console</span>.log(newdate);</span><br><span class="line">---------------------</span><br><span class="line">输出结果：<span class="number">2018</span><span class="number">-10</span><span class="number">-16</span> <span class="number">15</span>:<span class="number">42</span>:<span class="number">53</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//nodejs时间格式化</span></span><br><span class="line"><span class="built_in">Date</span>.prototype.Format = <span class="function"><span class="keyword">function</span> (<span class="params">fmt</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = &#123;</span><br><span class="line">        <span class="string">"M+"</span>: <span class="keyword">this</span>.getMonth() + <span class="number">1</span>, <span class="comment">//month</span></span><br><span class="line">        <span class="string">"d+"</span>: <span class="keyword">this</span>.getDate(), <span class="comment">//day</span></span><br><span class="line">        <span class="string">"h+"</span>: <span class="keyword">this</span>.getHours(), <span class="comment">//hour</span></span><br><span class="line">        <span class="string">"m+"</span>: <span class="keyword">this</span>.getMinutes(), <span class="comment">//minute</span></span><br><span class="line">        <span class="string">"s+"</span>: <span class="keyword">this</span>.getSeconds(), <span class="comment">//second</span></span><br><span class="line">        <span class="string">"q+"</span>: <span class="built_in">Math</span>.floor((<span class="keyword">this</span>.getMonth() + <span class="number">3</span>) / <span class="number">3</span>), <span class="comment">//season</span></span><br><span class="line">        <span class="string">"S"</span>: <span class="keyword">this</span>.getMilliseconds() <span class="comment">//msec</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">if</span> (<span class="regexp">/(y+)/</span>.test(fmt)) fmt = fmt.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, (<span class="keyword">this</span>.getFullYear() + <span class="string">""</span>).substr(<span class="number">4</span> - <span class="built_in">RegExp</span>.$<span class="number">1.</span>length));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> o)</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"("</span> + k + <span class="string">")"</span>).test(fmt)) fmt = fmt.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, (<span class="built_in">RegExp</span>.$<span class="number">1.</span>length == <span class="number">1</span>) ? (o[k]) : ((<span class="string">"00"</span> + o[k]).substr((<span class="string">""</span> + o[k]).length)));</span><br><span class="line">    <span class="keyword">return</span> fmt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>().Format(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>().Format(<span class="string">"yyyy-MM-dd hh: mm: ss: S"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"time1:       "</span> + time1);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"time2:       "</span> + time2);</span><br><span class="line"></span><br><span class="line">------------------------------------</span><br><span class="line">输出结果：</span><br><span class="line">time1:       <span class="number">2018</span><span class="number">-10</span><span class="number">-16</span></span><br><span class="line">time2:       <span class="number">2018</span><span class="number">-10</span><span class="number">-16</span> <span class="number">15</span>: <span class="number">42</span>: <span class="number">53</span>: <span class="number">276</span></span><br></pre></td></tr></table></figure>
+
+    
+        <a href="/2018/10/27/nodejs时间格式化/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-go时间处理"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/22/go时间处理/">go时间处理</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-22 10:16:29" datetime="2018-10-22T02:16:29.000Z"  itemprop="datePublished">2018-10-22</time>
+
+        
+
+
+        
+	<span id="/2018/10/22/go时间处理/" class="leancloud_visitors" data-flag-title="go时间处理" title="go时间处理">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/22/go时间处理/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/22/go时间处理/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://www.36nu.com/post/277" target="_blank" rel="noopener">go语言中日期字符串与时间戳互转</a></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	now := time.Now()</span><br><span class="line">	fmt.Println(<span class="string">"当前时间:"</span>, now)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//两小时之后的时间</span></span><br><span class="line">	 h, _ := time.ParseDuration(<span class="string">"2h"</span>)</span><br><span class="line">	 nowAfter2Hour := now.Add(h)</span><br><span class="line">	 fmt.Println(<span class="string">"两小时之后的时间:"</span>, nowAfter2Hour)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//两小时之前的时间</span></span><br><span class="line">	 negativeH, _ := time.ParseDuration(<span class="string">"-2h"</span>)</span><br><span class="line">	 nowBefore2Hour := now.Add(negativeH)</span><br><span class="line">	 fmt.Println(<span class="string">"两小时之前的时间:"</span>, nowBefore2Hour)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// subtime := nowAfter2Hour.Sub(nowBefore2Hour)</span></span><br><span class="line">	<span class="comment">// fmt.Println("时间差:", subtime)</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//datetime := "2015-01-01 00:00:00" //待转化为时间戳的字符串</span></span><br><span class="line">	datetime1 := <span class="string">"2018-10-22 11:17:20"</span> <span class="comment">//待转化为时间戳的字符串</span></span><br><span class="line">	datetime2 := <span class="string">"2018-10-23 11:17:20"</span> <span class="comment">//待转化为时间戳的字符串</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//日期转化为时间戳</span></span><br><span class="line">	timeLayout := <span class="string">"2006-01-02 15:04:05"</span> <span class="comment">//转化所需模板</span></span><br><span class="line"></span><br><span class="line">	tmp1, _ := time.Parse(timeLayout, datetime1)</span><br><span class="line">	tmp2, _ := time.Parse(timeLayout, datetime2)</span><br><span class="line">	timestamp1 := tmp1.Unix() <span class="comment">//转化为时间戳 类型是int64</span></span><br><span class="line">	timestamp2 := tmp2.Unix() <span class="comment">//转化为时间戳 类型是int64</span></span><br><span class="line"></span><br><span class="line">	subtime := (timestamp2 - timestamp1) / <span class="number">3600</span> / <span class="number">24</span></span><br><span class="line"></span><br><span class="line">	fmt.Println(<span class="string">"时间差天数:"</span>, subtime)</span><br><span class="line">	<span class="comment">// subtime := strconv.ParseFloat(sub, 64)</span></span><br><span class="line"></span><br><span class="line">	ProfitAmount := (<span class="number">0.02</span> * <span class="number">12</span> / <span class="number">365</span>) * <span class="number">10000</span> * (<span class="keyword">float64</span>(subtime))</span><br><span class="line">	fmt.Println(<span class="string">"利润"</span>, ProfitAmount)</span><br><span class="line">	<span class="comment">//时间戳转化为日期</span></span><br><span class="line">	datetime1 = time.Unix(timestamp1, <span class="number">0</span>).Format(timeLayout)</span><br><span class="line">	datetime2 = time.Unix(timestamp2, <span class="number">0</span>).Format(timeLayout)</span><br><span class="line">	datetime3 := time.Unix(subtime, <span class="number">0</span>).Format(timeLayout)</span><br><span class="line">	fmt.Println(datetime3)</span><br><span class="line"></span><br><span class="line">	datetime3day := time.Unix(subtime, <span class="number">0</span>).Day()</span><br><span class="line">	fmt.Println(datetime3day)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//十分钟之后的时间</span></span><br><span class="line">	 m, _ := time.ParseDuration(<span class="string">"10m"</span>)</span><br><span class="line">	 nowAfter10Minute := now.Add(m)</span><br><span class="line">	 fmt.Println(<span class="string">"十分钟之后的时间:"</span>, nowAfter10Minute)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//十分钟之前的时间</span></span><br><span class="line">	 negativeM, _ := time.ParseDuration(<span class="string">"-10m"</span>)</span><br><span class="line">	 nowBefore10Minute := now.Add(negativeM)</span><br><span class="line">	 fmt.Println(<span class="string">"十分钟之前的时间:"</span>, nowBefore10Minute)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//30s之后的时间</span></span><br><span class="line">	 s, _ := time.ParseDuration(<span class="string">"30s"</span>)</span><br><span class="line">	 nowAfter30Second := now.Add(s)</span><br><span class="line">	 fmt.Println(<span class="string">"30s之后的时间:"</span>, nowAfter30Second)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//30s之前的时间</span></span><br><span class="line">	 negativeS, _ := time.ParseDuration(<span class="string">"-30s"</span>)</span><br><span class="line">	 nowBefore30Second := now.Add(negativeS)</span><br><span class="line">	 fmt.Println(<span class="string">"30s之前的时间:"</span>, nowBefore30Second)</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//1年1个月1天 之后的时间</span></span><br><span class="line">	 fmt.Println(<span class="string">"1年2个月3天之后的时间:"</span>, now.AddDate(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//2年2个月2天之前的时间</span></span><br><span class="line">	 fmt.Println(<span class="string">"2年3个月4天之前的时间:"</span>, now.AddDate(<span class="number">-2</span>, <span class="number">-3</span>, <span class="number">-4</span>))</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+        <a href="/2018/10/22/go时间处理/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-ES6 异步编程方法"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/19/ES6 异步编程方法/">ES6 异步编程方法</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-19 10:16:29" datetime="2018-10-19T02:16:29.000Z"  itemprop="datePublished">2018-10-19</time>
+
+        
+
+
+        
+	<span id="/2018/10/19/ES6 异步编程方法/" class="leancloud_visitors" data-flag-title="ES6 异步编程方法" title="ES6 异步编程方法">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/10/19/ES6 异步编程方法/#comment">
+            <span class="valine-comment-count" data-xid="/2018/10/19/ES6 异步编程方法/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>大部分复制整理于以下四篇文章，侵删致歉。</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="noopener">Generator函数的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/thunk.html" target="_blank" rel="noopener">Thunk函数的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/co.html" target="_blank" rel="noopener">co函数库的含义与用法</a><br><a href="http://www.ruanyifeng.com/blog/2015/05/async.html" target="_blank" rel="noopener">async函数的含义与用法</a></p>
+<h3 id="协程coroutine"><a href="#协程coroutine" class="headerlink" title="协程coroutine"></a>协程coroutine</h3><pre><code>多个线程互相协作，完成异步任务。
+</code></pre><ol>
+<li>协程A开始执行。</li>
+<li>协程A执行到一半，进入暂停，执行权转移到协程B。</li>
+<li>（一段时间后）协程B交还执行权。</li>
+<li>协程A恢复执行。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">asnycJob</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...其他代码</span></span><br><span class="line">  <span class="keyword">var</span> f = <span class="keyword">yield</span> readFile(fileA);</span><br><span class="line">  <span class="comment">// ...其他代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码的函数 <code>asyncJob</code> 是一个协程。<br><code>yield</code> 命令表示执行到此处，执行权将交给其他协程。也就是说，<code>yield</code>命令是异步两个阶段的分界线。</p>
+<p>协程遇到 <code>yield</code> 命令就暂停，等到执行权返回，再从暂停的地方继续往后执行。它的最大优点，就是代码的写法非常像同步操作，如果去除yield命令，简直一模一样。</p>
+    
+        <a href="/2018/10/19/ES6 异步编程方法/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -588,7 +592,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
     </div>
 </nav>
 
@@ -599,7 +603,7 @@
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

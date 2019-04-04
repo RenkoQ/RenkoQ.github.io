@@ -189,12 +189,11 @@
 <h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank" rel="noopener">摘自维基</a>：<br>科赫曲线是一种分形，是de Rham曲线的特例。<br>给定线段AB，科赫曲线可以由以下步骤生成：<br>1.将线段分成三等份（AC,CD,DB）<br>2.以CD为底，向外（内外随意）画一个等边三角形DMC<br>3.将线段CD移去<br>4.分别对AC,CM,MD,DB重复1~3。<br>科赫雪花是以等边三角形三边生成的科赫曲线组成的。每条科赫曲线的长度是无限大，它是连续而无处可微的曲线。</p>
 <a id="more"></a>
 <h3 id="2-数学原理与Matlab实现"><a href="#2-数学原理与Matlab实现" class="headerlink" title="2. 数学原理与Matlab实现"></a>2. 数学原理与Matlab实现</h3><p>摘自<a href="http://www.weibo.com/p/230418e9a1554a0102vpll" target="_blank" rel="noopener">分形系列之matlab绘制koch曲线</a><br> 1 . 算法分析：<br><figure class="image-box">
-                <img src="http://ww1.sinaimg.cn/large/789d050dly1fv6v8hsm15j20810363yg.jpg" alt="描述" title="" class="">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190403/20190403171543-image.png" alt="描述" title="" class="">
                 <p>描述</p>
-            </figure><br>在直线段的中间依次插入三个点P2，P3，P4。P2,P4三等分点。P3是P2,P4中点，旋转60°由正交矩阵实现。<br> <figure class="image-box">
-                <img src="http://s6.sinaimg.cn/large/004hgvMuzy6SNVJ9Mpf85" alt="旋转矩阵" title="" class="">
-                <p>旋转矩阵</p>
-            </figure><br>根据初始数据（P1和P5点的坐标），产生图中5个结点的坐标。结点的坐标数组形成一个矩阵，矩阵的第一行为P1的坐标，第二行为P2的坐标……，第五行为P5的坐标。矩阵的第一列元素分别为5个结点的x坐标，第二列元素分别为5个结点的y坐标。<br>进一步考虑Koch曲线形成过程中结点数目的变化规律。设第k次迭代产生的结点数为n(k)，第k+1次迭代产生的结点数为n(k+1)，则n(k)和n(k+1)中间的递推关系为n(k+1)=4n(k)-3。</p>
+            </figure></p>
+<p>在直线段的中间依次插入三个点P2，P3，P4。P2,P4三等分点。P3是P2,P4中点，旋转60°由正交矩阵实现。</p>
+<p> <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190403/20190403171644-image.png" alt="旋转矩阵"><br>根据初始数据（P1和P5点的坐标），产生图中5个结点的坐标。结点的坐标数组形成一个矩阵，矩阵的第一行为P1的坐标，第二行为P2的坐标……，第五行为P5的坐标。矩阵的第一列元素分别为5个结点的x坐标，第二列元素分别为5个结点的y坐标。<br>进一步考虑Koch曲线形成过程中结点数目的变化规律。设第k次迭代产生的结点数为n(k)，第k+1次迭代产生的结点数为n(k+1)，则n(k)和n(k+1)中间的递推关系为n(k+1)=4n(k)-3。</p>
 <p>2 . 代码</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Koch</span><span class="params">(num)</span></span></span><br><span class="line">p = [<span class="number">0</span> <span class="number">0</span>;<span class="number">10</span> <span class="number">0</span>];<span class="comment">%p初始线段两端点</span></span><br><span class="line">n=<span class="number">2</span>;  <span class="comment">%n结点数</span></span><br><span class="line">A=[cos(pi/<span class="number">3</span>) -sin(pi/<span class="number">3</span>);sin(pi/<span class="number">3</span>) cos(pi/<span class="number">3</span>)]; <span class="comment">%旋转矩阵</span></span><br><span class="line"><span class="keyword">for</span> k=<span class="number">1</span>:num   <span class="comment">%k为分形次数</span></span><br><span class="line"> d=diff(p)/<span class="number">3</span>;<span class="comment">%diff计算相邻两个点的坐标之差 d得三等分点</span></span><br><span class="line"> m=<span class="number">4</span>*n<span class="number">-3</span>;<span class="comment">%迭代公式</span></span><br><span class="line"> q=p(<span class="number">1</span>:n<span class="number">-1</span>,:); <span class="comment">%以原点为起点,前n-1个点的坐标为终点形成向量</span></span><br><span class="line"> p(<span class="number">5</span>:<span class="number">4</span>:m,:)=p(<span class="number">2</span>:n,:); <span class="comment">%迭代后处于4k+1位置上的点的坐标为迭代前的相应坐标</span></span><br><span class="line"> p(<span class="number">2</span>:<span class="number">4</span>:m,:)=q+d;     <span class="comment">%用向量方法计算迭代后处于4k+2位置上的点的坐标    </span></span><br><span class="line"> p(<span class="number">3</span>:<span class="number">4</span>:m,:)=q+d+d*A';  <span class="comment">%用向量方法计算迭代后处于4k+3位置上的点的坐标   </span></span><br><span class="line"> p(<span class="number">4</span>:<span class="number">4</span>:m,:)=q+<span class="number">2</span>*d;   <span class="comment">%用向量方法计算迭代后处于4k位置上的点的坐标</span></span><br><span class="line"> n=m; <span class="comment">%迭代后新的结点数目</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">plot(p(:,<span class="number">1</span>),p(:,<span class="number">2</span>));</span><br><span class="line">axis([<span class="number">0</span> <span class="number">10</span> <span class="number">0</span> <span class="number">10</span>]);</span><br></pre></td></tr></table></figure>
 <figure class="image-box">
@@ -209,7 +208,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-12T09:10:16.002Z" itemprop="dateUpdated">2018-09-12 17:10:16</time>
+    最后更新时间：<time datetime="2019-04-03T09:17:01.132Z" itemprop="dateUpdated">2019-04-03 17:17:01</time>
 </span><br>
 
 
@@ -319,7 +318,7 @@
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

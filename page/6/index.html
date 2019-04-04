@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-同源和跨域（二）概念&amp;JSONP"
+                <article id="post-命令行处理JSON工具 jq"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/16/同源和跨域（二）概念&JSONP/">同源和跨域（二）概念&amp;JSONP</a>
+      <a class="post-title-link" href="/2018/05/25/命令行处理JSON工具 jq/">命令行处理JSON工具 jq</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-03-16 12:43:11" datetime="2018-03-16T04:43:11.000Z"  itemprop="datePublished">2018-03-16</time>
+        <time class="post-time" title="2018-05-25 13:34:30" datetime="2018-05-25T05:34:30.000Z"  itemprop="datePublished">2018-05-25</time>
 
         
 
 
         
-	<span id="/2018/03/16/同源和跨域（二）概念&JSONP/" class="leancloud_visitors" data-flag-title="同源和跨域（二）概念&JSONP" title="同源和跨域（二）概念&JSONP">
+	<span id="/2018/05/25/命令行处理JSON工具 jq/" class="leancloud_visitors" data-flag-title="命令行处理JSON工具 jq" title="命令行处理JSON工具 jq">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,8 +188,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/03/16/同源和跨域（二）概念&JSONP/#comment">
-            <span class="valine-comment-count" data-xid="/2018/03/16/同源和跨域（二）概念&JSONP/"></span>
+        <a href="/2018/05/25/命令行处理JSON工具 jq/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/25/命令行处理JSON工具 jq/"></span>
         </a>
     </span>
 
@@ -204,250 +204,24 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><pre><code>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。
-</code></pre><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><h3 id="1-跨域类型"><a href="#1-跨域类型" class="headerlink" title="1. 跨域类型"></a>1. 跨域类型</h3><table>
-<thead>
-<tr>
-<th>URL</th>
-<th style="text-align:right">说明</th>
-<th style="text-align:center">是否允许通信</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
-<td style="text-align:right">同一域名下</td>
-<td style="text-align:center">允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/lab/a.js" target="_blank" rel="external">http://www.a.com/lab/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/script/b.js" target="_blank" rel="external">http://www.a.com/script/b.js</a></td>
-<td style="text-align:right">同一域名下不同文件夹</td>
-<td style="text-align:center">允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com:8000/a.js" target="_blank" rel="external">http://www.a.com:8000/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
-<td style="text-align:right">同一域名，不同端口</td>
-<td style="text-align:center">不允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="https://www.a.com/b.js" target="_blank" rel="external">https://www.a.com/b.js</a></td>
-<td style="text-align:right">同一域名，不同协议</td>
-<td style="text-align:center">不允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://70.32.92.74/b.js" target="_blank" rel="external">http://70.32.92.74/b.js</a></td>
-<td style="text-align:right">域名和域名对应ip</td>
-<td style="text-align:center">不允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://script.a.com/b.js" target="_blank" rel="external">http://script.a.com/b.js</a></td>
-<td style="text-align:right">主域相同，子域不同</td>
-<td style="text-align:center">不允许</td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://a.com/b.js" target="_blank" rel="external">http://a.com/b.js</a></td>
-<td style="text-align:right">同一域名，不同二级域名（同上）</td>
-<td style="text-align:center">不允许（cookie这种情况下也不允许访问）</td>
-</tr>
-<tr>
-<td><a href="http://www.cnblogs.com/a.js" target="_blank" rel="external">http://www.cnblogs.com/a.js</a></td>
-</tr>
-<tr>
-<td><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a></td>
-<td style="text-align:right">不同域名</td>
-<td style="text-align:center">不允许</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-跨域方案"><a href="#2-跨域方案" class="headerlink" title="2. 跨域方案"></a>2. 跨域方案</h3><p>顶级域名相同的可以通过domain.name来解决，即同时设置 domain.name = 顶级域名（如example.com）</p>
-<p>document.domain + iframe</p>
-<p>window.name + iframe</p>
-<p>location.hash + iframe</p>
-<p>window.postMessage()</p>
-<h3 id="3-JSONP"><a href="#3-JSONP" class="headerlink" title="3. JSONP"></a>3. JSONP</h3>
-    
-        <a href="/2018/03/16/同源和跨域（二）概念&JSONP/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-同源和跨域（一）Ajax"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/15/同源和跨域（一）Ajax/">同源和跨域（一）Ajax</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-03-15 17:56:34" datetime="2018-03-15T09:56:34.000Z"  itemprop="datePublished">2018-03-15</time>
-
-        
-
-
-        
-	<span id="/2018/03/15/同源和跨域（一）Ajax/" class="leancloud_visitors" data-flag-title="同源和跨域（一）Ajax" title="同源和跨域（一）Ajax">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/03/15/同源和跨域（一）Ajax/#comment">
-            <span class="valine-comment-count" data-xid="/2018/03/15/同源和跨域（一）Ajax/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-原生Ajax写法"><a href="#1-原生Ajax写法" class="headerlink" title="1. 原生Ajax写法"></a>1. 原生Ajax写法</h3><ol>
-<li>建立XMLHTTPRequest对象</li>
-<li>注册回调函数<br>当服务器回应我们了,我们想要执行什么逻辑</li>
-<li>使用open方法设置和服务器端交互的基本信息<br>设置提交的网址,数据,post提交的一些额外内容</li>
-<li>设置发送的数据，开始和服务器端交互<br>发送数据</li>
-<li>更新界面<br>在注册的回调函数中,获取返回的数据,更新界面</li>
-</ol>
-<p><strong>示例代码:GET</strong> get的数据,直接在请求的url中添加即可</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 创建XMLHttpRequest 对象</span></div><div class="line">  <span class="keyword">var</span> xml = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置跟服务端交互的信息</span></div><div class="line">  xml.open(<span class="string">'get'</span>,<span class="string">'01.ajax.php?name=fox'</span>);</div><div class="line">  xml.send(<span class="literal">null</span>);    <span class="comment">// get请求这里写null即可</span></div><div class="line"></div><div class="line">  <span class="comment">// 接收服务器反馈</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">      <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">          <span class="comment">// 打印响应内容</span></div><div class="line">          alert(xml.responseText);</div><div class="line">      &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p><strong>示例代码:POST</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">  <span class="comment">// 异步对象</span></div><div class="line">  <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">  <span class="comment">// 设置属性</span></div><div class="line">  xhr.open(<span class="string">'post'</span>, <span class="string">'02.post.php'</span> );</div><div class="line"></div><div class="line">  <span class="comment">// 如果想要使用post提交数据,必须添加</span></div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 将数据通过send方法传递</span></div><div class="line">  xhr.send(<span class="string">'name=fox&amp;age=18'</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 发送并接受返回值</span></div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 这步为判断服务器是否正确响应</span></div><div class="line">  <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</div><div class="line">         alert(xhr.responseText);</div><div class="line">       &#125; </div><div class="line">  &#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<h3 id="2-Ajax工具函数封装"><a href="#2-Ajax工具函数封装" class="headerlink" title="2. Ajax工具函数封装"></a>2. Ajax工具函数封装</h3>
-    
-        <a href="/2018/03/15/同源和跨域（一）Ajax/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-函数节流&amp;防抖"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/03/函数节流&防抖/">函数节流&amp;防抖</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-03-03 23:34:31" datetime="2018-03-03T15:34:31.000Z"  itemprop="datePublished">2018-03-03</time>
-
-        
-
-
-        
-	<span id="/2018/03/03/函数节流&防抖/" class="leancloud_visitors" data-flag-title="函数节流&防抖" title="函数节流&防抖">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2018/03/03/函数节流&防抖/#comment">
-            <span class="valine-comment-count" data-xid="/2018/03/03/函数节流&防抖/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h3 id="1-函数防抖（debounce）"><a href="#1-函数防抖（debounce）" class="headerlink" title="1.函数防抖（debounce）"></a>1.函数防抖（debounce）</h3><pre><code>连续的调用，停止t后才会执行该动作，若在这t内又调用此动作则将重新计算t
-</code></pre><p><strong>场景案例1</strong>：</p>
-<pre><code>监听 resize 事件，每缩小（或者放大）一次浏览器，实际上会触发多次，用户玩够了再执行
-</code></pre><p><strong>解决方案</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> foo = debounce(resizeBox, <span class="number">1000</span>);</div><div class="line">  $(<span class="built_in">window</span>).on(<span class="string">'load resize'</span>, foo);</div><div class="line">&#125;);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeBox</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> fullWidth = $(<span class="string">'body'</span>).width(),</div><div class="line">    maxWidth = <span class="number">800</span>;</div><div class="line">  <span class="keyword">if</span> (fullWidth &lt;= maxWidth) &#123;</div><div class="line">    $(<span class="string">'.full'</span>).width(fullWidth);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    $(<span class="string">'.full'</span>).width(maxWidth);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>场景案例2</strong>：</p>
-<pre><code>文本输入的验证（连续输入文字后发送 AJAX 请求进行验证，验证最后一次就好）
-</code></pre><p><strong>解决方案</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> foo = debounce(checkInput, <span class="number">1000</span>);</div><div class="line">  $(<span class="string">'.input'</span>).on(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    foo();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInput</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 替换为异步请求，可减少请求次数</span></div><div class="line">  $(<span class="string">'.type'</span>).text($(<span class="string">'.input'</span>).val());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-函数节流（throttle）"><a href="#2-函数节流（throttle）" class="headerlink" title="2. 函数节流（throttle）"></a>2. 函数节流（throttle）</h3><pre><code>一个不间断的调用，每隔t，执行一次
+        <p>所有参考资料都写在文末，侵删致歉。</p>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p><a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener">jq</a><br><a href="https://github.com/stedolan/jq" target="_blank" rel="noopener">stedolan/jq</a></p>
+<pre><code>jq is a lightweight and flexible command-line JSON processor.
+</code></pre><p>jq 是一款命令行下处理 JSON 数据的工具。<br>其可以接受标准输入，命令管道或者文件中的 JSON 数据，经过一系列的过滤器(filters)和表达式的转后形成我们需要的数据结构并将结果输出到标准输出中。<br>jq 的这种特性使我们可以很容易地在 Shell 脚本中调用它。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p><a href="https://stedolan.github.io/jq/download/" target="_blank" rel="noopener">Download jq</a></p>
+<pre><code>brew install jq
+sudo apt-get install jq
+yum -y  install epel-release   &amp;&amp;    yum -y install jq
 </code></pre>
     
-        <a href="/2018/03/03/函数节流&防抖/" class="post-more waves-effect waves-button">
+        <a href="/2018/05/25/命令行处理JSON工具 jq/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -456,7 +230,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-ES6_ES2015语法及Babel"
+                <article id="post-YAML"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -464,20 +238,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/28/ES6_ES2015语法及Babel/">ES6/ES2015语法及Babel</a>
+      <a class="post-title-link" href="/2018/05/06/YAML/">YAML</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-28 00:01:00" datetime="2018-02-27T16:01:00.000Z"  itemprop="datePublished">2018-02-28</time>
+        <time class="post-time" title="2018-05-06 21:27:30" datetime="2018-05-06T13:27:30.000Z"  itemprop="datePublished">2018-05-06</time>
 
         
 
 
         
-	<span id="/2018/02/28/ES6_ES2015语法及Babel/" class="leancloud_visitors" data-flag-title="ES6/ES2015语法及Babel" title="ES6/ES2015语法及Babel">
+	<span id="/2018/05/06/YAML/" class="leancloud_visitors" data-flag-title="YAML" title="YAML">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -488,8 +262,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/28/ES6_ES2015语法及Babel/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/28/ES6_ES2015语法及Babel/"></span>
+        <a href="/2018/05/06/YAML/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/06/YAML/"></span>
         </a>
     </span>
 
@@ -504,54 +278,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>偶然在项目中看见，感觉是重要的内容，先了解下基本语法，等有空再深入学习。<br>babel迷之安装 一觉醒来打开webstorm发现装上了Σ(っ °Д °;)っ<br>File Watcher打开添加babel时programa一栏填写:</p>
-<pre><code>$ProjectFileDir$/node_modules/.bin/babel
-</code></pre><p>然后就能自动转码为ES5啦:)</p>
-<h3 id="1-文档转换"><a href="#1-文档转换" class="headerlink" title="1. 文档转换"></a>1. 文档转换</h3><p>Babel的REPL在线编译器，将ES6代码转为ES5代码。<br><a href="https://babeljs.io/repl/" target="_blank" rel="external">https://babeljs.io/repl/</a></p>
-<h3 id="2-ES6部分特性"><a href="#2-ES6部分特性" class="headerlink" title="2. ES6部分特性"></a>2. ES6部分特性</h3><ol>
-<li><code>var</code>声明的内层变量会覆盖外层变量，而<code>let</code>提供块级作用域，变量只在代码块内有效。</li>
-<li>当引用第三方库时声明的变量，用<code>const</code>来声明可以避免未来不小心重命名而导致出现bug</li>
-<li>引入<code>Class</code>（类）概念，可以通过<code>extends</code>关键字实现继承。（这部分感觉有点像java）</li>
-<li><code>arrow function箭头函数的</code>this<code>是继承外层代码块的</code>this`。</li>
-<li><code>template string</code>，用反引号来标识起始，用<code>${}</code>来引用变量，而且所有的空格和缩进都会被保留在输出之中.</li>
-<li><code>destructuring</code>解构:从数组和对象中提取值，对变量进行赋值。</li>
-<li><code>default</code>默认值, <code>rest</code>语法(用Rest操作符以后，args参数就是一个数组了，任何操作数组的方法都可以直接对args使用)</li>
-</ol>
-<hr>
-<p>电脑重装了，反正要重新配置环境，不如找个东西边学边装。就决定是你了，ES6！</p>
-<ol>
-<li>惯例安装nodejs以及express</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save</div><div class="line">$ npm install body-parser --save</div><div class="line">$ npm install cookie-parser --save</div><div class="line">$ npm install multer --save</div><div class="line">$ npm list express</div></pre></td></tr></table></figure>
-<p>途中出现第一个问题，<code>npm ERR! extraneous</code>，<a href="https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o" target="_blank" rel="external">https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o</a><br>第二个问题 <code>express command not found</code> ，解决方法<a href="https://stackoverflow.com/questions/23002448/express-command-not-found" target="_blank" rel="external">https://stackoverflow.com/questions/23002448/express-command-not-found</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g express-generator</div></pre></td></tr></table></figure></p>
-<ol>
-<li>gulp<br><a href="http://www.gulpjs.com.cn/docs/" target="_blank" rel="external">文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ touch .babelrc</div><div class="line"></div><div class="line">$ touch gulpfile.babel.js</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>因为使用ES6语法，所以必须创建<code>gulpfile.babel.js</code>文件而不是<code>gulpfile.js</code></p>
-<hr>
-<p>然后又出现了很多问题，我就先去学习了gulp的详细用法，写了三篇文章总结。又学会了使用yeoman工具直接构建项目骨架。详细参见之前的博文。我发现webstorm里也可以直接选择yeoman构建，神器啊。<br>下面真的开始学习ES6语法了 O_&lt;</p>
-<hr>
-<p>参考阮一峰的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">《ECMAScript 6 入门》</a></p>
-<h3 id="1-let-amp-const"><a href="#1-let-amp-const" class="headerlink" title="1. let &amp; const"></a>1. let &amp; const</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>;i&lt;<span class="number">3</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-<ol>
-<li>块作用域（大括号内）第二个<code>console.log(i)</code>脱离了块作用域，于是只能输出1，2。</li>
-<li>严格模式：ES5代码中存在<code>use strict</code>来启动文件采用严格模式，ES6中则强制开启。严格模式中变量未声明则不能引用，会报错。</li>
-<li>使用let时不能重复定义变量。</li>
-<li>使用const声明的常量不能修改。</li>
-<li>第4点注意情况</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> PI =<span class="number">3.1415926</span>;   <span class="comment">//不能修改</span></div><div class="line"><span class="keyword">const</span> K =&#123;</div><div class="line">  <span class="attr">a</span>:<span class="number">1</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//K指向对象存储的指针，对象可变指针不变。</span></div><div class="line">K.b = <span class="number">3</span>;</div></pre></td></tr></table></figure>
-<h3 id="2-解构赋值"><a href="#2-解构赋值" class="headerlink" title="2. 解构赋值"></a>2. 解构赋值</h3>
+        <h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><a href="http://yaml.org/" target="_blank" rel="noopener">官网</a></p>
+<p><a href="http://yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener">文档</a></p>
+<pre><code>YAML Ain&apos;t Markup Language
+YAML is a human friendly data serialization standard for all programming languages.
+</code></pre><p><a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/07/yaml.html</a></p>
+<p>YAML实质上是一种通用的数据串行化格式。</p>
     
-        <a href="/2018/02/28/ES6_ES2015语法及Babel/" class="post-more waves-effect waves-button">
+        <a href="/2018/05/06/YAML/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
 
     </div>
     
@@ -560,7 +301,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-响应式开发"
+                <article id="post-terminal、shell、tty、console"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -568,20 +309,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/03/响应式开发/">响应式开发总结</a>
+      <a class="post-title-link" href="/2018/05/01/terminal、shell、tty、console/">terminal、shell、tty、console</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-03 00:01:00" datetime="2018-02-02T16:01:00.000Z"  itemprop="datePublished">2018-02-03</time>
+        <time class="post-time" title="2018-05-01 02:01:30" datetime="2018-04-30T18:01:30.000Z"  itemprop="datePublished">2018-05-01</time>
 
         
 
 
         
-	<span id="/2018/02/03/响应式开发/" class="leancloud_visitors" data-flag-title="响应式开发总结" title="响应式开发总结">
+	<span id="/2018/05/01/terminal、shell、tty、console/" class="leancloud_visitors" data-flag-title="terminal、shell、tty、console" title="terminal、shell、tty、console">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -592,8 +333,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/03/响应式开发/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/03/响应式开发/"></span>
+        <a href="/2018/05/01/terminal、shell、tty、console/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/01/terminal、shell、tty、console/"></span>
         </a>
     </span>
 
@@ -608,24 +349,31 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>之前对于响应式都是用bootstrap等响应式框架，非常肤浅。就学习了具体的响应式开发相关内容，运用媒体查询写出不同的css布局，锻炼了基本技能，对基础概念也有了新了解。还学习了响应式图片的处理和兼容性处理，也收获良多。</p>
-<h3 id="1-响应式网站"><a href="#1-响应式网站" class="headerlink" title="1. 响应式网站"></a>1. 响应式网站</h3><blockquote>
-<p>所谓响应式网站，就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本，在各种分辨率的设备下都能很好地展示页面效果。</p>
+        <h3 id="无关本文比较的TTY"><a href="#无关本文比较的TTY" class="headerlink" title="无关本文比较的TTY"></a>无关本文比较的TTY</h3><blockquote>
+<p>TTY is a toolbox for developing beautiful command line clients in Ruby<br>with a fluid interface for gathering input, querying terminal<br>properties and displaying information.</p>
 </blockquote>
-<h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><p>flexible grid layout 弹性网格布局<br>flexible image 弹性图片<br>media queries 媒体查询</p>
-<h4 id="优点和缺点"><a href="#优点和缺点" class="headerlink" title="优点和缺点"></a>优点和缺点</h4><p>一套代码适应多终端设备，省人省时省钱，利于SEO。缺点是需要加载更多的样式和脚本资源，造成代码冗余。</p>
-<h4 id="实践原则："><a href="#实践原则：" class="headerlink" title="实践原则："></a>实践原则：</h4><p>制作网站大抵都遵循两个原则：渐近增强(Progressive Enhancement)和优雅降级(Graceful Degradation)，渐近增强是指先制作一个简陋但是兼容各个版本浏览器的网页，然后再添加效果。而优雅降级则刚好相反，直接制作出效果绚烂的兼容主流浏览器的产品，然后根据低版本再做出一些兼容性处理。</p>
-<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>使用相对单位并配合媒体查询来实现页面，我们只需要根据设计图,将绝对单位px转换为相对单位rem或者em并配合@media即可。</p>
-<h3 id="2-非常规文件"><a href="#2-非常规文件" class="headerlink" title="2. 非常规文件"></a>2. 非常规文件</h3>
+<p><a href="https://github.com/piotrmurach/tty" target="_blank" rel="noopener">github</a><br><a href="http://piotrmurach.github.io/tty/" target="_blank" rel="noopener">官网</a></p>
+<hr>
+<p><strong>但此处比较的不是这个RUBY命令行工具。</strong></p>
+<p><a href="https://blog.csdn.net/on_1y/article/details/20203963" target="_blank" rel="noopener">控制台，终端，tty，shell等概念的区别</a></p>
+<p><a href="https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con" target="_blank" rel="noopener">What is the exact difference between a ‘terminal’, a ‘shell’, a ‘tty’ and a ‘console’?</a></p>
+<p><a href="https://www.zhihu.com/question/21711307" target="_blank" rel="noopener">终端，Shell，“tty”和控制台（console）有什么区别？</a></p>
+<p>(以下内容皆从上述链接中复制粘贴整理所得，侵删致歉)</p>
+<blockquote>
+<p><strong>A terminal is at the end of an electric wire, a shell is the home of a turtle, tty is a strange abbreviation and a console is a kind of cabinet.</strong></p>
+</blockquote>
+<p>In unix terminology, the short answer is that</p>
+<p><code>terminal</code> = <code>tty</code> = text input/output environment（文本的输入输出环境）<br><code>console</code> = physical terminal（物理终端）<br><code>shell</code> = command line interpreter(命令行解释器)</p>
+<h3 id="Teleprinter（TTY）-amp-Terminal"><a href="#Teleprinter（TTY）-amp-Terminal" class="headerlink" title="Teleprinter（TTY）&amp; Terminal"></a>Teleprinter（TTY）&amp; Terminal</h3>
     
-        <a href="/2018/02/03/响应式开发/" class="post-more waves-effect waves-button">
+        <a href="/2018/05/01/terminal、shell、tty、console/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
 
     </div>
     
@@ -634,7 +382,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-水平垂直居中"
+                <article id="post-Red Hat"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -642,20 +390,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/02/水平垂直居中/">CSS水平垂直居中</a>
+      <a class="post-title-link" href="/2018/05/01/Red Hat/">Red Hat</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2018-02-02 22:23:31" datetime="2018-02-02T14:23:31.000Z"  itemprop="datePublished">2018-02-02</time>
+        <time class="post-time" title="2018-05-01 00:01:00" datetime="2018-04-30T16:01:00.000Z"  itemprop="datePublished">2018-05-01</time>
 
         
 
 
         
-	<span id="/2018/02/02/水平垂直居中/" class="leancloud_visitors" data-flag-title="CSS水平垂直居中" title="CSS水平垂直居中">
+	<span id="/2018/05/01/Red Hat/" class="leancloud_visitors" data-flag-title="Red Hat" title="Red Hat">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -666,8 +414,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2018/02/02/水平垂直居中/#comment">
-            <span class="valine-comment-count" data-xid="/2018/02/02/水平垂直居中/"></span>
+        <a href="/2018/05/01/Red Hat/#comment">
+            <span class="valine-comment-count" data-xid="/2018/05/01/Red Hat/"></span>
         </a>
     </span>
 
@@ -682,23 +430,167 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p><a href="https://github.com/yanhaijing/vertical-center" target="_blank" rel="noopener">vertical-center</a><br>全部从该项目转载，侵删。</p>
-<h1 id="仅居中元素定宽高适用："><a href="#仅居中元素定宽高适用：" class="headerlink" title="仅居中元素定宽高适用："></a>仅居中元素定宽高适用：</h1><p>absolute + 负margin</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 50%;</span><br><span class="line">    <span class="selector-tag">left</span>: 50%;</span><br><span class="line">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">    <span class="selector-tag">margin-top</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>absolute + margin auto</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 0;</span><br><span class="line">    <span class="selector-tag">left</span>: 0;</span><br><span class="line">    <span class="selector-tag">right</span>: 0;</span><br><span class="line">    <span class="selector-tag">bottom</span>: 0;</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>absolute + calc</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">    <span class="selector-tag">left</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="居中元素不定宽高适用："><a href="#居中元素不定宽高适用：" class="headerlink" title="居中元素不定宽高适用："></a>居中元素不定宽高适用：</h1><p>absolute + transform</p>
+        <h3 id="1-yum安装"><a href="#1-yum安装" class="headerlink" title="1. yum安装"></a>1. yum安装</h3><pre><code>This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.  
+</code></pre><p>以下全部引用自：<br><a href="https://blog.csdn.net/qq_34182808/article/details/80345476" target="_blank" rel="noopener">Redhat7中yum安装以及问题解决办法(YUM和wget都无法使用的情况下)</a></p>
+<p>解决：</p>
+<h4 id="1-检查系统环境"><a href="#1-检查系统环境" class="headerlink" title="1. 检查系统环境"></a>1. 检查系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
+<h4 id="2-检查yum包安装情况"><a href="#2-检查yum包安装情况" class="headerlink" title="2. 检查yum包安装情况"></a>2. 检查yum包安装情况</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep yum</span><br></pre></td></tr></table></figure>
+<h4 id="3-绝对不能先删除系统自带的yum包"><a href="#3-绝对不能先删除系统自带的yum包" class="headerlink" title="3. 绝对不能先删除系统自带的yum包"></a>3. 绝对不能先删除系统自带的yum包</h4><h4 id="4-先安装wget"><a href="#4-先安装wget" class="headerlink" title="4. 先安装wget"></a>4. 先安装wget</h4><p>yum安装不上就只能手动下载传上去了</p>
+<h4 id="5-删除系统自带的yum包"><a href="#5-删除系统自带的yum包" class="headerlink" title="5. 删除系统自带的yum包"></a>5. 删除系统自带的yum包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep yum|xargs rpm -e --nodeps（不检查依赖，直接删除rpm包）  </span><br><span class="line">rpm -qa |grep yum （查询确认）</span><br></pre></td></tr></table></figure>
     
-        <a href="/2018/02/02/水平垂直居中/" class="post-more waves-effect waves-button">
+        <a href="/2018/05/01/Red Hat/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/运维/">运维</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-Go"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/04/25/Go/">Go</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-04-25 15:36:30" datetime="2018-04-25T07:36:30.000Z"  itemprop="datePublished">2018-04-25</time>
+
+        
+
+
+        
+	<span id="/2018/04/25/Go/" class="leancloud_visitors" data-flag-title="Go" title="Go">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/04/25/Go/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/25/Go/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://blog.csdn.net/wangshubo1989/article/details/73784907" target="_blank" rel="noopener">https://blog.csdn.net/wangshubo1989/article/details/73784907</a></p>
+<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><a href="https://github.com/golang/go/wiki/NonEnglish" target="_blank" rel="noopener">wiki</a></p>
+<p><a href="https://studygolang.com/" target="_blank" rel="noopener">Go语言中文网</a></p>
+<p><a href="https://studygolang.com/pkgdoc" target="_blank" rel="noopener">Golang标准库文档</a></p>
+<p><a href="http://zh-golang.appspot.com/doc/" target="_blank" rel="noopener">Go 编程语言</a> - Chinese Translation of tip.golang.org</p>
+<p><a href="https://books.studygolang.com/gopl-zh/" target="_blank" rel="noopener">Go语言圣经（中文版）</a></p>
+    
+        <a href="/2018/04/25/Go/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台/">后台</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-VLC插件实现监控和RTSP视频播放"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/04/23/VLC插件实现监控和RTSP视频播放/">VLC插件实现监控和RTSP视频播放</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-04-23 00:01:00" datetime="2018-04-22T16:01:00.000Z"  itemprop="datePublished">2018-04-23</time>
+
+        
+
+
+        
+	<span id="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="leancloud_visitors" data-flag-title="VLC插件实现监控和RTSP视频播放" title="VLC插件实现监控和RTSP视频播放">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/23/VLC插件实现监控和RTSP视频播放/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p><a href="https://software.intel.com/en-us/html5/hub/blogs/using-the-getusermedia-api-with-the-html5-video-and-canvas-elements/" target="_blank" rel="noopener">Using The Getusermedia API With The HTML5 Video And Canvas Elements</a></p>
+<p>配合海康威视摄像头使用<br>不兼容chrome</p>
+<p>参考链接</p>
+<p><a href="https://www.cnblogs.com/eoooxy/p/6401554.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">海康威视 嵌入到web页面相关问题</a></p>
+<p><a href="https://www.cnblogs.com/shusheng/archive/2011/12/15/2288649.html" target="_blank" rel="noopener">使用海康摄像头实现实时监控</a></p>
+<p><a href="https://www.cnblogs.com/ry-93-dream/articles/7554919.html" target="_blank" rel="noopener">在Chrome上通过vlc插件播放rtsp和rtmp视频</a></p>
+<p><a href="https://blog.csdn.net/hsany330/article/details/73457324?locationNum=2&amp;fps=1" target="_blank" rel="noopener">利用vlc插件将IP摄像头嵌入网页和网页播放RTSP流</a></p>
+<p><a href="https://www.cnblogs.com/jhlong/p/5848490.html" target="_blank" rel="noopener">web网页中使用vlc插件播放相机rtsp流视频</a></p>
+
+    
+        <a href="/2018/04/23/VLC插件实现监控和RTSP视频播放/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -710,7 +602,7 @@
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
     </div>
 </nav>
 
@@ -721,7 +613,7 @@
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

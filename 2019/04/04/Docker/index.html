@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Docker | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="架构">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Docker</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Docker</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-04T03:21:00.000Z" itemprop="datePublished" class="page-time">
+  2019-04-04
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Docker"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Docker</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-04 11:21:00" datetime="2019-04-04T03:21:00.000Z"  itemprop="datePublished">2019-04-04</time>
+
+            
+
+
+            
+	<span id="/2019/04/04/Docker/" class="leancloud_visitors" data-flag-title="Docker" title="Docker">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2019/04/04/Docker/#comment">
+            <span class="valine-comment-count" data-xid="/2019/04/04/Docker/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://hub.docker.com" target="_blank" rel="noopener">docker hub</a></p>
+<p><a href="https://docs.docker-cn.com/" target="_blank" rel="noopener">docker 文档</a></p>
+<p><a href="https://runnable.com/docker/" target="_blank" rel="noopener">docker好教程</a></p>
+<p><a href="http://www.runoob.com/docker/docker-command-manual.html" target="_blank" rel="noopener">Docker 命令大全</a><br><code>docker run --help</code></p>
+<a id="more"></a>
+<h2 id="1-VScode插件"><a href="#1-VScode插件" class="headerlink" title="1. VScode插件"></a>1. VScode插件</h2><p>复制整理自:<br><a href="https://jeremysu0131.github.io/Docker-%E6%96%B0%E6%89%8B%E4%BD%BF%E7%94%A8-VSCode-%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8B-CentOS-Container/" target="_blank" rel="noopener">新手使用 VS Code 快速建立 CentOS Container</a></p>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-1/29696290.jpg" alt="Docker扩展" title="" class="">
+                <p>Docker扩展</p>
+            </figure>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-1/42409259.jpg" alt="扩展界面" title="" class="">
+                <p>扩展界面</p>
+            </figure>
+<p>pull image<br><figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-1/32554208.jpg" alt="centos image pull" title="" class="">
+                <p>centos image pull</p>
+            </figure></p>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-1/72289310.jpg" alt="右键菜单" title="" class="">
+                <p>右键菜单</p>
+            </figure>
+<p><code>Run Interactive</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -it centos:latest</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="http://pic.sunnyfu.cn/18-11-1/15889587.jpg" alt="Run Interactive" title="" class="">
+                <p>Run Interactive</p>
+            </figure>
+<p><code>--rm</code>指退出时自动删除容器，<code>-it</code>指交互式</p>
+<p><code>Attach Shell</code>进入容器</p>
+<p><code>Show Logs</code>查看日志</p>
+<h3 id="创建一个express项目镜像"><a href="#创建一个express项目镜像" class="headerlink" title="创建一个express项目镜像"></a>创建一个express项目镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express-generator</span><br><span class="line">$ express --no-view --git express-docker #不使用任何 View 模板</span><br><span class="line">$ cd express-docker</span><br><span class="line">$ npm install #</span><br><span class="line">$ node bin\www #启动</span><br></pre></td></tr></table></figure>
+<p><a href="http://localhost:3000打开无误，开始创建镜像。" target="_blank" rel="noopener">http://localhost:3000打开无误，开始创建镜像。</a></p>
+<p>在目录中新建<code>Dockerfile</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 指定使用的Node版本</span><br><span class="line">FROM node:8.9-alpine</span><br><span class="line"></span><br><span class="line"># Node环境设定为production</span><br><span class="line">ENV NODE_ENV production</span><br><span class="line"></span><br><span class="line"># Node在容器內的位置</span><br><span class="line">WORKDIR /usr/src/app</span><br><span class="line"></span><br><span class="line"># 复制package文件</span><br><span class="line">COPY [&quot;package.json&quot;, &quot;./&quot;]</span><br><span class="line"></span><br><span class="line"># 安裝依赖</span><br><span class="line">RUN npm install --production --silent &amp;&amp; mv node_modules ../</span><br><span class="line"></span><br><span class="line"># 第一个`.` 是本地文件位置，第二個是 docker 内的位置，就是将我们的代码复制到docker里</span><br><span class="line">COPY . .</span><br><span class="line"></span><br><span class="line"># 开放对外端口</span><br><span class="line">EXPOSE 3000</span><br><span class="line"></span><br><span class="line"># 执行程序</span><br><span class="line">CMD npm start</span><br></pre></td></tr></table></figure>
+<p>切换到项目根目录，执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t jeremy/express-docker:1.0.0 .</span><br></pre></td></tr></table></figure></p>
+<p> -t 参数设定container的名称以及标签</p>
+<p> 成功后执行<code>docker image ls</code>可看到新创建的镜像</p>
+<p> 运行镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3000:3000 jeremy/express-docker:1.0.0</span><br></pre></td></tr></table></figure></p>
+<p><code>-d</code> 让container在后台执行，如果去掉参数就会立即在terminal上执行<br><code>-p</code> 指定要使用的port ，第一个是指定 container 对外的 port，第二个指定对内映射的port</p>
+<p><a href="http://localhost:3000打开无误，镜像创建成功。" target="_blank" rel="noopener">http://localhost:3000打开无误，镜像创建成功。</a></p>
+<h2 id="2-基本-Docker-命令列表"><a href="#2-基本-Docker-命令列表" class="headerlink" title="2 基本 Docker 命令列表"></a>2 基本 Docker 命令列表</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker build -t friendlyname .</code></td>
+<td>使用此目录的 Dockerfile 创建镜像</td>
+</tr>
+<tr>
+<td><code>docker run -p 4000:80 friendlyname</code></td>
+<td>运行端口 4000 到 90 的“友好名称”映射</td>
+</tr>
+<tr>
+<td><code>docker run -d -p 4000:80 friendlyname</code></td>
+<td>内容相同，但在分离模式下</td>
+</tr>
+<tr>
+<td><code>docker ps</code></td>
+<td>查看所有正在运行的容器的列表</td>
+</tr>
+<tr>
+<td><code>docker stop &lt;hash&gt;</code></td>
+<td>平稳地停止指定的容器</td>
+</tr>
+<tr>
+<td><code>docker ps -a</code></td>
+<td>查看所有容器的列表，甚至包含未运行的容器</td>
+</tr>
+<tr>
+<td><code>docker kill &lt;hash&gt;</code></td>
+<td>强制关闭指定的容器</td>
+</tr>
+<tr>
+<td><code>docker rm &lt;hash&gt;</code></td>
+<td>从此机器中删除指定的容器</td>
+</tr>
+<tr>
+<td><code>docker rm $(docker ps -a -q)</code></td>
+<td>从此机器中删除所有容器</td>
+</tr>
+<tr>
+<td><code>docker images -a</code></td>
+<td>显示此机器上的所有镜像</td>
+</tr>
+<tr>
+<td><code>docker rmi &lt;imagename&gt;</code></td>
+<td>从此机器中删除指定的镜像</td>
+</tr>
+<tr>
+<td><code>docker rmi &lt;imagename&gt;</code></td>
+<td>从此机器中删除指定的镜像</td>
+</tr>
+<tr>
+<td><code>docker rmi $(docker images -q)</code></td>
+<td>从此机器中删除所有镜像</td>
+</tr>
+<tr>
+<td><code>docker login</code></td>
+<td>使用您的 Docker 凭证登录此 CLI 会话</td>
+</tr>
+<tr>
+<td><code>docker tag &lt;image&gt; username/repository:tag</code></td>
+<td>标记 <image> 以上传到镜像库</image></td>
+</tr>
+<tr>
+<td><code>docker push username/repository:tag</code></td>
+<td>将已标记的镜像上传到镜像库</td>
+</tr>
+<tr>
+<td><code>docker run username/repository:tag</code></td>
+<td>运行镜像库中的镜像</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-1-常用参数说明"><a href="#2-1-常用参数说明" class="headerlink" title="2.1 常用参数说明"></a>2.1 常用参数说明</h3><ul>
+<li>-i interactive 交互式,container stdin读取键盘输入</li>
+</ul>
+<ul>
+<li>-t tty,屏幕输出</li>
+</ul>
+<ul>
+<li>-d detach,后台运行容器</li>
+</ul>
+<ul>
+<li>-p 端口映射</li>
+</ul>
+<ul>
+<li>–name 为容器命名,否则系统随机命名</li>
+</ul>
+<ul>
+<li>-v volume,挂载host磁盘到容器下,可设置读写权限</li>
+</ul>
+<ul>
+<li>/bin/bash 容器初始完成后执行的命令</li>
+</ul>
+<h3 id="2-2-创建镜像"><a href="#2-2-创建镜像" class="headerlink" title="2.2 创建镜像"></a>2.2 创建镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build --tag my-python-app .</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190306155430-image.png" alt="20190306155430-image.png" title="" class="">
+                <p>20190306155430-image.png</p>
+            </figure>
+<h3 id="2-3-删除所有容器"><a href="#2-3-删除所有容器" class="headerlink" title="2.3 删除所有容器"></a>2.3 删除所有容器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -q -a | xargs docker rm</span><br></pre></td></tr></table></figure>
+<p><code>-q</code> prints only the container ID’s<br><code>-a</code> prints all containers<br>passing all container IDs to <code>xargs</code>, <code>docker rm</code> deletes all containers</p>
+<h3 id="2-4-删除所有Untagged镜像"><a href="#2-4-删除所有Untagged镜像" class="headerlink" title="2.4 删除所有Untagged镜像"></a>2.4 删除所有Untagged镜像</h3><p>Docker marks images without tags with <code>&quot;&lt;none&gt;&quot;</code> so we need to process only those images. Run the following command from your terminal (the <code>awk</code> <a href="https://en.wikipedia.org/wiki/AWK" target="_blank" rel="noopener">programming language</a> gives you text manipulation tools):</p>
+<pre><code>docker rmi $(docker images | grep &quot;&lt;none&gt;&quot; | awk &apos;{print $3}&apos;)
+</code></pre><ul>
+<li><code>Docker remove &lt;none&gt; TAG images</code></li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/33913020/docker-remove-none-tag-images" target="_blank" rel="noopener">docker-remove-none-tag-images</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">docker image prune  </span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">### 2.5 删除所有镜像</span><br><span class="line"></span><br><span class="line">	docker rmi $(docker images | awk &apos;&#123;print $3&#125;&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 3. docker与python</span><br><span class="line"></span><br><span class="line">### 3.1 sample</span><br><span class="line"></span><br><span class="line">[docker入门](https://docs.docker-cn.com/get-started/part2/)</span><br><span class="line"></span><br><span class="line">	docker run hello-world</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Dockerfile</span><br><span class="line">创建空目录并将名为 Dockerfile 的此文件放入其中。记录说明每个语句的注释。</span><br></pre></td></tr></table></figure>
+<h1 id="将官方-Python-运行时用作父镜像"><a href="#将官方-Python-运行时用作父镜像" class="headerlink" title="将官方 Python 运行时用作父镜像"></a>将官方 Python 运行时用作父镜像</h1><p>FROM python:2.7-slim</p>
+<h1 id="将工作目录设置为-app"><a href="#将工作目录设置为-app" class="headerlink" title="将工作目录设置为 /app"></a>将工作目录设置为 /app</h1><p>WORKDIR /app</p>
+<h1 id="将当前目录内容复制到位于-app-中的容器中"><a href="#将当前目录内容复制到位于-app-中的容器中" class="headerlink" title="将当前目录内容复制到位于 /app 中的容器中"></a>将当前目录内容复制到位于 /app 中的容器中</h1><p>ADD . /app</p>
+<h1 id="安装-requirements-txt-中指定的任何所需软件包"><a href="#安装-requirements-txt-中指定的任何所需软件包" class="headerlink" title="安装 requirements.txt 中指定的任何所需软件包"></a>安装 requirements.txt 中指定的任何所需软件包</h1><p>RUN pip install -r requirements.txt</p>
+<h1 id="使端口-80-可供此容器外的环境使用"><a href="#使端口-80-可供此容器外的环境使用" class="headerlink" title="使端口 80 可供此容器外的环境使用"></a>使端口 80 可供此容器外的环境使用</h1><p>EXPOSE 80</p>
+<h1 id="定义环境变量"><a href="#定义环境变量" class="headerlink" title="定义环境变量"></a>定义环境变量</h1><p>ENV NAME World</p>
+<h1 id="在容器启动时运行-app-py"><a href="#在容器启动时运行-app-py" class="headerlink" title="在容器启动时运行 app.py"></a>在容器启动时运行 app.py</h1><p>CMD [“python”, “app.py”]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">requirements.txt</span><br></pre></td></tr></table></figure></p>
+<p>Flask<br>Redis<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.py</span><br></pre></td></tr></table></figure></p>
+<p>from flask import Flask<br>from redis import Redis, RedisError<br>import os<br>import socket</p>
+<h1 id="Connect-to-Redis"><a href="#Connect-to-Redis" class="headerlink" title="Connect to Redis"></a>Connect to Redis</h1><p>redis = Redis(host=”redis”, db=0, socket_connect_timeout=2, socket_timeout=2)</p>
+<p>app = Flask(<strong>name</strong>)</p>
+<p>@app.route(“/“)<br>def hello():<br>    try:<br>        visits = redis.incr(“counter”)<br>    except RedisError:<br>        visits = “<i>cannot connect to Redis, counter disabled</i>“</p>
+<pre><code>html = &quot;&lt;h3&gt;Hello {name}!&lt;/h3&gt;&quot; \
+       &quot;&lt;b&gt;Hostname:&lt;/b&gt; {hostname}&lt;br/&gt;&quot; \
+       &quot;&lt;b&gt;Visits:&lt;/b&gt; {visits}&quot;
+return html.format(name=os.getenv(&quot;NAME&quot;, &quot;world&quot;), hostname=socket.gethostname(), visits=visits)
+</code></pre><p>if <strong>name</strong> == “<strong>main</strong>“:<br>    app.run(host=’0.0.0.0’, port=80)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">运行构建命令。这将创建 Docker 镜像，我们将使用 -t 对其进行标记，以使其具有友好名称。</span><br><span class="line"></span><br><span class="line">	docker build -t friendlyhello .</span><br><span class="line"></span><br><span class="line">您已构建的镜像在何处？它位于您的机器上的本地 Docker 镜像库中：</span><br><span class="line"></span><br><span class="line">	$ docker images</span><br><span class="line"></span><br><span class="line">	REPOSITORY            TAG                 IMAGE ID</span><br><span class="line">	friendlyhello         latest              326387cea398</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">运行应用，使用 -p 参数将机器的 4000 端口映射到容器暴露的 80 端口：</span><br><span class="line"></span><br><span class="line">	docker run -p 4000:80 friendlyhello</span><br><span class="line"></span><br><span class="line">您还可以在 shell 中使用 curl 命令查看相同内容。</span><br><span class="line"></span><br><span class="line">	$ curl http://localhost:4000</span><br><span class="line"></span><br><span class="line">我们从后台在分离模式下运行应用。</span><br><span class="line"></span><br><span class="line">	docker run -d -p 4000:80 friendlyhello</span><br><span class="line"></span><br><span class="line">您将获得应用的长容器 ID，然后将返回到终端。容器现在在后台运行。您还可以使用 docker ps 查看缩写容器 ID（这两种 ID 可以在运行命令时交换工作）：</span><br><span class="line"></span><br><span class="line">	$ docker ps</span><br><span class="line">	CONTAINER ID        IMAGE               COMMAND             CREATED</span><br><span class="line">	1fa4ab2cf395        friendlyhello       &quot;python app.py&quot;     28 seconds ago</span><br><span class="line"></span><br><span class="line">您将看到 CONTAINER ID 与 http://localhost:4000 上的内容相匹配。</span><br><span class="line"></span><br><span class="line">现在，使用 docker stop 及 CONTAINER ID 结束该进程，如下所示：</span><br><span class="line"></span><br><span class="line">	docker stop 1fa4ab2cf395</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.2 python容器相关</span><br><span class="line"></span><br><span class="line">[Dockerize your Python Application](https://runnable.com/docker/python/dockerize-your-python-application)</span><br><span class="line"></span><br><span class="line">#### 3.2.1 运行python文件</span><br><span class="line"></span><br><span class="line">[运行python文件](https://stackoverflow.com/questions/6357361/alternative-to-execfile-in-python-3)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    exec(open(filename).read())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**不写dockerfile仅运行python文件**</span><br><span class="line"></span><br><span class="line">In the examples below, assume you store `my_script.py` in` /usr/src/widget_app/`, and you want to name the container `my-first-python-script`:</span><br></pre></td></tr></table></figure></p>
+<p>Python 3:<br>docker run -it –rm –name my-first-python-script -v “$PWD”:/usr/src/widget_app python:3 python my_script.py</p>
+<p>Python 2:<br>docker run -it –rm –name my-first-python-script -v “$PWD”:/usr/src/widget_app python:2 python my_script.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 3.2.2 docker: executable file not found in $PATH</span><br><span class="line"></span><br><span class="line">[docker: executable file not found in $PATH](https://stackoverflow.com/questions/27158840/docker-executable-file-not-found-in-path)</span><br><span class="line"></span><br><span class="line">[Use docker run command to pass arguments to CMD in Dockerfile</span><br><span class="line">](https://stackoverflow.com/questions/40873165/use-docker-run-command-to-pass-arguments-to-cmd-in-dockerfile)</span><br></pre></td></tr></table></figure></p>
+<p>ENTRYPOINT [ “bash”, “entrypoint.sh” ]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 3.2.3 查看目录文件</span><br><span class="line"></span><br><span class="line">查看当前目录所有文件：</span><br></pre></td></tr></table></figure></p>
+<p>import os<br>print(os.listdir(‘.’))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看当前目录所有文件夹：</span><br></pre></td></tr></table></figure></p>
+<p>import os<br>path = os.listdir(os.getcwd())<br>for p in path:<br>    if os.path.isdir(p):<br>        print(p)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 3.2.4 文件映射</span><br><span class="line"></span><br><span class="line">(1). 从容器内复制文件</span><br></pre></td></tr></table></figure></p>
+<p>docker cp 5c727cdbc3e6:/app/test/results.txt /Users/wangzulong/Desktop/docker<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![20190307103645-image.png](https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190307103645-image.png)</span><br><span class="line"></span><br><span class="line">(2). 从宿主机拷贝文件到容器</span><br></pre></td></tr></table></figure></p>
+<p>docker cp /Users/wangzulong/Desktop/docker 5c727cdbc3e6:/app/test/results.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">(3). 挂载本地目录</span><br><span class="line"></span><br><span class="line">[Docker学习---挂载本地目录/数据卷](https://my.oschina.net/piorcn/blog/324202)</span><br></pre></td></tr></table></figure></p>
+<p>docker build –tag my-python-app .</p>
+<p>#通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径。使用VOLUME声明的话不能挂载到宿主机指定目录。<br>docker run –rm -it -v /Users/wangzulong/Desktop/docker/sharefile:/app/sharefile my-python-app:latest</p>
+<p>COPY results.txt ./sharefile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 4. docker与java</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Ubuntu 16.04安装Java JDK](http://topspeedsnail.com/ubuntu16-install-java-jdk/)</span><br></pre></td></tr></table></figure>
+<h3 id="1-Get-Linux"><a href="#1-Get-Linux" class="headerlink" title="1. Get Linux"></a>1. Get Linux</h3><p>FROM alpine:3.7</p>
+<h3 id="2-Get-Java-via-the-package-manager"><a href="#2-Get-Java-via-the-package-manager" class="headerlink" title="2. Get Java via the package manager"></a>2. Get Java via the package manager</h3><p>RUN apk update \<br>    &amp;&amp; apk upgrade \<br>    &amp;&amp; apk add –no-cache bash \<br>    &amp;&amp; apk add –no-cache –virtual=build-dependencies unzip \<br>    &amp;&amp; apk add –no-cache curl \<br>    &amp;&amp; apk add –no-cache openjdk8-jre</p>
+<h3 id="3-Get-Python-PIP"><a href="#3-Get-Python-PIP" class="headerlink" title="3. Get Python, PIP"></a>3. Get Python, PIP</h3><p>RUN apk add –no-cache python3 \<br>    &amp;&amp; python3 -m ensurepip \<br>    &amp;&amp; pip3 install –upgrade pip setuptools \<br>    &amp;&amp; rm -r /usr/lib/python*/ensurepip &amp;&amp; \<br>    if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi &amp;&amp; \<br>    if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi &amp;&amp; \<br>    rm -r /root/.cache</p>
+<h1 id="将工作目录设置为-app-SensitiveDataReplace"><a href="#将工作目录设置为-app-SensitiveDataReplace" class="headerlink" title="将工作目录设置为 /app/SensitiveDataReplace"></a>将工作目录设置为 /app/SensitiveDataReplace</h1><p>WORKDIR /app/SensitiveDataReplace</p>
+<h1 id="将当前目录内容复制到位于-app-SensitiveDataReplace-中的容器中"><a href="#将当前目录内容复制到位于-app-SensitiveDataReplace-中的容器中" class="headerlink" title="将当前目录内容复制到位于 /app/SensitiveDataReplace 中的容器中"></a>将当前目录内容复制到位于 /app/SensitiveDataReplace 中的容器中</h1><p>ADD requirements.txt .<br>ADD NLP/  NLP/<br>ADD dist/ .</p>
+<h1 id="更新pip"><a href="#更新pip" class="headerlink" title="更新pip"></a>更新pip</h1><p>RUN pip3 install –upgrade pip</p>
+<p>RUN apk add –no-cache python3-dev</p>
+<p>RUN apk add –no-cache libevent-dev</p>
+<p>RUN apk add –no-cache gcc<br>RUN apk add –no-cache musl-dev</p>
+<h1 id="更新setuptools"><a href="#更新setuptools" class="headerlink" title="更新setuptools"></a>更新setuptools</h1><p>RUN pip3 install setuptools==40.6.2</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>RUN pip3 install Cython==0.28.5</p>
+<h1 id="安装-requirementsTrain-txt-中指定的任何所需软件包"><a href="#安装-requirementsTrain-txt-中指定的任何所需软件包" class="headerlink" title="安装 requirementsTrain.txt 中指定的任何所需软件包"></a>安装 requirementsTrain.txt 中指定的任何所需软件包</h1><p>RUN pip3 install -r requirements.txt</p>
+<h1 id="安装-wheel"><a href="#安装-wheel" class="headerlink" title="安装 wheel"></a>安装 wheel</h1><p>RUN pip3 install *.whl</p>
+<h1 id="对外暴露8886端口"><a href="#对外暴露8886端口" class="headerlink" title="对外暴露8886端口"></a>对外暴露8886端口</h1><p>EXPOSE 8886</p>
+<h1 id="多命令运行方法一：-在容器启动时运行-Entry-Points"><a href="#多命令运行方法一：-在容器启动时运行-Entry-Points" class="headerlink" title="多命令运行方法一： 在容器启动时运行 Entry Points"></a>多命令运行方法一： 在容器启动时运行 Entry Points</h1><h1 id="ENTRYPOINT-“bash”-“run-desensitize-sh”"><a href="#ENTRYPOINT-“bash”-“run-desensitize-sh”" class="headerlink" title="ENTRYPOINT [ “bash”, “run_desensitize.sh” ]"></a>ENTRYPOINT [ “bash”, “run_desensitize.sh” ]</h1><h1 id="多命令运行方法一：-使用sh-c-注意括号"><a href="#多命令运行方法一：-使用sh-c-注意括号" class="headerlink" title="多命令运行方法一： 使用sh -c 注意括号"></a>多命令运行方法一： 使用sh -c 注意括号</h1><p>CMD [“sh”,”-c”,”(nohup java -jar NLP/nlp-0.0.1-SNAPSHOT.jar &amp;) &amp;&amp; desensitize”]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### &quot;exec: \&quot;bash\&quot;: executable file not found in $PATH&quot;</span><br><span class="line"></span><br><span class="line">新换的alpine内没有bash，我们只能运行指定镜像的容器中已有的程序，以及运行之后通过 exec 或 run 命令安装的程序。  </span><br><span class="line"></span><br><span class="line">将`ENTRYPOINT [ &quot;bash&quot;, &quot;setup.sh&quot; ]` 修改为`ENTRYPOINT [ &quot;/bin/sh&quot;, &quot;setup.sh&quot; ]`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 5. dockerfile</span><br><span class="line"></span><br><span class="line">### 5.1 RUN 、CMD 、 ENTRYPOINT</span><br><span class="line"></span><br><span class="line">复制自：  </span><br><span class="line">[RUN vs CMD vs ENTRYPOINT - 每天5分钟玩转 Docker 容器技术（17）][2]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- RUN 执行命令并创建新的镜像层，RUN 经常用于安装软件包。</span><br><span class="line"></span><br><span class="line">- CMD 设置容器启动后默认执行的命令及其参数，但 CMD 能够被 docker run 后面跟的命令行参数替换。</span><br><span class="line"></span><br><span class="line">- ENTRYPOINT 配置容器启动时运行的命令。</span><br><span class="line"></span><br><span class="line">&gt; 使用 RUN 指令安装应用和软件包，构建镜像。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 如果 Docker 镜像的用途是运行应用程序或服务，比如运行一个 MySQL，应该优先使用 Exec 格式的 ENTRYPOINT指令。</span><br><span class="line">&gt; CMD 可为 ENTRYPOINT 提供额外的默认参数，同时可利用 docker run 命令行替换默认参数。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 如果想为容器设置默认的启动命令，可使用 CMD 指令。用户可在 docker run 命令行中替换此默认命令。</span><br><span class="line"></span><br><span class="line">#### Shell 和 Exec 格式</span><br><span class="line"></span><br><span class="line">(1)  Shell 格式</span><br><span class="line"></span><br><span class="line">    &lt;instruction&gt; &lt;command&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line">    RUN apt-get install python3  </span><br><span class="line"></span><br><span class="line">    CMD echo &quot;Hello world&quot;  </span><br><span class="line"></span><br><span class="line">    ENTRYPOINT echo &quot;Hello world&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当指令执行时，shell 格式底层会调用 `/bin/sh -c &lt;command&gt;` 。</span><br><span class="line"></span><br><span class="line">(2) Exec 格式</span><br><span class="line"></span><br><span class="line">    &lt;instruction&gt; [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;, ...]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line">    RUN [&quot;apt-get&quot;, &quot;install&quot;, &quot;python3&quot;]  </span><br><span class="line"></span><br><span class="line">    CMD [&quot;/bin/echo&quot;, &quot;Hello world&quot;]  </span><br><span class="line"></span><br><span class="line">    ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello world&quot;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当指令执行时，会直接调用 `&lt;command&gt;`，不会被 shell 解析(不使用环境变量 `ENV`)。</span><br><span class="line"></span><br><span class="line">例如下面的 Dockerfile 片段：</span><br></pre></td></tr></table></figure></p>
+<p>ENV name Cloud Man  </p>
+<p>ENTRYPOINT [“/bin/echo”, “Hello, $name”]</p>
+<h1 id="运行容器将输出："><a href="#运行容器将输出：" class="headerlink" title="运行容器将输出："></a>运行容器将输出：</h1><h1 id="Hello-name"><a href="#Hello-name" class="headerlink" title="Hello, $name"></a>Hello, $name</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果希望使用环境变量，照如下修改</span><br></pre></td></tr></table></figure>
+<p>ENV name Cloud Man  </p>
+<p>ENTRYPOINT [“/bin/sh”, “-c”, “echo Hello, $name”]</p>
+<h1 id="运行容器将输出：-1"><a href="#运行容器将输出：-1" class="headerlink" title="运行容器将输出："></a>运行容器将输出：</h1><h1 id="Hello-Cloud-Man"><a href="#Hello-Cloud-Man" class="headerlink" title="Hello, Cloud Man"></a>Hello, Cloud Man</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**CMD 和 ENTRYPOINT 推荐使用 Exec 格式，因为指令可读性更强，更容易理解。RUN 则两种格式都可以。**</span><br><span class="line"></span><br><span class="line">#### RUN</span><br><span class="line"></span><br><span class="line">&gt; RUN 指令通常用于安装应用和软件包。</span><br><span class="line"></span><br><span class="line">RUN 在当前镜像的顶部执行命令，并通过创建新的镜像层。Dockerfile 中常常包含多个 RUN 指令。</span><br><span class="line"></span><br><span class="line"> 1. Shell 格式：`RUN`</span><br><span class="line"> 2. Exec 格式：`RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]`</span><br><span class="line"></span><br><span class="line">下面是使用 RUN 安装多个包的例子：</span><br></pre></td></tr></table></figure>
+<p>RUN apt-get update &amp;&amp; apt-get install -y \  </p>
+<p> bzr \</p>
+<p> cvs \</p>
+<p> git \</p>
+<p> mercurial \</p>
+<p> subversion<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">注意：`apt-get update` 和 `apt-get install` 被放在一个 RUN 指令中执行，这样能够保证每次安装的是最新的包。如果 `apt-get install` 在单独的 RUN 中执行，则会使用 `apt-get update` 创建的镜像层，而这一层可能是很久以前缓存的。</span><br><span class="line"></span><br><span class="line">#### CMD</span><br><span class="line"></span><br><span class="line">&gt; CMD 指令允许用户指定容器的默认执行的命令。</span><br><span class="line"></span><br><span class="line">此命令会在容器启动且 docker run 没有指定其他命令时运行。</span><br><span class="line"></span><br><span class="line">**如果 docker run 指定了其他命令，CMD 指定的默认命令将被忽略。**</span><br><span class="line"></span><br><span class="line">**如果 Dockerfile 中有多个 CMD 指令，只有最后一个 CMD 有效。**</span><br><span class="line"></span><br><span class="line"> 1. Exec 格式：`CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]` 这是 CMD 的推荐格式。</span><br><span class="line"> 2. `CMD [&quot;param1&quot;,&quot;param2&quot;]` 为 ENTRYPOINT 提供额外的参数，此时 ENTRYPOINT 必须使用 Exec 格式。</span><br><span class="line"> 3. Shell 格式：`CMD command param1 param2`</span><br></pre></td></tr></table></figure></p>
+<p>CMD echo “Hello world”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行容器 `docker run -it [image]` 将输出：</span><br><span class="line"></span><br><span class="line">    Hello world</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">但当后面加上一个命令，比如 `docker run -it [image] /bin/bash`，CMD 会被忽略掉，命令 bash 将被执行：</span><br><span class="line"></span><br><span class="line">    root@10a32dc7d3d3:/#</span><br><span class="line"></span><br><span class="line">#### ENTRYPOINT</span><br><span class="line"></span><br><span class="line">&gt; ENTRYPOINT 指令可让容器以应用程序或者服务的形式运行。</span><br><span class="line"></span><br><span class="line">**ENTRYPOINT 不会被忽略，一定会被执行，即使运行 docker run 时指定了其他命令。**</span><br><span class="line"></span><br><span class="line"> 1. Exec 格式：`ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]` 这是 ENTRYPOINT的推荐格式。</span><br><span class="line"> 2. Shell 格式：`ENTRYPOINT command param1 param2`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ENTRYPOINT 的 Exec 格式用于设置要执行的命令及其参数，同时可通过 CMD 提供额外的参数。</span><br><span class="line"></span><br><span class="line">**ENTRYPOINT 中的参数始终会被使用，而 CMD的额外参数可以在容器启动时动态替换掉。**</span><br></pre></td></tr></table></figure></p>
+<p>ENTRYPOINT [“/bin/echo”, “Hello”]  </p>
+<p>CMD [“world”]<br><code>`</code></p>
+<p>当容器通过 <code>docker run -it [image]</code> 启动时，输出为：</p>
+<pre><code>Hello world
+</code></pre><p>而如果通过 <code>docker run -it [image] CloudMan</code> 启动，则输出为：</p>
+<pre><code>Hello CloudMan
+</code></pre><p><strong>ENTRYPOINT 的 Shell 格式会忽略任何 CMD 或 docker run 提供的参数。</strong></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-04-04T03:32:38.036Z" itemprop="dateUpdated">2019-04-04 11:32:38</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2019/04/04/Docker/" target="_blank" rel="external">https://renkoq.github.io/2019/04/04/Docker/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2019/04/04/Docker/&title=《Docker》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2019/04/04/Docker/&title=《Docker》 — Renko's blog&source=docker hub
+docker 文档
+docker好教程
+Docker 命令大全docker run --help" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Docker》 — Renko's blog&url=https://renkoq.github.io/2019/04/04/Docker/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2019/04/04/Docker/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/04/03/numpy&pandas/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">numpy&amp;pandas</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-VScode插件"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. VScode插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-基本-Docker-命令列表"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 基本 Docker 命令列表</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#将官方-Python-运行时用作父镜像"><span class="post-toc-number"></span> <span class="post-toc-text">将官方 Python 运行时用作父镜像</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#将工作目录设置为-app"><span class="post-toc-number"></span> <span class="post-toc-text">将工作目录设置为 /app</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#将当前目录内容复制到位于-app-中的容器中"><span class="post-toc-number"></span> <span class="post-toc-text">将当前目录内容复制到位于 /app 中的容器中</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-requirements-txt-中指定的任何所需软件包"><span class="post-toc-number"></span> <span class="post-toc-text">安装 requirements.txt 中指定的任何所需软件包</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使端口-80-可供此容器外的环境使用"><span class="post-toc-number"></span> <span class="post-toc-text">使端口 80 可供此容器外的环境使用</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#定义环境变量"><span class="post-toc-number"></span> <span class="post-toc-text">定义环境变量</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在容器启动时运行-app-py"><span class="post-toc-number"></span> <span class="post-toc-text">在容器启动时运行 app.py</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Connect-to-Redis"><span class="post-toc-number"></span> <span class="post-toc-text">Connect to Redis</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#将工作目录设置为-app-SensitiveDataReplace"><span class="post-toc-number"></span> <span class="post-toc-text">将工作目录设置为 /app/SensitiveDataReplace</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#将当前目录内容复制到位于-app-SensitiveDataReplace-中的容器中"><span class="post-toc-number"></span> <span class="post-toc-text">将当前目录内容复制到位于 /app/SensitiveDataReplace 中的容器中</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更新pip"><span class="post-toc-number"></span> <span class="post-toc-text">更新pip</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更新setuptools"><span class="post-toc-number"></span> <span class="post-toc-text">更新setuptools</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更新"><span class="post-toc-number"></span> <span class="post-toc-text">更新</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-requirementsTrain-txt-中指定的任何所需软件包"><span class="post-toc-number"></span> <span class="post-toc-text">安装 requirementsTrain.txt 中指定的任何所需软件包</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-wheel"><span class="post-toc-number"></span> <span class="post-toc-text">安装 wheel</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对外暴露8886端口"><span class="post-toc-number"></span> <span class="post-toc-text">对外暴露8886端口</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#多命令运行方法一：-在容器启动时运行-Entry-Points"><span class="post-toc-number"></span> <span class="post-toc-text">多命令运行方法一： 在容器启动时运行 Entry Points</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ENTRYPOINT-“bash”-“run-desensitize-sh”"><span class="post-toc-number"></span> <span class="post-toc-text">ENTRYPOINT [ “bash”, “run_desensitize.sh” ]</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#多命令运行方法一：-使用sh-c-注意括号"><span class="post-toc-number"></span> <span class="post-toc-text">多命令运行方法一： 使用sh -c 注意括号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#运行容器将输出："><span class="post-toc-number"></span> <span class="post-toc-text">运行容器将输出：</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Hello-name"><span class="post-toc-number"></span> <span class="post-toc-text">Hello, $name</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#运行容器将输出：-1"><span class="post-toc-number"></span> <span class="post-toc-text">运行容器将输出：</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Hello-Cloud-Man"><span class="post-toc-number"></span> <span class="post-toc-text">Hello, Cloud Man</span></a>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2019
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2019/04/04/Docker/&title=《Docker》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2019/04/04/Docker/&title=《Docker》 — Renko's blog&source=docker hub
+docker 文档
+docker好教程
+Docker 命令大全docker run --help" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Docker》 — Renko's blog&url=https://renkoq.github.io/2019/04/04/Docker/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2019/04/04/Docker/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3azY7CMAxFYd7/pTvSbCHtuXZHTJ2TFQJS8rGw/JPXC6/jd52/Xu3ie9+/f/OSIUPGYxnH6Vp9Z4Xk1NrvLqkyZMjYgEGCLAmXtfCdBnQZMmTIIOkgCYvn4ZV8KkOGDBk1BilBSbJIUk8ZMmTISItJcqxamOZPvqEWlyFDxgMZdw0G/uL1F+YbMmTI+GeMI1zkCbw9l5bEy1PJkCFjNKNfQHYuXtTCa5DhypAhYxwjLVDJSIBc/CJFL7pAJkOGjKEM3sBKgzI/dO2vkSFDxm6MdCTJR5WdsQG/xiFDhozZDN4a44ND3nrrXPK4aLfJkCFjHKN/GYIH0FobLvgjZMiQsQ2Dl7Xp2CCl8vacDBkypjJIaZqWrP3wml7FkCFDxs6M9NB8Lw/l6DkyZMjYgMG38dDMwyX59CINlSFDxgaMTsBNf5J/J7imJkOGjNEM0kQj7bM07es03WTIkLEbgx/l3vSxNiJd7pIhQ8ZoBm+T1QIxvzyRNt0+vC9DhoyhjPRqBX80D5ppgXoxGJAhQ8Y2jFpyFtTKeBcao8qQIWM0gydk6dCRPD89XNDakyFDxiDGES5SgqbBmieIy10yZMgYzeCrk66RAF1LTGXIkLEPIw2ynTEAOW4xDZUhQ8YGjNoQMQ2ycVXNy10ZMmTIKF3F4E20TqIpQ4YMGWlTrH9Fo/i3ypAhYwNGrYitJXZpKCcnlCFDxmxGrXSsDTj7g4RaUS1DhozHMn4AYODMUsVIdNkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

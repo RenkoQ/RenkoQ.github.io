@@ -185,17 +185,17 @@
             
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="1-Visual-Studio-2015（坑）"><a href="#1-Visual-Studio-2015（坑）" class="headerlink" title="1.Visual Studio 2015（坑）"></a>1.Visual Studio 2015（坑）</h3><p><a href="https://blogs.msdn.microsoft.com/caleteet/2016/04/01/solidity-integration-with-visual-studio/" target="_blank" rel="external">微软官网参考</a></p>
-<p>(1) 下载<a href="https://marketplace.visualstudio.com/items?itemName=ConsenSys.Solidity" target="_blank" rel="external">solidity扩展</a><br>目前不支持高亮显示，下载了<a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.SyntaxHighlightingPack" target="_blank" rel="external">Syntax Highlighting Pack</a>没用==<br>node.js必须装，<a href="https://nodejs.org/en/" target="_blank" rel="external">下载</a></p>
-<p>(2) 建立solidity项目<br><a href="https://www.youtube.com/watch?v=yoffoNRk-Xg" target="_blank" rel="external">视频参考</a><br><figure class="image-box">
-                <img src="http://wx3.sinaimg.cn/large/789d050dgy1ff1l7r9vbfj20wy0mtacb.jpg" alt="新建" title="" class="">
+            <h3 id="1-Visual-Studio-2015（坑）"><a href="#1-Visual-Studio-2015（坑）" class="headerlink" title="1.Visual Studio 2015（坑）"></a>1.Visual Studio 2015（坑）</h3><p><a href="https://blogs.msdn.microsoft.com/caleteet/2016/04/01/solidity-integration-with-visual-studio/" target="_blank" rel="noopener">微软官网参考</a></p>
+<p>(1) 下载<a href="https://marketplace.visualstudio.com/items?itemName=ConsenSys.Solidity" target="_blank" rel="noopener">solidity扩展</a><br>目前不支持高亮显示，下载了<a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.SyntaxHighlightingPack" target="_blank" rel="noopener">Syntax Highlighting Pack</a>没用==<br>node.js必须装，<a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载</a></p>
+<p>(2) 建立solidity项目<br><a href="https://www.youtube.com/watch?v=yoffoNRk-Xg" target="_blank" rel="noopener">视频参考</a><br><figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190403/20190403175104-image.png" alt="新建" title="" class="">
                 <p>新建</p>
             </figure><br>错误是因为没装bloc<br><figure class="image-box">
                 <img src="http://wx2.sinaimg.cn/large/789d050dgy1ff1l7rtdm4j20ry0lgwgc.jpg" alt="错误" title="" class="">
                 <p>错误</p>
             </figure></p>
 <a id="more"></a>
-<p>(3) 安装bloc<br><a href="https://github.com/blockapps/bloc" target="_blank" rel="external">bloc</a>（Minimal commandline build and deploy tool for the BlockApps API）</p>
+<p>(3) 安装bloc<br><a href="https://github.com/blockapps/bloc" target="_blank" rel="noopener">bloc</a>（Minimal commandline build and deploy tool for the BlockApps API）</p>
 <pre><code>npm install blockapps-bloc -g
 bloc init
 cd app_name &amp;&amp; npm install
@@ -203,24 +203,28 @@ bloc genkey
 bloc start
 </code></pre><p><img src="http://wx1.sinaimg.cn/large/789d050dgy1ff1l7sgbf1j20ko09gabf.jpg" alt="init"></p>
 <figure class="image-box">
-                <img src="http://wx3.sinaimg.cn/large/789d050dgy1ff1l7ssa69j20jb0a3tbd.jpg" alt="cd" title="" class="">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190403/20190403175144-image.png" alt="cd" title="" class="">
                 <p>cd</p>
             </figure>
 <figure class="image-box">
                 <img src="http://wx2.sinaimg.cn/large/789d050dgy1ff1l7t87ktj20kc0a875w.jpg" alt="genkey" title="" class="">
                 <p>genkey</p>
             </figure>
-<p>然而出现了一个问题：bloc genkey后无限<code>waiting for transaction to be mined</code><br><a href="https://github.com/blockapps/bloc/issues/188" target="_blank" rel="external">https://github.com/blockapps/bloc/issues/188</a><br><a href="http://stackoverflow.com/questions/40844350/solidity-stuck-at-mining-transaction" target="_blank" rel="external">http://stackoverflow.com/questions/40844350/solidity-stuck-at-mining-transaction</a><br>反正目前无解(┬＿┬)</p>
-<h3 id="2-intellij-solidity"><a href="#2-intellij-solidity" class="headerlink" title="2.intellij-solidity"></a>2.intellij-solidity</h3><p><a href="https://github.com/intellij-solidity/intellij-solidity" target="_blank" rel="external">插件源码</a></p>
+<p>然而出现了一个问题：bloc genkey后无限<code>waiting for transaction to be mined</code><br><a href="https://github.com/blockapps/bloc/issues/188" target="_blank" rel="noopener">https://github.com/blockapps/bloc/issues/188</a><br><a href="http://stackoverflow.com/questions/40844350/solidity-stuck-at-mining-transaction" target="_blank" rel="noopener">http://stackoverflow.com/questions/40844350/solidity-stuck-at-mining-transaction</a><br>反正目前无解(┬＿┬)</p>
+<h3 id="2-intellij-solidity"><a href="#2-intellij-solidity" class="headerlink" title="2.intellij-solidity"></a>2.intellij-solidity</h3><p><a href="https://github.com/intellij-solidity/intellij-solidity" target="_blank" rel="noopener">插件源码</a></p>
 <ol>
 <li><p>安装插件<br><img src="http://wx3.sinaimg.cn/large/789d050dgy1fgdzhl8skrj214b0rdadc.jpg" alt="安装插件"></p>
 </li>
-<li><p>插件应用<br><img src="http://wx4.sinaimg.cn/large/789d050dgy1fgdzhlrdijj20x10ox3zu.jpg" alt="插件应用"></p>
+<li><p>插件应用</p>
 </li>
 </ol>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190403/20190403175334-image.png" alt="插件应用" title="" class="">
+                <p>插件应用</p>
+            </figure>
 <p>发现功能只有Syntax highlighting，Code completion等</p>
 <h3 id="3-geth"><a href="#3-geth" class="headerlink" title="3.geth"></a>3.geth</h3><p>geth全称Go-ethereum,是一个用go语言编写的以太坊客户端，也是目前最常用的客户端。</p>
-<p>从<a href="https://geth.ethereum.org/downloads/" target="_blank" rel="external">官网</a>下载适配系统的压缩包</p>
+<p>从<a href="https://geth.ethereum.org/downloads/" target="_blank" rel="noopener">官网</a>下载适配系统的压缩包</p>
 <ol>
 <li><p>geth是一个命令行工具，只能cmd中运行，windows下不可直接双击geth.exe。<br><img src="http://wx2.sinaimg.cn/large/789d050dgy1fgdyzrsflqj20n70f2q4u.jpg" alt="geth help"></p>
 </li>
@@ -233,17 +237,17 @@ bloc start
 <pre><code>npm config set prefix &quot;C:\Program Files\nodejs\node_global&quot;
 </code></pre><p>(2) npm的cache的路径</p>
 <pre><code>npm config set cache &quot;C:\Program Files\nodejs\node_cache&quot;
-</code></pre><h4 id="3-安装cnpm"><a href="#3-安装cnpm" class="headerlink" title="3.安装cnpm"></a>3.安装<a href="https://cnpmjs.org/" target="_blank" rel="external">cnpm</a></h4><p>管理员模式开cmd</p>
+</code></pre><h4 id="3-安装cnpm"><a href="#3-安装cnpm" class="headerlink" title="3.安装cnpm"></a>3.安装<a href="https://cnpmjs.org/" target="_blank" rel="noopener">cnpm</a></h4><p>管理员模式开cmd</p>
 <pre><code>npm install -g cnpm –registry=https://registry.npm.taobao.org
 </code></pre><p><code>fetchMetadata: sill mapToRegistry</code>会很慢，耐心……</p>
 <p>安装完后<code>npm config list</code>会显示淘宝源</p>
-<h4 id="4-atom安装"><a href="#4-atom安装" class="headerlink" title="4.atom安装"></a>4.atom安装</h4><p><a href="https://atom.io/" target="_blank" rel="external">Atom</a> <a href="https://npm.taobao.org/mirrors/atom/" target="_blank" rel="external">下载镜像</a></p>
-<p>安装参考了<a href="http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html" target="_blank" rel="external">http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html</a></p>
+<h4 id="4-atom安装"><a href="#4-atom安装" class="headerlink" title="4.atom安装"></a>4.atom安装</h4><p><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a> <a href="https://npm.taobao.org/mirrors/atom/" target="_blank" rel="noopener">下载镜像</a></p>
+<p>安装参考了<a href="http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html" target="_blank" rel="noopener">http://mazhuang.org/atom-flight-manual/chapter-1-getting-started/installing-atom.html</a></p>
 <p>然后在系统环境变量<code>path</code>中添加路径<code>C:\Users\~\AppData\Local\atom\bin</code></p>
 <p>装solidity插件<code>atom-ethereum-interface</code>和<code>linter-solidity</code></p>
 <pre><code>$ apm install atom-ethereum-interface
 
-$ apm install linter #(if you don&apos;t have AtomLinter/Linter installed). 
+$ apm install linter #(if you don&apos;t have AtomLinter/Linter installed).
 
 $ apm install linter-solidity
 </code></pre><p>网不好，本地安装吧。 先cmd输入<code>apm -version</code>检查环境配置，然后从github上下载插件，<code>npm install</code>命令安装。</p>
@@ -254,7 +258,7 @@ $ apm install linter-solidity
 <p><img src="http://wx3.sinaimg.cn/large/789d050dgy1fgdyi7lcjqj20p40940uc.jpg" alt="编译部署"></p>
 </li>
 </ol>
-<ol>
+<ol start="2">
 <li>语法错误提示<br><img src="http://wx4.sinaimg.cn/large/789d050dgy1fgdyi83vcej20fd0h8q47.jpg" alt="语法错误提示"></li>
 </ol>
 
@@ -264,7 +268,7 @@ $ apm install linter-solidity
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-11-21T14:32:56.589Z" itemprop="dateUpdated">2017-11-21 22:32:56</time>
+    最后更新时间：<time datetime="2019-04-03T09:53:51.304Z" itemprop="dateUpdated">2019-04-03 17:53:51</time>
 </span><br>
 
 
@@ -374,7 +378,7 @@ $ apm install linter-solidity
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

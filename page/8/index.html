@@ -156,7 +156,7 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-HEXO 新主题mellow"
+                <article id="post-函数节流&amp;防抖"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -164,20 +164,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/16/HEXO 新主题mellow/">HEXO 新主题mellow</a>
+      <a class="post-title-link" href="/2018/03/03/函数节流&防抖/">函数节流&amp;防抖</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-16 11:55:01" datetime="2017-12-16T03:55:01.000Z"  itemprop="datePublished">2017-12-16</time>
+        <time class="post-time" title="2018-03-03 23:34:31" datetime="2018-03-03T15:34:31.000Z"  itemprop="datePublished">2018-03-03</time>
 
         
 
 
         
-	<span id="/2017/12/16/HEXO 新主题mellow/" class="leancloud_visitors" data-flag-title="HEXO 新主题mellow" title="HEXO 新主题mellow">
+	<span id="/2018/03/03/函数节流&防抖/" class="leancloud_visitors" data-flag-title="函数节流&防抖" title="函数节流&防抖">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -188,16 +188,14 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/16/HEXO 新主题mellow/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/16/HEXO 新主题mellow/"></span>
+        <a href="/2018/03/03/函数节流&防抖/#comment">
+            <span class="valine-comment-count" data-xid="/2018/03/03/函数节流&防抖/"></span>
         </a>
     </span>
 
 
         
         
-  <span class="music"><i class="icon icon-music"></i></span>
-
     </div>
     
     
@@ -206,21 +204,26 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>主题<a href="https://github.com/codefine/hexo-theme-mellow" target="_blank" rel="external">mellow</a><br>作者<a href="http://blog.lujingtao.com/" target="_blank" rel="external">Michael.Lu</a><br><a href="https://github.com/codefine/hexo-theme-mellow/wiki" target="_blank" rel="external">文档</a></p>
-<p>用了一年多的默认主题landscape，虽然简洁但功能欠缺，干脆换个主题。最后选择了mellow，因为UI好看，基础功能全面，非常轻量，而且评论系统valine使用友好。</p>
-<figure class="image-box">
-                <img src="http://wx4.sinaimg.cn/large/789d050dgy1fmhv3xe69oj21hc0xctys.jpg" alt="原banner" title="justify-full" class="index-item-img">
-                <p>justify-full</p>
-            </figure>
+        <h3 id="1-函数防抖（debounce）"><a href="#1-函数防抖（debounce）" class="headerlink" title="1.函数防抖（debounce）"></a>1.函数防抖（debounce）</h3><pre><code>连续的调用，停止t后才会执行该动作，若在这t内又调用此动作则将重新计算t
+</code></pre><p><strong>场景案例1</strong>：</p>
+<pre><code>监听 resize 事件，每缩小（或者放大）一次浏览器，实际上会触发多次，用户玩够了再执行
+</code></pre><p><strong>解决方案</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> foo = debounce(resizeBox, <span class="number">1000</span>);</span><br><span class="line">  $(<span class="built_in">window</span>).on(<span class="string">'load resize'</span>, foo);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeBox</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fullWidth = $(<span class="string">'body'</span>).width(),</span><br><span class="line">    maxWidth = <span class="number">800</span>;</span><br><span class="line">  <span class="keyword">if</span> (fullWidth &lt;= maxWidth) &#123;</span><br><span class="line">    $(<span class="string">'.full'</span>).width(fullWidth);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $(<span class="string">'.full'</span>).width(maxWidth);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>场景案例2</strong>：</p>
+<pre><code>文本输入的验证（连续输入文字后发送 AJAX 请求进行验证，验证最后一次就好）
+</code></pre><p><strong>解决方案</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> foo = debounce(checkInput, <span class="number">1000</span>);</span><br><span class="line">  $(<span class="string">'.input'</span>).on(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    foo();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInput</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 替换为异步请求，可减少请求次数</span></span><br><span class="line">  $(<span class="string">'.type'</span>).text($(<span class="string">'.input'</span>).val());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-函数节流（throttle）"><a href="#2-函数节流（throttle）" class="headerlink" title="2. 函数节流（throttle）"></a>2. 函数节流（throttle）</h3><pre><code>一个不间断的调用，每隔t，执行一次
+</code></pre>
     
-        <a href="/2017/12/16/HEXO 新主题mellow/" class="post-more waves-effect waves-button">
+        <a href="/2018/03/03/函数节流&防抖/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -229,7 +232,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（五）"
+                <article id="post-ES6_ES2015语法及Babel"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -237,20 +240,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/05/Google 地图 JavaScript API（五）/">Google 地图 JavaScript API（五）</a>
+      <a class="post-title-link" href="/2018/02/28/ES6_ES2015语法及Babel/">ES6/ES2015语法及Babel</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-05 00:01:00" datetime="2017-12-04T16:01:00.000Z"  itemprop="datePublished">2017-12-05</time>
+        <time class="post-time" title="2018-02-28 00:01:00" datetime="2018-02-27T16:01:00.000Z"  itemprop="datePublished">2018-02-28</time>
 
         
 
 
         
-	<span id="/2017/12/05/Google 地图 JavaScript API（五）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（五）" title="Google 地图 JavaScript API（五）">
+	<span id="/2018/02/28/ES6_ES2015语法及Babel/" class="leancloud_visitors" data-flag-title="ES6/ES2015语法及Babel" title="ES6/ES2015语法及Babel">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -261,8 +264,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/05/Google 地图 JavaScript API（五）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/05/Google 地图 JavaScript API（五）/"></span>
+        <a href="/2018/02/28/ES6_ES2015语法及Babel/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/28/ES6_ES2015语法及Babel/"></span>
         </a>
     </span>
 
@@ -277,46 +280,54 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
+        <p>偶然在项目中看见，感觉是重要的内容，先了解下基本语法，等有空再深入学习。<br>babel迷之安装 一觉醒来打开webstorm发现装上了Σ(っ °Д °;)っ<br>File Watcher打开添加babel时programa一栏填写:</p>
+<pre><code>$ProjectFileDir$/node_modules/.bin/babel
+</code></pre><p>然后就能自动转码为ES5啦:)</p>
+<h3 id="1-文档转换"><a href="#1-文档转换" class="headerlink" title="1. 文档转换"></a>1. 文档转换</h3><p>Babel的REPL在线编译器，将ES6代码转为ES5代码。<br><a href="https://babeljs.io/repl/" target="_blank" rel="noopener">https://babeljs.io/repl/</a></p>
+<h3 id="2-ES6部分特性"><a href="#2-ES6部分特性" class="headerlink" title="2. ES6部分特性"></a>2. ES6部分特性</h3><ol>
+<li><code>var</code>声明的内层变量会覆盖外层变量，而<code>let</code>提供块级作用域，变量只在代码块内有效。</li>
+<li>当引用第三方库时声明的变量，用<code>const</code>来声明可以避免未来不小心重命名而导致出现bug</li>
+<li>引入<code>Class</code>（类）概念，可以通过<code>extends</code>关键字实现继承。（这部分感觉有点像java）</li>
+<li><code>arrow function箭头函数的</code>this<code>是继承外层代码块的</code>this`。</li>
+<li><code>template string</code>，用反引号来标识起始，用<code>${}</code>来引用变量，而且所有的空格和缩进都会被保留在输出之中.</li>
+<li><code>destructuring</code>解构:从数组和对象中提取值，对变量进行赋值。</li>
+<li><code>default</code>默认值, <code>rest</code>语法(用Rest操作符以后，args参数就是一个数组了，任何操作数组的方法都可以直接对args使用)</li>
+</ol>
 <hr>
-<h3 id="1-方向API"><a href="#1-方向API" class="headerlink" title="1. 方向API"></a>1. 方向API</h3><p>是一项计算位置间路线的服务。您可以搜索包括公共交通、驾车、步行或骑行在内的几种交通模式的路线。</p>
-<p><a href="https://developers.google.com/maps/documentation/directions/" target="_blank" rel="external">Google Maps Directions API</a> </p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/directions" target="_blank" rel="external">方向服务</a></p>
-<pre><code>https://maps.googleapis.com/maps/api/directions/json?origin=75+9th+Ave+New+York,+NY&amp;destination=MetLife+Stadium+1+MetLife+Stadium+Dr+East+Rutherford,+NJ+07073&amp;waypoints=optimize:true|Providence,+RI|Hartford,+CT&amp;mode=transit&amp;arrival_time=1391374800&amp;departure_time=1541202457&amp;traffic_model=best_guess&amp;key=YOUR_API_KEY
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//添加一个按钮指向新函数displayDirections( origins[i])</span></div><div class="line"><span class="comment">//传入起点是列出的地址，使用的终点是用户输入地址</span></div><div class="line"><span class="keyword">var</span> infowindow = <span class="keyword">new</span> google.maps.InfoWindow(&#123;</div><div class="line">  <span class="attr">content</span>:durationText+<span class="string">'away,'</span>+distanceText+</div><div class="line">  <span class="string">'&lt;div&gt;&lt;input type=\"button\" value=\"View Route\" onclick ='</span> +</div><div class="line">  <span class="string">'\"displayDirections(&amp;quot;'</span> + origins[i] + <span class="string">'&amp;quot;);\"&gt;&lt;/input&gt;&lt;/div&gt;'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//计算实际方向并在地图上显示路线</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayDirections</span>(<span class="params">origin</span>) </span>&#123;</div><div class="line">  hideListings();</div><div class="line">  <span class="comment">//初始化新实例</span></div><div class="line">  <span class="keyword">var</span> directionsService = <span class="keyword">new</span> google.maps.DirectionsService;</div><div class="line">  <span class="comment">//重新捕获用户输入终点和出行模式</span></div><div class="line">  <span class="keyword">var</span> destinationAddress =<span class="built_in">document</span>.getElementById(<span class="string">'search-within-time-text'</span>).value;</div><div class="line">  <span class="keyword">var</span> mode = <span class="built_in">document</span>.getElementById(<span class="string">'mode'</span>).value;</div><div class="line">  <span class="comment">//计算路线，传入起点，终点，出行模式</span></div><div class="line">  directionsService.route(&#123;</div><div class="line">    <span class="comment">// The origin is the passed in marker's position.</span></div><div class="line">    origin: origin,</div><div class="line">    <span class="comment">// The destination is user entered address.</span></div><div class="line">    destination: destinationAddress,</div><div class="line">    <span class="attr">travelMode</span>: google.maps.TravelMode[mode]</div><div class="line">  &#125;,<span class="function"><span class="keyword">function</span> (<span class="params">response, status</span>) </span>&#123;</div><div class="line">    <span class="comment">//获得响应后确保状态为OK</span></div><div class="line">    <span class="keyword">if</span> (status === google.maps.DirectionsStatus.OK) &#123;</div><div class="line">      <span class="comment">//此渲染器负责显示信息，在地图上显示最终的折线</span></div><div class="line">      <span class="keyword">var</span> directionsDisplay = <span class="keyword">new</span> google.maps.DirectionsRenderer(&#123;</div><div class="line">        <span class="comment">//指定地图</span></div><div class="line">        map: map,</div><div class="line">        <span class="comment">//从路线响应中获取方向</span></div><div class="line">        directions: response,</div><div class="line">        <span class="comment">//路线可移动</span></div><div class="line">        draggable: <span class="literal">true</span>,</div><div class="line">        <span class="comment">//路线绿色</span></div><div class="line">        polylineOptions: &#123;</div><div class="line">          <span class="attr">strokeColor</span>: <span class="string">'green'</span></div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="built_in">window</span>.alert(<span class="string">'Directions request failed due to '</span> + status);</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-距离矩阵和方向API注意点"><a href="#2-距离矩阵和方向API注意点" class="headerlink" title="2. 距离矩阵和方向API注意点"></a>2. 距离矩阵和方向API注意点</h3><p><strong>距离矩阵 API 请求</strong> 通过组合使用 ORIGIN、DESTINATION 和 TRAVELMODE 发出。在发出请求时，请注意以下几点：</p>
-<ul>
-<li>无论选择何种出行方式，每个请求最多可以传入 25 个 起点或者 25 个终点，但元素最多仅限 100 个， 且元素个数 =起点数*终点数。例如，10 个起点和 10 个 终点 = 100 个元素。在使用 Web 服务的情况下， 对于高级计划客户，此值最大可达到 625。</li>
-<li>虽然大多数其他服务受速率限制（每秒查询数不超过 50）， 但距离矩阵 API 在元素（而非查询）方面受到 速率 限制。如果某时间段内请求的元素数目 过多，将返回 OVER_QUERY_LIMIT 响应 代码。</li>
-<li>某些参数仅适用于特定出行方式， 例如：<ul>
-<li>如果出行方式为 transit，则将忽略 AvoidTolls 和 AvoidHighways</li>
-<li>仅当出行方式为 transit 时，所有 TransitOptions 才有效 </li>
-<li>departureTime 可在传递DrivingOptions 或 TransitOptions 参数时进行传递</li>
-</ul>
+<p>电脑重装了，反正要重新配置环境，不如找个东西边学边装。就决定是你了，ES6！</p>
+<ol>
+<li>惯例安装nodejs以及express</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express --save</span><br><span class="line">$ npm install body-parser --save</span><br><span class="line">$ npm install cookie-parser --save</span><br><span class="line">$ npm install multer --save</span><br><span class="line">$ npm list express</span><br></pre></td></tr></table></figure>
+<p>途中出现第一个问题，<code>npm ERR! extraneous</code>，<a href="https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o" target="_blank" rel="noopener">https://github.com/npm/npm/issues/10004#issuecomment-210710935，快捷方法是重装nodejs后用管理员模式安装&gt;_o</a><br>第二个问题 <code>express command not found</code> ，解决方法<a href="https://stackoverflow.com/questions/23002448/express-command-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/23002448/express-command-not-found</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g express-generator</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>gulp<br><a href="http://www.gulpjs.com.cn/docs/" target="_blank" rel="noopener">文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ touch .babelrc</span><br><span class="line"></span><br><span class="line">$ touch gulpfile.babel.js</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<p><strong>方向 API 请求</strong> 也涉及 ORIGIN、DESTINATION 和 TRAVELMODE，但还具有可选 参数 WAYPOINTS 或 VIA points。在发出请求时， 请注意以下几点：</p>
-<ul>
-<li>对于客户端方向服务（使用 Javascript API）， 除起点和终点外，最多可指定 8 个 途经点/请求 ，即每个请求 共 10个地理编码点。对于 高级计划 客户，这一限值由 8 增加至 23</li>
-<li>对于 Web 服务，只要提供 API 密钥等有效标识符， 即可为每个请求指定最多 23 个途经点。如果超出限制， 响应 代码将给出相应指示。</li>
-<li>TRANSIT 出行方式不支持途经点</li>
-</ul>
-<h3 id="3-道路API"><a href="#3-道路API" class="headerlink" title="3. 道路API"></a>3. 道路API</h3><p>通过 Google Maps Roads API 追踪 GPS 面包屑导航轨迹，以绘制车辆行驶的道路地图和确定这些路段沿线的速度限制。<br>标识车辆行驶的道路，并提供有关这些道路的附加元数据（如速度限制）。</p>
-<p><a href="https://developers.google.com/maps/documentation/roads/intro" target="_blank" rel="external">Google Maps Roads API</a></p>
-<p><a href="https://developers.google.com/maps/documentation/roads/inspector" target="_blank" rel="external">Google Maps Roads API 检查器</a><br>用自定义点测试道路吸附请求</p>
-<h3 id="4-地点自动完成"><a href="#4-地点自动完成" class="headerlink" title="4. 地点自动完成"></a>4. 地点自动完成</h3>
+</ol>
+<p>因为使用ES6语法，所以必须创建<code>gulpfile.babel.js</code>文件而不是<code>gulpfile.js</code></p>
+<hr>
+<p>然后又出现了很多问题，我就先去学习了gulp的详细用法，写了三篇文章总结。又学会了使用yeoman工具直接构建项目骨架。详细参见之前的博文。我发现webstorm里也可以直接选择yeoman构建，神器啊。<br>下面真的开始学习ES6语法了 O_&lt;</p>
+<hr>
+<p>参考阮一峰的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">《ECMAScript 6 入门》</a></p>
+<h3 id="1-let-amp-const"><a href="#1-let-amp-const" class="headerlink" title="1. let &amp; const"></a>1. let &amp; const</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<ol>
+<li>块作用域（大括号内）第二个<code>console.log(i)</code>脱离了块作用域，于是只能输出1，2。</li>
+<li>严格模式：ES5代码中存在<code>use strict</code>来启动文件采用严格模式，ES6中则强制开启。严格模式中变量未声明则不能引用，会报错。</li>
+<li>使用let时不能重复定义变量。</li>
+<li>使用const声明的常量不能修改。</li>
+<li>第4点注意情况</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI =<span class="number">3.1415926</span>;   <span class="comment">//不能修改</span></span><br><span class="line"><span class="keyword">const</span> K =&#123;</span><br><span class="line">  a:<span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//K指向对象存储的指针，对象可变指针不变。</span></span><br><span class="line">K.b = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="2-解构赋值"><a href="#2-解构赋值" class="headerlink" title="2. 解构赋值"></a>2. 解构赋值</h3>
     
-        <a href="/2017/12/05/Google 地图 JavaScript API（五）/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/28/ES6_ES2015语法及Babel/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -325,7 +336,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（四）"
+                <article id="post-响应式开发"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -333,20 +344,20 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/04/Google 地图 JavaScript API（四）/">Google 地图 JavaScript API（四）</a>
+      <a class="post-title-link" href="/2018/02/03/响应式开发/">响应式开发总结</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-04 00:01:00" datetime="2017-12-03T16:01:00.000Z"  itemprop="datePublished">2017-12-04</time>
+        <time class="post-time" title="2018-02-03 00:01:00" datetime="2018-02-02T16:01:00.000Z"  itemprop="datePublished">2018-02-03</time>
 
         
 
 
         
-	<span id="/2017/12/04/Google 地图 JavaScript API（四）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（四）" title="Google 地图 JavaScript API（四）">
+	<span id="/2018/02/03/响应式开发/" class="leancloud_visitors" data-flag-title="响应式开发总结" title="响应式开发总结">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -357,8 +368,8 @@
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/04/Google 地图 JavaScript API（四）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/04/Google 地图 JavaScript API（四）/"></span>
+        <a href="/2018/02/03/响应式开发/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/03/响应式开发/"></span>
         </a>
     </span>
 
@@ -373,122 +384,24 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
-<hr>
-<h3 id="1-地理编码"><a href="#1-地理编码" class="headerlink" title="1. 地理编码"></a>1. 地理编码</h3><p>在地址和经纬度之间转换</p>
-<p><code>地理编码</code>是将地址（如“1600 Amphitheatre Parkway, Mountain View, CA”）转换为地理坐标（如纬度 37.423021 和经度 -122.083739）的过程，您可以借此在地图上放置标记，或在地图上定位。</p>
-<p><code>反向地理编码</code>是将地理坐标转换为可人工读取的地址的过程。反向地理编码器还可让您找到对应于给定的地点 ID 的地址。</p>
-<p><a href="https://google-developers.appspot.com/maps/documentation/utils/geocoder/" target="_blank" rel="external">地理编码查询</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/geocoding" target="_blank" rel="external">地理编码服务</a></p>
-<p>地理编码 API <a href="https://developers.google.com/maps/documentation/geocoding/intro" target="_blank" rel="external">Geocoding API</a> </p>
-<p>地理编码的 <a href="https://developers.google.com/maps/documentation/geocoding/intro#StatusCodes" target="_blank" rel="external">状态代码</a> 和 <a href="https://developers.google.com/maps/documentation/geocoding/intro#Types" target="_blank" rel="external">地址和组成部分类型</a> </p>
-<p>地理寻宝游戏<a href="https://www.geocaching.com/play" target="_blank" rel="external">Geocaching</a></p>
-<hr>
-<p>Google Maps Geocoding API 请求使用以下格式：</p>
-<pre><code>https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters
-
-//json输出
-https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=YOUR_API_KEY
-//XML输出
-https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=YOUR_API_KEY
-//parameters参数：地址&amp;密钥
-</code></pre><p>示例<br>请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://maps.googleapis.com/maps/api/geocode/json?key=输入API&amp;latlng=30.315099,120.342865</div></pre></td></tr></table></figure></p>
-<p>返回<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   &quot;results&quot; : [</div><div class="line">      &#123;</div><div class="line">        &quot;//&quot;:&quot;地址要素部分，分解信息为街道、城镇、社区、州、国家等&quot;,</div><div class="line">        &quot;//&quot;:&quot;详情查阅前面地址类型和地址组成部分类型链接&quot;,</div><div class="line">         &quot;address_components&quot; : [</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;问鼎西路&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;问鼎西路&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;route&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;下沙&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;下沙&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;neighborhood&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;江干区&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;江干区&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;political&quot;, &quot;sublocality&quot;, &quot;sublocality_level_1&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;杭州市&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;杭州市&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;locality&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;浙江省&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;浙江省&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;administrative_area_level_1&quot;, &quot;political&quot; ]</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               &quot;long_name&quot; : &quot;中国&quot;,</div><div class="line">               &quot;short_name&quot; : &quot;CN&quot;,</div><div class="line">               &quot;types&quot; : [ &quot;country&quot;, &quot;political&quot; ]</div><div class="line">            &#125;</div><div class="line">         ],</div><div class="line">         &quot;//&quot;:&quot;格式化地址&quot;,</div><div class="line">         &quot;formatted_address&quot; : &quot;中国浙江省杭州市江干区下沙问鼎西路&quot;,</div><div class="line">         &quot;//&quot;:&quot;几何图形包含实际位置的经纬度和其他重要信息&quot;,</div><div class="line">         &quot;geometry&quot; : &#123;</div><div class="line">            &quot;bounds&quot; : &#123;</div><div class="line">               &quot;northeast&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.314869,</div><div class="line">                  &quot;lng&quot; : 120.3432986</div><div class="line">               &#125;,</div><div class="line">               &quot;southwest&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.3116694,</div><div class="line">                  &quot;lng&quot; : 120.3429376</div><div class="line">               &#125;</div><div class="line">            &#125;,</div><div class="line">            &quot;//&quot;:&quot;经纬度&quot;,</div><div class="line">            &quot;location&quot; : &#123;</div><div class="line">               &quot;lat&quot; : 30.3131545,</div><div class="line">               &quot;lng&quot; : 120.3429652</div><div class="line">            &#125;,</div><div class="line">            &quot;//&quot;:&quot;位置类型告诉我们返回点的更多信息&quot;,</div><div class="line">            &quot;//&quot;:&quot;rooftop屋顶说明获得了位置的全部匹配&quot;,</div><div class="line">            &quot;//&quot;:&quot;若是range interpolated差值范围：地理编码根据周围点近似的一个点&quot;,</div><div class="line">            &quot;//&quot;:&quot;若是geometric center几何中心：获得一条线的中心点&quot;,</div><div class="line">            &quot;location_type&quot; : &quot;GEOMETRIC_CENTER&quot;,</div><div class="line">            &quot;viewport&quot; : &#123;</div><div class="line">               &quot;northeast&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.314869,</div><div class="line">                  &quot;lng&quot; : 120.3444670802915</div><div class="line">               &#125;,</div><div class="line">               &quot;southwest&quot; : &#123;</div><div class="line">                  &quot;lat&quot; : 30.3116694,</div><div class="line">                  &quot;lng&quot; : 120.3417691197085</div><div class="line">               &#125;</div><div class="line">            &#125;</div><div class="line">         &#125;,</div><div class="line">         &quot;//&quot;:&quot;地点ID是任何地点的另一个唯一标识符&quot;,</div><div class="line">         &quot;place_id&quot; : &quot;ChIJycYN2imYTDQRoLUHSrSQQE8&quot;,</div><div class="line">         &quot;types&quot; : [ &quot;route&quot; ]</div><div class="line">      &#125;,</div><div class="line">   ],</div><div class="line">   &quot;//&quot;:&quot;告诉我们请求是否成功，能在各种web服务间共享，详情查询前面状态代码链接&quot;,</div><div class="line">   &quot;//&quot;:&quot;ok指找到一个或多个结果&quot;,</div><div class="line">   &quot;//&quot;:&quot;ZERO_RESULTS表示地理编码成功，但未返回任何结果&quot;,</div><div class="line">   &quot;//&quot;:&quot;invali request指请求中包含一些错误&quot;,</div><div class="line">   &quot;//&quot;:&quot;unknown error通常指服务器错误并可重复请求直到成功&quot;,</div><div class="line">   &quot;//&quot;:&quot;query limit error超过查询限制错误&quot;,</div><div class="line">   &quot;//&quot;:&quot;request denied error请求被拒错误&quot;,</div><div class="line">   &quot;status&quot; : &quot;OK&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="2-地理编码应用"><a href="#2-地理编码应用" class="headerlink" title="2. 地理编码应用"></a>2. 地理编码应用</h3>
-    
-        <a href="/2017/12/04/Google 地图 JavaScript API（四）/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-Flickr和Google地图的混搭"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/03/Flickr和Google地图的混搭/">Flickr和Google地图的混搭</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-12-03 00:01:00" datetime="2017-12-02T16:01:00.000Z"  itemprop="datePublished">2017-12-03</time>
-
-        
-
-
-        
-	<span id="/2017/12/03/Flickr和Google地图的混搭/" class="leancloud_visitors" data-flag-title="Flickr和Google地图的混搭" title="Flickr和Google地图的混搭">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/03/Flickr和Google地图的混搭/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/03/Flickr和Google地图的混搭/"></span>
-        </a>
-    </span>
-
-
-        
-        
-    </div>
-    
-    
-    
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <p>使用API创建一个混搭，它可以作为一个小部件内嵌在网站上。</p>
-<ul>
-<li>API（Application Programming Interface）：带有文档的接口，让第三方开发者使用产品的功能。</li>
-<li>混搭（Mashup）：一种服务，结合两个或多个不同API提供的功能。</li>
-<li>小部件（Widget）：一个可以内嵌在网站上的自包含小应用。</li>
-</ul>
-<h2 id="Flickr-API"><a href="#Flickr-API" class="headerlink" title="Flickr API"></a>Flickr API</h2><blockquote>
-<p>Flickr 社群具有超過 50 億張相片 (其中許多包含具有價值的描述資訊，例如標籤、地理位置和 Exif 資料)，建立了非常豐富的資料。<br>Flickr API 是可讓你存取該資料的工具。 事實上，幾乎所有使 flickr.com 得以運作的功能都可透過 API 取得。 並且API 的使用完全免費，是專為我們的會員以及開發人員和其他整合者提供的服務，使他們可以創造出 flickr.com 所未能提供的更多其他相片互動方式。</p>
+        <p>之前对于响应式都是用bootstrap等响应式框架，非常肤浅。就学习了具体的响应式开发相关内容，运用媒体查询写出不同的css布局，锻炼了基本技能，对基础概念也有了新了解。还学习了响应式图片的处理和兼容性处理，也收获良多。</p>
+<h3 id="1-响应式网站"><a href="#1-响应式网站" class="headerlink" title="1. 响应式网站"></a>1. 响应式网站</h3><blockquote>
+<p>所谓响应式网站，就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本，在各种分辨率的设备下都能很好地展示页面效果。</p>
 </blockquote>
-<p><a href="https://www.flickr.com/services/api/" target="_blank" rel="external">Flickr API 文档</a><br><a href="https://developers.google.com/maps/documentation/?hl=zh-cn" target="_blank" rel="external">Google地图 API 文档</a></p>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a><a href="http://www.json.org/" target="_blank" rel="external"><strong>JSON</strong></a></h2><p>Douglas Crockford认识到大部分现代编程语言共享了相同的数据结构核心：数值、字符串、布尔型、数组及键值对容器（又叫做记录、结构、字典、哈希表、哈希或关系数组）。JSON标准重用javascript语法来定义一个微型语言以表示那些和语言无关的数据结构。</p>
-<p>eval函数是将JSON字符串转成javascript对象的最快速的方式，但是它只能用在可以信任的JSON源上。如果JSON字符串来自不可信任的地方，可能包含恶意javascript代码。一个安全的替代直接调用的方式是使用parseJSON方法，其使用正则表示式检查JSON字符串是否安全，然后再传递给eval。</p>
-<h2 id="同源限制"><a href="#同源限制" class="headerlink" title="同源限制"></a>同源限制</h2><p>传统Ajax调用(使用XMLHttpRequest对象)有一个重要的限制：它们只允许和提供源代码的域进行通信。<br>如果没有同源限制，当一个用户在公司内部网络中访问一个恶意网站时，公共因特网上的恶意网页可以使用XMLHttpRequest从私有wiki上偷取信息。如果浏览器不强制同源限制，很多私有网站可能会被偷数据。<br>对于依赖外部域的操作，JSON可以让我们绕过这个限制，方法包括<code>跨域JSON</code>和<code>JSON-P</code>（“JSON with padding”缩写）。<br>永远不要从一个不信任的网站加载JSON-P文档，这样做可能让你受到恶意的跨站脚本攻击。</p>
-<p>为了提供跨域JSON，一个网站只需要在普通的JSON对象外面包裹一个命名函数的调用。通过定义自己的jsonfeed函数，并用HTML中的script标签引入。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>用户输入标签后显示包含该tag的20张图片<br>使用下面的URL获取被打标签的照片</p>
-<pre><code>http://api.flickr.com/services/feeds/photos_public.gne?tags=[TAG]
-</code></pre><p><a href="https://github.com/RenkoQ/googleMap_example/blob/master/Flickr_photos%26googlemap/Viewphotos_by_tag.html" target="_blank" rel="external">详细代码</a></p>
-<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>window是全局变量，所以给window设置属性相当于创建了一个全局变量。还可以通过省略变量声明中的var关键字来创建一个全局变量，不过这样难以区分。<br>在javascript中最好尽量避免使用全局变量。<br>
+<h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><p>flexible grid layout 弹性网格布局<br>flexible image 弹性图片<br>media queries 媒体查询</p>
+<h4 id="优点和缺点"><a href="#优点和缺点" class="headerlink" title="优点和缺点"></a>优点和缺点</h4><p>一套代码适应多终端设备，省人省时省钱，利于SEO。缺点是需要加载更多的样式和脚本资源，造成代码冗余。</p>
+<h4 id="实践原则："><a href="#实践原则：" class="headerlink" title="实践原则："></a>实践原则：</h4><p>制作网站大抵都遵循两个原则：渐近增强(Progressive Enhancement)和优雅降级(Graceful Degradation)，渐近增强是指先制作一个简陋但是兼容各个版本浏览器的网页，然后再添加效果。而优雅降级则刚好相反，直接制作出效果绚烂的兼容主流浏览器的产品，然后根据低版本再做出一些兼容性处理。</p>
+<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>使用相对单位并配合媒体查询来实现页面，我们只需要根据设计图,将绝对单位px转换为相对单位rem或者em并配合@media即可。</p>
+<h3 id="2-非常规文件"><a href="#2-非常规文件" class="headerlink" title="2. 非常规文件"></a>2. 非常规文件</h3>
     
-        <a href="/2017/12/03/Flickr和Google地图的混搭/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/03/响应式开发/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </div>
     
@@ -497,7 +410,7 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（三）"
+                <article id="post-水平垂直居中"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -505,20 +418,20 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/03/Google 地图 JavaScript API（三）/">Google 地图 JavaScript API（三）</a>
+      <a class="post-title-link" href="/2018/02/02/水平垂直居中/">CSS水平垂直居中</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-03 00:01:00" datetime="2017-12-02T16:01:00.000Z"  itemprop="datePublished">2017-12-03</time>
+        <time class="post-time" title="2018-02-02 22:23:31" datetime="2018-02-02T14:23:31.000Z"  itemprop="datePublished">2018-02-02</time>
 
         
 
 
         
-	<span id="/2017/12/03/Google 地图 JavaScript API（三）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（三）" title="Google 地图 JavaScript API（三）">
+	<span id="/2018/02/02/水平垂直居中/" class="leancloud_visitors" data-flag-title="CSS水平垂直居中" title="CSS水平垂直居中">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -529,8 +442,8 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/03/Google 地图 JavaScript API（三）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/03/Google 地图 JavaScript API（三）/"></span>
+        <a href="/2018/02/02/水平垂直居中/#comment">
+            <span class="valine-comment-count" data-xid="/2018/02/02/水平垂直居中/"></span>
         </a>
     </span>
 
@@ -545,36 +458,23 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
-<hr>
-<h3 id="1-静态地图和街道地图成像"><a href="#1-静态地图和街道地图成像" class="headerlink" title="1. 静态地图和街道地图成像"></a>1. 静态地图和街道地图成像</h3><p>Google 静态地图 API<br><a href="https://developers.google.com/maps/documentation/static-maps/intro" target="_blank" rel="external">Google Static Maps API</a></p>
-<p>Google 街道视图图像 API<br><a href="https://developers.google.com/maps/documentation/streetview/" target="_blank" rel="external">Street View Image API</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 点击标识时弹出信息窗口。</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">  <span class="comment">// 检查信息窗口还没有在这个标识打开</span></div><div class="line">  <span class="keyword">if</span> (infowindow.marker != marker) &#123;</div><div class="line">    infowindow.marker = marker;</div><div class="line">    infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;'</span>);</div><div class="line">    infowindow.open(map, marker);</div><div class="line">    <span class="comment">// 确保信息窗口关闭时已清空marker属性值</span></div><div class="line">    infowindow.addListener(<span class="string">'closeclick'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      infowindow.setMarker = <span class="literal">null</span>;</div><div class="line">    &#125;);</div><div class="line">    <span class="comment">//此服务根据离标记最近的位置获取全景图像</span></div><div class="line">    <span class="comment">//并找出相机朝向、角度(heading,pitch)</span></div><div class="line">    <span class="keyword">var</span> streetViewService = <span class="keyword">new</span> google.maps.StreetViewService();</div><div class="line">    <span class="comment">//寻找街景图像的范围</span></div><div class="line">    <span class="keyword">var</span> radius = <span class="number">50</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getStreetView</span>(<span class="params">data, status</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (status == google.maps.StreetViewStatus.OK) &#123;</div><div class="line">        <span class="comment">//取最近的街景位置</span></div><div class="line">        <span class="keyword">var</span> nearStreetViewLocation = data.location.latLng;</div><div class="line">        <span class="comment">//计算相机方向，要在加载api时添加&amp;libraries=geometry以使用谷歌地图的几何库</span></div><div class="line">        <span class="keyword">var</span> heading = google.maps.geometry.spherical.computeHeading(</div><div class="line">          nearStreetViewLocation, marker.position);</div><div class="line">        infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;&lt;div id="pano"&gt;&lt;/div&gt;'</span>);</div><div class="line">        <span class="comment">//设置全景选项</span></div><div class="line">        <span class="keyword">var</span> panoramaOptions = &#123;</div><div class="line">          <span class="comment">//最近的街景位置</span></div><div class="line">          position: nearStreetViewLocation,</div><div class="line">          <span class="comment">//视角</span></div><div class="line">          pov: &#123;</div><div class="line">            <span class="attr">heading</span>: heading,</div><div class="line">            <span class="attr">pitch</span>: <span class="number">30</span></div><div class="line">          &#125;</div><div class="line">        &#125;;</div><div class="line">        <span class="comment">//创建街景并将它放在id为pano的div处的信息窗口</span></div><div class="line">        <span class="keyword">var</span> panorama = <span class="keyword">new</span> google.maps.StreetViewPanorama(</div><div class="line">          <span class="built_in">document</span>.getElementById(<span class="string">'pano'</span>), panoramaOptions);</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">//如果没有找到街景就在信息窗口放入说明信息</span></div><div class="line">        infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;'</span> +</div><div class="line">          <span class="string">'&lt;div&gt;No Street View Found&lt;/div&gt;'</span>);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);</div><div class="line">    infowindow.open(map, marker);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>请求geometry library<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="keyword">async</span> defer</div><div class="line">    src=</div><div class="line">    <span class="string">"https://maps.googleapis.com/maps/api/js?key=MYAPIKEY&amp;libraries=geometry&amp;v=3&amp;callback=initMap"</span>&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>街道视图图像请求示例<br>outdoor Url</p>
-<pre><code>https://maps.googleapis.com/maps/api/streetview?size=600x300&amp;location=46.414382,10.013988&amp;heading=151.78&amp;pitch=-0.76&amp;key=YOUR_API_KEY
-</code></pre><p>indoor Url</p>
-<pre><code>https://maps.googleapis.com/maps/api/streetview?size=600x300&amp;location=41.403609,2.174448&amp;heading=100&amp;pitch=28&amp;scale=2&amp;key=YOUR_API_KEY
-</code></pre><h3 id="2-库"><a href="#2-库" class="headerlink" title="2. 库"></a>2. 库</h3><p><a href="https://developers.google.com/maps/documentation/javascript/libraries" target="_blank" rel="external">Maps JavaScript API 库</a></p>
-<p>Maps API 的 JavaScript 代码通过<code>https://maps.googleapis.com/maps/api/js</code> 形式的引导程序 URL 进行加载。此引导程序请求会加载所有供在 Maps API 中使用的主要 JavaScript 对象和符号。此外，明确请求时才会加载的自包含内容库中也提供了一些 Maps API 功能。将辅助组件分解成内容库可使主 API 快速加载（和解析）；您只会招致在必要时加载和解析内容库的额外开销。</p>
-<p>您可以通过指定 <code>libraries</code> 参数并向其传递内容库的名称，指定要在引导程序请求内加载的其他内容库。可以逗号分隔列表形式指定多个内容库。加载后的内容库通过 <code>google.maps.libraryName</code> 命名空间进行访问。</p>
-<ul>
-<li>drawing 提供了一个图形界面，以供用户在地图上绘制多边形、矩形、多段线、圆和标记。<a href="https://developers.google.com/maps/documentation/javascript/drawinglayer" target="_blank" rel="external">文档</a>。</li>
-<li>geometry 包括用于计算地球表面上标量几何值（如距离和面积）的应用函数。<a href="https://developers.google.com/maps/documentation/javascript/geometry" target="_blank" rel="external">文档</a>。</li>
-<li>places 让您的应用能够在定义的区域内搜索场所、地理位置或著名景点等地点。<a href="https://developers.google.com/maps/documentation/javascript/places" target="_blank" rel="external">文档</a>。</li>
-<li>visualization 提供数据的视觉表示，包括热图和 Google Maps Engine 数据。<a href="https://developers.google.com/maps/documentation/javascript/visualization" target="_blank" rel="external">文档</a>。</li>
-</ul>
+        <p><a href="https://github.com/yanhaijing/vertical-center" target="_blank" rel="noopener">vertical-center</a><br>全部从该项目转载，侵删。</p>
+<h1 id="仅居中元素定宽高适用："><a href="#仅居中元素定宽高适用：" class="headerlink" title="仅居中元素定宽高适用："></a>仅居中元素定宽高适用：</h1><p>absolute + 负margin</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 50%;</span><br><span class="line">    <span class="selector-tag">left</span>: 50%;</span><br><span class="line">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">    <span class="selector-tag">margin-top</span>: <span class="selector-tag">-50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>absolute + margin auto</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: 0;</span><br><span class="line">    <span class="selector-tag">left</span>: 0;</span><br><span class="line">    <span class="selector-tag">right</span>: 0;</span><br><span class="line">    <span class="selector-tag">bottom</span>: 0;</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>absolute + calc</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wp</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    position: absolute;;</span><br><span class="line">    <span class="selector-tag">top</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">    <span class="selector-tag">left</span>: <span class="selector-tag">calc</span>(50% <span class="selector-tag">-</span> 50<span class="selector-tag">px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="居中元素不定宽高适用："><a href="#居中元素不定宽高适用：" class="headerlink" title="居中元素不定宽高适用："></a>居中元素不定宽高适用：</h1><p>absolute + transform</p>
     
-        <a href="/2017/12/03/Google 地图 JavaScript API（三）/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/02/水平垂直居中/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </div>
     
@@ -583,7 +483,7 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-Google 地图 JavaScript API（二）"
+                <article id="post-You2php使用（完全转载）"
   class="article-card article-type-post" itemprop="blogPost">
     
     
@@ -591,20 +491,20 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/12/02/Google 地图 JavaScript API（二）/">Google 地图 JavaScript API（二）</a>
+      <a class="post-title-link" href="/2018/01/12/You2php使用（完全转载）/">You2php使用（完全转载）</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time class="post-time" title="2017-12-02 00:01:00" datetime="2017-12-01T16:01:00.000Z"  itemprop="datePublished">2017-12-02</time>
+        <time class="post-time" title="2018-01-12 19:34:30" datetime="2018-01-12T11:34:30.000Z"  itemprop="datePublished">2018-01-12</time>
 
         
 
 
         
-	<span id="/2017/12/02/Google 地图 JavaScript API（二）/" class="leancloud_visitors" data-flag-title="Google 地图 JavaScript API（二）" title="Google 地图 JavaScript API（二）">
+	<span id="/2018/01/12/You2php使用（完全转载）/" class="leancloud_visitors" data-flag-title="You2php使用（完全转载）" title="You2php使用（完全转载）">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -615,8 +515,8 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
         
     <span>
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/02/Google 地图 JavaScript API（二）/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/02/Google 地图 JavaScript API（二）/"></span>
+        <a href="/2018/01/12/You2php使用（完全转载）/#comment">
+            <span class="valine-comment-count" data-xid="/2018/01/12/You2php使用（完全转载）/"></span>
         </a>
     </span>
 
@@ -631,27 +531,87 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>根据udacity课程学习的笔记。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh_CN" target="_blank" rel="external">教程和文档</a></p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/reference" target="_blank" rel="external">Google Maps JavaScript API V3 Reference</a></p>
-<hr>
-<h3 id="1-层"><a href="#1-层" class="headerlink" title="1. 层"></a>1. 层</h3><p>层是地图上的对象，包含一个或多个单独项，但可作为一个整体进行操作。层通常反映了您添加到地图上用于指定公共关联的对象集合。</p>
-<p><a href="https://developers.google.com/maps/documentation/javascript/layers" target="_blank" rel="external">文档</a></p>
-<p><code>数据层</code><br>    Google 地图数据层提供了一个可用于储存任意地理空间数据的容器。您可以使用数据层储存您的自定义数据，或在 Google 地图上显示 GeoJSON 数据。<br>    <a href="https://developers.google.com/maps/documentation/javascript/datalayer" target="_blank" rel="external">文档</a></p>
-<p><code>Fusion Tables 图层/ 融合表层（试验性）</code><br>使用 FusionTablesLayer 对象将 Google Fusion Tables 中包含的数据呈现为地图上的图层。<br><a href="https://developers.google.com/maps/documentation/javascript/fusiontableslayer" target="_blank" rel="external">文档</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> map;</div><div class="line">  <span class="comment">//加载地图</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Constructor creates a new map - only center and zoom are required.</span></div><div class="line">    map = <span class="keyword">new</span> google.maps.Map(<span class="built_in">document</span>.getElementById(<span class="string">'map'</span>), &#123;</div><div class="line">      <span class="comment">//中心 纬度 经度</span></div><div class="line">      center: &#123;<span class="attr">lat</span>: <span class="number">30.317655</span>, <span class="attr">lng</span>: <span class="number">120.343745</span>&#125;,</div><div class="line">      <span class="comment">//缩放值 越高越详细</span></div><div class="line">      zoom: <span class="number">13</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">var</span> markers = [];</div><div class="line"></div><div class="line">    <span class="comment">//创建一组位置信息</span></div><div class="line">    <span class="keyword">var</span> locations = [</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 1'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310597</span>,<span class="attr">lng</span>:<span class="number">120.343251</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 2'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313089</span>,<span class="attr">lng</span>:<span class="number">120.340934</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 3'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.313103</span>,<span class="attr">lng</span>:<span class="number">120.344903</span>&#125;&#125;,</div><div class="line">      &#123;<span class="attr">title</span>:<span class="string">'building 4'</span>,<span class="attr">location</span>:&#123;<span class="attr">lat</span>:<span class="number">30.310653</span>,<span class="attr">lng</span>:<span class="number">120.347006</span>&#125;&#125;,</div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="comment">//创建信息窗口</span></div><div class="line">    <span class="keyword">var</span> largeInfowindow = <span class="keyword">new</span> google.maps.InfoWindow();</div><div class="line">    <span class="comment">//创建经纬度边界</span></div><div class="line">    <span class="keyword">var</span> bounds = <span class="keyword">new</span> google.maps.LatLngBounds();</div><div class="line"></div><div class="line">    <span class="comment">//通过位置数组初始化创建标识数组</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; locations.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> position = locations[i].location;</div><div class="line">      <span class="keyword">var</span> title = locations[i].title;</div><div class="line">      <span class="comment">//为每个位置创建标识</span></div><div class="line">      <span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">        <span class="attr">map</span>: map,</div><div class="line">        <span class="attr">position</span>: position,</div><div class="line">        <span class="attr">title</span>: title,</div><div class="line"></div><div class="line">        <span class="attr">animation</span>: google.maps.Animation.DROP,</div><div class="line">        <span class="attr">id</span>: i</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//把marker放进markers数组里</span></div><div class="line">      markers.push(marker);</div><div class="line">      <span class="comment">//添加事件使得点击时打开信息窗口</span></div><div class="line">      marker.addListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        populateInfoWindow(<span class="keyword">this</span>, largeInfowindow);</div><div class="line">      &#125;);</div><div class="line">      <span class="comment">//传入各标识位置扩展边界</span></div><div class="line">      bounds.extend(markers[i].position);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    map.fitBounds(bounds);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 点击标识时弹出信息窗口。</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">    <span class="comment">// 检查信息窗口还没有在这个标识打开</span></div><div class="line">    <span class="keyword">if</span> (infowindow.marker != marker) &#123;</div><div class="line">      infowindow.marker = marker;</div><div class="line">      infowindow.setContent(<span class="string">'&lt;div&gt;'</span> + marker.title + <span class="string">'&lt;/div&gt;'</span>);</div><div class="line">      infowindow.open(map, marker);</div><div class="line">      <span class="comment">// 确保信息窗口关闭时已清空marker属性值</span></div><div class="line">      infowindow.addListener(<span class="string">'closeclick'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        infowindow.setMarker = <span class="literal">null</span>;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h3 id="2-标识显隐"><a href="#2-标识显隐" class="headerlink" title="2. 标识显隐"></a>2. 标识显隐</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input id=&quot;show-listings&quot; type=&quot;button&quot; value=&quot;Show Listings&quot;&gt;</div><div class="line">&lt;input id=&quot;hide-listings&quot; type=&quot;button&quot; value=&quot;Hide Listings&quot;&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    map = <span class="keyword">new</span> google.maps.Map(</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">var</span> locations = [</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="keyword">var</span> largeInfowindow = <span class="keyword">new</span> google.maps.InfoWindow();</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; locations.length; i++) &#123;</div><div class="line">      <span class="keyword">var</span> position = locations[i].location;</div><div class="line">      <span class="keyword">var</span> title = locations[i].title;</div><div class="line">       <span class="keyword">var</span> marker = <span class="keyword">new</span> google.maps.Marker(&#123;</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">      &#125;);</div><div class="line">      markers.push(marker);</div><div class="line">      marker.addListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        populateInfoWindow(<span class="keyword">this</span>, largeInfowindow);</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//不立即设置标识的地图参数和扩展地图界限，用showListings函数做</span></div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'show-listings'</span>).addEventListener(<span class="string">'click'</span>, showListings);</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'hide-listings'</span>).addEventListener(<span class="string">'click'</span>, hideListings);</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">populateInfoWindow</span>(<span class="params">marker, infowindow</span>) </span>&#123;</div><div class="line">        <span class="comment">//省略同上</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the markers array and display them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">showListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> bounds = <span class="keyword">new</span> google.maps.LatLngBounds();</div><div class="line">    <span class="comment">// Extend the boundaries of the map for each marker and display the marker</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//将每个标识的地图设置为map</span></div><div class="line">      markers[i].setMap(map);</div><div class="line">      <span class="comment">//扩展地图界限来容纳标识</span></div><div class="line">      bounds.extend(markers[i].position);</div><div class="line">    &#125;</div><div class="line">    map.fitBounds(bounds);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// This function will loop through the listings and hide them all.</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">hideListings</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markers.length; i++) &#123;</div><div class="line">      <span class="comment">//不删除标识，只隐藏</span></div><div class="line">      markers[i].setMap(<span class="literal">null</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h3 id="3-设置地图样式"><a href="#3-设置地图样式" class="headerlink" title="3. 设置地图样式"></a>3. 设置地图样式</h3><p><a href="https://developers.google.com/maps/documentation/javascript/styling" target="_blank" rel="external">设置地图样式入门</a><br>可以利用样式化地图自定义 Google 基础地图的呈现方式，从而更改道路、公园和建成区等元素的视觉显示。</p>
+        <h1 id="什么是You2php"><a href="#什么是You2php" class="headerlink" title="什么是You2php?"></a>什么是You2php?</h1><p>You2PHP是一个用PHP开发的Youtube流量代理脚本、通过对接谷歌api获取数据，可用来搭建Youtube视频镜像站、可实现长城之内观看Youtube。<br>详情官网：<a href="https://you2php.github.io" target="_blank" rel="noopener">https://you2php.github.io</a><br>免翻墙：<a href="https://github.com/You2php/you2php/" target="_blank" rel="noopener">https://github.com/You2php/you2php/</a></p>
+<h1 id="简单原理："><a href="#简单原理：" class="headerlink" title="简单原理："></a>简单原理：</h1><p>我是将You2php部署在000webhost的海外免费虚拟主机上，绑定自己免费域名，再通过cloud flare进行DNS免费加速，实现看油管视频的。000webhost为每个free app提供10G/月的流量，所以还得省点使用。</p>
     
-        <a href="/2017/12/02/Google 地图 JavaScript API（二）/" class="post-more waves-effect waves-button">
+        <a href="/2018/01/12/You2php使用（完全转载）/" class="post-more waves-effect waves-button">
             more...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAP/">MAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+    </div>
+    
+</article>
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-hyperledger composer-sample-networks（五）"
+  class="article-card article-type-post" itemprop="blogPost">
+    
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/12/31/hyperledger composer-sample-networks（五）/">hyperledger composer-sample-networks（五）</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-12-31 23:30:11" datetime="2017-12-31T15:30:11.000Z"  itemprop="datePublished">2017-12-31</time>
+
+        
+
+
+        
+	<span id="/2017/12/31/hyperledger composer-sample-networks（五）/" class="leancloud_visitors" data-flag-title="hyperledger composer-sample-networks（五）" title="hyperledger composer-sample-networks（五）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/12/31/hyperledger composer-sample-networks（五）/#comment">
+            <span class="valine-comment-count" data-xid="/2017/12/31/hyperledger composer-sample-networks（五）/"></span>
+        </a>
+    </span>
+
+
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <h3 id="1-basic-sample-network"><a href="#1-basic-sample-network" class="headerlink" title="1. basic-sample-network"></a>1. basic-sample-network</h3><p><a href="https://github.com/hyperledger/composer-sample-networks/tree/master/packages/basic-sample-network" target="_blank" rel="noopener">basic-sample-network</a></p>
+<blockquote>
+<p>This is the “Hello World” of Hyperledger Composer samples, which demonstrates the core functionality of Hyperledger Composer by changing the value of an asset.</p>
+</blockquote>
+<h4 id="Participant-SampleParticipant"><a href="#Participant-SampleParticipant" class="headerlink" title="Participant SampleParticipant"></a><strong>Participant</strong> SampleParticipant</h4><h4 id="Asset-SampleAsset"><a href="#Asset-SampleAsset" class="headerlink" title="Asset SampleAsset"></a><strong>Asset</strong> SampleAsset</h4><h4 id="Transaction-SampleTransaction"><a href="#Transaction-SampleTransaction" class="headerlink" title="Transaction SampleTransaction"></a><strong>Transaction</strong> SampleTransaction</h4><h4 id="Event-SampleEvent"><a href="#Event-SampleEvent" class="headerlink" title="Event SampleEvent"></a><strong>Event</strong> SampleEvent</h4><p><img src="http://wx2.sinaimg.cn/large/789d050dgy1fmlc3hfyudj20kc0degnn.jpg" alt="basic"></p  class="index-item-img">
+    
+        <a href="/2017/12/31/hyperledger composer-sample-networks（五）/" class="post-more waves-effect waves-button">
+            more...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
 
     </div>
     
@@ -663,7 +623,7 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
         
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/7/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/9/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/7/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/9/">下一页</a>
     </div>
 </nav>
 
@@ -674,7 +634,7 @@ https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkw
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

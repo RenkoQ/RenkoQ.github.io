@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Cython&amp;Wheel | Renko&#39;s blog | 人生如逆旅，我亦是行人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="python">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.1.2">
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","app_key":"ji1U1fUbF7iiD8xufT3rvonA","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"BG0bK4DLNxackBrBBd7M3TOI-gzGzoHsz","appkey":"ji1U1fUbF7iiD8xufT3rvonA","notify":false,"verify":true,"placeholder":"欢迎留言...","avatar":"wavatar"}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Renko</h5>
+          <a href="mailto:fqx2@outlook.com" title="fqx2@outlook.com" class="mail">fqx2@outlook.com</a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/RenkoQ" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/friend"  >
+                <i class="icon icon-lg icon-group"></i>
+                友链
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://sunnyfu.cn"  >
+                <i class="icon icon-lg icon-anchor"></i>
+                简历
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Cython&amp;Wheel</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image: url(img/banner.jpg)">
+    <div class="container fade-scale">
+        <h1 class="title">Cython&amp;Wheel</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-21T02:16:29.000Z" itemprop="datePublished" class="page-time">
+  2019-03-21
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-Cython&amp;Wheel"
+  class="post-article article-type-post fade" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Cython&Wheel</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-21 10:16:29" datetime="2019-03-21T02:16:29.000Z"  itemprop="datePublished">2019-03-21</time>
+
+            
+
+
+            
+	<span id="/2019/03/21/Cython&Wheel/" class="leancloud_visitors" data-flag-title="Cython&Wheel" title="Cython&Wheel">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span>
+        <i class="icon icon-comment-o"></i>
+        <a href="/2019/03/21/Cython&Wheel/#comment">
+            <span class="valine-comment-count" data-xid="/2019/03/21/Cython&Wheel/"></span>
+        </a>
+    </span>
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://stackoverflow.com/questions/261638/how-do-i-protect-python-code" target="_blank" rel="noopener">How do I protect Python code?</a></p>
+<p>可以直接看第七项</p>
+<h2 id="1-Cython入门"><a href="#1-Cython入门" class="headerlink" title="1. Cython入门"></a>1. Cython入门</h2><p>完全摘抄自<a href="https://www.oschina.net/question/54100_39042" target="_blank" rel="noopener">Cython 三分钟入门</a></p>
+<p>python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">great_circle</span><span class="params">(lon1,lat1,lon2,lat2)</span>:</span></span><br><span class="line">    radius = <span class="number">3956</span> <span class="comment">#miles</span></span><br><span class="line">    x = math.pi/<span class="number">180.0</span></span><br><span class="line"></span><br><span class="line">    a = (<span class="number">90.0</span>-lat1)*(x)</span><br><span class="line">    b = (<span class="number">90.0</span>-lat2)*(x)</span><br><span class="line">    theta = (lon2-lon1)*(x)</span><br><span class="line">    c = math.acos((math.cos(a)*math.cos(b)) +</span><br><span class="line">                  (math.sin(a)*math.sin(b)*math.cos(theta)))</span><br><span class="line">    <span class="keyword">return</span> radius*c</span><br><span class="line"></span><br><span class="line"><span class="comment">###########</span></span><br><span class="line"><span class="comment"># 调用它 50 万次并测定它的时间</span></span><br><span class="line"><span class="comment">###########</span></span><br><span class="line"><span class="keyword">import</span> timeit  </span><br><span class="line"></span><br><span class="line">lon1, lat1, lon2, lat2 = <span class="number">-72.345</span>, <span class="number">34.323</span>, <span class="number">-61.823</span>, <span class="number">54.826</span></span><br><span class="line">num = <span class="number">500000</span></span><br><span class="line"></span><br><span class="line">t = timeit.Timer(<span class="string">"p1.great_circle(%f,%f,%f,%f)"</span> % (lon1,lat1,lon2,lat2),</span><br><span class="line">                       <span class="string">"import p1"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Pure python function"</span>, t.timeit(num), <span class="string">"sec"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#####</span></span><br><span class="line"><span class="comment">#约2.2秒</span></span><br><span class="line"><span class="comment">#####</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>Cython改写<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">######</span></span><br><span class="line"><span class="comment"># 定义一个Python函数，声明它的输入参数是浮点数类型，并为所有变量声明类型为C浮点数据类型</span></span><br><span class="line"><span class="comment">######</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">great_circle</span><span class="params">(float lon1,float lat1,float lon2,float lat2)</span>:</span></span><br><span class="line">    cdef float radius = <span class="number">3956.0</span></span><br><span class="line">    cdef float pi = <span class="number">3.14159265</span></span><br><span class="line">    cdef float x = pi/<span class="number">180.0</span></span><br><span class="line">    cdef float a,b,theta,c</span><br><span class="line"></span><br><span class="line">    a = (<span class="number">90.0</span>-lat1)*(x)</span><br><span class="line">    b = (<span class="number">90.0</span>-lat2)*(x)</span><br><span class="line">    theta = (lon2-lon1)*(x)</span><br><span class="line">    c = math.acos((math.cos(a)*math.cos(b)) + (math.sin(a)*math.sin(b)*math.cos(theta)))</span><br><span class="line">    <span class="keyword">return</span> radius*c</span><br></pre></td></tr></table></figure></p>
+<p>将其转换为C代码再编译为Python扩展</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;&gt;# this will create a c1.c file - the C source code to build a python extension</span><br><span class="line">cython c1.pyx</span><br><span class="line"></span><br><span class="line"># Compile the object file</span><br><span class="line">gcc -c -fPIC -I/usr/include/python2.5/ c1.c</span><br><span class="line"></span><br><span class="line"># Link it into a shared library</span><br><span class="line">gcc -shared c1.o -o c1.so</span><br></pre></td></tr></table></figure>
+<p><code>.so</code>（或<code>.dll</code>）文件可以被Python import<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    t = timeit.Timer(<span class="string">"c1.great_circle(%f,%f,%f,%f)"</span> % (lon1,lat1,lon2,lat2),</span><br><span class="line">                     <span class="string">"import c1"</span>)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Cython function (still using python math)"</span>, t.timeit(num), <span class="string">"sec"</span></span><br><span class="line"><span class="comment"># 约1.8秒</span></span><br></pre></td></tr></table></figure></p>
+<p>使用C标准库替代 python 的 math 模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用C标准库的math.h</span></span><br><span class="line">cdef extern <span class="keyword">from</span> <span class="string">"math.h"</span>:</span><br><span class="line">    float cosf(float theta)</span><br><span class="line">    float sinf(float theta)</span><br><span class="line">    float acosf(float theta)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">great_circle</span><span class="params">(float lon1,float lat1,float lon2,float lat2)</span>:</span></span><br><span class="line">    cdef float radius = <span class="number">3956.0</span></span><br><span class="line">    cdef float pi = <span class="number">3.14159265</span></span><br><span class="line">    cdef float x = pi/<span class="number">180.0</span></span><br><span class="line">    cdef float a,b,theta,c</span><br><span class="line"></span><br><span class="line">    a = (<span class="number">90.0</span>-lat1)*(x)</span><br><span class="line">    b = (<span class="number">90.0</span>-lat2)*(x)</span><br><span class="line">    theta = (lon2-lon1)*(x)</span><br><span class="line">    c = acosf((cosf(a)*cosf(b)) + (sinf(a)*sinf(b)*cosf(theta)))</span><br><span class="line">    <span class="keyword">return</span> radius*c</span><br><span class="line"></span><br><span class="line"><span class="comment">##############</span></span><br><span class="line">    t = timeit.Timer(<span class="string">"c2.great_circle(%f,%f,%f,%f)"</span> % (lon1,lat1,lon2,lat2),</span><br><span class="line">                     <span class="string">"import c2"</span>)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Cython function (using trig function from math.h)"</span>, t.timeit(num), <span class="string">"sec"</span></span><br><span class="line"><span class="comment"># 0.4秒</span></span><br></pre></td></tr></table></figure>
+<p>用纯粹C函数替代python函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">cdef extern <span class="keyword">from</span> <span class="string">"math.h"</span>:</span><br><span class="line">    float cosf(float theta)</span><br><span class="line">    float sinf(float theta)</span><br><span class="line">    float acosf(float theta)</span><br><span class="line"></span><br><span class="line">cdef float _great_circle(float lon1,float lat1,float lon2,float lat2):</span><br><span class="line">    cdef float radius = <span class="number">3956.0</span></span><br><span class="line">    cdef float pi = <span class="number">3.14159265</span></span><br><span class="line">    cdef float x = pi/<span class="number">180.0</span></span><br><span class="line">    cdef float a,b,theta,c</span><br><span class="line"></span><br><span class="line">    a = (<span class="number">90.0</span>-lat1)*(x)</span><br><span class="line">    b = (<span class="number">90.0</span>-lat2)*(x)</span><br><span class="line">    theta = (lon2-lon1)*(x)</span><br><span class="line">    c = acosf((cosf(a)*cosf(b)) + (sinf(a)*sinf(b)*cosf(theta)))</span><br><span class="line">    <span class="keyword">return</span> radius*c</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">great_circle</span><span class="params">(float lon1,float lat1,float lon2,float lat2,int num)</span>:</span></span><br><span class="line">    cdef int i</span><br><span class="line">    cdef float x</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">from</span> <span class="number">0</span> &lt; = i &lt; num:</span><br><span class="line">        x = _great_circle(lon1,lat1,lon2,lat2)</span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.2秒</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-使用cython（虚拟机）"><a href="#2-使用cython（虚拟机）" class="headerlink" title="2. 使用cython（虚拟机）"></a>2. 使用cython（虚拟机）</h2><p><a href="https://medium.com/@xpl/protecting-python-sources-using-cython-dcd940bb188e" target="_blank" rel="noopener">Protecting Python Sources With Cython——Distributing Python Programs As Compiled Binaries: How-To</a></p>
+<h3 id="2-1-安装Cython"><a href="#2-1-安装Cython" class="headerlink" title="2.1 安装Cython"></a>2.1 安装Cython</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install cython</span><br><span class="line">pip3 install cython (for Python 3)</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-添加compile-py"><a href="#2-2-添加compile-py" class="headerlink" title="2.2 添加compile.py"></a>2.2 添加compile.py</h3><p>在项目目录中加入如下脚本(<code>compile.py</code>).功能同 <code>makefile</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> distutils.extension <span class="keyword">import</span> Extension</span><br><span class="line"><span class="keyword">from</span> Cython.Distutils <span class="keyword">import</span> build_ext</span><br><span class="line">ext_modules = [</span><br><span class="line">    Extension(<span class="string">"mymodule1"</span>,  [<span class="string">"mymodule1.py"</span>]),</span><br><span class="line">    Extension(<span class="string">"mymodule2"</span>,  [<span class="string">"mymodule2.py"</span>]),</span><br><span class="line"><span class="comment">#   ... all your modules that need be compiled ...</span></span><br><span class="line">]</span><br><span class="line">setup(</span><br><span class="line">    name = <span class="string">'My Program Name'</span>,</span><br><span class="line">    cmdclass = &#123;<span class="string">'build_ext'</span>: build_ext&#125;,</span><br><span class="line">    ext_modules = ext_modules</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-添加main-py"><a href="#2-3-添加main-py" class="headerlink" title="2.3 添加main.py"></a>2.3 添加main.py</h3><p>设置入口<br>Make the entry point Python file for your application. You will import and launch all the compiled logic from there. An entry point file is required because Cython does not generate executable binaries by default (though it is capable to), so you will need a dummy Python file, where you simply import all the compiled logic and run it. It can be as simple as:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> logic <span class="keyword">import</span> main      <span class="comment"># this comes from a compiled binary</span></span><br><span class="line">main ()</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-4-编译compile-py"><a href="#2-4-编译compile-py" class="headerlink" title="2.4 编译compile.py"></a>2.4 编译compile.py</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python compile.py build_ext --inplace</span><br><span class="line">python3 compile.py build_ext --inplace(for Python 3)</span><br></pre></td></tr></table></figure>
+<p>在<code>.py</code>源文件旁生成<code>.so</code>或<code>.c</code></p>
+<h3 id="2-5-虚拟机VirtualBox、Vagrant使用"><a href="#2-5-虚拟机VirtualBox、Vagrant使用" class="headerlink" title="2.5 虚拟机VirtualBox、Vagrant使用"></a>2.5 虚拟机VirtualBox、Vagrant使用</h3><p><a href="http://yansu.org/2014/04/10/install-vagrant-in-mac.html" target="_blank" rel="noopener">在Mac下安装使用Vagrant</a></p>
+<ol>
+<li>安装<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a> 和 <a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a>.</li>
+<li>运行<code>export VAGRANT_DEFAULT_PROVIDER=virtualbox</code><br>(可以加入到bash脚本中<code>~/.bash_profile</code> 让运行更方便).</li>
+<li>选择一个操作系统:<br><a href="https://app.vagrantup.com/boxes/search" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search</a>.</li>
+<li>选择“How to use”选项，可以找到安装命令指南:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Vagrantfile</span><br><span class="line">---</span><br><span class="line">Vagrant.configure(&quot;2&quot;) do |config|</span><br><span class="line">  config.vm.box = &quot;ubuntu/trusty64&quot;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cmd</span><br><span class="line">---</span><br><span class="line">vagrant init ubuntu/trusty64</span><br><span class="line">vagrant up</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>最后运行 <code>vagrant ssh</code> 以进入一个全新安装的Ubuntu系统控制台 (输入 <code>exit</code>退出)。</p>
+</li>
+<li><p>进入 <code>/vagrant</code> 目录来找到项目文件，再运行步骤2.1和2.4</p>
+</li>
+</ol>
+<p>For projects with a short build/release cycle, multi-plaform builds could be automated using a CI (Continuous Integration) service, like <a href="https://travis-ci.org/" target="_blank" rel="noopener">TravisCI</a>, but that’s a story for another article.</p>
+<h3 id="2-6-虚拟机python环境问题"><a href="#2-6-虚拟机python环境问题" class="headerlink" title="2.6 虚拟机python环境问题"></a>2.6 虚拟机python环境问题</h3><h4 id="1-How-do-I-install-a-different-Python-version-using-apt-get"><a href="#1-How-do-I-install-a-different-Python-version-using-apt-get" class="headerlink" title="(1). How do I install a different Python version using apt-get?"></a>(1). <a href="https://askubuntu.com/questions/682869/how-do-i-install-a-different-python-version-using-apt-get" target="_blank" rel="noopener">How do I install a different Python version using apt-get?</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz</span><br><span class="line">tar xzvf Python-3.5.0.tgz</span><br><span class="line">cd Python-3.5.0</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<h4 id="2-network问题"><a href="#2-network问题" class="headerlink" title="(2). network问题"></a>(2). network问题</h4><p><a href="https://blog.csdn.net/qq_25964837/article/details/80295041" target="_blank" rel="noopener">python中安装包出现Retrying</a></p>
+<pre><code>pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+
+
+ -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+</code></pre><h4 id="3-TypeError-unsupported-operand-type-s-for-‘Retry’-and-‘int’"><a href="#3-TypeError-unsupported-operand-type-s-for-‘Retry’-and-‘int’" class="headerlink" title="(3). TypeError: unsupported operand type(s) for -=: ‘Retry’ and ‘int’"></a>(3). TypeError: unsupported operand type(s) for -=: ‘Retry’ and ‘int’</h4><p><a href="https://stackoverflow.com/questions/37495375/python-pip-install-throws-typeerror-unsupported-operand-types-for-retry" target="_blank" rel="noopener">Python PIP Install throws TypeError: unsupported operand type(s) for -=: ‘Retry’ and ‘int’
+</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove python-pip python3-pip</span><br><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">python get-pip.py</span><br><span class="line">python3 get-pip.py</span><br></pre></td></tr></table></figure>
+<h4 id="4-unknown-type-name-‘uint8-t"><a href="#4-unknown-type-name-‘uint8-t" class="headerlink" title="(4). unknown type name ‘uint8_t"></a>(4). unknown type name ‘uint8_t</h4><p>removed <code>/usr/local/include</code> and then reinstalled <code>llvm</code> using homebrew.</p>
+<p><a href="https://github.com/cython/cython/issues/2009" target="_blank" rel="noopener">https://github.com/cython/cython/issues/2009</a></p>
+<h4 id="5-Vagrant-SSH-can’t-access-shared-directory"><a href="#5-Vagrant-SSH-can’t-access-shared-directory" class="headerlink" title="(5). Vagrant SSH can’t access shared directory"></a>(5). Vagrant SSH can’t access shared directory</h4><p>the correct fix is to <code>exit</code> all vagrant ssh shells, run <code>vagrant halt</code> (<strong>not suspend</strong>) to make sure it’s OFF (not asleep), and revert any recent renames to parent directories. Then <code>vagrant up</code> and see if you can get into <code>/vagrant</code>! After that, if you want to rename your folders just <code>vagrant halt, rename, and vagrant up</code>.</p>
+<p><a href="https://stackoverflow.com/questions/18001193/vagrant-ssh-cant-access-shared-directory" target="_blank" rel="noopener">https://stackoverflow.com/questions/18001193/vagrant-ssh-cant-access-shared-directory</a></p>
+<h4 id="6-The-program-‘pip’-is-currently-not-installed"><a href="#6-The-program-‘pip’-is-currently-not-installed" class="headerlink" title="(6). The program ‘pip’ is currently not installed."></a>(6). The program ‘pip’ is currently not installed.</h4><p>To run ‘pip’ please ask your administrator to install the package ‘python-pip’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo apt-add-repository universe</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install python-pip</span><br></pre></td></tr></table></figure>
+<h4 id="7-error-command-‘x86-64-linux-gnu-gcc’-failed-with-exit-status-1"><a href="#7-error-command-‘x86-64-linux-gnu-gcc’-failed-with-exit-status-1" class="headerlink" title="(7). error: command ‘x86_64-linux-gnu-gcc’ failed with exit status 1"></a>(7). error: command ‘x86_64-linux-gnu-gcc’ failed with exit status 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">for scrapy with Python 3, you&apos;ll need</span><br><span class="line">---</span><br><span class="line">sudo apt-get install python3 python-dev python3-dev \</span><br><span class="line">     build-essential libssl-dev libffi-dev \</span><br><span class="line">     libxml2-dev libxslt1-dev zlib1g-dev \</span><br><span class="line">     python-pip</span><br><span class="line"></span><br><span class="line">with Python 2, you&apos;ll need</span><br><span class="line">---</span><br><span class="line">sudo apt-get install python-dev  \</span><br><span class="line">     build-essential libssl-dev libffi-dev \</span><br><span class="line">     libxml2-dev libxslt1-dev zlib1g-dev \</span><br><span class="line">     python-pip</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/scrapy/scrapy/issues/2115" target="_blank" rel="noopener">https://github.com/scrapy/scrapy/issues/2115</a></p>
+<h2 id="3-cython官方文档"><a href="#3-cython官方文档" class="headerlink" title="3. cython官方文档"></a>3. cython官方文档</h2><h3 id="3-1-使用distutils来创建Cython模块"><a href="#3-1-使用distutils来创建Cython模块" class="headerlink" title="3.1 使用distutils来创建Cython模块"></a>3.1 使用distutils来创建Cython模块</h3><ul>
+<li><p>官方库distutils，使用安装脚本setup.py来构建，安装包。2000年停止开发</p>
+</li>
+<li><p>setuptools是替代distutils 的增强版工具集，包含easy_install 工具，使用ez_setup.py文件，支持egg格式的构建和安装，提供查找，下载安装构建，发布，管理等包管理功能。<br>setuptools是包管理的核心模块。</p>
+</li>
+</ul>
+<p><code>hello.pyx</code>文件:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say_hello_to</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">"Hello %s!"</span> % name)</span><br></pre></td></tr></table></figure>
+<p><code>setup.py</code>文件:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize  </span><br><span class="line"></span><br><span class="line">setup(name=<span class="string">'Hello world app'</span>,</span><br><span class="line">      ext_modules=cythonize(<span class="string">"hello.pyx"</span>))</span><br></pre></td></tr></table></figure>
+<p>To build, run <code>python setup.py build_ext --inplace</code>. Then simply start a Python session and do <code>from hello import say_hello_to</code> and use the imported function as you see fit.</p>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190301161706-image.png" alt="20190301161706-image.png" title="" class="">
+                <p>20190301161706-image.png</p>
+            </figure>
+<h3 id="3-2-使用Jupyter-notebook"><a href="#3-2-使用Jupyter-notebook" class="headerlink" title="3.2 使用Jupyter notebook"></a>3.2 使用Jupyter notebook</h3><p>使用pip安装Jupyter notebook:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(venv)$ pip install jupyter</span><br><span class="line">(venv)$ jupyter notebook</span><br></pre></td></tr></table></figure></p>
+<p>To enable support for Cython compilation, install Cython as described in the installation guide and load the Cython extension from within the Jupyter notebook:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%load_ext Cython</span><br></pre></td></tr></table></figure></p>
+<p>Then, prefix a cell with the %%cython marker to compile it:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%%cython</span><br><span class="line"></span><br><span class="line">cdef int a = 0</span><br><span class="line">for i in range(10):</span><br><span class="line">    a += i</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure></p>
+<p>You can show Cython’s code analysis by passing the –annotate option:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%%cython --annotate</span><br><span class="line"></span><br><span class="line">cdef int a = 0</span><br><span class="line">for i in range(10):</span><br><span class="line">    a += i</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure></p>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190301161603-image.png" alt="20190301161603-image.png" title="" class="">
+                <p>20190301161603-image.png</p>
+            </figure>
+<hr>
+<h2 id="4-实际项目中cython使用"><a href="#4-实际项目中cython使用" class="headerlink" title="4. 实际项目中cython使用"></a>4. 实际项目中cython使用</h2><p>进入project<br><figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305112316-image.png" alt="20190305112316-image.png" title="" class="">
+                <p>20190305112316-image.png</p>
+            </figure></p>
+<p>假设要编译<code>fee_test_NA.py</code>文件为一个cython module。</p>
+<ol>
+<li>创建<code>cython_setup.py</code></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from distutils.core import setup</span><br><span class="line">from Cython.Build import cythonize</span><br><span class="line">from distutils.extension import Extension</span><br><span class="line"></span><br><span class="line">extensions = [Extension(&quot;fee_test_NA&quot;, [&quot;classify/fee_test_NA.py&quot;])]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=&apos;fee_test_NA app&apos;,</span><br><span class="line">    # ext_modules=cythonize(&quot;classify/fee_test_NA.py&quot;)</span><br><span class="line">    ext_modules=cythonize(extensions),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>运行 <code>python cython_setup.py build_ext --inplace</code></p>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305121109-image.png" alt="20190305121109-image.png" title="" class="">
+                <p>20190305121109-image.png</p>
+            </figure>
+</li>
+<li><p>在代码中引用 <code>import fee_test_NA</code></p>
+</li>
+</ol>
+<h2 id="5-实际项目中wheel使用"><a href="#5-实际项目中wheel使用" class="headerlink" title="5. 实际项目中wheel使用"></a>5. 实际项目中wheel使用</h2><p><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a></p>
+<ol>
+<li>把创建的<code>.so</code>文件放到一个想要打包的文件夹里。</li>
+<li>新建<code>MANIFEST.in</code>文件。<br>目的是打包<code>.so</code>文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">recursive-include fasttexttestdemo *.so</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>新建<code>setup.py</code>文件</li>
+</ol>
+<p><a href="https://stackoverflow.com/questions/24347450/how-do-you-add-additional-files-to-a-wheel" target="_blank" rel="noopener">How do you add additional files to a wheel?在wheel中加资源文件</a></p>
+<p><a href="https://stackoverflow.com/questions/39499453/package-only-binary-compiled-so-files-of-a-python-library-compiled-with-cython" target="_blank" rel="noopener">Package only binary compiled .so files of a python library compiled with Cython打包二进制so文件</a></p>
+<p><a href="https://stackoverflow.com/questions/24071491/how-can-i-make-a-python-wheel-from-an-existing-native-library" target="_blank" rel="noopener">How can I make a Python Wheel from an existing native library?从原始库中打包</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">from setuptools import setup, Distribution</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class BinaryDistribution(Distribution):</span><br><span class="line">    def has_ext_modules(foo):</span><br><span class="line">        return True</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=&apos;fee_test_na_app&apos;,</span><br><span class="line">    version=&apos;0.0.1&apos;,</span><br><span class="line">    description=&apos;fee_test_NA Library&apos;,</span><br><span class="line">    packages=[&apos;feetestna_app&apos;],</span><br><span class="line">    package_data=&#123;</span><br><span class="line">        &apos;feetestna_app&apos;: [&apos;*.so&apos;],</span><br><span class="line">    &#125;,</span><br><span class="line">    distclass=BinaryDistribution)</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305130032-image.png" alt="20190305130032-image.png" title="" class="">
+                <p>20190305130032-image.png</p>
+            </figure>
+<ol start="4">
+<li>打包并安装到python库</li>
+</ol>
+<p><a href="https://sparkydogx.github.io/2017/08/29/python-00/" target="_blank" rel="noopener">https://sparkydogx.github.io/2017/08/29/python-00/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">查找pip包路径</span><br><span class="line">&gt;&gt;&gt; import site</span><br><span class="line">&gt;&gt;&gt; site.getsitepackages()</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>egg文件</code>: 压缩文件，Python工程打包发布用。</li>
+<li><code>wheel文件</code>: wheel是一种制作分发格式，由PEP427定义。wheel志在取代egg格式。pip支持wheel。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python setup.py bdist_wheel</span><br><span class="line">pip install dist/fee_test_NA_APP-0.0.1-cp35-cp35m-macosx_10_14_x86_64.whl</span><br></pre></td></tr></table></figure>
+<h3 id="创建Pure-Python-wheel"><a href="#创建Pure-Python-wheel" class="headerlink" title="创建Pure-Python wheel"></a>创建Pure-Python wheel</h3><p><a href="https://stackoverflow.com/questions/31573107/how-to-create-a-pure-python-wheel" target="_blank" rel="noopener">How to create a Pure-Python wheel</a></p>
+<p><a href="https://stackoverflow.com/questions/47042483/how-to-build-and-distribute-a-python-cython-package-that-depends-on-third-party" target="_blank" rel="noopener">How to build and distribute a Python/Cython package that depends on third party libFoo.so打包通用包</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  --universal       make a universal wheel (default: false)</span><br><span class="line"></span><br><span class="line">----</span><br><span class="line">#add a setup.cfg file next to your setup.py that takes care of this:</span><br><span class="line">[bdist_wheel]</span><br><span class="line">universal = 1</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305130707-image.png" alt="20190305130707-image.png" title="" class="">
+                <p>20190305130707-image.png</p>
+            </figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305130542-image.png" alt="20190305130542-image.png" title="" class="">
+                <p>20190305130542-image.png</p>
+            </figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305130743-image.png" alt="20190305130743-image.png" title="" class="">
+                <p>20190305130743-image.png</p>
+            </figure>
+<ol start="5">
+<li>测试</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from feetestna_app.fee_test_NA import test</span><br><span class="line">test(&quot;/Users/wangzulong/Desktop/results.txt&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="https://raw.githubusercontent.com/sakuyaQ/markdown_images/master/20190225/20190305133425-image.png" alt="20190305133425-image.png" title="" class="">
+                <p>20190305133425-image.png</p>
+            </figure>
+<h2 id="6-多层代码打包处理"><a href="#6-多层代码打包处理" class="headerlink" title="6. 多层代码打包处理"></a>6. 多层代码打包处理</h2><p><a href="https://bucharjan.cz/blog/using-cython-to-protect-a-python-codebase.html" target="_blank" rel="noopener">Using Cython to protect a Python codebase</a></p>
+<pre><code>python setup.py build_ext
+python setup.py bdist_wheel
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">src</span><br><span class="line">├── mypkg</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   └── __init__.py</span><br><span class="line">├── mypkg2</span><br><span class="line">│   ├── bar.py</span><br><span class="line">│   ├── foo.py</span><br><span class="line">│   └── __init__.py</span><br><span class="line">└── setup.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###</span></span><br><span class="line"><span class="comment"># setup.py</span></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> setuptools.extension <span class="keyword">import</span> Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize</span><br><span class="line"><span class="keyword">from</span> Cython.Distutils <span class="keyword">import</span> build_ext</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">"mypkg"</span>,</span><br><span class="line">    ext_modules=cythonize(</span><br><span class="line">        [</span><br><span class="line">           Extension(<span class="string">"mypkg.*"</span>, [<span class="string">"mypkg/*.py"</span>]),</span><br><span class="line">           Extension(<span class="string">"mypkg2.*"</span>, [<span class="string">"mypkg2/*.py"</span>])</span><br><span class="line">        ],</span><br><span class="line">        build_dir=<span class="string">"build"</span>,</span><br><span class="line">        compiler_directives=dict(</span><br><span class="line">        always_allow_keywords=<span class="keyword">True</span></span><br><span class="line">        )),</span><br><span class="line">    cmdclass=dict(</span><br><span class="line">        build_ext=build_ext</span><br><span class="line">    ),</span><br><span class="line">    packages=[<span class="string">"mypkg"</span>, <span class="string">"mypkg2"</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><code>always_allow_keywords</code> 指令通过禁用对有大量参数的函数的关键字参数优化来保持flask视图函数工作正常。<br><code>ext_package</code>使编译代码保存在相同位置</p>
+<p>从资源树复制<code>__init__.py</code> 文件<br>修改<code>build_ext</code>类:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># ...</span><br><span class="line"></span><br><span class="line">from pathlib import Path</span><br><span class="line">import shutil</span><br><span class="line"></span><br><span class="line"># ...</span><br><span class="line"></span><br><span class="line">class MyBuildExt(build_ext):</span><br><span class="line">    def run(self):</span><br><span class="line">        build_ext.run(self)</span><br><span class="line"></span><br><span class="line">        build_dir = Path(self.build_lib)</span><br><span class="line">        root_dir = Path(__file__).parent</span><br><span class="line"></span><br><span class="line">        target_dir = build_dir if not self.inplace else root_dir</span><br><span class="line"></span><br><span class="line">        self.copy_file(Path(&apos;mypkg&apos;) / &apos;__init__.py&apos;, root_dir, target_dir)</span><br><span class="line">        self.copy_file(Path(&apos;mypkg2&apos;) / &apos;__init__.py&apos;, root_dir, target_dir)</span><br><span class="line">        self.copy_file(Path(&apos;mypkg&apos;) / &apos;__main__.py&apos;, root_dir, target_dir)</span><br><span class="line">        self.copy_file(Path(&apos;mypkg2&apos;) / &apos;__main__.py&apos;, root_dir, target_dir)</span><br><span class="line"></span><br><span class="line">    def copy_file(self, path, source_dir, destination_dir):</span><br><span class="line">        if not (source_dir / path).exists():</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">        shutil.copyfile(str(source_dir / path), str(destination_dir / path))</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line"># ...</span><br><span class="line">    cmdclass=dict(</span><br><span class="line">        build_ext=MyBuildExt</span><br><span class="line">    ),</span><br><span class="line"># ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p> 删除<code>packages</code>参数，使wheel包内不包含源代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setup(</span><br><span class="line">    # ...</span><br><span class="line">    packages=[]</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<pre><code>pip install dist/*.whl
+</code></pre><h2 id="7-docker一键打包"><a href="#7-docker一键打包" class="headerlink" title="7. docker一键打包"></a>7. docker一键打包</h2><p>dockerfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 将官方 Python 运行时用作父镜像</span><br><span class="line">FROM python:3.5.2</span><br><span class="line"></span><br><span class="line"># 复制到位于 /app/CNOOC 中的容器中</span><br><span class="line">COPY *.sh /app/CNOOC/</span><br><span class="line"></span><br><span class="line"># 将工作目录设置为 /app/CNOOC</span><br><span class="line">WORKDIR /app/CNOOC/</span><br><span class="line"></span><br><span class="line"># 更新pip</span><br><span class="line">RUN pip install --upgrade pip</span><br><span class="line"></span><br><span class="line"># 更新setuptools</span><br><span class="line">RUN pip install --upgrade setuptools</span><br><span class="line"></span><br><span class="line">RUN pip install Cython</span><br><span class="line"></span><br><span class="line">RUN pip install wheel</span><br><span class="line"></span><br><span class="line">RUN chmod +x *.sh</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [ &quot;bash&quot;, &quot;package.sh&quot; ]</span><br></pre></td></tr></table></figure></p>
+<p>package.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># remove old compile folders</span></span><br><span class="line">rm -rf build/</span><br><span class="line">rm -rf *.egg-info/</span><br><span class="line">rm -rf dist/</span><br><span class="line"></span><br><span class="line"><span class="comment"># complie train module</span></span><br><span class="line">python setup.py bdist_wheel</span><br><span class="line"></span><br><span class="line"><span class="comment"># remove unused folders</span></span><br><span class="line">rm -rf build/</span><br><span class="line">rm -rf *.egg-info/</span><br></pre></td></tr></table></figure></p>
+<p>setup.py<br><strong>注意在源代码里如果有内部文件引用，则需要增加testna.前缀，否则定位不到包内文件</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> setuptools.extension <span class="keyword">import</span> Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize</span><br><span class="line"><span class="keyword">from</span> Cython.Distutils <span class="keyword">import</span> build_ext</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyBuildExt</span><span class="params">(build_ext)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        build_ext.run(self)</span><br><span class="line"></span><br><span class="line">        build_dir = Path(self.build_lib)</span><br><span class="line">        root_dir = Path(__file__).parent</span><br><span class="line"></span><br><span class="line">        target_dir = build_dir <span class="keyword">if</span> <span class="keyword">not</span> self.inplace <span class="keyword">else</span> root_dir</span><br><span class="line"></span><br><span class="line">        print(<span class="string">"build_dir: "</span> + str(build_dir))</span><br><span class="line">        print(<span class="string">"root_dir: "</span> + str(root_dir))</span><br><span class="line">        print(<span class="string">"target_dir: "</span> + str(target_dir))</span><br><span class="line"></span><br><span class="line">        self.copy_file(Path(<span class="string">'testna'</span>) / <span class="string">'__init__.py'</span>, root_dir, target_dir)</span><br><span class="line">        self.copy_file(</span><br><span class="line">            Path(<span class="string">'testna/filter/'</span>) / <span class="string">'__init__.py'</span>, root_dir, target_dir)</span><br><span class="line">        self.copy_file(</span><br><span class="line">            Path(<span class="string">'testna/filter/input/'</span>) / <span class="string">'__init__.py'</span>, root_dir, target_dir)</span><br><span class="line">        self.copy_file(</span><br><span class="line">            Path(<span class="string">'testna/filter/output/'</span>) / <span class="string">'__init__.py'</span>, root_dir,</span><br><span class="line">            target_dir)</span><br><span class="line">        self.copy_file(</span><br><span class="line">            Path(<span class="string">'testna/security/'</span>) / <span class="string">'__init__.py'</span>, root_dir, target_dir)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">copy_file</span><span class="params">(self, path, source_dir, destination_dir)</span>:</span></span><br><span class="line">        print(<span class="string">"path: "</span> + str(path))</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> (source_dir / path).exists():</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        print(<span class="string">"source_dir / path: "</span> + str(source_dir / path))</span><br><span class="line">        print(<span class="string">"destination_dir / path: "</span> + str(destination_dir / path))</span><br><span class="line">        shutil.copyfile(str(source_dir / path), str(destination_dir / path))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">"cnooc-testservice"</span>,</span><br><span class="line">    version=<span class="string">"1.0.0"</span>,</span><br><span class="line">    description=<span class="string">"CNOOC Service"</span>,</span><br><span class="line">    license=<span class="string">"IBM limited"</span>,</span><br><span class="line">    ext_modules=cythonize(</span><br><span class="line">        [</span><br><span class="line">            Extension(<span class="string">"testna.*"</span>, [<span class="string">"testna/*.py"</span>]),</span><br><span class="line">            Extension(<span class="string">"testna.filter.input.*"</span>, [<span class="string">"testna/filter/input/*.py"</span>]),</span><br><span class="line">            Extension(<span class="string">"testna.filter.output.*"</span>, [<span class="string">"testna/filter/output/*.py"</span>]),</span><br><span class="line">            Extension(<span class="string">"testna.security.*"</span>, [<span class="string">"testna/security/*.py"</span>])</span><br><span class="line">        ],</span><br><span class="line">        build_dir=<span class="string">"build"</span>,</span><br><span class="line">        compiler_directives=dict(always_allow_keywords=<span class="keyword">True</span>)),</span><br><span class="line">    cmdclass=dict(build_ext=MyBuildExt),</span><br><span class="line">    packages=[],</span><br><span class="line">    install_requires=[],</span><br><span class="line">    entry_points=&#123;<span class="string">'console_scripts'</span>: [<span class="string">'cnooc-testna = testna.TestApp:main'</span>]&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="8-参考资料整理"><a href="#8-参考资料整理" class="headerlink" title="8. 参考资料整理"></a>8. 参考资料整理</h2><p><a href="http://nuitka.net/" target="_blank" rel="noopener">nuitkapython打包工具</a></p>
+<p><a href="https://www.pkold.com/a/cython_xie_de_python_bao_%EF%BC%8C_dai_so/_dai_ddl_de_bao_da_bao_dao_pypi_shang_%EF%BC%8C_shang_chuan" target="_blank" rel="noopener">cython写的python包，带so/带ddl的包打包到pypi上，上传</a></p>
+<p><a href="https://blog.csdn.net/chenfeidi1/article/details/80873979" target="_blank" rel="noopener">Python打包分发工具setuptools</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/24311879" target="_blank" rel="noopener">Cython 基本用法</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/39812605" target="_blank" rel="noopener">比Python快100倍，利用Cython实现高速NLP项目</a></p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-04-04T05:10:21.332Z" itemprop="dateUpdated">2019-04-04 13:10:21</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2019/03/21/Cython&amp;Wheel/" target="_blank" rel="external">https://renkoq.github.io/2019/03/21/Cython&amp;Wheel/</a>
+        
+    </div>
+    <footer>
+        <a href="https://renkoq.github.io">
+            <img src="/img/avatar.jpg" alt="Renko">
+            Renko
+        </a>
+    </footer>
+</blockquote>
+
+        
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&title=《Cython&Wheel》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&title=《Cython&Wheel》 — Renko's blog&source=How do I protect Python code?
+可以直接看第七项
+1. Cython入门完全摘抄自Cython 三分钟入门
+python123..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Cython&Wheel》 — Renko's blog&url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/04/01/python语法基础/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python语法基础</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/11/python 打包冻结(PyInstaller)/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python 打包冻结(PyInstaller)</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+</article>
+
+
+</div>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Cython入门"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Cython入门</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-使用cython（虚拟机）"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 使用cython（虚拟机）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-cython官方文档"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. cython官方文档</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-实际项目中cython使用"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 实际项目中cython使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-实际项目中wheel使用"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 实际项目中wheel使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-多层代码打包处理"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 多层代码打包处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-docker一键打包"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. docker一键打包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-参考资料整理"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 参考资料整理</span></a></li></ol>
+        </nav>
+    </aside>
+    
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Renko &copy; 2016 - 2019
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&title=《Cython&Wheel》 — Renko's blog&pic=https://renkoq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&title=《Cython&Wheel》 — Renko's blog&source=How do I protect Python code?
+可以直接看第七项
+1. Cython入门完全摘抄自Cython 三分钟入门
+python123..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Cython&Wheel》 — Renko's blog&url=https://renkoq.github.io/2019/03/21/Cython&Wheel/&via=https://renkoq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://renkoq.github.io/2019/03/21/Cython&Wheel/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aW46DMBBEUfa/abIAYlNVDUhuX3+NJgQ4HqmnHz4OeZ2XpVwzut79/WMLBgwYyzKUx7ufXu8/etHsuX+oMGDA2IAximDza+b3mb+cjlSeBQMGDBj6rSuh2X0WDBgwYMxvl4XjLHGEAQMGDD1QZkmhng5+VIvDgAFjQYbedf/+51fmGzBgwFiKcZrLTfLc1zqjBQMGjN6MrAR9CpmlocOnwIABoykje6GsiNWTzvkWGHsMAwaMdgy9rZY1v5SxpT4kGAZcGDBgNGW4yV/lWEaWhh5ZzIYBA0ZThpsCusHUPcAhbQQMGDBaMyohz03m3NZ/GHxhwICxAWP+tXozzh1zhiMEGDBgtGNkIbUeXt309GYTYcCA0ZShF4puCujOGfVidfh3gAEDRlOGfmwiC8SVoYL7VjBgwOjNeOPwhN6SyzA3/z1gwIDRmqEXq3pRqm/TY9MMGDBgNGLoAVFv9Ovh1Q3WQyoMGDBaM+YfuC/hHs5wW3s36SMMGDC2YbiN/uzBbkIpNQdhwICxAaMyGHBTxko6CAMGjJ0ZensrKz7tAxNCMw4GDBg7ME5zVcYJ+hjAKFz1sx4wYMBYllEZcyqBuF6a1tNNGDBg9GAoQdYdGGRjAB0MAwaMPRn11r9bfGaHwG5qcRgwYMCQS1D9W/XDGTBgwIChX6NcWUkWXwm4MGDAWIqhFLHuGCAbEoSbAgMGjNaMpw5YuIPGrHDN7gADBoxlGT9Gfbwq9PsGLwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.1.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.1.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.1.2"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.1.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.1.2"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.1.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    
+</body>
+</html>

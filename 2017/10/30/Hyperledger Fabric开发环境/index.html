@@ -186,15 +186,15 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>所有参考资料贴在最后。</p>
-<h3 id="1-Vagrant"><a href="#1-Vagrant" class="headerlink" title="1. Vagrant"></a>1. Vagrant</h3><p><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">官方下载</a></p>
-<p>Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟机的管理，包括建立和删除虚拟机、配置虚拟机运行参数、管理虚拟机运行状态、自动化配置和安装开发环境必须的各类软件、打包和分发虚拟机运行环境等。 <a href="http://www.ituring.com.cn/article/131600" target="_blank" rel="external">^foot1</a></p>
-<p>简单地说，Vagrant让我们可以通过代码的方式快速地、可重复地创建针对不同虚拟环境的虚拟机，包括Virtualbox、AWS、Docker等。它使得我们可以一次性地、自动创建多个环境相同的虚拟机，对于软件开发和测试尤其有用。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
-<p>使用Vagrant能尽可能避免”Work on my machine“错误，缩短搭建开发环境的时间。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="external">^foot2</a></p>
-<h3 id="2-go"><a href="#2-go" class="headerlink" title="2. go"></a>2. go</h3><p><a href="https://golang.org/dl/" target="_blank" rel="external">官方下载</a></p>
-<p><a href="https://golang.org/doc/" target="_blank" rel="external">官方文档</a></p>
+<h3 id="1-Vagrant"><a href="#1-Vagrant" class="headerlink" title="1. Vagrant"></a>1. Vagrant</h3><p><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener">官方下载</a></p>
+<p>Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。通过Vagrant可以方便实现的对虚拟机的管理，包括建立和删除虚拟机、配置虚拟机运行参数、管理虚拟机运行状态、自动化配置和安装开发环境必须的各类软件、打包和分发虚拟机运行环境等。 <a href="http://www.ituring.com.cn/article/131600" target="_blank" rel="noopener">^foot1</a></p>
+<p>简单地说，Vagrant让我们可以通过代码的方式快速地、可重复地创建针对不同虚拟环境的虚拟机，包括Virtualbox、AWS、Docker等。它使得我们可以一次性地、自动创建多个环境相同的虚拟机，对于软件开发和测试尤其有用。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="noopener">^foot2</a></p>
+<p>使用Vagrant能尽可能避免”Work on my machine“错误，缩短搭建开发环境的时间。<a href="http://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html" target="_blank" rel="noopener">^foot2</a></p>
+<h3 id="2-go"><a href="#2-go" class="headerlink" title="2. go"></a>2. go</h3><p><a href="https://golang.org/dl/" target="_blank" rel="noopener">官方下载</a></p>
+<p><a href="https://golang.org/doc/" target="_blank" rel="noopener">官方文档</a></p>
 <p>Go语言需要配置<code>GOPATH</code>环境变量，指向代码目录。</p>
 <p>管理员模式打开CMD输入<code>go env</code>验证。</p>
-<h3 id="3-下载源码"><a href="#3-下载源码" class="headerlink" title="3. 下载源码"></a>3. 下载源码</h3><p><a href="https://github.com/hyperledger/fabric" target="_blank" rel="external">fabric</a><br><a href="https://github.com/hyperledger/fabric-ca" target="_blank" rel="external">fabric-ca</a></p>
+<h3 id="3-下载源码"><a href="#3-下载源码" class="headerlink" title="3. 下载源码"></a>3. 下载源码</h3><p><a href="https://github.com/hyperledger/fabric" target="_blank" rel="noopener">fabric</a><br><a href="https://github.com/hyperledger/fabric-ca" target="_blank" rel="noopener">fabric-ca</a></p>
 <pre><code>git clone https://github.com/hyperledger/fabric.git                        
 git clone https://github.com/hyperledger/fabric-ca.git    
 </code></pre><a id="more"></a>    
@@ -203,18 +203,18 @@ vagrant up
 vagrant ssh
 </code></pre><ol>
 <li><p>“No Usable default provider could be found for your system”</p>
-<p> <code>vagrant up --provider=virtualbox</code>查询错误信息，发现vagrant对virtualbox的版本有要求。<a href="https://github.com/hashicorp/vagrant/issues/7411#issuecomment-232305067" target="_blank" rel="external">具体版本支持。</a><br> 重新安装virtualbox 5.1后成功。</p>
+<p> <code>vagrant up --provider=virtualbox</code>查询错误信息，发现vagrant对virtualbox的版本有要求。<a href="https://github.com/hashicorp/vagrant/issues/7411#issuecomment-232305067" target="_blank" rel="noopener">具体版本支持。</a><br> 重新安装virtualbox 5.1后成功。</p>
 </li>
 <li><p>“Couldn’t open file /Users/…/base”</p>
 <pre><code>vagrant init hashicorp/fabric 
 vagrant up
-</code></pre><p> 具体参见 <a href="https://stackoverflow.com/questions/23874260/error-when-trying-vagrant-up" target="_blank" rel="external">1</a> <a href="https://github.com/hyperledger-archives/fabric/issues/2400" target="_blank" rel="external">2</a><br> 我的解决方法是重新Clone the fabric folder。不要用<code>vagrant init</code>修改原有的<code>Vagrantfile</code>配置文件。</p>
+</code></pre><p> 具体参见 <a href="https://stackoverflow.com/questions/23874260/error-when-trying-vagrant-up" target="_blank" rel="noopener">1</a> <a href="https://github.com/hyperledger-archives/fabric/issues/2400" target="_blank" rel="noopener">2</a><br> 我的解决方法是重新Clone the fabric folder。不要用<code>vagrant init</code>修改原有的<code>Vagrantfile</code>配置文件。</p>
 </li>
 <li><p>“Can’t download boxes on Windows 10”</p>
-<p> 问题：<a href="https://github.com/mitchellh/vagrant/issues/6754" target="_blank" rel="external">mitchellh/vagrant#6754</a>)<br> If the <code>vagrant up</code> command fails it may be because you do not have the Microsoft Visual C++ Redistributable package installed. <a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328" target="_blank" rel="external">下载地址</a>。<a href="http://hyperledger-fabric.readthedocs.io/en/latest/dev-setup/devenv.html" target="_blank" rel="external">^foot3</a></p>
+<p> 问题：<a href="https://github.com/mitchellh/vagrant/issues/6754" target="_blank" rel="noopener">mitchellh/vagrant#6754</a>)<br> If the <code>vagrant up</code> command fails it may be because you do not have the Microsoft Visual C++ Redistributable package installed. <a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328" target="_blank" rel="noopener">下载地址</a>。<a href="http://hyperledger-fabric.readthedocs.io/en/latest/dev-setup/devenv.html" target="_blank" rel="noopener">^foot3</a></p>
 </li>
 <li><p>“Vagrant box downloads extremely slow”</p>
-<p>  <a href="https://github.com/hashicorp/vagrant/issues/5319" target="_blank" rel="external">#5319</a><br> take a walk or make yourself a sandwich. Get way from screen for a little bit.</p>
+<p>  <a href="https://github.com/hashicorp/vagrant/issues/5319" target="_blank" rel="noopener">#5319</a><br> take a walk or make yourself a sandwich. Get way from screen for a little bit.</p>
 </li>
 <li><p>“ubuntu xenial64 box password”</p>
 <p> 在目录<code>~/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20161221.0.0/virtualbox/Vagrantfile</code>中有密码</p>
@@ -264,7 +264,7 @@ bd9c6bda7560        dev-jdoe-mycc-1.0   &quot;chaincode -peer.a...&quot;   5 sec
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-11-21T14:33:40.618Z" itemprop="dateUpdated">2017-11-21 22:33:40</time>
+    最后更新时间：<time datetime="2017-11-21T14:33:40.000Z" itemprop="dateUpdated">2017-11-21 22:33:40</time>
 </span><br>
 
 
@@ -375,7 +375,7 @@ Vagrant是构建在虚拟化技术之上的虚拟机运行环境管理工具。�
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	

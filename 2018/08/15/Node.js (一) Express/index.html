@@ -185,8 +185,7 @@
             
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>[TOC]</p>
-<p><a href="https://github.com/nswbmw/N-blog/" target="_blank" rel="noopener">https://github.com/nswbmw/N-blog/</a></p>
+            <p><a href="https://github.com/nswbmw/N-blog/" target="_blank" rel="noopener">https://github.com/nswbmw/N-blog/</a></p>
 <h3 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1. 环境变量"></a>1. 环境变量</h3><p><code>环境变量（environment variables）</code>一般是指在操作系统中用来指定操作系统运行环境的一些参数。</p>
 <p>简单来讲，环境变量就是传递参数给运行程序的。</p>
 <pre><code>env  //显示环境变量
@@ -323,8 +322,10 @@
 <p>session 中间件会在 req 上添加 session 对象，即 <code>req.session</code> 初始值为 <code>{}</code>，当我们登录后设置 <code>req.session.user = 用户信息</code>，返回浏览器的头信息中会带上 <code>set-cookie</code> 将 <code>session id</code> 写到浏览器 cookie 中，那么该用户下次请求时，通过带上来的 cookie 中的 <code>session id</code> 我们就可以查找到该用户，并将用户信息保存到 <code>req.session.user</code>。</p>
 <h4 id="connect-flash中间件"><a href="#connect-flash中间件" class="headerlink" title="connect-flash中间件"></a>connect-flash中间件</h4><p>引入中间件，实现页面通知只显示一次，刷新后消失。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install connect-flash</span><br></pre></td></tr></table></figure>
-<pre><code>The flash is a special area of the session used for storing messages. Messages are written to the flash and cleared after being displayed to the user. The flash is typically used in combination with redirects, ensuring that the message is available to the next page that is to be rendered.
-</code></pre><p>它是基于 session 实现的，设置初始值 <code>req.session.flash={}</code>，通过 <code>req.flash(name, value)</code> 设置这个对象下的字段和值，通过 <code>req.flash(name)</code> 获取这个对象下的值，同时删除这个字段，实现了只显示一次刷新后消失的功能。</p>
+<blockquote>
+<p>The flash is a special area of the session used for storing messages. Messages are written to the flash and cleared after being displayed to the user. The flash is typically used in combination with redirects, ensuring that the message is available to the next page that is to be rendered.</p>
+</blockquote>
+<p>它是基于 session 实现的，设置初始值 <code>req.session.flash={}</code>，通过 <code>req.flash(name, value)</code> 设置这个对象下的字段和值，通过 <code>req.flash(name)</code> 获取这个对象下的值，同时删除这个字段，实现了只显示一次刷新后消失的功能。</p>
 <h4 id="express-session、connect-mongo-和-connect-flash-的区别与联系"><a href="#express-session、connect-mongo-和-connect-flash-的区别与联系" class="headerlink" title="express-session、connect-mongo 和 connect-flash 的区别与联系"></a>express-session、connect-mongo 和 connect-flash 的区别与联系</h4><blockquote>
 <p><strong>express-session</strong>: 会话（session）支持中间件<br><strong>connect-mongo</strong>: 将 session 存储于 mongodb，需结合 express-session 使用，我们也可以将 session 存储于 redis，如 connect-redis<br><strong>connect-flash</strong>: 基于 session 实现的用于通知功能的中间件，需结合 express-session 使用</p>
 </blockquote>
@@ -342,7 +343,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-13T03:05:48.355Z" itemprop="dateUpdated">2018-09-13 11:05:48</time>
+    最后更新时间：<time datetime="2019-04-04T02:28:29.229Z" itemprop="dateUpdated">2019-04-04 10:28:29</time>
 </span><br>
 
 
@@ -383,9 +384,8 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/08/15/Node.js (一) Express/&title=《Node.js (一) Express》 — Renko's blog&source=[TOC]
-https://github.com/nswbmw/N-blog/
-1. 环境变量环境变量（environment variables）一般是..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/08/15/Node.js (一) Express/&title=《Node.js (一) Express》 — Renko's blog&source=https://github.com/nswbmw/N-blog/
+1. 环境变量环境变量（environment variables）一般是指在操作系统..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -453,7 +453,7 @@ https://github.com/nswbmw/N-blog/
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	
@@ -491,9 +491,8 @@ https://github.com/nswbmw/N-blog/
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/08/15/Node.js (一) Express/&title=《Node.js (一) Express》 — Renko's blog&source=[TOC]
-https://github.com/nswbmw/N-blog/
-1. 环境变量环境变量（environment variables）一般是..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://renkoq.github.io/2018/08/15/Node.js (一) Express/&title=《Node.js (一) Express》 — Renko's blog&source=https://github.com/nswbmw/N-blog/
+1. 环境变量环境变量（environment variables）一般是指在操作系统..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

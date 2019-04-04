@@ -185,8 +185,8 @@
             
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>1 . 在init()函数中添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stat = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">stat = <span class="keyword">new</span> Stats();</div><div class="line">stat.domElement.style.position = <span class="string">'absolute'</span>;</div><div class="line">stat.domElement.style.right = <span class="string">'0px'</span>;</div><div class="line">stat.domElement.style.top = <span class="string">'0px'</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(stat.domElement);</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>2 . 设置开始帧和结束帧<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">stat.begin();</div><div class="line"></div><div class="line"><span class="comment">//动画函数</span></div><div class="line"><span class="comment">//renderer.render(scene, camera);</span></div><div class="line"></div><div class="line">stat.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+            <p>1 . 在init()函数中添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stat = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">stat = <span class="keyword">new</span> Stats();</span><br><span class="line">stat.domElement.style.position = <span class="string">'absolute'</span>;</span><br><span class="line">stat.domElement.style.right = <span class="string">'0px'</span>;</span><br><span class="line">stat.domElement.style.top = <span class="string">'0px'</span>;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(stat.domElement);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2 . 设置开始帧和结束帧<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">stat.begin();</span><br><span class="line"></span><br><span class="line"><span class="comment">//动画函数</span></span><br><span class="line"><span class="comment">//renderer.render(scene, camera);</span></span><br><span class="line"></span><br><span class="line">stat.end();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>也可以直接添加</p>
 <pre><code>stat.update();
 </code></pre>
@@ -196,7 +196,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-11-21T14:35:26.326Z" itemprop="dateUpdated">2017-11-21 22:35:26</time>
+    最后更新时间：<time datetime="2017-11-21T14:35:26.000Z" itemprop="dateUpdated">2017-11-21 22:35:26</time>
 </span><br>
 
 
@@ -305,7 +305,7 @@
     <div class="bottom">
         <p>
             <span>
-                Renko &copy; 2016 - 2018
+                Renko &copy; 2016 - 2019
             </span>
         		
            	
